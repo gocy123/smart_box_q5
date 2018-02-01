@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armjlink2.dll" 
 
-"D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Exe\Project.out" 
+"D:\GitHub2\smart_box_q5\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Exe\Project.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armbat.dll" 
 

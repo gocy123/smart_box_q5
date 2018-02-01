@@ -1,413 +1,442 @@
 ###############################################################################
 #                                                                             #
-#     IAR Assembler V7.40.7.9843/W32 for ARM 30/Jan/2018  14:31:25            #
+#     IAR Assembler V7.40.7.9843/W32 for ARM 01/Feb/2018  10:27:22            #
 #     Copyright 1999-2015 IAR Systems AB.                                     #
 #                                                                             #
-#           Source file   =  D:\SmartCardBox\SMART_CARD\Project\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup_stm32f10x_md.s#
-#           List file     =  D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\startup_stm32f10x_md.lst#
-#           Object file   =  D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\startup_stm32f10x_md.o#
-#           Command line  =  D:\SmartCardBox\SMART_CARD\Project\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup_stm32f10x_md.s #
-#                            -OD:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj #
+#           Source file   =  D:\GitHub2\smart_box_q5\SMART_CARD\Project\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup_stm32f10x_md.s#
+#           List file     =  D:\GitHub2\smart_box_q5\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\startup_stm32f10x_md.lst#
+#           Object file   =  D:\GitHub2\smart_box_q5\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\startup_stm32f10x_md.o#
+#           Command line  =  D:\GitHub2\smart_box_q5\SMART_CARD\Project\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup_stm32f10x_md.s #
+#                            -OD:\GitHub2\smart_box_q5\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj #
 #                            -s+ -M<> -w+ -r                                  #
-#                            -LD:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List #
+#                            -LD:\GitHub2\smart_box_q5\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List #
 #                            -t8 --cpu Cortex-M3 --fpu None                   #
 #                                                                             #
 ###############################################################################
 
                                 Reset_Handler
                                 ------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",125  War
-                                ning[25]: Label 'Reset_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                125  Warning[25]: Label 'Reset_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 NMI_Handler
                                 ----------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",133  War
-                                ning[25]: Label 'NMI_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                133  Warning[25]: Label 'NMI_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 HardFault_Handler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",138  War
-                                ning[25]: Label 'HardFault_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                138  Warning[25]: Label 'HardFault_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 MemManage_Handler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",143  War
-                                ning[25]: Label 'MemManage_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                143  Warning[25]: Label 'MemManage_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 BusFault_Handler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",148  War
-                                ning[25]: Label 'BusFault_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                148  Warning[25]: Label 'BusFault_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 UsageFault_Handler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",153  War
-                                ning[25]: Label 'UsageFault_Handler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                153  Warning[25]: Label 'UsageFault_Handler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 SVC_Handler
                                 ----------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",158  War
-                                ning[25]: Label 'SVC_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                158  Warning[25]: Label 'SVC_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 DebugMon_Handler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",163  War
-                                ning[25]: Label 'DebugMon_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                163  Warning[25]: Label 'DebugMon_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 PendSV_Handler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",168  War
-                                ning[25]: Label 'PendSV_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                168  Warning[25]: Label 'PendSV_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 SysTick_Handler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",173  War
-                                ning[25]: Label 'SysTick_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                173  Warning[25]: Label 'SysTick_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 WWDG_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",178  War
-                                ning[25]: Label 'WWDG_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                178  Warning[25]: Label 'WWDG_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 PVD_IRQHandler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",183  War
-                                ning[25]: Label 'PVD_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                183  Warning[25]: Label 'PVD_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 TAMPER_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",188  War
-                                ning[25]: Label 'TAMPER_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                188  Warning[25]: Label 'TAMPER_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 RTC_IRQHandler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",193  War
-                                ning[25]: Label 'RTC_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                193  Warning[25]: Label 'RTC_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 FLASH_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",198  War
-                                ning[25]: Label 'FLASH_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                198  Warning[25]: Label 'FLASH_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 RCC_IRQHandler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",203  War
-                                ning[25]: Label 'RCC_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                203  Warning[25]: Label 'RCC_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 EXTI0_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",208  War
-                                ning[25]: Label 'EXTI0_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                208  Warning[25]: Label 'EXTI0_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 EXTI1_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",213  War
-                                ning[25]: Label 'EXTI1_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                213  Warning[25]: Label 'EXTI1_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 EXTI2_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",218  War
-                                ning[25]: Label 'EXTI2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                218  Warning[25]: Label 'EXTI2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 EXTI3_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",223  War
-                                ning[25]: Label 'EXTI3_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                223  Warning[25]: Label 'EXTI3_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 EXTI4_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",228  War
-                                ning[25]: Label 'EXTI4_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                228  Warning[25]: Label 'EXTI4_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 DMA1_Channel1_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",233  War
-                                ning[25]: Label 'DMA1_Channel1_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                233  Warning[25]: Label 'DMA1_Channel1_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 DMA1_Channel2_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",238  War
-                                ning[25]: Label 'DMA1_Channel2_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                238  Warning[25]: Label 'DMA1_Channel2_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 DMA1_Channel3_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",243  War
-                                ning[25]: Label 'DMA1_Channel3_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                243  Warning[25]: Label 'DMA1_Channel3_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 DMA1_Channel4_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",248  War
-                                ning[25]: Label 'DMA1_Channel4_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                248  Warning[25]: Label 'DMA1_Channel4_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 DMA1_Channel5_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",253  War
-                                ning[25]: Label 'DMA1_Channel5_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                253  Warning[25]: Label 'DMA1_Channel5_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 DMA1_Channel6_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",258  War
-                                ning[25]: Label 'DMA1_Channel6_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                258  Warning[25]: Label 'DMA1_Channel6_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 DMA1_Channel7_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",263  War
-                                ning[25]: Label 'DMA1_Channel7_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                263  Warning[25]: Label 'DMA1_Channel7_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
                                 ADC1_2_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",268  War
-                                ning[25]: Label 'ADC1_2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                268  Warning[25]: Label 'ADC1_2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 USB_HP_CAN1_TX_IRQHandler
                                 ------------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",273  War
-                                ning[25]: Label 'USB_HP_CAN1_TX_IRQHandler' is
-                        defined pubweak in a section implicitly declared
-                        root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                273  Warning[25]: Label 'USB_HP_CAN1_TX_IRQHan
+                       dler' is defined pubweak in a section implicitly
+                        declared root
                                 USB_LP_CAN1_RX0_IRQHandler
                                 -------------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",278  War
-                                ning[25]: Label 'USB_LP_CAN1_RX0_IRQHandler'
-                        is defined pubweak in a section implicitly declared
-                        root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                278  Warning[25]: Label 'USB_LP_CAN1_RX0_IRQHa
+                       ndler' is defined pubweak in a section implicitly
+                        declared root
                                 CAN1_RX1_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",283  War
-                                ning[25]: Label 'CAN1_RX1_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                283  Warning[25]: Label 'CAN1_RX1_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 CAN1_SCE_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",288  War
-                                ning[25]: Label 'CAN1_SCE_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                288  Warning[25]: Label 'CAN1_SCE_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 EXTI9_5_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",293  War
-                                ning[25]: Label 'EXTI9_5_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                293  Warning[25]: Label 'EXTI9_5_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 TIM1_BRK_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",298  War
-                                ning[25]: Label 'TIM1_BRK_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                298  Warning[25]: Label 'TIM1_BRK_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 TIM1_UP_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",303  War
-                                ning[25]: Label 'TIM1_UP_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                303  Warning[25]: Label 'TIM1_UP_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 TIM1_TRG_COM_IRQHandler
                                 ----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",308  War
-                                ning[25]: Label 'TIM1_TRG_COM_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                308  Warning[25]: Label 'TIM1_TRG_COM_IRQHandl
+                       er' is defined pubweak in a section implicitly declared
                         root
                                 TIM1_CC_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",313  War
-                                ning[25]: Label 'TIM1_CC_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                313  Warning[25]: Label 'TIM1_CC_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 TIM2_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",318  War
-                                ning[25]: Label 'TIM2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                318  Warning[25]: Label 'TIM2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 TIM3_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",323  War
-                                ning[25]: Label 'TIM3_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                323  Warning[25]: Label 'TIM3_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 TIM4_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",328  War
-                                ning[25]: Label 'TIM4_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                328  Warning[25]: Label 'TIM4_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 I2C1_EV_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",333  War
-                                ning[25]: Label 'I2C1_EV_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                333  Warning[25]: Label 'I2C1_EV_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 I2C1_ER_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",338  War
-                                ning[25]: Label 'I2C1_ER_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                338  Warning[25]: Label 'I2C1_ER_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 I2C2_EV_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",343  War
-                                ning[25]: Label 'I2C2_EV_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                343  Warning[25]: Label 'I2C2_EV_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 I2C2_ER_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",348  War
-                                ning[25]: Label 'I2C2_ER_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                348  Warning[25]: Label 'I2C2_ER_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 SPI1_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",353  War
-                                ning[25]: Label 'SPI1_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                353  Warning[25]: Label 'SPI1_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 SPI2_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",358  War
-                                ning[25]: Label 'SPI2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                358  Warning[25]: Label 'SPI2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 USART1_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",363  War
-                                ning[25]: Label 'USART1_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                363  Warning[25]: Label 'USART1_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 USART2_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",368  War
-                                ning[25]: Label 'USART2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                368  Warning[25]: Label 'USART2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 USART3_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",373  War
-                                ning[25]: Label 'USART3_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                373  Warning[25]: Label 'USART3_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
                                 EXTI15_10_IRQHandler
                                 -------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",378  War
-                                ning[25]: Label 'EXTI15_10_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                378  Warning[25]: Label 'EXTI15_10_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 RTCAlarm_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",383  War
-                                ning[25]: Label 'RTCAlarm_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                383  Warning[25]: Label 'RTCAlarm_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
                                 USBWakeUp_IRQHandler
                                 -------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",388  War
-                                ning[25]: Label 'USBWakeUp_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                388  Warning[25]: Label 'USBWakeUp_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
 
 
@@ -622,11 +651,12 @@
   125                           Reset_Handler
                                 Reset_Handler
                                 ------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",125  War
-                                ning[25]: Label 'Reset_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                125  Warning[25]: Label 'Reset_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   126    00000000 0148                  LDR     R0, =SystemInit
   127    00000002 8047                  BLX     R0
   128    00000004 0148                  LDR     R0, =__iar_program_start
@@ -640,11 +670,12 @@
   133                           NMI_Handler
                                 NMI_Handler
                                 ----------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",133  War
-                                ning[25]: Label 'NMI_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                133  Warning[25]: Label 'NMI_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   134    00000000 ........              B NMI_Handler
   135                           
   136                                   PUBWEAK HardFault_Handler
@@ -652,11 +683,12 @@
   138                           HardFault_Handler
                                 HardFault_Handler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",138  War
-                                ning[25]: Label 'HardFault_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                138  Warning[25]: Label 'HardFault_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   139    00000000 ........              B HardFault_Handler
   140                           
   141                                   PUBWEAK MemManage_Handler
@@ -664,11 +696,12 @@
   143                           MemManage_Handler
                                 MemManage_Handler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",143  War
-                                ning[25]: Label 'MemManage_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                143  Warning[25]: Label 'MemManage_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   144    00000000 ........              B MemManage_Handler
   145                           
   146                                   PUBWEAK BusFault_Handler
@@ -676,11 +709,12 @@
   148                           BusFault_Handler
                                 BusFault_Handler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",148  War
-                                ning[25]: Label 'BusFault_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                148  Warning[25]: Label 'BusFault_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   149    00000000 ........              B BusFault_Handler
   150                           
   151                                   PUBWEAK UsageFault_Handler
@@ -688,11 +722,11 @@
   153                           UsageFault_Handler
                                 UsageFault_Handler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",153  War
-                                ning[25]: Label 'UsageFault_Handler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                153  Warning[25]: Label 'UsageFault_Handler'
+                        is defined pubweak in a section implicitly declared
                         root
   154    00000000 ........              B UsageFault_Handler
   155                           
@@ -701,11 +735,12 @@
   158                           SVC_Handler
                                 SVC_Handler
                                 ----------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",158  War
-                                ning[25]: Label 'SVC_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                158  Warning[25]: Label 'SVC_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   159    00000000 ........              B SVC_Handler
   160                           
   161                                   PUBWEAK DebugMon_Handler
@@ -713,11 +748,12 @@
   163                           DebugMon_Handler
                                 DebugMon_Handler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",163  War
-                                ning[25]: Label 'DebugMon_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                163  Warning[25]: Label 'DebugMon_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   164    00000000 ........              B DebugMon_Handler
   165                           
   166                                   PUBWEAK PendSV_Handler
@@ -725,11 +761,12 @@
   168                           PendSV_Handler
                                 PendSV_Handler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",168  War
-                                ning[25]: Label 'PendSV_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                168  Warning[25]: Label 'PendSV_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   169    00000000 ........              B PendSV_Handler
   170                           
   171                                   PUBWEAK SysTick_Handler
@@ -737,11 +774,12 @@
   173                           SysTick_Handler
                                 SysTick_Handler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",173  War
-                                ning[25]: Label 'SysTick_Handler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                173  Warning[25]: Label 'SysTick_Handler' is
+                        defined pubweak in a section implicitly declared
+                        root
   174    00000000 ........              B SysTick_Handler
   175                           
   176                                   PUBWEAK WWDG_IRQHandler
@@ -749,11 +787,12 @@
   178                           WWDG_IRQHandler
                                 WWDG_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",178  War
-                                ning[25]: Label 'WWDG_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                178  Warning[25]: Label 'WWDG_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   179    00000000 ........              B WWDG_IRQHandler
   180                           
   181                                   PUBWEAK PVD_IRQHandler
@@ -761,11 +800,12 @@
   183                           PVD_IRQHandler
                                 PVD_IRQHandler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",183  War
-                                ning[25]: Label 'PVD_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                183  Warning[25]: Label 'PVD_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   184    00000000 ........              B PVD_IRQHandler
   185                           
   186                                   PUBWEAK TAMPER_IRQHandler
@@ -773,11 +813,12 @@
   188                           TAMPER_IRQHandler
                                 TAMPER_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",188  War
-                                ning[25]: Label 'TAMPER_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                188  Warning[25]: Label 'TAMPER_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   189    00000000 ........              B TAMPER_IRQHandler
   190                           
   191                                   PUBWEAK RTC_IRQHandler
@@ -785,11 +826,12 @@
   193                           RTC_IRQHandler
                                 RTC_IRQHandler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",193  War
-                                ning[25]: Label 'RTC_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                193  Warning[25]: Label 'RTC_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   194    00000000 ........              B RTC_IRQHandler
   195                           
   196                                   PUBWEAK FLASH_IRQHandler
@@ -797,11 +839,12 @@
   198                           FLASH_IRQHandler
                                 FLASH_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",198  War
-                                ning[25]: Label 'FLASH_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                198  Warning[25]: Label 'FLASH_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   199    00000000 ........              B FLASH_IRQHandler
   200                           
   201                                   PUBWEAK RCC_IRQHandler
@@ -809,11 +852,12 @@
   203                           RCC_IRQHandler
                                 RCC_IRQHandler
                                 -------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",203  War
-                                ning[25]: Label 'RCC_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                203  Warning[25]: Label 'RCC_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   204    00000000 ........              B RCC_IRQHandler
   205                           
   206                                   PUBWEAK EXTI0_IRQHandler
@@ -821,11 +865,12 @@
   208                           EXTI0_IRQHandler
                                 EXTI0_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",208  War
-                                ning[25]: Label 'EXTI0_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                208  Warning[25]: Label 'EXTI0_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   209    00000000 ........              B EXTI0_IRQHandler
   210                           
   211                                   PUBWEAK EXTI1_IRQHandler
@@ -833,11 +878,12 @@
   213                           EXTI1_IRQHandler
                                 EXTI1_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",213  War
-                                ning[25]: Label 'EXTI1_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                213  Warning[25]: Label 'EXTI1_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   214    00000000 ........              B EXTI1_IRQHandler
   215                           
   216                                   PUBWEAK EXTI2_IRQHandler
@@ -845,11 +891,12 @@
   218                           EXTI2_IRQHandler
                                 EXTI2_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",218  War
-                                ning[25]: Label 'EXTI2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                218  Warning[25]: Label 'EXTI2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   219    00000000 ........              B EXTI2_IRQHandler
   220                           
   221                                   PUBWEAK EXTI3_IRQHandler
@@ -857,11 +904,12 @@
   223                           EXTI3_IRQHandler
                                 EXTI3_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",223  War
-                                ning[25]: Label 'EXTI3_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                223  Warning[25]: Label 'EXTI3_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   224    00000000 ........              B EXTI3_IRQHandler
   225                           
   226                                   PUBWEAK EXTI4_IRQHandler
@@ -869,11 +917,12 @@
   228                           EXTI4_IRQHandler
                                 EXTI4_IRQHandler
                                 ---------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",228  War
-                                ning[25]: Label 'EXTI4_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                228  Warning[25]: Label 'EXTI4_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   229    00000000 ........              B EXTI4_IRQHandler
   230                           
   231                                   PUBWEAK DMA1_Channel1_IRQHandler
@@ -881,11 +930,11 @@
   233                           DMA1_Channel1_IRQHandler
                                 DMA1_Channel1_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",233  War
-                                ning[25]: Label 'DMA1_Channel1_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                233  Warning[25]: Label 'DMA1_Channel1_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   234    00000000 ........              B DMA1_Channel1_IRQHandler
   235                           
@@ -894,11 +943,11 @@
   238                           DMA1_Channel2_IRQHandler
                                 DMA1_Channel2_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",238  War
-                                ning[25]: Label 'DMA1_Channel2_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                238  Warning[25]: Label 'DMA1_Channel2_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   239    00000000 ........              B DMA1_Channel2_IRQHandler
   240                           
@@ -907,11 +956,11 @@
   243                           DMA1_Channel3_IRQHandler
                                 DMA1_Channel3_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",243  War
-                                ning[25]: Label 'DMA1_Channel3_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                243  Warning[25]: Label 'DMA1_Channel3_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   244    00000000 ........              B DMA1_Channel3_IRQHandler
   245                           
@@ -920,11 +969,11 @@
   248                           DMA1_Channel4_IRQHandler
                                 DMA1_Channel4_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",248  War
-                                ning[25]: Label 'DMA1_Channel4_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                248  Warning[25]: Label 'DMA1_Channel4_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   249    00000000 ........              B DMA1_Channel4_IRQHandler
   250                           
@@ -933,11 +982,11 @@
   253                           DMA1_Channel5_IRQHandler
                                 DMA1_Channel5_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",253  War
-                                ning[25]: Label 'DMA1_Channel5_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                253  Warning[25]: Label 'DMA1_Channel5_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   254    00000000 ........              B DMA1_Channel5_IRQHandler
   255                           
@@ -946,11 +995,11 @@
   258                           DMA1_Channel6_IRQHandler
                                 DMA1_Channel6_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",258  War
-                                ning[25]: Label 'DMA1_Channel6_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                258  Warning[25]: Label 'DMA1_Channel6_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   259    00000000 ........              B DMA1_Channel6_IRQHandler
   260                           
@@ -959,11 +1008,11 @@
   263                           DMA1_Channel7_IRQHandler
                                 DMA1_Channel7_IRQHandler
                                 -----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",263  War
-                                ning[25]: Label 'DMA1_Channel7_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                263  Warning[25]: Label 'DMA1_Channel7_IRQHand
+                       ler' is defined pubweak in a section implicitly declared
                         root
   264    00000000 ........              B DMA1_Channel7_IRQHandler
   265                           
@@ -972,11 +1021,12 @@
   268                           ADC1_2_IRQHandler
                                 ADC1_2_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",268  War
-                                ning[25]: Label 'ADC1_2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                268  Warning[25]: Label 'ADC1_2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   269    00000000 ........              B ADC1_2_IRQHandler
   270                           
   271                                   PUBWEAK USB_HP_CAN1_TX_IRQHandler
@@ -984,12 +1034,12 @@
   273                           USB_HP_CAN1_TX_IRQHandler
                                 USB_HP_CAN1_TX_IRQHandler
                                 ------------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",273  War
-                                ning[25]: Label 'USB_HP_CAN1_TX_IRQHandler' is
-                        defined pubweak in a section implicitly declared
-                        root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                273  Warning[25]: Label 'USB_HP_CAN1_TX_IRQHan
+                       dler' is defined pubweak in a section implicitly
+                        declared root
   274    00000000 ........              B USB_HP_CAN1_TX_IRQHandler
   275                           
   276                                   PUBWEAK USB_LP_CAN1_RX0_IRQHandler
@@ -997,12 +1047,12 @@
   278                           USB_LP_CAN1_RX0_IRQHandler
                                 USB_LP_CAN1_RX0_IRQHandler
                                 -------------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",278  War
-                                ning[25]: Label 'USB_LP_CAN1_RX0_IRQHandler'
-                        is defined pubweak in a section implicitly declared
-                        root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                278  Warning[25]: Label 'USB_LP_CAN1_RX0_IRQHa
+                       ndler' is defined pubweak in a section implicitly
+                        declared root
   279    00000000 ........              B USB_LP_CAN1_RX0_IRQHandler
   280                           
   281                                   PUBWEAK CAN1_RX1_IRQHandler
@@ -1010,11 +1060,11 @@
   283                           CAN1_RX1_IRQHandler
                                 CAN1_RX1_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",283  War
-                                ning[25]: Label 'CAN1_RX1_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                283  Warning[25]: Label 'CAN1_RX1_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   284    00000000 ........              B CAN1_RX1_IRQHandler
   285                           
@@ -1023,11 +1073,11 @@
   288                           CAN1_SCE_IRQHandler
                                 CAN1_SCE_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",288  War
-                                ning[25]: Label 'CAN1_SCE_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                288  Warning[25]: Label 'CAN1_SCE_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   289    00000000 ........              B CAN1_SCE_IRQHandler
   290                           
@@ -1036,11 +1086,11 @@
   293                           EXTI9_5_IRQHandler
                                 EXTI9_5_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",293  War
-                                ning[25]: Label 'EXTI9_5_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                293  Warning[25]: Label 'EXTI9_5_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   294    00000000 ........              B EXTI9_5_IRQHandler
   295                           
@@ -1049,11 +1099,11 @@
   298                           TIM1_BRK_IRQHandler
                                 TIM1_BRK_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",298  War
-                                ning[25]: Label 'TIM1_BRK_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                298  Warning[25]: Label 'TIM1_BRK_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   299    00000000 ........              B TIM1_BRK_IRQHandler
   300                           
@@ -1062,11 +1112,11 @@
   303                           TIM1_UP_IRQHandler
                                 TIM1_UP_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",303  War
-                                ning[25]: Label 'TIM1_UP_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                303  Warning[25]: Label 'TIM1_UP_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   304    00000000 ........              B TIM1_UP_IRQHandler
   305                           
@@ -1075,11 +1125,11 @@
   308                           TIM1_TRG_COM_IRQHandler
                                 TIM1_TRG_COM_IRQHandler
                                 ----------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",308  War
-                                ning[25]: Label 'TIM1_TRG_COM_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                308  Warning[25]: Label 'TIM1_TRG_COM_IRQHandl
+                       er' is defined pubweak in a section implicitly declared
                         root
   309    00000000 ........              B TIM1_TRG_COM_IRQHandler
   310                           
@@ -1088,11 +1138,11 @@
   313                           TIM1_CC_IRQHandler
                                 TIM1_CC_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",313  War
-                                ning[25]: Label 'TIM1_CC_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                313  Warning[25]: Label 'TIM1_CC_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   314    00000000 ........              B TIM1_CC_IRQHandler
   315                           
@@ -1101,11 +1151,12 @@
   318                           TIM2_IRQHandler
                                 TIM2_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",318  War
-                                ning[25]: Label 'TIM2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                318  Warning[25]: Label 'TIM2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   319    00000000 ........              B TIM2_IRQHandler
   320                           
   321                                   PUBWEAK TIM3_IRQHandler
@@ -1113,11 +1164,12 @@
   323                           TIM3_IRQHandler
                                 TIM3_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",323  War
-                                ning[25]: Label 'TIM3_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                323  Warning[25]: Label 'TIM3_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   324    00000000 ........              B TIM3_IRQHandler
   325                           
   326                                   PUBWEAK TIM4_IRQHandler
@@ -1125,11 +1177,12 @@
   328                           TIM4_IRQHandler
                                 TIM4_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",328  War
-                                ning[25]: Label 'TIM4_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                328  Warning[25]: Label 'TIM4_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   329    00000000 ........              B TIM4_IRQHandler
   330                           
   331                                   PUBWEAK I2C1_EV_IRQHandler
@@ -1137,11 +1190,11 @@
   333                           I2C1_EV_IRQHandler
                                 I2C1_EV_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",333  War
-                                ning[25]: Label 'I2C1_EV_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                333  Warning[25]: Label 'I2C1_EV_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   334    00000000 ........              B I2C1_EV_IRQHandler
   335                           
@@ -1150,11 +1203,11 @@
   338                           I2C1_ER_IRQHandler
                                 I2C1_ER_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",338  War
-                                ning[25]: Label 'I2C1_ER_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                338  Warning[25]: Label 'I2C1_ER_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   339    00000000 ........              B I2C1_ER_IRQHandler
   340                           
@@ -1163,11 +1216,11 @@
   343                           I2C2_EV_IRQHandler
                                 I2C2_EV_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",343  War
-                                ning[25]: Label 'I2C2_EV_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                343  Warning[25]: Label 'I2C2_EV_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   344    00000000 ........              B I2C2_EV_IRQHandler
   345                           
@@ -1176,11 +1229,11 @@
   348                           I2C2_ER_IRQHandler
                                 I2C2_ER_IRQHandler
                                 -----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",348  War
-                                ning[25]: Label 'I2C2_ER_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                348  Warning[25]: Label 'I2C2_ER_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   349    00000000 ........              B I2C2_ER_IRQHandler
   350                           
@@ -1189,11 +1242,12 @@
   353                           SPI1_IRQHandler
                                 SPI1_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",353  War
-                                ning[25]: Label 'SPI1_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                353  Warning[25]: Label 'SPI1_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   354    00000000 ........              B SPI1_IRQHandler
   355                           
   356                                   PUBWEAK SPI2_IRQHandler
@@ -1201,11 +1255,12 @@
   358                           SPI2_IRQHandler
                                 SPI2_IRQHandler
                                 --------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",358  War
-                                ning[25]: Label 'SPI2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                358  Warning[25]: Label 'SPI2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   359    00000000 ........              B SPI2_IRQHandler
   360                           
   361                                   PUBWEAK USART1_IRQHandler
@@ -1213,11 +1268,12 @@
   363                           USART1_IRQHandler
                                 USART1_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",363  War
-                                ning[25]: Label 'USART1_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                363  Warning[25]: Label 'USART1_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   364    00000000 ........              B USART1_IRQHandler
   365                           
   366                                   PUBWEAK USART2_IRQHandler
@@ -1225,11 +1281,12 @@
   368                           USART2_IRQHandler
                                 USART2_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",368  War
-                                ning[25]: Label 'USART2_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                368  Warning[25]: Label 'USART2_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   369    00000000 ........              B USART2_IRQHandler
   370                           
   371                                   PUBWEAK USART3_IRQHandler
@@ -1237,11 +1294,12 @@
   373                           USART3_IRQHandler
                                 USART3_IRQHandler
                                 ----------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",373  War
-                                ning[25]: Label 'USART3_IRQHandler' is defined
-                        pubweak in a section implicitly declared root
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                373  Warning[25]: Label 'USART3_IRQHandler' is
+                        defined pubweak in a section implicitly declared
+                        root
   374    00000000 ........              B USART3_IRQHandler
   375                           
   376                                   PUBWEAK EXTI15_10_IRQHandler
@@ -1249,11 +1307,11 @@
   378                           EXTI15_10_IRQHandler
                                 EXTI15_10_IRQHandler
                                 -------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",378  War
-                                ning[25]: Label 'EXTI15_10_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                378  Warning[25]: Label 'EXTI15_10_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   379    00000000 ........              B EXTI15_10_IRQHandler
   380                           
@@ -1262,11 +1320,11 @@
   383                           RTCAlarm_IRQHandler
                                 RTCAlarm_IRQHandler
                                 ------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",383  War
-                                ning[25]: Label 'RTCAlarm_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                383  Warning[25]: Label 'RTCAlarm_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   384    00000000 ........              B RTCAlarm_IRQHandler
   385                           
@@ -1275,11 +1333,11 @@
   388                           USBWakeUp_IRQHandler
                                 USBWakeUp_IRQHandler
                                 -------------------^
-                                "D:\SmartCardBox\SMART_CARD\Project\Libraries\
-                       CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar\startup
-                       _stm32f10x_md.s",388  War
-                                ning[25]: Label 'USBWakeUp_IRQHandler' is
-                        defined pubweak in a section implicitly declared
+                                "D:\GitHub2\smart_box_q5\SMART_CARD\Project\Li
+                       braries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\iar
+                       \startup_stm32f10x_md.s",
+                                388  Warning[25]: Label 'USBWakeUp_IRQHandler'
+                        is defined pubweak in a section implicitly declared
                         root
   389    00000000 ........              B USBWakeUp_IRQHandler
   390                           
