@@ -1,0 +1,6 @@
+---- lf_dst_WUPA Matches (5 in 1 files) ----
+User_rf_app.c (app\rf):u16 lf_dst_WUPA=0x4148;
+User_rf_app.c (app\rf):	LFData[0] = (u8)(lf_dst_WUPA>>8);
+User_rf_app.c (app\rf):	LFData[1] = (u8)lf_dst_WUPA;
+User_rf_app.c (app\rf):	LFData[2] = (u8)(lf_dst_WUPA>>8);
+User_rf_app.c (app\rf):	LFData[3] = (u8)lf_dst_WUPA;

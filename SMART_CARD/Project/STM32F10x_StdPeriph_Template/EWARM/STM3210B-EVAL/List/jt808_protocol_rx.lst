@@ -1,0 +1,675 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:26
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_protocol_rx.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_protocol_rx.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\jt808_protocol_rx.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\jt808_protocol_rx.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_protocol_rx.c
+      1          #include "user_system_cfg.h"
+      2          
+      3          #ifdef USE_PROTOCOL_JT808
+      4          
+      5          #include <stdint.h>
+      6          #include <stdio.h>
+      7          #include <string.h>
+      8          #include "stdlib.h"
+      9          
+     10          
+     11          #include "os.h"
+     12          #include "os_cfg_app.h"			//TCB,STACK,PRIORITY,任务间消息的结构体定义和宏
+     13          //#include "rsa_main.h"
+     14          //#include "aes.h"
+     15          
+     16          #ifdef USE_SIM800_MODEM
+     17          #include "modem_sim800_app.h"
+     18          #include "modem_sim800_AT_pro.h"
+     19          #endif
+     20          
+     21          #ifdef USE_SIM6320_MODEM
+     22          #include "modem_sim6320_app.h"
+     23          #include "modem_sim6320_AT_pro.h"
+     24          #endif
+     25          
+     26          #ifdef USE_MC20_MODEM
+     27          #include "modem_MC20_app.h"
+     28          #include "modem_MC20_AT_pro.h"
+     29          #endif
+     30          
+     31          
+     32          //#include "sgmw_telecom_prot_manage.h"
+     33          #include "user_debug_app.h"
+     34          #include "user_gps_app.h"
+     35          #include "user_rtc_app.h"
+     36          
+     37          
+     38          #include "jt808_protocol_rx.h"
+     39          #include "jt808_protocol_tx.h"
+     40          #include "jt808_pt_misc.h"
+     41          
+     42          #define JT808_PT_APP_LAYER_BUF_MAX  300  
+     43          static uint8_t 	jt808_pt_app_layer_buf[JT808_PT_APP_LAYER_BUF_MAX];//未转义的完整包
+     44          static uint8_t 	jt808_DeEscaped_frame_buf[300]; //解析后的协议包
+     45          OS_Q 	rx_server_ack_q;
+     46          TASK_MSG_T 	upgrade_req_msg;
+     47          
+     48          extern uint32_t SD_save_time 	; //SD卡保存时间0自动
+     49          extern uint8_t 	SD_save_status 	; //是否保存SD卡 0不保存 1保存
+     50          extern uint8_t 	report_TBC_type ; //tbc回传方式 1 DBC 2 TBC
+     51          
+     52          
+     53          int post_report_result(uint16_t serial,uint16_t cmd_id,uint8_t result)
+     54          {
+     55          	OS_ERR os_err;
+     56          	remote_result_q_t *ptr;
+     57          
+     58          	ptr=(remote_result_q_t *)user_malloc(sizeof(remote_result_q_t),__FUNCTION__);
+     59          	if(ptr!=NULL)
+     60          	{
+     61          		ptr->cmd_id=REMOTE_RECV_TASK_ID;
+     62          		ptr->serial=serial;
+     63          		ptr->cmd_id=cmd_id;
+     64          		ptr->result=result;
+     65          		
+     66          		OSQPost(&rx_server_ack_q,(uint8_t *)ptr,sizeof(remote_result_q_t),OS_OPT_POST_FIFO,&os_err);
+     67          		
+     68          	    if(os_err == OS_ERR_NONE)
+     69          		{
+     70          			InfoPrintf("post rx_server_ack q, ok\r\n");
+     71          		}
+     72          		else
+     73          		{
+     74          			InfoPrintf("post rx_server_ack q, fail--%d--\r\n",os_err);
+     75          			user_free(ptr,__FUNCTION__);
+     76          		}
+     77          		
+     78          		return os_err;
+     79          	}
+     80          	else
+     81          	{
+     82          		InfoPrintf("post rx_server_ack q, malloc fail\r\n");
+     83          	}
+     84          
+     85          	return -1;	
+     86          }
+     87          
+     88          
+     89          /*
+     90           *****************************************************************************************
+     91           *function name:int post_ack_to_server_q(uint16_t serial,uint16_t cmd_id,uint8_t result)
+     92           * Description: 
+     93           * Arguments  : ack_type:FATHER_MSG_T_ACK_TO_SERVER_SET,//应答服务器下发的设置结果
+     94           *                       FATHER_MSG_T_ACK_TO_SERVER_QRY//应答服务器的查询结果
+     95           *              serial:server's serial,cmd_id:server's cmd id,result:tbox's result 
+     96           * Returns	  : 
+     97           * create by:liaoxc 2015-11-24			
+     98           *******************************************************************************************
+     99           */
+    100          int post_ack_to_server_q(uint8_t ack_type,uint16_t serial,uint16_t cmd_id,uint8_t result)
+    101          {
+    102          	return 0;
+    103          }
+    104          
+    105          /*
+    106          *********************************************************************************************************
+    107          *function name: post_update_param_msg
+    108          * Description: give a message 
+    109          * Arguments  : 
+    110          *
+    111          * Returns	 : 0	 If the call was successful
+    112          *		   -1	 If not
+    113          *Created by:	   newone 2015-12-31
+    114          *********************************************************************************************************
+    115          */
+    116          int  post_update_param_msg(OS_TCB* pTCB,enum task_msg_src_id_t src_id,uint8_t msg_type,uint8_t cmd_id)
+    117          {
+    118            return 0;
+    119          
+    120          }
+    121          
+    122          
+    123          #define ___pro_rx_gprs_data________________________________________________________________________
+    124          
+    125          
+    126          /*****************************************
+    127          功能:异或校验
+    128          参数:*buf 校验起始位，Len 校验包的长度
+    129          返回:1->校验失败0->校验成功
+    130          作者:weicheng 2015.11.19
+    131          *******************************************/
+    132          uint8_t  jt808_xor_checkout_func(uint8_t *buf, uint16_t Len)
+    133          {
+    134             uint16_t i;
+    135             uint8_t checkNumber=0;
+    136             for(i=1;i<Len-2;i++) //i=1 跳过包头，Len-2减去包尾和校验位
+    137             {
+    138                checkNumber ^= buf[i];
+    139             }
+    140             if(checkNumber == buf[Len-2])
+    141             {
+    142                 return 0;
+    143             }
+    144             else //失败
+    145             {
+    146                  return 1;
+    147             }
+    148          }
+    149          
+    150          uint32_t high_low_switch_32(uint32_t a)
+    151          {
+    152          	uint32_t b;
+    153          	b= ((a<<24)|((a&0x0000FF00)<<8)|((a&0x00FF0000)>>8)|(a>>24));
+    154          	return b;
+    155          }
+    156          
+    157          uint16_t high_low_switch_16(uint16_t a)
+    158          {
+    159          	uint16_t b;
+    160          	b=((a<<8)|(a>>8));
+    161          	return b;
+    162          }
+    163          
+    164          
+    165          static void jt808_parse_one_rx_protocol_frame(uint8_t *buf, uint16_t len)
+    166          {
+    167          	//protocol format
+    168          	uint16_t msg_id;
+    169          	uint16_t msg_attribute;
+    170          	uint8_t  tm_phone_num[6]={0};
+    171          	uint16_t msg_sn;
+    172          	uint16_t multi_package_amount;
+    173          	uint16_t multi_package_sn;
+    174          	
+    175          	//user define
+    176          	JT808_PROTCOL_T *jt808_prot;
+    177          	uint8_t  multi_package_flag;
+    178          	uint8_t  *pdu_data;
+    179          	uint16_t pdu_data_len;
+    180          	int i;
+    181          
+    182          	InfoPrintf("接收空中协议帧:");
+    183          	for(i=0;i<len;i++)
+    184          	{
+    185          		InfoPrintf("%02X,",buf[i]);
+    186          	}	
+    187          	InfoPrintf("\r\n");
+    188          
+    189          	jt808_prot=(JT808_PROTCOL_T *)buf;
+    190          	
+    191          	msg_id=jt808_prot->msg_id;
+    192          	msg_id=high_low_switch_16(msg_id);
+    193          
+    194          	msg_attribute=jt808_prot->msg_attribute;
+    195          	msg_attribute=high_low_switch_16(msg_attribute);
+    196          
+    197          	memcpy(tm_phone_num,jt808_prot->tm_phone_num,6);
+    198          	
+    199          	msg_sn=jt808_prot->msg_sn;
+    200          	msg_sn=high_low_switch_16(msg_sn);
+    201          
+    202          	if(((msg_attribute>>13)&0x0001)!=0)
+    203          	{
+    204          		multi_package_flag=1;
+    205          	}
+    206          	else
+    207          	{
+    208          		multi_package_flag=0;
+    209          	}
+    210          
+    211          	pdu_data_len= msg_attribute&0x01FF;
+    212          
+    213          	if(multi_package_flag==1)
+    214          	{
+    215          		multi_package_amount=*((uint16_t *)(jt808_prot->pdu));
+    216          		multi_package_amount=high_low_switch_16(multi_package_amount);
+    217          		
+    218          		multi_package_sn=*((uint16_t *)(jt808_prot->pdu+2));
+    219          		multi_package_sn=high_low_switch_16(multi_package_sn);
+    220          
+    221          		pdu_data=(jt808_prot->pdu+4);
+    222          	}
+    223          	else
+    224          	{
+    225          		pdu_data=jt808_prot->pdu;
+    226          	}
+    227          
+    228          	InfoPrintf("RX:msg id=%04X\r\n",msg_id);
+    229          
+    230          	switch (msg_id)
+    231          	{
+    232          		case SV_COM_ACK_ID:
+    233          			jt808_com_ack_pro(pdu_data,pdu_data_len);
+    234          			break;
+    235          		case SV_ACK_TM_REG_ID:	
+    236                    	InfoPrintf("注册应答\r\n");
+    237          			jt808_ack_reg_pro(pdu_data,pdu_data_len);
+    238          			break;
+    239          		case SV_SET_TM_PARA_ID:					
+    240          			break;
+    241          		case SV_GET_TM_PARA_ID:				
+    242          			break;
+    243          		case SV_CTL_TM_ID:						
+    244          			break;
+    245          		case SV_GET_TM_GPS_INFO_ID:				
+    246          			break;
+    247          		case SV_TEMP_CTL_TRACK_GPS_ID:			
+    248          			break;
+    249          		case SV_EVENT_SET_ID:						
+    250          			break;
+    251          		case SV_ASK_QUESTION_ID:					
+    252          			break;
+    253          		case SV_INOF_PLAY_MENU_SET_ID:			
+    254          			break;
+    255          		case SV_INFO_SERVICE_ID:					
+    256          			break;
+    257          		case SV_PHONE_CALL_BACK_ID:				
+    258          			break;
+    259          		case SV_SET_TELEPHONE_BOOT_ID:			
+    260          			break;
+    261          		case SV_VEHICLE_CTL_ID:					
+    262          			break;
+    263          		case SV_SET_CIRCLE_AREA_ID:				
+    264          			break;
+    265          		case SV_DELETE_CIRCULAR_AREA_ID:			
+    266          			break;
+    267          		case SV_SET_RECTANGLE_AREA_ID:			
+    268          			break;
+    269          		case SV_DELETE_RECTANGLE_AREA_ID:			
+    270          			break;
+    271          		case SV_SET_POLYGON_AREA_ID:				
+    272          			break;
+    273          		case SV_DELETE_POLYGON_AREA_ID:			
+    274          			break;
+    275          		case SV_SET_ROUTE_ID:						
+    276          			break;
+    277          		case SV_DELETE_ROUTE_ID:					
+    278          			break;
+    279          		case SV_SAMPLE_TRAVEL_INFO_ID:			
+    280          			break;
+    281          		case SV_SET_TRAVEL_INFO_REC_PARA_ID:		
+    282          			break;
+    283          		case SV_ACK_MULTI_MEDIA_DATA_REP_ID:		
+    284          			break;
+    285          		case SV_CTL_TAKING_ONE_PHOTO_ID:			
+    286          			break;
+    287          		case SV_MULTI_MEDIA_DATA_INDEXING_ID:		
+    288          			break;
+    289          		case SV_STORED_MEDIA_DATA_REP_ID:			
+    290          			break;
+    291          		case SV_START_RECORDING_ID:				
+    292          			break;
+    293          		case SV_DATA_DOWN_DIRECTLY_ID:			
+    294          			break;
+    295          		case SV_RSA_PUBLIC_KEY_ID:	
+    296          			break;
+    297          		default:
+    298          			break;
+    299          	}
+    300          	
+    301          }
+    302          /*	
+    303          brief: extract one frame from the app layer cache buffer
+    304          
+    305          	input :
+    306          			app_buf      : wait for extract buf
+    307          			buf_valid_len: wait buf`s len
+    308          	output:
+    309          			extracted_frame_len: extracted frame`s length; 
+    310          			if >0 ,means extracted one frame successfully (important !!!)
+    311          			app caller should take care of this output parameter.
+    312          	return:
+    313          			-1		: error calling
+    314          			others	: need_shift_out_amount
+    315          */
+    316          static int jt808_extract_one_rx_prtocol_frame(uint8_t *app_buf,
+    317            											  int buf_valid_len,
+    318            											  int *extracted_frame_len)
+    319          {
+    320          	int i;
+    321          
+    322          	//-------------------------------
+    323          	for(i=0;i<buf_valid_len;i++)
+    324          	{
+    325          		if(JT808_PROTOCOL_FIX==app_buf[i])
+    326          		{
+    327          			break;
+    328          		}
+    329          	}
+    330          
+    331          	if(0 != i)
+    332          	{
+    333          		//找到HEAD,但在HEAD之前有乱码数据,先左移掉
+    334          		*extracted_frame_len=0;
+    335          		return i;
+    336          	}
+    337          
+    338          	//------------------------------
+    339          	for(i=1;i<buf_valid_len;i++)
+    340          	{
+    341          		if(JT808_PROTOCOL_FIX==app_buf[i])
+    342          		{
+    343          			break;
+    344          		}
+    345          	}
+    346          
+    347          	if(buf_valid_len==i)
+    348          	{
+    349          		*extracted_frame_len=0;
+    350          		return 0;
+    351          	}
+    352          
+    353          	if(i >= JT808_PT_FRAME_MININUM_LEN)
+    354          	{//ok
+    355          		*extracted_frame_len=(i+1);
+    356          		return (i+1);
+    357          	}
+    358          	else
+    359          	{//mininum len error
+    360          		*extracted_frame_len=0;
+    361          		return (i+1)-1;//retain the second JT808_PROTOCOL_FIX,it may be the HEAD_BYTE of next frame
+    362          	}
+    363          }
+    364          
+    365          uint8_t jt808_analysis_modem_gprs_q(uint8_t * ptr,uint16_t len)
+    366          {
+    367          	//int i;
+    368          	uint16_t ret;
+    369          	
+    370          	uint16_t DeEscaped_len;
+    371          	
+    372          	static int remain_len=0;	
+    373          	int extractOut_buf_len=0;
+    374          	int shift_len=0; 
+    375          	
+    376          	uint16_t input_len;
+    377          	uint16_t max_allow_copy_len;
+    378          	uint16_t one_time_copy_len;
+    379          
+    380          	input_len=len;
+    381          
+    382          	while(1)
+    383          	{
+    384          		max_allow_copy_len= JT808_PT_APP_LAYER_BUF_MAX-remain_len;
+    385          		if(input_len <= max_allow_copy_len)
+    386          		{
+    387          			one_time_copy_len=input_len;
+    388          			input_len-=input_len;
+    389          		}
+    390          		else
+    391          		{
+    392          			one_time_copy_len=max_allow_copy_len;
+    393          			input_len-=max_allow_copy_len;
+    394          		}
+    395          
+    396          		if(0==one_time_copy_len)
+    397          		{
+    398          			break;
+    399          		}
+    400          
+    401          		memcpy(jt808_pt_app_layer_buf+remain_len,ptr,one_time_copy_len);
+    402          
+    403          		remain_len += one_time_copy_len;
+    404          		
+    405          		while(1)	
+    406          		{
+    407          			if(remain_len>=JT808_PT_FRAME_MININUM_LEN)//15:mininum of one jt808 frame 
+    408          			{
+    409          				shift_len=jt808_extract_one_rx_prtocol_frame(jt808_pt_app_layer_buf,remain_len,&extractOut_buf_len);
+    410          				
+    411          				if(shift_len>0)
+    412          				{
+    413          					if(extractOut_buf_len>0)
+    414          					{	
+    415          						DeEscaped_len = jt808_DeEscape_package(jt808_DeEscaped_frame_buf,
+    416          															  jt808_pt_app_layer_buf,
+    417          															  extractOut_buf_len);//反转义
+    418          						
+    419          						ret = jt808_xor_checkout_func(jt808_DeEscaped_frame_buf,DeEscaped_len);
+    420          						if(0==ret)
+    421          						{
+    422          							jt808_parse_one_rx_protocol_frame(jt808_DeEscaped_frame_buf,DeEscaped_len);
+    423          						}
+    424          						else
+    425          						{
+    426          							//校验错误
+    427          							InfoPrintf("GPRS帧校验错误\r\n");
+    428          							shift_len -= 1;//retain the last HEAD_BYTE, it may be the head of next frame.
+    429          						}
+    430          					}
+    431          					else
+    432          					{
+    433          
+    434          					}
+    435          					
+    436          					remain_len-=shift_len;
+    437          					
+    438          					memmove(jt808_pt_app_layer_buf,jt808_pt_app_layer_buf+shift_len,remain_len);
+    439          				}
+    440          				else
+    441          				{
+    442          					break;
+    443          				}
+    444          			}
+    445          			else
+    446          			{
+    447          				//rx bytes amount is not equal or more than the protocol frame mininum 
+    448          				break;
+    449          			}
+    450          		}
+    451          	}
+    452          
+    453          	return 0;
+    454          }
+    455          
+    456          #define ___TASK________________________________A_______________________
+    457          
+    458          void *pend_recv_gprs_data_q(uint16_t wait_time,uint16_t *msg_size)
+    459          {
+    460          	uint8_t *ptr;
+    461          	OS_ERR os_err;
+    462          	ptr=(uint8_t *)OSQPend(&modem_receive_gprs_data_q,wait_time,OS_OPT_PEND_BLOCKING,msg_size,NULL,&os_err);
+    463          	if(os_err==OS_ERR_NONE)
+    464          	{
+    465          		return ptr;
+    466          	}
+    467          
+    468          	if(ptr!=NULL)
+    469          	{
+    470          		user_free(ptr,__FUNCTION__);
+    471          	}
+    472          	return NULL;
+    473          }
+    474          
+    475          void remote_receive_task(void *p_para)
+    476          {
+    477          	uint8_t * p_buf = NULL;
+    478          	OS_ERR os_err; 
+    479          	uint16_t msg_size;
+    480          	p_para = p_para;
+    481          	
+    482          	OSQCreate(&rx_server_ack_q,"rx_server_ack q;",4,&os_err);
+    483          	if(os_err != OS_ERR_NONE)
+    484          	{
+    485          		InfoPrintf("create rx_server_ack q fail\r\n");
+    486          	}
+    487          
+    488          	while(1)
+    489          	{
+    490          		p_buf = pend_recv_gprs_data_q(1000,&msg_size);
+    491          		if(p_buf != NULL)
+    492          		{
+    493          			jt808_analysis_modem_gprs_q(p_buf,msg_size);
+    494          			user_free(p_buf,__FUNCTION__);
+    495          			OSSchedRoundRobinYield(&os_err);
+    496          		}
+    497          		else if(os_err != OS_ERR_TIMEOUT)
+    498          		{
+    499          			user_delay_ms(TIME_100ms);
+    500          		}
+    501          	}
+    502          }
+    503          
+    504          #endif
+    505          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   high_low_switch_16
+       0   high_low_switch_32
+      32   jt808_analysis_modem_gprs_q
+        32   -> InfoPrintf
+        32   -> __aeabi_memcpy
+        32   -> __aeabi_memmove
+        32   -> jt808_DeEscape_package
+        32   -> jt808_extract_one_rx_prtocol_frame
+        32   -> jt808_parse_one_rx_protocol_frame
+        32   -> jt808_xor_checkout_func
+       4   jt808_extract_one_rx_prtocol_frame
+      32   jt808_parse_one_rx_protocol_frame
+        32   -> InfoPrintf
+        32   -> __aeabi_memcpy
+        32   -> high_low_switch_16
+        32   -> jt808_ack_reg_pro
+        32   -> jt808_com_ack_pro
+       8   jt808_xor_checkout_func
+      16   pend_recv_gprs_data_q
+        16   -> OSQPend
+        16   -> user_free
+       0   post_ack_to_server_q
+      32   post_report_result
+        32   -> InfoPrintf
+        32   -> OSQPost
+        32   -> user_free
+        32   -> user_malloc
+       0   post_update_param_msg
+      16   remote_receive_task
+        16   -> InfoPrintf
+        16   -> OSQCreate
+        16   -> OSSchedRoundRobinYield
+        16   -> jt808_analysis_modem_gprs_q
+        16   -> pend_recv_gprs_data_q
+        16   -> user_delay_ms
+        16   -> user_free
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable19
+       4  ??DataTable19_1
+       4  ??DataTable19_2
+       4  ??DataTable19_3
+      28  ?_0
+      36  ?_1
+      20  ?_10
+      32  ?_11
+      36  ?_2
+       8  ?_3
+      16  ?_4
+       8  ?_5
+       4  ?_6
+      20  ?_7
+      12  ?_8
+      20  ?_9
+      12  high_low_switch_16
+      24  high_low_switch_32
+     158  jt808_analysis_modem_gprs_q
+      68  jt808_extract_one_rx_prtocol_frame
+     172  jt808_parse_one_rx_protocol_frame
+      46  jt808_xor_checkout_func
+      44  pend_recv_gprs_data_q
+       4  post_ack_to_server_q
+     122  post_report_result
+       4  post_update_param_msg
+     604  remain_len
+          jt808_pt_app_layer_buf
+          jt808_DeEscaped_frame_buf
+      96  remote_receive_task
+      48  rx_server_ack_q
+      16  upgrade_req_msg
+      64  -- Other
+
+ 
+   668 bytes in section .bss
+    12 bytes in section .rodata
+ 1 058 bytes in section .text
+ 
+ 1 058 bytes of CODE  memory
+    12 bytes of CONST memory
+   668 bytes of DATA  memory
+
+Errors: none
+Warnings: none

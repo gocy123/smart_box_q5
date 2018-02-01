@@ -1,0 +1,427 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:29
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  D:\SmartCardBox\SMART_CARD\Project\Utility\ringbuffer.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\Utility\ringbuffer.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\ringbuffer.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\ringbuffer.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\Utility\ringbuffer.c
+      1          /*
+      2          	最好不要在应用层直接调用ringbuffer的相关函数，应该增加一个中间层，
+      3          	增加一个上锁保护机制，封装好后，再供APP层调用，即可避免队列数据错乱
+      4          	                                                           ---zgc
+      5          
+      6           * File      : ringbuffer.c
+      7           * This file is part of RT-Thread RTOS
+      8           * COPYRIGHT (C) 2012, RT-Thread Development Team
+      9           *
+     10           *  This program is free software; you can redistribute it and/or modify
+     11           *  it under the terms of the GNU General Public License as published by
+     12           *  the Free Software Foundation; either version 2 of the License, or
+     13           *  (at your option) any later version.
+     14           *
+     15           *  This program is distributed in the hope that it will be useful,
+     16           *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+     17           *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     18           *  GNU General Public License for more details.
+     19           *
+     20           *  You should have received a copy of the GNU General Public License along
+     21           *  with this program; if not, write to the Free Software Foundation, Inc.,
+     22           *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+     23           *
+     24           * Change Logs:
+     25           * Date           Author       Notes
+     26           * 2012-09-30     Bernard      first version.
+     27           * 2013-05-08     Grissiom     reimplement
+     28           */
+     29          
+     30          #include <string.h>
+     31          #include <stdint.h>
+     32          #include "ringbuffer.h"
+     33             
+     34          /* RT_ALIGN_SIZE*/
+     35          #define RT_ALIGN_SIZE	4   
+     36          /**
+     37           * @ingroup BasicDef
+     38           *
+     39           * @def RT_ALIGN(size, align)
+     40           * Return the most contiguous size aligned at specified width. RT_ALIGN(13, 4)
+     41           * would return 16.
+     42           */
+     43          #define RT_ALIGN(size, align)           (((size) + (align) - 1) & ~((align) - 1))
+     44          /**
+     45           * @ingroup BasicDef
+     46           *
+     47           * @def RT_ALIGN_DOWN(size, align)
+     48           * Return the down number of aligned at specified width. RT_ALIGN_DOWN(13, 4)
+     49           * would return 12. 
+     50           */
+     51          #define RT_ALIGN_DOWN(size, align)      ((size) & ~((align) - 1))   
+     52          
+     53          void rt_ringbuffer_init(struct rt_ringbuffer *rb,
+     54                                  uint8_t           *pool,
+     55                                  int16_t            size)
+     56          {
+     57              //RT_ASSERT(rb != RT_NULL);
+     58              //RT_ASSERT(size > 0)
+     59          
+     60              /* initialize read and write index */
+     61              rb->read_mirror = rb->read_index = 0;
+     62              rb->write_mirror = rb->write_index = 0;
+     63          
+     64              /* set buffer pool and size */
+     65              rb->buffer_ptr = pool;
+     66              rb->buffer_size = RT_ALIGN_DOWN(size, RT_ALIGN_SIZE);
+     67          }
+     68          
+     69          /**
+     70           * put a block of data into ring buffer
+     71           */
+     72          uint32_t rt_ringbuffer_put(struct rt_ringbuffer *rb,
+     73                                      const uint8_t     *ptr,
+     74                                      uint16_t           length)
+     75          {
+     76              uint16_t size;
+     77          
+     78              //RT_ASSERT(rb != RT_NULL);
+     79          
+     80              /* whether has enough space */
+     81              size = rt_ringbuffer_space_len(rb);
+     82          
+     83              /* no space */
+     84              if (size == 0)
+     85                  return 0;
+     86          
+     87              /* drop some data */
+     88              if (size < length)
+     89                  length = size;
+     90          
+     91              if (rb->buffer_size - rb->write_index > length)
+     92              {
+     93                  /* read_index - write_index = empty space */
+     94                  memcpy(&rb->buffer_ptr[rb->write_index], ptr, length);
+     95                  /* this should not cause overflow because there is enough space for
+     96                   * length of data in current mirror */
+     97                  rb->write_index += length;
+     98                  return length;
+     99              }
+    100          
+    101              memcpy(&rb->buffer_ptr[rb->write_index],
+    102                     &ptr[0],
+    103                     rb->buffer_size - rb->write_index);
+    104              memcpy(&rb->buffer_ptr[0],
+    105                     &ptr[rb->buffer_size - rb->write_index],
+    106                     length - (rb->buffer_size - rb->write_index));
+    107          
+    108              /* we are going into the other side of the mirror */
+    109              rb->write_mirror = ~rb->write_mirror;
+    110              rb->write_index = length - (rb->buffer_size - rb->write_index);
+    111          
+    112              return length;
+    113          }
+    114          
+    115          /**
+    116           * put a block of data into ring buffer
+    117           *
+    118           * When the buffer is full, it will discard the old data.
+    119           */
+    120          uint32_t rt_ringbuffer_put_force(struct rt_ringbuffer *rb,
+    121                                      const uint8_t     *ptr,
+    122                                      uint16_t           length)
+    123          {
+    124              enum rt_ringbuffer_state old_state;
+    125          
+    126              //RT_ASSERT(rb != RT_NULL);
+    127          
+    128              old_state = rt_ringbuffer_status(rb);
+    129          
+    130              if (length > rb->buffer_size)
+    131                  length = rb->buffer_size;
+    132          
+    133              if (rb->buffer_size - rb->write_index > length)
+    134              {
+    135                  /* read_index - write_index = empty space */
+    136                  memcpy(&rb->buffer_ptr[rb->write_index], ptr, length);
+    137                  /* this should not cause overflow because there is enough space for
+    138                   * length of data in current mirror */
+    139                  rb->write_index += length;
+    140          
+    141                  if (old_state == RT_RINGBUFFER_FULL)
+    142                      rb->read_index = rb->write_index;
+    143          
+    144                  return length;
+    145              }
+    146          
+    147              memcpy(&rb->buffer_ptr[rb->write_index],
+    148                     &ptr[0],
+    149                     rb->buffer_size - rb->write_index);
+    150              memcpy(&rb->buffer_ptr[0],
+    151                     &ptr[rb->buffer_size - rb->write_index],
+    152                     length - (rb->buffer_size - rb->write_index));
+    153          
+    154              /* we are going into the other side of the mirror */
+    155              rb->write_mirror = ~rb->write_mirror;
+    156              rb->write_index = length - (rb->buffer_size - rb->write_index);
+    157          
+    158              if (old_state == RT_RINGBUFFER_FULL)
+    159              {
+    160                  rb->read_mirror = ~rb->read_mirror;
+    161                  rb->read_index = rb->write_index;
+    162              }
+    163          
+    164              return length;
+    165          }
+    166          
+    167          /**
+    168           *  get data from ring buffer
+    169           */
+    170          uint32_t rt_ringbuffer_get(struct rt_ringbuffer *rb,
+    171                                      uint8_t           *ptr,
+    172                                      uint16_t           length)
+    173          {
+    174              uint32_t size;
+    175          
+    176              //RT_ASSERT(rb != RT_NULL);
+    177          
+    178              /* whether has enough data  */
+    179              size = rt_ringbuffer_data_len(rb);
+    180          
+    181              /* no data */
+    182              if (size == 0)
+    183                  return 0;
+    184          
+    185              /* less data */
+    186              if (size < length)
+    187                  length = size;
+    188          
+    189              if (rb->buffer_size - rb->read_index > length)
+    190              {
+    191                  /* copy all of data */
+    192                  memcpy(ptr, &rb->buffer_ptr[rb->read_index], length);
+    193                  /* this should not cause overflow because there is enough space for
+    194                   * length of data in current mirror */
+    195                  rb->read_index += length;
+    196                  return length;
+    197              }
+    198          
+    199              memcpy(&ptr[0],
+    200                     &rb->buffer_ptr[rb->read_index],
+    201                     rb->buffer_size - rb->read_index);
+    202              memcpy(&ptr[rb->buffer_size - rb->read_index],
+    203                     &rb->buffer_ptr[0],
+    204                     length - (rb->buffer_size - rb->read_index));
+    205          
+    206              /* we are going into the other side of the mirror */
+    207              rb->read_mirror = ~rb->read_mirror;
+    208              rb->read_index = length - (rb->buffer_size - rb->read_index);
+    209          
+    210              return length;
+    211          }
+    212          
+    213          /**
+    214           * put a character into ring buffer
+    215           */
+    216          uint32_t rt_ringbuffer_putchar(struct rt_ringbuffer *rb, const uint8_t ch)
+    217          {
+    218              //RT_ASSERT(rb != RT_NULL);
+    219          
+    220              /* whether has enough space */
+    221              if (!rt_ringbuffer_space_len(rb))
+    222                  return 0;
+    223          
+    224              rb->buffer_ptr[rb->write_index] = ch;
+    225          
+    226              /* flip mirror */
+    227              if (rb->write_index == rb->buffer_size-1)
+    228              {
+    229                  rb->write_mirror = ~rb->write_mirror;
+    230                  rb->write_index = 0;
+    231              }
+    232              else
+    233              {
+    234                  rb->write_index++;
+    235              }
+    236          
+    237              return 1;
+    238          }
+    239          
+    240          /**
+    241           * put a character into ring buffer
+    242           *
+    243           * When the buffer is full, it will discard one old data.
+    244           */
+    245          uint32_t rt_ringbuffer_putchar_force(struct rt_ringbuffer *rb, const uint8_t ch)
+    246          {
+    247              enum rt_ringbuffer_state old_state;
+    248          
+    249              //RT_ASSERT(rb != RT_NULL);
+    250          
+    251              old_state = rt_ringbuffer_status(rb);
+    252          
+    253              rb->buffer_ptr[rb->write_index] = ch;
+    254          
+    255              /* flip mirror */
+    256              if (rb->write_index == rb->buffer_size-1)
+    257              {
+    258                  rb->write_mirror = ~rb->write_mirror;
+    259                  rb->write_index = 0;
+    260                  if (old_state == RT_RINGBUFFER_FULL)
+    261                  {
+    262                      rb->read_mirror = ~rb->read_mirror;
+    263                      rb->read_index = rb->write_index;
+    264                  }
+    265              }
+    266              else
+    267              {
+    268                  rb->write_index++;
+    269                  if (old_state == RT_RINGBUFFER_FULL)
+    270                      rb->read_index = rb->write_index;
+    271              }
+    272          
+    273              return 1;
+    274          }
+    275          
+    276          /**
+    277           * get a character from a ringbuffer
+    278           */
+    279          uint32_t rt_ringbuffer_getchar(struct rt_ringbuffer *rb, uint8_t *ch)
+    280          {
+    281              //RT_ASSERT(rb != RT_NULL);
+    282          
+    283              /* ringbuffer is empty */
+    284              if (!rt_ringbuffer_data_len(rb))
+    285                  return 0;
+    286          
+    287              /* put character */
+    288              *ch = rb->buffer_ptr[rb->read_index];
+    289          
+    290              if (rb->read_index == rb->buffer_size-1)
+    291              {
+    292                  rb->read_mirror = ~rb->read_mirror;
+    293                  rb->read_index = 0;
+    294              }
+    295              else
+    296              {
+    297                  rb->read_index++;
+    298              }
+    299          
+    300              return 1;
+    301          }
+    302          
+    303          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   rt_ringbuffer_data_len
+         8   -> rt_ringbuffer_status
+      24   rt_ringbuffer_get
+        24   -> __aeabi_memcpy
+        24   -> rt_ringbuffer_data_len
+      16   rt_ringbuffer_getchar
+        16   -> rt_ringbuffer_data_len
+       0   rt_ringbuffer_init
+      24   rt_ringbuffer_put
+        24   -> __aeabi_memcpy
+        24   -> rt_ringbuffer_data_len
+      24   rt_ringbuffer_put_force
+        24   -> __aeabi_memcpy
+        24   -> rt_ringbuffer_status
+      16   rt_ringbuffer_putchar
+        16   -> rt_ringbuffer_data_len
+      16   rt_ringbuffer_putchar_force
+        16   -> rt_ringbuffer_status
+       0   rt_ringbuffer_status
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      60  rt_ringbuffer_data_len
+     146  rt_ringbuffer_get
+      70  rt_ringbuffer_getchar
+      34  rt_ringbuffer_init
+     148  rt_ringbuffer_put
+     182  rt_ringbuffer_put_force
+      72  rt_ringbuffer_putchar
+     104  rt_ringbuffer_putchar_force
+      40  rt_ringbuffer_status
+
+ 
+ 856 bytes in section .text
+ 
+ 856 bytes of CODE memory
+
+Errors: none
+Warnings: none

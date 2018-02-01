@@ -1,0 +1,302 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:26
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_pt_misc.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_pt_misc.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\jt808_pt_misc.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\jt808_pt_misc.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_pt_misc.c
+      1          #include "user_system_cfg.h"
+      2          
+      3          #ifdef USE_PROTOCOL_JT808
+      4          
+      5          #include <stdint.h>
+      6          #include <string.h>
+      7          #include <math.h>
+      8          
+      9          #include "os.h"
+     10          #include "os_cfg_app.h"
+     11          
+     12          #include "user_debug_app.h"
+     13          
+     14          #include "jt808_pt_misc.h"
+     15          #include "jt808_protocol_tx.h"
+     16          
+     17          extern 	int post_report_result(uint16_t serial,uint16_t cmd_id,uint8_t result);
+     18          #ifdef MOBI_IP
+     19          uint8_t authorize_code[13]="123456789088\0";
+     20          #else
+     21          uint8_t authorize_code[49]="52EAD799A38944C081606191D538DB7B0001215A3782096-\0";
+     22          #endif
+     23          
+     24          uint8_t register_ok_flag=0;
+     25          
+     26          uint8_t get_register_ok_flag(void)
+     27          {
+     28          	return register_ok_flag;
+     29          }
+     30          
+     31          uint8_t *get_authorize_code(void)
+     32          {
+     33          	return authorize_code;
+     34          }
+     35          
+     36          
+     37          void jt808_com_ack_pro(uint8_t *buf,uint16_t len)
+     38          {
+     39          	uint16_t ack_sn;
+     40          	uint16_t ack_id;
+     41          	uint8_t  result;
+     42          	
+     43          	ack_sn= *(uint16_t *)(buf);
+     44          	ack_sn=high_low_switch_16(ack_sn);
+     45          	
+     46          	ack_id= *(uint16_t *)(buf+2);
+     47          	ack_id=high_low_switch_16(ack_id);
+     48          	
+     49          	result= *(buf+4);
+     50          	
+     51          	InfoPrintf("应答流水号:%04X--",ack_sn);
+     52          	InfoPrintf("应答ID:%04X--",ack_id);
+     53          	InfoPrintf("应答结果:%d\r\n",result);
+     54          
+     55          	post_report_result(ack_sn,ack_id,result);
+     56          }
+     57          
+     58          
+     59          
+     60          /*void jt808_ack_reg_pro(uint8_t *buf,uint16_t len)
+     61          {
+     62          	uint16_t ack_sn;
+     63          	uint8_t  result;
+     64          	int i=0;
+     65          	uint8_t authorize_len;
+     66          	
+     67          	ack_sn= *(uint16_t *)(buf);
+     68          	ack_sn=high_low_switch_16(ack_sn);
+     69          	
+     70          	result= *(buf+2);
+     71          	
+     72          	InfoPrintf("应答流水号:%04X\r\n",ack_sn);
+     73          	InfoPrintf("应答结果:%d\r\n",result);
+     74          	
+     75          	authorize_len=len-3;
+     76          	
+     77          	memcpy(authorize_code,&buf[i+3],48);
+     78          
+     79          	
+     80          	#if 1
+     81          	InfoPrintf("鉴权码 char (%d):",authorize_len);
+     82          	for(i=0;i<authorize_len;i++)
+     83          	{
+     84          		InfoPrintf("%c",authorize_code[i]);
+     85          	}
+     86          	InfoPrintf("\r\n");
+     87          		
+     88          	InfoPrintf("鉴权码 HEX(%d):",authorize_len);
+     89          	for(i=0;i<authorize_len;i++)
+     90          	{
+     91          		InfoPrintf("%02X",authorize_code[i]);
+     92          	}
+     93          	InfoPrintf("\r\n");
+     94          	#endif
+     95          
+     96          	
+     97          	if(authorize_len>0)
+     98          	{
+     99          		register_ok_flag=1;
+    100          	}
+    101          
+    102          	post_report_result(ack_sn,TM_REGISTER_ID,result);
+    103          }*/
+    104          
+    105          void jt808_ack_reg_pro(uint8_t *buf,uint16_t len)
+    106          {
+    107          	uint16_t ack_sn;
+    108          	uint8_t  result;
+    109          	int i=0;
+    110          	uint8_t authorize_len;
+    111          	
+    112          	ack_sn= *(uint16_t *)(buf);
+    113          	ack_sn=high_low_switch_16(ack_sn);
+    114          	
+    115          	result= *(buf+2);
+    116          	
+    117          	InfoPrintf("应答流水号:%04X\r\n",ack_sn);
+    118          	InfoPrintf("应答结果:%d\r\n",result);
+    119          	
+    120          	authorize_len=len-3;
+    121          	if(authorize_len>0)
+    122          	{
+    123          		register_ok_flag=1;
+    124          		memset(authorize_code,0,48);
+    125          		memcpy(authorize_code,&buf[i+3],48);
+    126          	}
+    127          
+    128          	#if 1
+    129          	InfoPrintf("鉴权码 char (%d):",authorize_len);
+    130          	for(i=0;i<authorize_len;i++)
+    131          	{
+    132          		InfoPrintf("%c",authorize_code[i]);
+    133          	}
+    134          	InfoPrintf("\r\n");
+    135          		
+    136          	InfoPrintf("鉴权码 HEX(%d):",authorize_len);
+    137          	for(i=0;i<authorize_len;i++)
+    138          	{
+    139          		InfoPrintf("%02X",authorize_code[i]);
+    140          	}
+    141          	InfoPrintf("\r\n");
+    142          	#endif
+    143          	
+    144          
+    145          	post_report_result(ack_sn,TM_REGISTER_ID,result);
+    146          }
+    147          
+    148          
+    149          
+    150          
+    151          
+    152          
+    153          
+    154          
+    155          
+    156          
+    157          
+    158          
+    159          
+    160          
+    161          
+    162          
+    163          
+    164          
+    165          
+    166          
+    167          #endif
+    168          
+    169          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   get_authorize_code
+       0   get_register_ok_flag
+      24   jt808_ack_reg_pro
+        24   -> InfoPrintf
+        24   -> __aeabi_memcpy
+        24   -> __aeabi_memset4
+        24   -> high_low_switch_16
+         0   -> post_report_result
+      16   jt808_com_ack_pro
+        16   -> InfoPrintf
+        16   -> high_low_switch_16
+         0   -> post_report_result
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+      20  ?_0
+      16  ?_1
+      16  ?_2
+      20  ?_3
+      20  ?_4
+       4  ?_5
+       4  ?_6
+      16  ?_7
+       8  ?_8
+      52  authorize_code
+       4  get_authorize_code
+       6  get_register_ok_flag
+     174  jt808_ack_reg_pro
+      66  jt808_com_ack_pro
+       1  register_ok_flag
+
+ 
+   1 byte  in section .bss
+  52 bytes in section .data
+   8 bytes in section .rodata
+ 382 bytes in section .text
+ 
+ 382 bytes of CODE  memory
+   8 bytes of CONST memory
+  53 bytes of DATA  memory
+
+Errors: none
+Warnings: none

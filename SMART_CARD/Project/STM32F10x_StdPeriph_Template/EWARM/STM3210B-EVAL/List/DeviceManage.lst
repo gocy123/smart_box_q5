@@ -1,0 +1,838 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:26
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\dev_manage\DeviceManage.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\dev_manage\DeviceManage.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\DeviceManage.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\DeviceManage.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\dev_manage\DeviceManage.c
+      1          #include <stdlib.h>
+      2          #include <string.h>
+      3          
+      4          
+      5          
+      6          //user app head file
+      7          #include "os.h"
+      8          #include "heads.h"
+      9          #include "os_cfg_app.h"
+     10          
+     11          #include "stm32f10x.h"
+     12          #include "stm32f10x_it.h"
+     13          
+     14          #include "user_rf_app.h"
+     15          
+     16          void *user_malloc(unsigned int size,char const*caller)
+     17          {
+     18          	void *ptr;
+     19          
+     20          	uint32_t check_size;
+     21          	uint32_t temp;
+     22          
+     23          	if(size%8==0)
+     24          	{
+     25          		check_size=size;
+     26          	}
+     27          	else
+     28          	{
+     29          		temp=size%8;
+     30          		
+     31          		check_size=(8-temp)+size;
+     32          	}
+     33          
+     34          	check_size+=8;
+     35          
+     36              CPU_SR_ALLOC();
+     37          
+     38          
+     39              CPU_CRITICAL_ENTER();
+     40          
+     41          	ptr=malloc(check_size);
+     42          	if(ptr!=NULL)
+     43          	{
+     44          		memset(ptr,0,check_size);
+     45          		 CPU_CRITICAL_EXIT();	
+     46                  return ptr;
+     47          	} 
+     48              else
+     49          	{
+     50          		 CPU_CRITICAL_EXIT();
+     51          		return NULL;
+     52              }
+     53          }
+     54          
+     55          void user_free(void *rmem,char const*caller)
+     56          {
+     57              CPU_SR_ALLOC();
+     58          
+     59          
+     60              CPU_CRITICAL_ENTER();
+     61          
+     62          
+     63          	if(rmem!=NULL)
+     64          	{
+     65          		free(rmem);
+     66          	}
+     67          	else
+     68          	{
+     69          		while(1);
+     70          	}
+     71          	
+     72              CPU_CRITICAL_EXIT();
+     73          	//return ;
+     74          }
+     75          
+     76          void user_delay_ms(uint32_t ms)
+     77          {
+     78          	OS_ERR os_err;
+     79          	OSTimeDly(ms, OS_OPT_TIME_DLY, &os_err);
+     80          }
+     81          /*return os running time*/
+     82          uint32_t user_get_os_time(void)
+     83          {
+     84          	OS_ERR os_err;
+     85          	return OSTimeGet(&os_err);
+     86          }
+     87          
+     88          void RCC_Configuration(void)
+     89          {  
+     90          	RCC_DeInit();											//RCC系统复位
+     91          	RCC_HSICmd(ENABLE);										//使能内部高速振荡
+     92          	FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);	//使能FLASH BUFFER
+     93          	FLASH_SetLatency(FLASH_Latency_2);						//Flash 2个等待周期
+     94          	RCC_HCLKConfig(RCC_SYSCLK_Div1);						//HCLK = SYSCLK
+     95          	RCC_PCLK2Config(RCC_HCLK_Div1);							//PCLK2 = HCLK
+     96          	RCC_PCLK1Config(RCC_HCLK_Div1);							//PCLK1 = HCLK
+     97          	while(RCC_GetFlagStatus(RCC_FLAG_HSIRDY) == RESET)		//等待 HSI 就绪
+     98          	{
+     99          
+    100          	}
+    101          	RCC_SYSCLKConfig(RCC_SYSCLKSource_HSI);					//选择 HSI 为系统时钟
+    102          	while(RCC_GetSYSCLKSource() != 0x00)					//等待系统时钟就绪
+    103          	{
+    104          
+    105          	}
+    106          	
+    107          	RCC_APB1PeriphClockCmd(	  RCC_APB1Periph_TIM2
+    108          							| RCC_APB1Periph_TIM4
+    109          							| RCC_APB1Periph_PWR 
+    110          							| RCC_APB1Periph_BKP
+    111          							//| RCC_APB1Periph_USART2
+    112          							#ifdef ENABLE_PRINT
+    113          							| RCC_APB1Periph_USART3
+    114          							#endif
+    115          							,ENABLE
+    116          						  );
+    117          
+    118          	RCC_APB2PeriphClockCmd(	  RCC_APB2Periph_GPIOA
+    119          							| RCC_APB2Periph_GPIOB
+    120          							| RCC_APB2Periph_USART1
+    121          							#ifdef EN_ADC1_CHN1
+    122          							| RCC_APB2Periph_ADC1
+    123          							#endif
+    124          							| RCC_APB2Periph_AFIO
+    125          							, ENABLE
+    126          						  );
+    127          	#ifdef EN_ADC1_CHN1
+    128          	RCC_ADCCLKConfig(RCC_PCLK2_Div4); 
+    129          	#endif
+    130          	
+    131          
+    132          }
+    133          
+    134          
+    135          /**
+    136            * @brief  Configures the nested vectored interrupt controller.
+    137            * @param  None
+    138            * @retval None
+    139            */
+    140          void NVIC_Configuration(void)
+    141          {
+    142          	NVIC_InitTypeDef NVIC_InitStructure={0};
+    143          
+    144          	///NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);	//设置向量表基址：0x08000000   
+    145          
+    146          	/* Configure the NVIC Preemption Priority Bits */  
+    147          	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);
+    148          
+    149          	/* Enable the USART1 Interrupt */
+    150          	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+    151          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    152          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    153          	NVIC_Init(&NVIC_InitStructure);
+    154          
+    155          	/* Enable the USARTz Interrupt */
+    156          	NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;
+    157          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+    158          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    159          	NVIC_Init(&NVIC_InitStructure);
+    160            
+    161            	/* Enable the USARTz Interrupt */
+    162          	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
+    163          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
+    164          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    165          	NVIC_Init(&NVIC_InitStructure);
+    166          
+    167          	
+    168          
+    169          	/* Configure and enable ADC interrupt */
+    170          	NVIC_InitStructure.NVIC_IRQChannel = ADC1_2_IRQn;
+    171          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+    172          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    173          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    174          	NVIC_Init(&NVIC_InitStructure);
+    175          
+    176          	/* Enable the RTC Interrupt */
+    177          	NVIC_InitStructure.NVIC_IRQChannel = RTC_IRQn;
+    178          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+    179          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    180          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    181          	NVIC_Init(&NVIC_InitStructure);
+    182          
+    183          	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;	//定时器时间中断通道
+    184          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+    185          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+    186          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    187          	NVIC_Init(&NVIC_InitStructure);  
+    188          }
+    189          
+    190          void TIM_Configuration(void)
+    191          {
+    192          	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+    193          	TIM_OCInitTypeDef 		TIM_OCInitStructure;
+    194          
+    195          	//TIM_TimeBaseStructure.TIM_Period = 32;				//重载值 8us
+    196          	TIM_TimeBaseStructure.TIM_Period = 32;				//重载值 8us
+    197          	TIM_TimeBaseStructure.TIM_Prescaler = 0;			//分频值PCLK/(X+1)
+    198          	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+    199          	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_CenterAligned1;	//中央对齐模式1
+    200          	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
+    201          	TIM_TimeBaseInit(LF125K_TIMx, &TIM_TimeBaseStructure);
+    202          
+    203          	TIM_OCInitStructure.TIM_OCMode 		= TIM_OCMode_PWM1;			//PWM输出模式1
+    204          	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;	
+    205          	TIM_OCInitStructure.TIM_OutputNState= TIM_OutputNState_Disable;
+    206          	TIM_OCInitStructure.TIM_Pulse 		= 16;						//占空比 50%
+    207          	TIM_OCInitStructure.TIM_OCPolarity 	= TIM_OCPolarity_Low;
+    208          	TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_Low;
+    209          	TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Reset;
+    210          	TIM_OCInitStructure.TIM_OCNIdleState= TIM_OCNIdleState_Reset;
+    211          
+    212          	TIM_OC1Init(LF125K_TIMx, &TIM_OCInitStructure);	//LF信号发生器1
+    213          	TIM_OC1PreloadConfig(LF125K_TIMx, TIM_OCPreload_Enable);
+    214          
+    215          	TIM_OC2Init(LF125K_TIMx, &TIM_OCInitStructure);	//LF信号发生器2
+    216          	TIM_OC2PreloadConfig(LF125K_TIMx, TIM_OCPreload_Enable);  
+    217          
+    218          	TIM_ARRPreloadConfig(LF125K_TIMx, ENABLE);
+    219          	TIM_CtrlPWMOutputs(LF125K_TIMx, ENABLE);
+    220          	TIM_Cmd(LF125K_TIMx, DISABLE);   
+    221          
+    222          	TIM_TimeBaseStructure.TIM_Period 		= U16_MAX;
+    223          	TIM_TimeBaseStructure.TIM_Prescaler 	= 15;
+    224          	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+    225          	TIM_TimeBaseStructure.TIM_CounterMode 	= TIM_CounterMode_Up;
+    226          	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
+    227          	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);	//周期2us定时计数器
+    228          	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);		//清中断，以免一启用中断后立即产生中断
+    229          	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+    230          	//TIM_Cmd(TIM2, ENABLE);
+    231          }
+    232          
+    233          
+    234          
+    235          void EXTI0_Config(void)
+    236          {
+    237          	EXTI_InitTypeDef   EXTI_InitStructure;
+    238          	GPIO_InitTypeDef   GPIO_InitStructure;
+    239          	NVIC_InitTypeDef   NVIC_InitStructure;
+    240          	/* Enable GPIOA clock */
+    241          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+    242          
+    243          	/* Configure PA.00 pin as input floating */
+    244          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    245          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    246          	GPIO_Init(GPIOB, &GPIO_InitStructure);
+    247          
+    248          	/* Enable AFIO clock */
+    249          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    250          
+    251          	/* Connect EXTI0 Line to PA.00 pin */
+    252          	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource0);
+    253          
+    254          	/* Configure EXTI0 line */
+    255          	EXTI_InitStructure.EXTI_Line = EXTI_Line0;
+    256          	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    257          	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;  
+    258          	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    259          	EXTI_Init(&EXTI_InitStructure);
+    260          
+    261          	/* Enable and set EXTI0 Interrupt to the lowest priority */
+    262          	NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;
+    263          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0F;
+    264          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0F;
+    265          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    266          	NVIC_Init(&NVIC_InitStructure);
+    267          }
+    268          void EXTI1_Config(void)
+    269          {
+    270          	EXTI_InitTypeDef   EXTI_InitStructure;
+    271          	GPIO_InitTypeDef   GPIO_InitStructure;
+    272          	NVIC_InitTypeDef   NVIC_InitStructure;
+    273          	/* Enable GPIOA clock */
+    274          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+    275          
+    276          	/* Configure PA.00 pin as input floating */
+    277          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    278          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    279          	GPIO_Init(GPIOB, &GPIO_InitStructure);
+    280          
+    281          	/* Enable AFIO clock */
+    282          	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    283          
+    284          	/* Connect EXTI0 Line to PA.00 pin */
+    285          	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource1);
+    286          
+    287          	/* Configure EXTI0 line */
+    288          	EXTI_InitStructure.EXTI_Line = EXTI_Line1;
+    289          	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    290          	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;  
+    291          	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    292          	EXTI_Init(&EXTI_InitStructure);
+    293          
+    294          	/* Enable and set EXTI0 Interrupt to the lowest priority */
+    295          	NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;
+    296          	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0F;
+    297          	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0E;
+    298          	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    299          	NVIC_Init(&NVIC_InitStructure);
+    300          }
+    301          
+    302          void Can0ManageTask(void *p_arg)
+    303          {
+    304          	p_arg=p_arg;
+    305          	while(1)
+    306          		{
+    307          			user_delay_ms(3000);
+    308          			InfoPrintf("Can0ManageTask ok\r\n");
+    309          		}
+    310          }
+    311          
+    312          
+    313          void ISO15765Task(void *p_arg)
+    314          {
+    315          	p_arg=p_arg;
+    316          	while(1)
+    317          			{
+    318          				user_delay_ms(3000);
+    319          				InfoPrintf("ISO15765Task ok\r\n");
+    320          			}
+    321          
+    322          }
+    323          
+    324          void StorageTask(void *p_arg)
+    325          {
+    326          	p_arg=p_arg;
+    327          	while(1)
+    328          			{
+    329          				user_delay_ms(3000);
+    330          				InfoPrintf("StorageTask ok\r\n");
+    331          			}
+    332          
+    333          }
+    334          
+    335          void creat_app_task(void)
+    336          {
+    337          	OS_ERR os_err;
+    338          
+    339          	#if 0
+    340          	OSTaskCreate((OS_TCB     *)&Can0ManageTask_Tcb,
+    341          			     (CPU_CHAR   *)((void *)"can0 manage Task"),
+    342          			     (OS_TASK_PTR )Can0ManageTask,
+    343          			     (void       *)0,
+    344          			     (OS_PRIO     )CAN0_MANAGE_TASK_PRIO,
+    345          			     (CPU_STK    *)Can0ManageTask_Stk,
+    346          			     (CPU_STK_SIZE)(CAN0_MANAGE_TASK_STK_SIZE/10),
+    347          			     (CPU_STK_SIZE)CAN0_MANAGE_TASK_STK_SIZE,
+    348          			     (OS_MSG_QTY  )CAN0_MANAGE_TASK_MSG_QTY,
+    349          			     (OS_TICK     )CAN0_MANAGE_TASK_TIME_QUANTA,
+    350          			     (void       *)0,
+    351          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    352          			     (OS_ERR     *)&os_err);
+    353          	if(os_err!=OS_ERR_NONE)
+    354          	{
+    355          		//return ;
+    356          	}
+    357          	else
+    358          	{
+    359          		//InfoPrintf("can0 manage Task created ok\r\n");
+    360          	}
+    361          	#endif
+    362          	
+    363          	#if 0
+    364          	OSTaskCreate((OS_TCB     *)&ModemManageTask_Tcb,
+    365          			     (CPU_CHAR   *)((void *)"modem manage Task"),
+    366          			     (OS_TASK_PTR )ModemManageTask,
+    367          			     (void       *)0,
+    368          			     (OS_PRIO     )MODEM_MANAGE_TASK_PRIO,
+    369          			     (CPU_STK    *)ModemManageTask_Stk,
+    370          			     (CPU_STK_SIZE)(MODEM_MANAGE_TASK_STK_SIZE/10),
+    371          			     (CPU_STK_SIZE)MODEM_MANAGE_TASK_STK_SIZE,
+    372          			     (OS_MSG_QTY  )MODEM_MANAGE_TASK_MSG_QTY,
+    373          			     (OS_TICK     )MODEM_MANAGE_TASK_TIME_QUANTA,
+    374          			     (void       *)0,
+    375          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    376          			     (OS_ERR     *)&os_err);
+    377          	if(os_err!=OS_ERR_NONE)
+    378          	{
+    379          		//return ;
+    380          	}
+    381          	else
+    382          	{
+    383          		//InfoPrintf("modem manage Task created ok\r\n");
+    384          	}
+    385          	#endif
+    386          
+    387          	
+    388          	#if 0
+    389          	OSTaskCreate((OS_TCB     *)&telecom_prot_manage_task_Tcb,
+    390          			     (CPU_CHAR   *)((void *)"telecom_prot_manage task"),
+    391          			     (OS_TASK_PTR )telecom_protocol_manage_task,
+    392          			     (void       *)0,
+    393          			     (OS_PRIO     )TELECOM_PROTOCOL_MANAGE_TASK_PRIO,
+    394          			     (CPU_STK    *)telecom_prot_manage_task_stk,
+    395          			     (CPU_STK_SIZE)(TELECOM_PROT_MANAGE_TASK_STK_SIZE/10),
+    396          			     (CPU_STK_SIZE)TELECOM_PROT_MANAGE_TASK_STK_SIZE,
+    397          			     (OS_MSG_QTY  )TELECOM_PROT_MANAGE_TASK_MSG_QTY,
+    398          			     (OS_TICK     )TELECOM_PROT_MANAGE_TASK_TIME_QUANTA,
+    399          			     (void       *)0,
+    400          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    401          			     (OS_ERR     *)&os_err);
+    402          	if(os_err!=OS_ERR_NONE)
+    403          	{
+    404          		//return ;
+    405          	}
+    406          	else
+    407          	{
+    408          		//InfoPrintf("report manage task created ok\r\n");
+    409          	}
+    410          	#endif
+    411          
+    412          	
+    413          	#if 0
+    414          	OSTaskCreate((OS_TCB     *)&GpsTask_Tcb,
+    415          			     (CPU_CHAR   *)((void *)"gps Task"),
+    416          			     (OS_TASK_PTR )GpsTask,
+    417          			     (void       *)0,
+    418          			     (OS_PRIO     )GPS_TASK_PRIO,
+    419          			     (CPU_STK    *)GpsTask_Stk,
+    420          			     (CPU_STK_SIZE)(GPS_TASK_STK_SIZE/10),
+    421          			     (CPU_STK_SIZE)GPS_TASK_STK_SIZE,
+    422          			     (OS_MSG_QTY  )GPS_TASK_MSG_QTY,
+    423          			     (OS_TICK     )GPS_TASK_TIME_QUANTA,
+    424          			     (void       *)0,
+    425          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    426          			     (OS_ERR     *)&os_err);
+    427          	if(os_err!=OS_ERR_NONE)
+    428          	{
+    429          		//return ;
+    430          	}
+    431          	else
+    432          	{
+    433          		//InfoPrintf("gps Task created ok\r\n");
+    434          	}
+    435          	#endif
+    436          	
+    437          	#if 1
+    438          	OSTaskCreate((OS_TCB     *)&rf_task_Tcb,
+    439          			     (CPU_CHAR   *)((void *)"rf Task"),
+    440          			     (OS_TASK_PTR )RfTask,
+    441          			     (void       *)0,
+    442          			     (OS_PRIO     )RF_TASK_PRIO,
+    443          			     (CPU_STK    *)rf_task_stk,
+    444          			     (CPU_STK_SIZE)(RF_TASK_STK_SIZE/10),
+    445          			     (CPU_STK_SIZE)RF_TASK_STK_SIZE,
+    446          			     (OS_MSG_QTY  )RF_TASK_MSG_QTY,
+    447          			     (OS_TICK     )RF_TASK_TIME_QUANTA,
+    448          			     (void       *)0,
+    449          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    450          			     (OS_ERR     *)&os_err);
+    451          	if(os_err!=OS_ERR_NONE)
+    452          	{
+    453          		//return ;
+    454          	}
+    455          	else
+    456          	{
+    457          		//InfoPrintf("rf Task created ok\r\n");
+    458          	}
+    459          	#endif
+    460          
+    461          	
+    462          	#if 0
+    463          	OSTaskCreate((OS_TCB     *)&ISO15765Task_Tcb,
+    464          			     (CPU_CHAR   *)((void *)"ISO15765 Task"),
+    465          			     (OS_TASK_PTR )ISO15765Task,
+    466          			     (void       *)0,
+    467          			     (OS_PRIO     )ISO15765_TASK_PRIO,
+    468          			     (CPU_STK    *)ISO15765Task_Stk,
+    469          			     (CPU_STK_SIZE)(ISO15765_TASK_STK_SIZE/10),
+    470          			     (CPU_STK_SIZE)ISO15765_TASK_STK_SIZE,
+    471          			     (OS_MSG_QTY  )ISO15765_TASK_MSG_QTY,
+    472          			     (OS_TICK     )ISO15765_TASK_TIME_QUANTA,
+    473          			     (void       *)0,
+    474          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    475          			     (OS_ERR     *)&os_err);
+    476          	if(os_err!=OS_ERR_NONE)
+    477          	{
+    478          		//return ;
+    479          	}
+    480          	else
+    481          	{
+    482          		//InfoPrintf("ISO15765 Task created ok\r\n");
+    483          	}
+    484          	#endif
+    485          
+    486          	
+    487          	#if 0
+    488          	OSTaskCreate((OS_TCB     *)&storage_task_Tcb,
+    489          			     (CPU_CHAR   *)((void *)"storage Task"),
+    490          			     (OS_TASK_PTR )StorageTask,
+    491          			     (void       *)0,
+    492          			     (OS_PRIO     )STORAGE_TASK_PRIO,
+    493          			     (CPU_STK    *)storage_task_stk,
+    494          			     (CPU_STK_SIZE)(STORAGE_TASK_STK_SIZE/10),
+    495          			     (CPU_STK_SIZE)STORAGE_TASK_STK_SIZE,
+    496          			     (OS_MSG_QTY  )STORAGE_TASK_MSG_QTY,
+    497          			     (OS_TICK     )STORAGE_TASK_TIME_QUANTA,
+    498          			     (void       *)0,
+    499          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    500          			     (OS_ERR     *)&os_err);
+    501          	if(os_err!=OS_ERR_NONE)
+    502          	{
+    503          		//return ;
+    504          	}
+    505          	else
+    506          	{
+    507          		//InfoPrintf("storage Task created ok\r\n");
+    508          	}
+    509          	#endif
+    510          
+    511          }
+    512          
+    513          
+    514          void DeviceManageTaskMsg_handle(void)
+    515          {
+    516          	OS_ERR os_err;
+    517          	uint8_t *p_msg;
+    518          	OS_MSG_SIZE msg_size;
+    519          	p_msg=OSTaskQPend(TIME_0ms,OS_OPT_PEND_NON_BLOCKING,&msg_size,NULL,&os_err);
+    520          	if(p_msg != NULL)
+    521          	{
+    522          		user_free(p_msg,__FUNCTION__);	
+    523          	}
+    524          }
+    525          
+    526          
+    527          
+    528          int DM_post_one_task_msg(OS_TCB *tcb,TASK_MSG_T task_msg)
+    529          {
+    530              OS_ERR os_err;
+    531          	TASK_MSG_T *task_manage_msg=NULL;
+    532          	TASK_MSG_T temp_msg;
+    533          	
+    534          	temp_msg=task_msg;	
+    535          	
+    536          	task_manage_msg=(TASK_MSG_T *)user_malloc(sizeof(TASK_MSG_T),__FUNCTION__);
+    537          	if(task_manage_msg!=NULL)
+    538          	{
+    539          		memcpy((uint8_t *)task_manage_msg,(uint8_t *)(&temp_msg),sizeof(TASK_MSG_T));
+    540          		
+    541          		OSTaskQPost(tcb,task_manage_msg,sizeof(TASK_MSG_T),OS_OPT_POST_FIFO,&os_err);	
+    542          		if(OS_ERR_NONE == os_err)
+    543          		{
+    544          			return 0;
+    545          		}
+    546          		else
+    547          		{
+    548          			InfoPrintf("post task q fail -%d-,free...\r\n",os_err);
+    549          			user_free(task_manage_msg,__FUNCTION__);
+    550          			return -1;
+    551          		}
+    552          	}
+    553          	else
+    554          	{
+    555          		InfoPrintf("malloc task q fail\r\n");
+    556          		return -2;
+    557          	}
+    558          }
+    559          
+    560          static void DM_post_pwr_on_to_tasks(void)
+    561          {
+    562          	//OS_ERR os_err;
+    563          	TASK_MSG_T task_manage_msg={0};
+    564          
+    565          	task_manage_msg.msg_src_id		= DEV_MANAGE_TASK_ID;
+    566          	task_manage_msg.msg_father_type	= FATHER_MSG_T_TASK_POWER_CTRL;
+    567          	task_manage_msg.msg_son_type	= POWER_CTRL_PWR_ON;
+    568          	DM_post_one_task_msg(&GpsTask_Tcb,task_manage_msg);
+    569          	//DM_post_one_task_msg(&Can0ManageTask_Tcb,task_manage_msg);
+    570          	//DM_post_one_task_msg(&ModemManageTask_Tcb,task_manage_msg);
+    571          }
+    572          
+    573          void DeviceManageTask(void *p_arg)
+    574          {
+    575          	OS_ERR os_err;
+    576          
+    577          	p_arg=p_arg;
+    578          
+    579          	RCC_Configuration();
+    580          	IWDG_Configuration();
+    581          	NVIC_Configuration();
+    582          	GPIO_Configuration();
+    583          	TIM_Configuration();
+    584          	//EXTI0_Config();
+    585          	//EXTI1_Config();
+    586          	debug_port_init();
+    587          	user_open_rtc();
+    588          	creat_app_task();
+    589          	DM_post_pwr_on_to_tasks();
+    590          	BEEP_ON;
+    591          	OSTimeDly(500, OS_OPT_TIME_DLY, &os_err);
+    592          	BEEP_OFF;
+    593          	while(1)
+    594          	{
+    595          		OSTimeDly(5000, OS_OPT_TIME_DLY, &os_err);
+    596          		//InfoPrintf("DeviceManageTask loop...\r\n");
+    597          
+    598          		printf_time_now();
+    599          
+    600          
+    601          		/*do
+    602          		{
+    603          			ret=USART_GetFlagStatus(USART3,USART_FLAG_TXE);
+    604          		}while(ret==0);
+    605          		USART_SendData(USART3, 85);*/
+    606          	}
+    607          	
+    608          
+    609          }
+    610          
+    611          
+    612          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Can0ManageTask
+         8   -> InfoPrintf
+         8   -> user_delay_ms
+      56   DM_post_one_task_msg
+        56   -> InfoPrintf
+        56   -> OSTaskQPost
+        56   -> __aeabi_memcpy
+        56   -> __aeabi_memcpy4
+        56   -> user_free
+        56   -> user_malloc
+      36   DM_post_pwr_on_to_tasks
+        24   -> DM_post_one_task_msg
+        24   -> __aeabi_memclr4
+      16   DeviceManageTask
+        16   -> DM_post_pwr_on_to_tasks
+        16   -> GPIO_Configuration
+        16   -> GPIO_ResetBits
+        16   -> GPIO_SetBits
+        16   -> IWDG_Configuration
+        16   -> NVIC_Configuration
+        16   -> OSTimeDly
+        16   -> RCC_Configuration
+        16   -> TIM_Configuration
+        16   -> creat_app_task
+        16   -> debug_port_init
+        16   -> printf_time_now
+        16   -> user_open_rtc
+      16   DeviceManageTaskMsg_handle
+        16   -> OSTaskQPend
+        16   -> user_free
+      24   EXTI0_Config
+        24   -> EXTI_Init
+        24   -> GPIO_EXTILineConfig
+        24   -> GPIO_Init
+        24   -> NVIC_Init
+        24   -> RCC_APB2PeriphClockCmd
+      24   EXTI1_Config
+        24   -> EXTI_Init
+        24   -> GPIO_EXTILineConfig
+        24   -> GPIO_Init
+        24   -> NVIC_Init
+        24   -> RCC_APB2PeriphClockCmd
+       8   ISO15765Task
+         8   -> InfoPrintf
+         8   -> user_delay_ms
+       8   NVIC_Configuration
+         8   -> NVIC_Init
+         8   -> NVIC_PriorityGroupConfig
+       8   RCC_Configuration
+         8   -> FLASH_PrefetchBufferCmd
+         8   -> FLASH_SetLatency
+         8   -> RCC_APB1PeriphClockCmd
+         0   -> RCC_APB2PeriphClockCmd
+         8   -> RCC_DeInit
+         8   -> RCC_GetFlagStatus
+         8   -> RCC_GetSYSCLKSource
+         8   -> RCC_HCLKConfig
+         8   -> RCC_HSICmd
+         8   -> RCC_PCLK1Config
+         8   -> RCC_PCLK2Config
+         8   -> RCC_SYSCLKConfig
+       8   StorageTask
+         8   -> InfoPrintf
+         8   -> user_delay_ms
+      40   TIM_Configuration
+        40   -> TIM_ARRPreloadConfig
+        40   -> TIM_ClearITPendingBit
+        40   -> TIM_Cmd
+        40   -> TIM_CtrlPWMOutputs
+        40   -> TIM_ITConfig
+        40   -> TIM_OC1Init
+        40   -> TIM_OC1PreloadConfig
+        40   -> TIM_OC2Init
+        40   -> TIM_OC2PreloadConfig
+        40   -> TIM_TimeBaseInit
+      48   creat_app_task
+        48   -> OSTaskCreate
+       8   user_delay_ms
+         8   -> OSTimeDly
+      16   user_free
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+         0   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+        16   -> free
+       8   user_get_os_time
+         8   -> OSTimeGet
+      16   user_malloc
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+        16   -> __aeabi_memset
+        16   -> malloc
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable16
+       4  ??DataTable16_1
+       4  ??DataTable16_2
+       4  ??DataTable16_3
+       4  ??DataTable16_4
+       4  ??DataTable16_5
+       4  ??DataTable16_6
+       4  ?_0
+      20  ?_1
+      20  ?_2
+      20  ?_3
+       8  ?_4
+      32  ?_5
+      24  ?_6
+      16  ?_7
+      20  Can0ManageTask
+     114  DM_post_one_task_msg
+      56  DM_post_pwr_on_to_tasks
+      88  DeviceManageTask
+      38  DeviceManageTaskMsg_handle
+     108  EXTI0_Config
+     110  EXTI1_Config
+      20  ISO15765Task
+     176  NVIC_Configuration
+      90  RCC_Configuration
+      20  StorageTask
+     202  TIM_Configuration
+      58  creat_app_task
+      12  user_delay_ms
+      40  user_free
+      10  user_get_os_time
+      78  user_malloc
+      52  -- Other
+
+ 
+    16 bytes in section .rodata
+ 1 448 bytes in section .text
+ 
+ 1 448 bytes of CODE  memory
+    16 bytes of CONST memory
+
+Errors: none
+Warnings: 2

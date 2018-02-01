@@ -1,0 +1,1134 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:28
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_q.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_q.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_q.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_q.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_q.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                               MESSAGE QUEUE MANAGEMENT
+     10          *
+     11          * File    : OS_Q.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_q__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          #if OS_CFG_Q_EN > 0u
+     41          /*
+     42          ************************************************************************************************************************
+     43          *                                               CREATE A MESSAGE QUEUE
+     44          *
+     45          * Description: This function is called by your application to create a message queue.  Message queues MUST be created
+     46          *              before they can be used.
+     47          *
+     48          * Arguments  : p_q         is a pointer to the message queue
+     49          *
+     50          *              p_name      is a pointer to an ASCII string that will be used to name the message queue
+     51          *
+     52          *              max_qty     indicates the maximum size of the message queue (must be non-zero).  Note that it's also not
+     53          *                          possible to have a size higher than the maximum number of OS_MSGs available.
+     54          *
+     55          *              p_err       is a pointer to a variable that will contain an error code returned by this function.
+     56          *
+     57          *                              OS_ERR_NONE                    the call was successful
+     58          *                              OS_ERR_CREATE_ISR              can't create from an ISR
+     59          *                              OS_ERR_ILLEGAL_CREATE_RUN_TIME if you are trying to create the Queue after you called
+     60          *                                                               OSSafetyCriticalStart().
+     61          *                              OS_ERR_NAME                    if 'p_name' is a NULL pointer
+     62          *                              OS_ERR_OBJ_CREATED             if the message queue has already been created
+     63          *                              OS_ERR_OBJ_PTR_NULL            if you passed a NULL pointer for 'p_q'
+     64          *                              OS_ERR_Q_SIZE                  if the size you specified is 0
+     65          *
+     66          * Returns    : none
+     67          ************************************************************************************************************************
+     68          */
+     69          
+     70          void  OSQCreate (OS_Q        *p_q,
+     71                           CPU_CHAR    *p_name,
+     72                           OS_MSG_QTY   max_qty,
+     73                           OS_ERR      *p_err)
+     74          
+     75          {
+     76              CPU_SR_ALLOC();
+     77          
+     78          
+     79          
+     80          #ifdef OS_SAFETY_CRITICAL
+     81              if (p_err == (OS_ERR *)0) {
+     82                  OS_SAFETY_CRITICAL_EXCEPTION();
+     83                  return;
+     84              }
+     85          #endif
+     86          
+     87          #ifdef OS_SAFETY_CRITICAL_IEC61508
+     88              if (OSSafetyCriticalStartFlag == DEF_TRUE) {
+     89                 *p_err = OS_ERR_ILLEGAL_CREATE_RUN_TIME;
+     90                  return;
+     91              }
+     92          #endif
+     93          
+     94          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+     95              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to be called from an ISR                   */
+     96                  *p_err = OS_ERR_CREATE_ISR;
+     97                  return;
+     98              }
+     99          #endif
+    100          
+    101          #if OS_CFG_ARG_CHK_EN > 0u
+    102              if (p_q == (OS_Q *)0) {                                 /* Validate arguments                                     */
+    103                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    104                  return;
+    105              }
+    106              if (max_qty == (OS_MSG_QTY)0) {                         /* Cannot specify a zero size queue                       */
+    107                  *p_err = OS_ERR_Q_SIZE;
+    108                  return;
+    109              }
+    110          #endif
+    111          
+    112              OS_CRITICAL_ENTER();
+    113              p_q->Type    = OS_OBJ_TYPE_Q;                           /* Mark the data structure as a message queue             */
+    114              p_q->NamePtr = p_name;
+    115              OS_MsgQInit(&p_q->MsgQ,                                 /* Initialize the queue                                   */
+    116                          max_qty);
+    117              OS_PendListInit(&p_q->PendList);                        /* Initialize the waiting list                            */
+    118          
+    119          #if OS_CFG_DBG_EN > 0u
+    120              OS_QDbgListAdd(p_q);
+    121          #endif
+    122              OSQQty++;                                               /* One more queue created                                 */
+    123          
+    124              OS_CRITICAL_EXIT();
+    125              *p_err = OS_ERR_NONE;
+    126          }
+    127          
+    128          /*$PAGE*/
+    129          /*
+    130          ************************************************************************************************************************
+    131          *                                               DELETE A MESSAGE QUEUE
+    132          *
+    133          * Description: This function deletes a message queue and readies all tasks pending on the queue.
+    134          *
+    135          * Arguments  : p_q       is a pointer to the message queue you want to delete
+    136          *
+    137          *              opt       determines delete options as follows:
+    138          *
+    139          *                            OS_OPT_DEL_NO_PEND          Delete the queue ONLY if no task pending
+    140          *                            OS_OPT_DEL_ALWAYS           Deletes the queue even if tasks are waiting.
+    141          *                                                        In this case, all the tasks pending will be readied.
+    142          *
+    143          *              p_err     is a pointer to a variable that will contain an error code returned by this function.
+    144          *
+    145          *                            OS_ERR_NONE                 The call was successful and the queue was deleted
+    146          *                            OS_ERR_DEL_ISR              If you tried to delete the queue from an ISR
+    147          *                            OS_ERR_OBJ_PTR_NULL         if you pass a NULL pointer for 'p_q'
+    148          *                            OS_ERR_OBJ_TYPE             if the message queue was not created
+    149          *                            OS_ERR_OPT_INVALID          An invalid option was specified
+    150          *                            OS_ERR_TASK_WAITING         One or more tasks were waiting on the queue
+    151          *
+    152          * Returns    : == 0          if no tasks were waiting on the queue, or upon error.
+    153          *              >  0          if one or more tasks waiting on the queue are now readied and informed.
+    154          *
+    155          * Note(s)    : 1) This function must be used with care.  Tasks that would normally expect the presence of the queue MUST
+    156          *                 check the return code of OSQPend().
+    157          *
+    158          *              2) OSQAccept() callers will not know that the intended queue has been deleted.
+    159          *
+    160          *              3) Because ALL tasks pending on the queue will be readied, you MUST be careful in applications where the
+    161          *                 queue is used for mutual exclusion because the resource(s) will no longer be guarded by the queue.
+    162          ************************************************************************************************************************
+    163          */
+    164          
+    165          #if OS_CFG_Q_DEL_EN > 0u
+    166          OS_OBJ_QTY  OSQDel (OS_Q    *p_q,
+    167                              OS_OPT   opt,
+    168                              OS_ERR  *p_err)
+    169          {
+    170              OS_OBJ_QTY     cnt;
+    171              OS_OBJ_QTY     nbr_tasks;
+    172              OS_PEND_DATA  *p_pend_data;
+    173              OS_PEND_LIST  *p_pend_list;
+    174              OS_TCB        *p_tcb;
+    175              CPU_TS         ts;
+    176              CPU_SR_ALLOC();
+    177          
+    178          
+    179          
+    180          #ifdef OS_SAFETY_CRITICAL
+    181              if (p_err == (OS_ERR *)0) {
+    182                  OS_SAFETY_CRITICAL_EXCEPTION();
+    183                  return ((OS_OBJ_QTY)0);
+    184              }
+    185          #endif
+    186          
+    187          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    188              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Can't delete a message queue from an ISR               */
+    189                 *p_err = OS_ERR_DEL_ISR;
+    190                  return ((OS_OBJ_QTY)0);
+    191              }
+    192          #endif
+    193          
+    194          #if OS_CFG_ARG_CHK_EN > 0u
+    195              if (p_q == (OS_Q *)0) {                                 /* Validate arguments                                     */
+    196                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    197                  return ((OS_OBJ_QTY)0);
+    198              }
+    199          #endif
+    200          
+    201          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    202              if (p_q->Type != OS_OBJ_TYPE_Q) {                       /* Make sure message queue was created                    */
+    203                  *p_err = OS_ERR_OBJ_TYPE;
+    204                  return ((OS_OBJ_QTY)0);
+    205              }
+    206          #endif
+    207          
+    208              CPU_CRITICAL_ENTER();
+    209              p_pend_list = &p_q->PendList;
+    210              cnt         = p_pend_list->NbrEntries;
+    211              nbr_tasks   = cnt;
+    212              switch (opt) {
+    213                  case OS_OPT_DEL_NO_PEND:                            /* Delete message queue only if no task waiting           */
+    214                       if (nbr_tasks == (OS_OBJ_QTY)0) {
+    215          #if OS_CFG_DBG_EN > 0u
+    216                           OS_QDbgListRemove(p_q);
+    217          #endif
+    218                           OSQQty--;
+    219                           OS_QClr(p_q);
+    220                           CPU_CRITICAL_EXIT();
+    221                           *p_err = OS_ERR_NONE;
+    222                       } else {
+    223                           CPU_CRITICAL_EXIT();
+    224                           *p_err = OS_ERR_TASK_WAITING;
+    225                       }
+    226                       break;
+    227          
+    228                  case OS_OPT_DEL_ALWAYS:                             /* Always delete the message queue                        */
+    229                       OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    230                       ts = OS_TS_GET();                              /* Get local time stamp so all tasks get the same time    */
+    231                       while (cnt > 0u) {                             /* Remove all tasks from the pend list                    */
+    232                           p_pend_data = p_pend_list->HeadPtr;
+    233                           p_tcb       = p_pend_data->TCBPtr;
+    234                           OS_PendObjDel((OS_PEND_OBJ *)((void *)p_q),
+    235                                         p_tcb,
+    236                                         ts);
+    237                           cnt--;
+    238                       }
+    239          #if OS_CFG_DBG_EN > 0u
+    240                       OS_QDbgListRemove(p_q);
+    241          #endif
+    242                       OSQQty--;
+    243                       OS_QClr(p_q);
+    244                       OS_CRITICAL_EXIT_NO_SCHED();
+    245                       OSSched();                                     /* Find highest priority task ready to run                */
+    246                       *p_err = OS_ERR_NONE;
+    247                       break;
+    248          
+    249                  default:
+    250                       CPU_CRITICAL_EXIT();
+    251                       *p_err = OS_ERR_OPT_INVALID;
+    252                       break;
+    253              }
+    254              return (nbr_tasks);
+    255          }
+    256          #endif
+    257          
+    258          /*$PAGE*/
+    259          /*
+    260          ************************************************************************************************************************
+    261          *                                                     FLUSH QUEUE
+    262          *
+    263          * Description : This function is used to flush the contents of the message queue.
+    264          *
+    265          * Arguments   : p_q        is a pointer to the message queue to flush
+    266          *
+    267          *               p_err      is a pointer to a variable that will contain an error code returned by this function.
+    268          *
+    269          *                              OS_ERR_NONE           upon success
+    270          *                              OS_ERR_FLUSH_ISR      if you called this function from an ISR
+    271          *                              OS_ERR_OBJ_PTR_NULL   If you passed a NULL pointer for 'p_q'
+    272          *                              OS_ERR_OBJ_TYPE       If you didn't create the message queue
+    273          *
+    274          * Returns     : The number of entries freed from the queue
+    275          *
+    276          * Note(s)     : 1) You should use this function with great care because, when to flush the queue, you LOOSE the
+    277          *                  references to what the queue entries are pointing to and thus, you could cause 'memory leaks'.  In
+    278          *                  other words, the data you are pointing to that's being referenced by the queue entries should, most
+    279          *                  likely, need to be de-allocated (i.e. freed).
+    280          ************************************************************************************************************************
+    281          */
+    282          
+    283          #if OS_CFG_Q_FLUSH_EN > 0u
+    284          OS_MSG_QTY  OSQFlush (OS_Q    *p_q,
+    285                                OS_ERR  *p_err)
+    286          {
+    287              OS_MSG_QTY  entries;
+    288              CPU_SR_ALLOC();
+    289          
+    290          
+    291          
+    292          #ifdef OS_SAFETY_CRITICAL
+    293              if (p_err == (OS_ERR *)0) {
+    294                  OS_SAFETY_CRITICAL_EXCEPTION();
+    295                  return ((OS_MSG_QTY)0);
+    296              }
+    297          #endif
+    298          
+    299          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    300              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Can't flush a message queue from an ISR                */
+    301                 *p_err = OS_ERR_FLUSH_ISR;
+    302                  return ((OS_MSG_QTY)0);
+    303              }
+    304          #endif
+    305          
+    306          #if OS_CFG_ARG_CHK_EN > 0u
+    307              if (p_q == (OS_Q *)0) {                                 /* Validate arguments                                     */
+    308                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    309                  return ((OS_MSG_QTY)0);
+    310              }
+    311          #endif
+    312          
+    313          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    314              if (p_q->Type != OS_OBJ_TYPE_Q) {                       /* Make sure message queue was created                    */
+    315                  *p_err = OS_ERR_OBJ_TYPE;
+    316                  return ((OS_MSG_QTY)0);
+    317              }
+    318          #endif
+    319          
+    320              OS_CRITICAL_ENTER();
+    321              entries = OS_MsgQFreeAll(&p_q->MsgQ);                   /* Return all OS_MSGs to the OS_MSG pool                  */
+    322              OS_CRITICAL_EXIT();
+    323              *p_err  = OS_ERR_NONE;
+    324              return ((OS_MSG_QTY)entries);
+    325          }
+    326          #endif
+    327          
+    328          /*$PAGE*/
+    329          /*
+    330          ************************************************************************************************************************
+    331          *                                            PEND ON A QUEUE FOR A MESSAGE
+    332          *
+    333          * Description: This function waits for a message to be sent to a queue
+    334          *
+    335          * Arguments  : p_q           is a pointer to the message queue
+    336          *
+    337          *              timeout       is an optional timeout period (in clock ticks).  If non-zero, your task will wait for a
+    338          *                            message to arrive at the queue up to the amount of time specified by this argument.  If you
+    339          *                            specify 0, however, your task will wait forever at the specified queue or, until a message
+    340          *                            arrives.
+    341          *
+    342          *              opt           determines whether the user wants to block if the queue is empty or not:
+    343          *
+    344          *                                OS_OPT_PEND_BLOCKING
+    345          *                                OS_OPT_PEND_NON_BLOCKING
+    346          *
+    347          *              p_msg_size    is a pointer to a variable that will receive the size of the message
+    348          *
+    349          *              p_ts          is a pointer to a variable that will receive the timestamp of when the message was
+    350          *                            received, pend aborted or the message queue deleted,  If you pass a NULL pointer (i.e.
+    351          *                            (CPU_TS *)0) then you will not get the timestamp.  In other words, passing a NULL pointer
+    352          *                            is valid and indicates that you don't need the timestamp.
+    353          *
+    354          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    355          *
+    356          *                                OS_ERR_NONE               The call was successful and your task received a message.
+    357          *                                OS_ERR_OBJ_PTR_NULL       if you pass a NULL pointer for 'p_q'
+    358          *                                OS_ERR_OBJ_TYPE           if the message queue was not created
+    359          *                                OS_ERR_PEND_ABORT         the pend was aborted
+    360          *                                OS_ERR_PEND_ISR           if you called this function from an ISR
+    361          *                                OS_ERR_PEND_WOULD_BLOCK   If you specified non-blocking but the queue was not empty
+    362          *                                OS_ERR_SCHED_LOCKED       the scheduler is locked
+    363          *                                OS_ERR_TIMEOUT            A message was not received within the specified timeout
+    364          *                                                          would lead to a suspension.
+    365          *
+    366          * Returns    : != (void *)0  is a pointer to the message received
+    367          *              == (void *)0  if you received a NULL pointer message or,
+    368          *                            if no message was received or,
+    369          *                            if 'p_q' is a NULL pointer or,
+    370          *                            if you didn't pass a pointer to a queue.
+    371          ************************************************************************************************************************
+    372          */
+    373          
+    374          void  *OSQPend (OS_Q         *p_q,
+    375                          OS_TICK       timeout,
+    376                          OS_OPT        opt,
+    377                          OS_MSG_SIZE  *p_msg_size,
+    378                          CPU_TS       *p_ts,
+    379                          OS_ERR       *p_err)
+    380          {
+    381              OS_PEND_DATA  pend_data;
+    382              void         *p_void;
+    383              CPU_SR_ALLOC();
+    384          
+    385          
+    386          
+    387          #ifdef OS_SAFETY_CRITICAL
+    388              if (p_err == (OS_ERR *)0) {
+    389                  OS_SAFETY_CRITICAL_EXCEPTION();
+    390                  return ((void *)0);
+    391              }
+    392          #endif
+    393          
+    394          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    395              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to call from an ISR                        */
+    396                 *p_err = OS_ERR_PEND_ISR;
+    397                  return ((void *)0);
+    398              }
+    399          #endif
+    400          
+    401          #if OS_CFG_ARG_CHK_EN > 0u
+    402              if (p_q == (OS_Q *)0) {                                 /* Validate arguments                                     */
+    403                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    404                  return ((void *)0);
+    405              }
+    406              if (p_msg_size == (OS_MSG_SIZE *)0) {
+    407                  *p_err = OS_ERR_PTR_INVALID;
+    408                  return ((void *)0);
+    409              }
+    410              switch (opt) {
+    411                  case OS_OPT_PEND_BLOCKING:
+    412                  case OS_OPT_PEND_NON_BLOCKING:
+    413                       break;
+    414          
+    415                  default:
+    416                       *p_err = OS_ERR_OPT_INVALID;
+    417                       return ((void *)0);
+    418              }
+    419          #endif
+    420          
+    421          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    422              if (p_q->Type != OS_OBJ_TYPE_Q) {                       /* Make sure message queue was created                    */
+    423                  *p_err = OS_ERR_OBJ_TYPE;
+    424                  return ((void *)0);
+    425              }
+    426          #endif
+    427          
+    428              if (p_ts != (CPU_TS *)0) {
+    429                 *p_ts  = (CPU_TS  )0;                                /* Initialize the returned timestamp                      */
+    430              }
+    431          
+    432              CPU_CRITICAL_ENTER();
+    433              p_void = OS_MsgQGet(&p_q->MsgQ,                         /* Any message waiting in the message queue?              */
+    434                                  p_msg_size,
+    435                                  p_ts,
+    436                                  p_err);
+    437              if (*p_err == OS_ERR_NONE) {
+    438                  CPU_CRITICAL_EXIT();
+    439                  return (p_void);                                    /* Yes, Return message received                           */
+    440              }
+    441          
+    442              if ((opt & OS_OPT_PEND_NON_BLOCKING) != (OS_OPT)0) {    /* Caller wants to block if not available?                */
+    443                  CPU_CRITICAL_EXIT();
+    444                  *p_err = OS_ERR_PEND_WOULD_BLOCK;                   /* No                                                     */
+    445                  return ((void *)0);
+    446              } else {
+    447                  if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0) {    /* Can't pend when the scheduler is locked                */
+    448                      CPU_CRITICAL_EXIT();
+    449                      *p_err = OS_ERR_SCHED_LOCKED;
+    450                      return ((void *)0);
+    451                  }
+    452              }
+    453          
+    454              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();                  /* Lock the scheduler/re-enable interrupts                */
+    455              OS_Pend(&pend_data,                                     /* Block task pending on Message Queue                    */
+    456                      (OS_PEND_OBJ *)((void *)p_q),
+    457                      OS_TASK_PEND_ON_Q,
+    458                      timeout);
+    459              OS_CRITICAL_EXIT_NO_SCHED();
+    460          
+    461              OSSched();                                              /* Find the next highest priority task ready to run       */
+    462          
+    463              CPU_CRITICAL_ENTER();
+    464              switch (OSTCBCurPtr->PendStatus) {
+    465                  case OS_STATUS_PEND_OK:                             /* Extract message from TCB (Put there by Post)           */
+    466                       p_void      = OSTCBCurPtr->MsgPtr;
+    467                       *p_msg_size = OSTCBCurPtr->MsgSize;
+    468                       if (p_ts != (CPU_TS *)0) {
+    469                          *p_ts  =  OSTCBCurPtr->TS;
+    470                       }
+    471                       *p_err      = OS_ERR_NONE;
+    472                       break;
+    473          
+    474                  case OS_STATUS_PEND_ABORT:                          /* Indicate that we aborted                               */
+    475                       p_void      = (void      *)0;
+    476                       *p_msg_size = (OS_MSG_SIZE)0;
+    477                       if (p_ts != (CPU_TS *)0) {
+    478                          *p_ts  =  OSTCBCurPtr->TS;
+    479                       }
+    480                       *p_err      = OS_ERR_PEND_ABORT;
+    481                       break;
+    482          
+    483                  case OS_STATUS_PEND_TIMEOUT:                        /* Indicate that we didn't get event within TO            */
+    484                       p_void      = (void      *)0;
+    485                       *p_msg_size = (OS_MSG_SIZE)0;
+    486                       if (p_ts != (CPU_TS *)0) {
+    487                          *p_ts  = (CPU_TS  )0;
+    488                       }
+    489                       *p_err      = OS_ERR_TIMEOUT;
+    490                       break;
+    491          
+    492                  case OS_STATUS_PEND_DEL:                            /* Indicate that object pended on has been deleted        */
+    493                       p_void      = (void      *)0;
+    494                       *p_msg_size = (OS_MSG_SIZE)0;
+    495                       if (p_ts != (CPU_TS *)0) {
+    496                          *p_ts  =  OSTCBCurPtr->TS;
+    497                       }
+    498                       *p_err      = OS_ERR_OBJ_DEL;
+    499                       break;
+    500          
+    501                  default:
+    502                       p_void      = (void      *)0;
+    503                       *p_msg_size = (OS_MSG_SIZE)0;
+    504                       *p_err      = OS_ERR_STATUS_INVALID;
+    505                       break;
+    506              }
+    507              CPU_CRITICAL_EXIT();
+    508              return (p_void);
+    509          }
+    510          
+    511          
+    512          /*$PAGE*/
+    513          /*
+    514          ************************************************************************************************************************
+    515          *                                             ABORT WAITING ON A MESSAGE QUEUE
+    516          *
+    517          * Description: This function aborts & readies any tasks currently waiting on a queue.  This function should be used to
+    518          *              fault-abort the wait on the queue, rather than to normally signal the queue via OSQPost().
+    519          *
+    520          * Arguments  : p_q       is a pointer to the message queue
+    521          *
+    522          *              opt       determines the type of ABORT performed:
+    523          *
+    524          *                            OS_OPT_PEND_ABORT_1          ABORT wait for a single task (HPT) waiting on the queue
+    525          *                            OS_OPT_PEND_ABORT_ALL        ABORT wait for ALL tasks that are  waiting on the queue
+    526          *                            OS_OPT_POST_NO_SCHED         Do not call the scheduler
+    527          *
+    528          *              p_err     is a pointer to a variable that will contain an error code returned by this function.
+    529          *
+    530          *                            OS_ERR_NONE                  At least one task waiting on the queue was readied and
+    531          *                                                         informed of the aborted wait; check return value for the
+    532          *                                                         number of tasks whose wait on the queue was aborted.
+    533          *                            OS_ERR_OPT_INVALID           if you specified an invalid option
+    534          *                            OS_ERR_OBJ_PTR_NULL          if you pass a NULL pointer for 'p_q'
+    535          *                            OS_ERR_OBJ_TYPE              if the message queue was not created
+    536          *                            OS_ERR_PEND_ABORT_ISR        If this function was called from an ISR
+    537          *                            OS_ERR_PEND_ABORT_NONE       No task were pending
+    538          *
+    539          * Returns    : == 0          if no tasks were waiting on the queue, or upon error.
+    540          *              >  0          if one or more tasks waiting on the queue are now readied and informed.
+    541          ************************************************************************************************************************
+    542          */
+    543          
+    544          #if OS_CFG_Q_PEND_ABORT_EN > 0u
+    545          OS_OBJ_QTY  OSQPendAbort (OS_Q    *p_q,
+    546                                    OS_OPT   opt,
+    547                                    OS_ERR  *p_err)
+    548          {
+    549              OS_PEND_LIST  *p_pend_list;
+    550              OS_TCB        *p_tcb;
+    551              CPU_TS         ts;
+    552              OS_OBJ_QTY     nbr_tasks;
+    553              CPU_SR_ALLOC();
+    554          
+    555          
+    556          
+    557          #ifdef OS_SAFETY_CRITICAL
+    558              if (p_err == (OS_ERR *)0) {
+    559                  OS_SAFETY_CRITICAL_EXCEPTION();
+    560                  return ((OS_OBJ_QTY)0u);
+    561              }
+    562          #endif
+    563          
+    564          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    565              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to Pend Abort from an ISR                  */
+    566                 *p_err =  OS_ERR_PEND_ABORT_ISR;
+    567                  return ((OS_OBJ_QTY)0u);
+    568              }
+    569          #endif
+    570          
+    571          #if OS_CFG_ARG_CHK_EN > 0u
+    572              if (p_q == (OS_Q *)0) {                                 /* Validate 'p_q'                                         */
+    573                 *p_err =  OS_ERR_OBJ_PTR_NULL;
+    574                  return ((OS_OBJ_QTY)0u);
+    575              }
+    576              switch (opt) {                                          /* Validate 'opt'                                         */
+    577                  case OS_OPT_PEND_ABORT_1:
+    578                  case OS_OPT_PEND_ABORT_ALL:
+    579                       break;
+    580          
+    581                  default:
+    582                      *p_err =  OS_ERR_OPT_INVALID;
+    583                       return ((OS_OBJ_QTY)0u);
+    584              }
+    585          #endif
+    586          
+    587          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    588              if (p_q->Type != OS_OBJ_TYPE_Q) {                       /* Make sure queue was created                            */
+    589                 *p_err =  OS_ERR_OBJ_TYPE;
+    590                  return ((OS_OBJ_QTY)0u);
+    591              }
+    592          #endif
+    593          
+    594              CPU_CRITICAL_ENTER();
+    595              p_pend_list = &p_q->PendList;
+    596              if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0u) {        /* Any task waiting on queue?                             */
+    597                  CPU_CRITICAL_EXIT();                                /* No                                                     */
+    598                 *p_err =  OS_ERR_PEND_ABORT_NONE;
+    599                  return ((OS_OBJ_QTY)0u);
+    600              }
+    601          
+    602              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    603              nbr_tasks = 0u;
+    604              ts        = OS_TS_GET();                                /* Get local time stamp so all tasks get the same time    */
+    605              while (p_pend_list->NbrEntries > (OS_OBJ_QTY)0u) {
+    606                  p_tcb = p_pend_list->HeadPtr->TCBPtr;
+    607                  OS_PendAbort((OS_PEND_OBJ *)((void *)p_q),
+    608                               p_tcb,
+    609                               ts);
+    610                  nbr_tasks++;
+    611                  if (opt != OS_OPT_PEND_ABORT_ALL) {                 /* Pend abort all tasks waiting?                          */
+    612                      break;                                          /* No                                                     */
+    613                  }
+    614              }
+    615              OS_CRITICAL_EXIT_NO_SCHED();
+    616          
+    617              if ((opt & OS_OPT_POST_NO_SCHED) == (OS_OPT)0u) {
+    618                  OSSched();                                          /* Run the scheduler                                      */
+    619              }
+    620          
+    621             *p_err = OS_ERR_NONE;
+    622              return (nbr_tasks);
+    623          }
+    624          #endif
+    625          
+    626          /*$PAGE*/
+    627          /*
+    628          ************************************************************************************************************************
+    629          *                                               POST MESSAGE TO A QUEUE
+    630          *
+    631          * Description: This function sends a message to a queue.  With the 'opt' argument, you can specify whether the message
+    632          *              is broadcast to all waiting tasks and/or whether you post the message to the front of the queue (LIFO)
+    633          *              or normally (FIFO) at the end of the queue.
+    634          *
+    635          * Arguments  : p_q           is a pointer to a message queue that must have been created by OSQCreate().
+    636          *
+    637          *              p_void        is a pointer to the message to send.
+    638          *
+    639          *              msg_size      specifies the size of the message (in bytes)
+    640          *
+    641          *              opt           determines the type of POST performed:
+    642          *
+    643          *                                OS_OPT_POST_ALL          POST to ALL tasks that are waiting on the queue.  This option
+    644          *                                                         can be added to either OS_OPT_POST_FIFO or OS_OPT_POST_LIFO
+    645          *                                OS_OPT_POST_FIFO         POST message to end of queue (FIFO) and wake up a single
+    646          *                                                         waiting task.
+    647          *                                OS_OPT_POST_LIFO         POST message to the front of the queue (LIFO) and wake up
+    648          *                                                         a single waiting task.
+    649          *                                OS_OPT_POST_NO_SCHED     Do not call the scheduler
+    650          *
+    651          *                            Note(s): 1) OS_OPT_POST_NO_SCHED can be added (or OR'd) with one of the other options.
+    652          *                                     2) OS_OPT_POST_ALL      can be added (or OR'd) with one of the other options.
+    653          *                                     3) Possible combination of options are:
+    654          *
+    655          *                                        OS_OPT_POST_FIFO
+    656          *                                        OS_OPT_POST_LIFO
+    657          *                                        OS_OPT_POST_FIFO + OS_OPT_POST_ALL
+    658          *                                        OS_OPT_POST_LIFO + OS_OPT_POST_ALL
+    659          *                                        OS_OPT_POST_FIFO + OS_OPT_POST_NO_SCHED
+    660          *                                        OS_OPT_POST_LIFO + OS_OPT_POST_NO_SCHED
+    661          *                                        OS_OPT_POST_FIFO + OS_OPT_POST_ALL + OS_OPT_POST_NO_SCHED
+    662          *                                        OS_OPT_POST_LIFO + OS_OPT_POST_ALL + OS_OPT_POST_NO_SCHED
+    663          *
+    664          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    665          *
+    666          *                                OS_ERR_NONE            The call was successful and the message was sent
+    667          *                                OS_ERR_MSG_POOL_EMPTY  If there are no more OS_MSGs to use to place the message into
+    668          *                                OS_ERR_OBJ_PTR_NULL    If 'p_q' is a NULL pointer
+    669          *                                OS_ERR_OBJ_TYPE        If the message queue was not initialized
+    670          *                                OS_ERR_Q_MAX           If the queue is full
+    671          *
+    672          * Returns    : None
+    673          ************************************************************************************************************************
+    674          */
+    675          
+    676          void  OSQPost (OS_Q        *p_q,
+    677                         void        *p_void,
+    678                         OS_MSG_SIZE  msg_size,
+    679                         OS_OPT       opt,
+    680                         OS_ERR      *p_err)
+    681          {
+    682              CPU_TS  ts;
+    683          
+    684          
+    685          
+    686          #ifdef OS_SAFETY_CRITICAL
+    687              if (p_err == (OS_ERR *)0) {
+    688                  OS_SAFETY_CRITICAL_EXCEPTION();
+    689                  return;
+    690              }
+    691          #endif
+    692          
+    693          #if OS_CFG_ARG_CHK_EN > 0u
+    694              if (p_q == (OS_Q *)0) {                                 /* Validate arguments                                     */
+    695                 *p_err = OS_ERR_OBJ_PTR_NULL;
+    696                  return;
+    697              }
+    698          #endif
+    699          
+    700          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    701              if (p_q->Type != OS_OBJ_TYPE_Q) {                       /* Make sure message queue was created                    */
+    702                  *p_err = OS_ERR_OBJ_TYPE;
+    703                  return;
+    704              }
+    705          #endif
+    706          
+    707              ts = OS_TS_GET();                                       /* Get timestamp                                          */
+    708          
+    709          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+    710              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {
+    711                  OS_IntQPost((OS_OBJ_TYPE)OS_OBJ_TYPE_Q,             /* Post to ISR queue                                      */
+    712                              (void      *)p_q,
+    713                              (void      *)p_void,
+    714                              (OS_MSG_SIZE)msg_size,
+    715                              (OS_FLAGS   )0,
+    716                              (OS_OPT     )opt,
+    717                              (CPU_TS     )ts,
+    718                              (OS_ERR    *)p_err);
+    719                  return;
+    720              }
+    721          #endif
+    722          
+    723              OS_QPost(p_q,
+    724                       p_void,
+    725                       msg_size,
+    726                       opt,
+    727                       ts,
+    728                       p_err);
+    729          }
+    730          
+    731          /*$PAGE*/
+    732          /*
+    733          ************************************************************************************************************************
+    734          *                                        CLEAR THE CONTENTS OF A MESSAGE QUEUE
+    735          *
+    736          * Description: This function is called by OSQDel() to clear the contents of a message queue
+    737          *
+    738          
+    739          * Argument(s): p_q      is a pointer to the queue to clear
+    740          *              ---
+    741          *
+    742          * Returns    : none
+    743          *
+    744          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    745          ************************************************************************************************************************
+    746          */
+    747          
+    748          void  OS_QClr (OS_Q *p_q)
+    749          {
+    750              (void)OS_MsgQFreeAll(&p_q->MsgQ);                       /* Return all OS_MSGs to the free list                    */
+    751              p_q->Type    =  OS_OBJ_TYPE_NONE;                       /* Mark the data structure as a NONE                      */
+    752              p_q->NamePtr = (CPU_CHAR *)((void *)"?Q");
+    753              OS_MsgQInit(&p_q->MsgQ,                                 /* Initialize the list of OS_MSGs                         */
+    754                          0u);
+    755              OS_PendListInit(&p_q->PendList);                        /* Initialize the waiting list                            */
+    756          }
+    757          
+    758          /*$PAGE*/
+    759          /*
+    760          ************************************************************************************************************************
+    761          *                                      ADD/REMOVE MESSAGE QUEUE TO/FROM DEBUG LIST
+    762          *
+    763          * Description: These functions are called by uC/OS-III to add or remove a message queue to/from a message queue debug
+    764          *              list.
+    765          *
+    766          * Arguments  : p_q     is a pointer to the message queue to add/remove
+    767          *
+    768          * Returns    : none
+    769          *
+    770          * Note(s)    : These functions are INTERNAL to uC/OS-III and your application should not call it.
+    771          ************************************************************************************************************************
+    772          */
+    773          
+    774          
+    775          #if OS_CFG_DBG_EN > 0u
+    776          void  OS_QDbgListAdd (OS_Q  *p_q)
+    777          {
+    778              p_q->DbgNamePtr               = (CPU_CHAR *)((void *)" ");
+    779              p_q->DbgPrevPtr               = (OS_Q     *)0;
+    780              if (OSQDbgListPtr == (OS_Q *)0) {
+    781                  p_q->DbgNextPtr           = (OS_Q     *)0;
+    782              } else {
+    783                  p_q->DbgNextPtr           =  OSQDbgListPtr;
+    784                  OSQDbgListPtr->DbgPrevPtr =  p_q;
+    785              }
+    786              OSQDbgListPtr                 =  p_q;
+    787          }
+    788          
+    789          
+    790          
+    791          void  OS_QDbgListRemove (OS_Q  *p_q)
+    792          {
+    793              OS_Q  *p_q_next;
+    794              OS_Q  *p_q_prev;
+    795          
+    796          
+    797              p_q_prev = p_q->DbgPrevPtr;
+    798              p_q_next = p_q->DbgNextPtr;
+    799          
+    800              if (p_q_prev == (OS_Q *)0) {
+    801                  OSQDbgListPtr = p_q_next;
+    802                  if (p_q_next != (OS_Q *)0) {
+    803                      p_q_next->DbgPrevPtr = (OS_Q *)0;
+    804                  }
+    805                  p_q->DbgNextPtr = (OS_Q *)0;
+    806          
+    807              } else if (p_q_next == (OS_Q *)0) {
+    808                  p_q_prev->DbgNextPtr = (OS_Q *)0;
+    809                  p_q->DbgPrevPtr      = (OS_Q *)0;
+    810          
+    811              } else {
+    812                  p_q_prev->DbgNextPtr =  p_q_next;
+    813                  p_q_next->DbgPrevPtr =  p_q_prev;
+    814                  p_q->DbgNextPtr      = (OS_Q *)0;
+    815                  p_q->DbgPrevPtr      = (OS_Q *)0;
+    816              }
+    817          }
+    818          #endif
+    819          
+    820          /*$PAGE*/
+    821          /*
+    822          ************************************************************************************************************************
+    823          *                                              MESSAGE QUEUE INITIALIZATION
+    824          *
+    825          * Description: This function is called by OSInit() to initialize the message queue management.
+    826          *
+    827          
+    828          * Arguments  : p_err         is a pointer to a variable that will receive an error code.
+    829          *
+    830          *                                OS_ERR_NONE     the call was successful
+    831          *
+    832          * Returns    : none
+    833          *
+    834          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    835          ************************************************************************************************************************
+    836          */
+    837          
+    838          void  OS_QInit (OS_ERR *p_err)
+    839          {
+    840          #ifdef OS_SAFETY_CRITICAL
+    841              if (p_err == (OS_ERR *)0) {
+    842                  OS_SAFETY_CRITICAL_EXCEPTION();
+    843                  return;
+    844              }
+    845          #endif
+    846          
+    847          #if OS_CFG_DBG_EN > 0u
+    848              OSQDbgListPtr = (OS_Q *)0;
+    849          #endif
+    850          
+    851              OSQQty        = (OS_OBJ_QTY)0;
+    852              *p_err        = OS_ERR_NONE;
+    853          }
+    854          
+    855          /*$PAGE*/
+    856          /*
+    857          ************************************************************************************************************************
+    858          *                                               POST MESSAGE TO A QUEUE
+    859          *
+    860          * Description: This function sends a message to a queue.  With the 'opt' argument, you can specify whether the message
+    861          *              is broadcast to all waiting tasks and/or whether you post the message to the front of the queue (LIFO)
+    862          *              or normally (FIFO) at the end of the queue.
+    863          *
+    864          * Arguments  : p_q           is a pointer to a message queue that must have been created by OSQCreate().
+    865          *
+    866          *              p_void        is a pointer to the message to send.
+    867          *
+    868          *              msg_size      specifies the size of the message (in bytes)
+    869          *
+    870          *              opt           determines the type of POST performed:
+    871          *
+    872          *                                OS_OPT_POST_ALL          POST to ALL tasks that are waiting on the queue
+    873          *
+    874          *                                OS_OPT_POST_FIFO         POST as FIFO and wake up single waiting task
+    875          *                                OS_OPT_POST_LIFO         POST as LIFO and wake up single waiting task
+    876          *
+    877          *                                OS_OPT_POST_NO_SCHED     Do not call the scheduler
+    878          *
+    879          *              ts            is the timestamp of the post
+    880          *
+    881          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    882          *
+    883          *                                OS_ERR_NONE            The call was successful and the message was sent
+    884          *                                OS_ERR_MSG_POOL_EMPTY  If there are no more OS_MSGs to use to place the message into
+    885          *                                OS_ERR_OBJ_PTR_NULL    If 'p_q' is a NULL pointer
+    886          *                                OS_ERR_OBJ_TYPE        If the message queue was not initialized
+    887          *                                OS_ERR_Q_MAX           If the queue is full
+    888          *
+    889          * Returns    : None
+    890          *
+    891          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+    892          ************************************************************************************************************************
+    893          */
+    894          
+    895          void  OS_QPost (OS_Q        *p_q,
+    896                          void        *p_void,
+    897                          OS_MSG_SIZE  msg_size,
+    898                          OS_OPT       opt,
+    899                          CPU_TS       ts,
+    900                          OS_ERR      *p_err)
+    901          {
+    902              OS_OBJ_QTY     cnt;
+    903              OS_OPT         post_type;
+    904              OS_PEND_LIST  *p_pend_list;
+    905              OS_PEND_DATA  *p_pend_data;
+    906              OS_PEND_DATA  *p_pend_data_next;
+    907              OS_TCB        *p_tcb;
+    908              CPU_SR_ALLOC();
+    909          
+    910          
+    911          
+    912              OS_CRITICAL_ENTER();
+    913              p_pend_list = &p_q->PendList;
+    914              if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0) {         /* Any task waiting on message queue?                     */
+    915                  if ((opt & OS_OPT_POST_LIFO) == (OS_OPT)0) {        /* Determine whether we post FIFO or LIFO                 */
+    916                      post_type = OS_OPT_POST_FIFO;
+    917                  } else {
+    918                      post_type = OS_OPT_POST_LIFO;
+    919                  }
+    920                  OS_MsgQPut(&p_q->MsgQ,                              /* Place message in the message queue                     */
+    921                             p_void,
+    922                             msg_size,
+    923                             post_type,
+    924                             ts,
+    925                             p_err);
+    926                  OS_CRITICAL_EXIT();
+    927                  return;
+    928              }
+    929          
+    930              if ((opt & OS_OPT_POST_ALL) != (OS_OPT)0) {             /* Post message to all tasks waiting?                     */
+    931                  cnt = p_pend_list->NbrEntries;                      /* Yes                                                    */
+    932              } else {
+    933                  cnt = (OS_OBJ_QTY)1;                                /* No                                                     */
+    934              }
+    935              p_pend_data = p_pend_list->HeadPtr;
+    936              while (cnt > 0u) {
+    937                  p_tcb            = p_pend_data->TCBPtr;
+    938                  p_pend_data_next = p_pend_data->NextPtr;
+    939                  OS_Post((OS_PEND_OBJ *)((void *)p_q),
+    940                          p_tcb,
+    941                          p_void,
+    942                          msg_size,
+    943                          ts);
+    944                  p_pend_data = p_pend_data_next;
+    945                  cnt--;
+    946              }
+    947              OS_CRITICAL_EXIT_NO_SCHED();
+    948              if ((opt & OS_OPT_POST_NO_SCHED) == (OS_OPT)0) {
+    949                  OSSched();                                          /* Run the scheduler                                      */
+    950              }
+    951              *p_err = OS_ERR_NONE;
+    952          }
+    953          
+    954          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   OSQCreate
+        24   -> CPU_IntDisMeasStart
+        24   -> CPU_IntDisMeasStop
+        24   -> CPU_SR_Restore
+        24   -> CPU_SR_Save
+        24   -> OS_MsgQInit
+        24   -> OS_PendListInit
+        24   -> OS_QDbgListAdd
+      32   OSQDel
+        32   -> CPU_IntDisMeasStart
+        32   -> CPU_IntDisMeasStop
+        32   -> CPU_SR_Restore
+        32   -> CPU_SR_Save
+        32   -> CPU_TS_TmrRd
+        32   -> OSSched
+        32   -> OS_PendObjDel
+        32   -> OS_QClr
+        32   -> OS_QDbgListRemove
+      16   OSQFlush
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+        16   -> OS_MsgQFreeAll
+      72   OSQPend
+        72   -> CPU_IntDisMeasStart
+        72   -> CPU_IntDisMeasStop
+        72   -> CPU_SR_Restore
+        72   -> CPU_SR_Save
+        72   -> OSSched
+        72   -> OS_MsgQGet
+        72   -> OS_Pend
+      32   OSQPendAbort
+        32   -> CPU_IntDisMeasStart
+        32   -> CPU_IntDisMeasStop
+        32   -> CPU_SR_Restore
+        32   -> CPU_SR_Save
+        32   -> CPU_TS_TmrRd
+        32   -> OSSched
+        32   -> OS_PendAbort
+      32   OSQPost
+        32   -> CPU_TS_TmrRd
+        32   -> OS_QPost
+       8   OS_QClr
+         8   -> OS_MsgQFreeAll
+         8   -> OS_MsgQInit
+         0   -> OS_PendListInit
+       0   OS_QDbgListAdd
+       0   OS_QDbgListRemove
+       0   OS_QInit
+      48   OS_QPost
+        48   -> CPU_IntDisMeasStart
+        48   -> CPU_IntDisMeasStop
+         0   -> CPU_SR_Restore
+        48   -> CPU_SR_Restore
+        48   -> CPU_SR_Save
+        48   -> OSSched
+        48   -> OS_MsgQPut
+        48   -> OS_Post
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+       4  ??DataTable11_4
+       4  ??DataTable11_5
+       4  ??DataTable11_6
+       4  ??DataTable11_7
+       4  ??DataTable11_8
+       4  ?_0
+       2  ?_1
+     126  OSQCreate
+     258  OSQDel
+      96  OSQFlush
+     394  OSQPend
+     194  OSQPendAbort
+      66  OSQPost
+      42  OS_QClr
+      32  OS_QDbgListAdd
+      52  OS_QDbgListRemove
+      14  OS_QInit
+     166  OS_QPost
+
+ 
+     6 bytes in section .rodata
+ 1 476 bytes in section .text
+ 
+ 1 476 bytes of CODE  memory
+     6 bytes of CONST memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,516 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:33
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  D:\SmartCardBox\SMART_CARD\Project\App\rtc\user_rtc_app.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\rtc\user_rtc_app.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\user_rtc_app.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\user_rtc_app.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\rtc\user_rtc_app.c
+      1          #include <stdint.h>
+      2          
+      3          #include "os.h"
+      4          #include "os_cfg_app.h"
+      5          
+      6          #include "heads.h"
+      7          
+      8          static uint8_t rtc_calibrate_flag=0;
+      9          static OS_MUTEX rtc_rd_wr_mutex={0};
+     10          
+     11          
+     12          #if 1
+     13          void RTC_Configuration(void)
+     14          {
+     15            /* Enable PWR and BKP clocks */
+     16            RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
+     17          
+     18            /* Allow access to BKP Domain */
+     19            PWR_BackupAccessCmd(ENABLE);
+     20          
+     21            /* Reset Backup Domain */
+     22            BKP_DeInit();
+     23          
+     24            /* Enable LSE */
+     25            //RCC_LSEConfig(RCC_LSE_ON);
+     26            RCC_LSICmd(ENABLE);
+     27            /* Wait till LSE is ready */
+     28            //while (RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET)
+     29            //{}
+     30            while (RCC_GetFlagStatus(RCC_FLAG_LSIRDY) == RESET)
+     31            {}
+     32          
+     33            /* Select LSE as RTC Clock Source */
+     34            RCC_RTCCLKConfig(RCC_RTCCLKSource_LSI);
+     35          
+     36            /* Enable RTC Clock */
+     37            RCC_RTCCLKCmd(ENABLE);
+     38          
+     39            /* Wait for RTC registers synchronization */
+     40            RTC_WaitForSynchro();
+     41          
+     42            /* Wait until last write operation on RTC registers has finished */
+     43            RTC_WaitForLastTask();
+     44          
+     45            /* Enable the RTC Second */
+     46            RTC_ITConfig(RTC_IT_SEC, ENABLE);
+     47          
+     48            /* Wait until last write operation on RTC registers has finished */
+     49            RTC_WaitForLastTask();
+     50          
+     51            /* Set RTC prescaler: set RTC period to 1sec */
+     52            RTC_SetPrescaler(32767); /* RTC period = RTCCLK/RTC_PR = (32.768 KHz)/(32767+1) */
+     53          
+     54            /* Wait until last write operation on RTC registers has finished */
+     55            RTC_WaitForLastTask();
+     56          }
+     57          
+     58          void RTC_Configuration1(void)
+     59          {
+     60            /* Enable PWR and BKP clocks */
+     61            RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
+     62          
+     63            /* Allow access to BKP Domain */
+     64            PWR_BackupAccessCmd(ENABLE);
+     65          
+     66            /* Reset Backup Domain */
+     67            //BKP_DeInit();
+     68          
+     69            /* Enable LSE */
+     70            //RCC_LSEConfig(RCC_LSE_ON);
+     71            RCC_LSICmd(ENABLE);
+     72            /* Wait till LSE is ready */
+     73            //while (RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET)
+     74            //{}
+     75            while (RCC_GetFlagStatus(RCC_FLAG_LSIRDY) == RESET)
+     76            {}
+     77          
+     78            /* Select LSE as RTC Clock Source */
+     79            RCC_RTCCLKConfig(RCC_RTCCLKSource_LSI);
+     80          
+     81            /* Enable RTC Clock */
+     82            RCC_RTCCLKCmd(ENABLE);
+     83          
+     84            /* Wait for RTC registers synchronization */
+     85            RTC_WaitForSynchro();
+     86          
+     87            /* Wait until last write operation on RTC registers has finished */
+     88            RTC_WaitForLastTask();
+     89          
+     90            /* Enable the RTC Second */
+     91            RTC_ITConfig(RTC_IT_SEC, ENABLE);
+     92          
+     93            /* Wait until last write operation on RTC registers has finished */
+     94            RTC_WaitForLastTask();
+     95          
+     96            /* Set RTC prescaler: set RTC period to 1sec */
+     97            RTC_SetPrescaler(32767); /* RTC period = RTCCLK/RTC_PR = (32.768 KHz)/(32767+1) */
+     98          
+     99            /* Wait until last write operation on RTC registers has finished */
+    100            RTC_WaitForLastTask();
+    101          }
+    102          
+    103          
+    104          #else
+    105          void RTC_Configuration(void)
+    106          {
+    107            /* Enable PWR and BKP clocks */
+    108            RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
+    109          
+    110            /* Allow access to BKP Domain */
+    111            PWR_BackupAccessCmd(ENABLE);
+    112          
+    113            /* Reset Backup Domain */
+    114            BKP_DeInit();
+    115          
+    116            /* Enable LSE */
+    117            RCC_LSEConfig(RCC_LSE_ON);
+    118            /* Wait till LSE is ready */
+    119            while (RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET)
+    120            {}
+    121          
+    122            /* Select LSE as RTC Clock Source */
+    123            RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
+    124          
+    125            /* Enable RTC Clock */
+    126            RCC_RTCCLKCmd(ENABLE);
+    127          
+    128            /* Wait for RTC registers synchronization */
+    129            RTC_WaitForSynchro();
+    130          
+    131            /* Wait until last write operation on RTC registers has finished */
+    132            RTC_WaitForLastTask();
+    133          
+    134            /* Enable the RTC Second */
+    135            RTC_ITConfig(RTC_IT_SEC, ENABLE);
+    136          
+    137            /* Wait until last write operation on RTC registers has finished */
+    138            RTC_WaitForLastTask();
+    139          
+    140            /* Set RTC prescaler: set RTC period to 1sec */
+    141            RTC_SetPrescaler(32767); /* RTC period = RTCCLK/RTC_PR = (32.768 KHz)/(32767+1) */
+    142          
+    143            /* Wait until last write operation on RTC registers has finished */
+    144            RTC_WaitForLastTask();
+    145          }
+    146          #endif
+    147          /**
+    148            * @brief  Returns the time entered by user, using Hyperterminal.
+    149            * @param  None
+    150            * @retval Current time RTC counter value
+    151            */
+    152          uint32_t Time_Regulate(void)
+    153          {
+    154            uint32_t Tmp_HH = 0xF0, Tmp_MM = 0xF0, Tmp_SS = 0xF0;
+    155          
+    156            InfoPrintf("\r\n==============Time Settings=====================================");
+    157          
+    158            /* Return the value to store in RTC counter register */
+    159            return((Tmp_HH*3600 + Tmp_MM*60 + Tmp_SS));
+    160          }
+    161          
+    162          /**
+    163            * @brief  Adjusts time.
+    164            * @param  None
+    165            * @retval None
+    166            */
+    167          void Rtc_Time_Adjust(uint32_t time_u32)
+    168          {
+    169            /* Wait until last write operation on RTC registers has finished */
+    170            RTC_WaitForLastTask();
+    171            /* Change the current time */
+    172            RTC_SetCounter(time_u32);//(Time_Regulate());
+    173            /* Wait until last write operation on RTC registers has finished */
+    174            RTC_WaitForLastTask();
+    175          }
+    176          
+    177          
+    178          void user_open_rtc(void)
+    179          {
+    180          	RTC_TIME_Type RTCFullTime;
+    181          	
+    182          	if (BKP_ReadBackupRegister(BKP_DR1) != 0xA5A6)
+    183          	{
+    184          		/* RTC Configuration */
+    185          		RTC_Configuration();
+    186          		/* Adjust time by values entered by the user on the hyperterminal */
+    187          		Rtc_Time_Adjust(Time_Regulate());
+    188          		BKP_WriteBackupRegister(BKP_DR1, 0xA5A6);
+    189          	}
+    190          	else
+    191          	{
+    192          		RTC_Configuration1();
+    193          	
+    194          		/* Check if the Power On Reset flag is set */
+    195          		if (RCC_GetFlagStatus(RCC_FLAG_PORRST) != RESET)
+    196          		{
+    197          			InfoPrintf("\r\n\n Power On Reset occurred....");
+    198          		}
+    199          		/* Check if the Pin Reset flag is set */
+    200          		else if (RCC_GetFlagStatus(RCC_FLAG_PINRST) != RESET)
+    201          		{
+    202          			InfoPrintf("\r\n\n External Reset occurred....");
+    203          		}
+    204          
+    205          		//InfoPrintf("\r\n No need to configure RTC....");
+    206          		/* Wait for RTC registers synchronization */
+    207                  
+    208          		RTC_WaitForSynchro();
+    209          
+    210          		/* Enable the RTC Second */
+    211          		RTC_ITConfig(RTC_IT_SEC, ENABLE);
+    212          		/* Wait until last write operation on RTC registers has finished */
+    213          		RTC_WaitForLastTask();
+    214          	}
+    215          
+    216          	/* Clear reset flags */
+    217            	RCC_ClearFlag();
+    218          	
+    219          	rtc_calibrate_flag=1;
+    220          	
+    221          }
+    222          
+    223          
+    224          int get_rtc_init_flag(void)
+    225          {
+    226          	return rtc_calibrate_flag;
+    227          }
+    228          
+    229          int get_current_time(BEIJING_TIME_T *current_time)
+    230          {
+    231          	RTC_TIME_Type RTCFullTime;
+    232          	uint32_t time_u32;
+    233          	OS_ERR os_err;
+    234          	
+    235            	if(OSRunning==OS_STATE_OS_RUNNING)
+    236          	{
+    237          		if(rtc_rd_wr_mutex.Type!=OS_OBJ_TYPE_MUTEX)
+    238          		{
+    239          			OSMutexCreate(&rtc_rd_wr_mutex,"RTC RW MT",&os_err);
+    240          		}
+    241          		OSMutexPend(&rtc_rd_wr_mutex,1000,OS_OPT_PEND_BLOCKING,NULL,&os_err);
+    242          	}
+    243          	
+    244          	//RTC_GetFullTime (LPC_RTC, &RTCFullTime);
+    245          	time_u32=RTC_GetCounter();
+    246          	
+    247          	localtime(time_u32 , current_time);//1970-2100之间能正确转换
+    248          
+    249          	//if(RTCFullTime.YEAR)  做有效性判断  !!!!!!!!!!
+    250          	//  (RTCFullTime.MONTH)(RTCFullTime.DOM)
+    251          	//(RTCFullTime.HOUR)(RTCFullTime.MIN)(RTCFullTime.SEC)
+    252          
+    253          
+    254          	if(OSRunning==OS_STATE_OS_RUNNING)
+    255          	{
+    256          		OSMutexPost(&rtc_rd_wr_mutex,OS_OPT_POST_NONE,&os_err);
+    257          	}
+    258          	
+    259              return 0;
+    260          }
+    261          
+    262          void write_rtc(BEIJING_TIME_T current_time)
+    263          {
+    264             	OS_ERR os_err;
+    265          	uint32_t time_u32;
+    266          	//合法性判断
+    267          	//...
+    268          	if(OSRunning==OS_STATE_OS_RUNNING)
+    269          	{
+    270          		if(rtc_rd_wr_mutex.Type!=OS_OBJ_TYPE_MUTEX)
+    271          		{
+    272          			OSMutexCreate(&rtc_rd_wr_mutex,"RTC RW MT",&os_err);
+    273          		}
+    274          		OSMutexPend(&rtc_rd_wr_mutex,1000,OS_OPT_PEND_BLOCKING,NULL,&os_err);
+    275          	}
+    276          	
+    277          	//写入 , 要加一个互斥量 zgc
+    278          	//RTC_SetTime (LPC_RTC, RTC_TIMETYPE_SECOND, 	(uint32_t)current_time.second);
+    279          	//RTC_SetTime (LPC_RTC, RTC_TIMETYPE_MINUTE, 	(uint32_t)current_time.minute);
+    280          	//RTC_SetTime (LPC_RTC, RTC_TIMETYPE_HOUR, 	(uint32_t)current_time.hour);
+    281          	
+    282          	//RTC_SetTime (LPC_RTC, RTC_TIMETYPE_DAYOFMONTH, 	(uint32_t)current_time.day);
+    283          	//RTC_SetTime (LPC_RTC, RTC_TIMETYPE_MONTH, 		(uint32_t)current_time.month);
+    284          	//RTC_SetTime (LPC_RTC, RTC_TIMETYPE_YEAR, 		(uint32_t)current_time.year);
+    285          
+    286          	
+    287          	time_u32=mktime (	current_time.year, current_time.month ,current_time.day,
+    288          						current_time.hour, current_time.minute,current_time.second);
+    289          
+    290          	Rtc_Time_Adjust(time_u32);
+    291          
+    292          	rtc_calibrate_flag=1;
+    293          
+    294          	if(OSRunning==OS_STATE_OS_RUNNING)
+    295          	{
+    296          		OSMutexPost(&rtc_rd_wr_mutex,OS_OPT_POST_NONE,&os_err);
+    297          	}
+    298          }
+    299          
+    300          void printf_time_now(void)
+    301          {
+    302          	BEIJING_TIME_T current_time;
+    303          	uint32_t time_u32;
+    304          	OS_ERR os_err;
+    305           	#if 1
+    306          	if(OSRunning==OS_STATE_OS_RUNNING)
+    307          	{
+    308          		if(rtc_rd_wr_mutex.Type!=OS_OBJ_TYPE_MUTEX)
+    309          		{
+    310          			OSMutexCreate(&rtc_rd_wr_mutex,"RTC RW MT",&os_err);
+    311          		}
+    312          		
+    313          		OSMutexPend(&rtc_rd_wr_mutex,1000,OS_OPT_PEND_BLOCKING,NULL,&os_err);
+    314          	}
+    315          	
+    316          	//要加一个互斥量。。。。 zgc
+    317          	//RTC_GetFullTime (LPC_RTC, &RTCFullTime);
+    318          	time_u32=RTC_GetCounter();
+    319          		
+    320          	localtime(time_u32 , &current_time);//1970-2100之间能正确转换
+    321          
+    322          		
+    323          
+    324          	InfoPrintf("current time:%u-%02d-%02d %02d:%02d:%02d\r\n",current_time.year,current_time.month,current_time.day,\
+    325          	current_time.hour,current_time.minute,current_time.second);
+    326          	if(OSRunning==OS_STATE_OS_RUNNING)
+    327          	{
+    328          		OSMutexPost(&rtc_rd_wr_mutex,OS_OPT_POST_NONE,&os_err);
+    329          	}
+    330          	#endif
+    331          }
+    332          
+    333          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   RTC_Configuration
+         8   -> BKP_DeInit
+         8   -> PWR_BackupAccessCmd
+         8   -> RCC_APB1PeriphClockCmd
+         8   -> RCC_GetFlagStatus
+         8   -> RCC_LSICmd
+         8   -> RCC_RTCCLKCmd
+         8   -> RCC_RTCCLKConfig
+         8   -> RTC_ITConfig
+         8   -> RTC_SetPrescaler
+         0   -> RTC_WaitForLastTask
+         8   -> RTC_WaitForLastTask
+         8   -> RTC_WaitForSynchro
+       8   RTC_Configuration1
+         8   -> PWR_BackupAccessCmd
+         8   -> RCC_APB1PeriphClockCmd
+         8   -> RCC_GetFlagStatus
+         8   -> RCC_LSICmd
+         8   -> RCC_RTCCLKCmd
+         8   -> RCC_RTCCLKConfig
+         8   -> RTC_ITConfig
+         8   -> RTC_SetPrescaler
+         0   -> RTC_WaitForLastTask
+         8   -> RTC_WaitForLastTask
+         8   -> RTC_WaitForSynchro
+       8   Rtc_Time_Adjust
+         8   -> RTC_SetCounter
+         0   -> RTC_WaitForLastTask
+         8   -> RTC_WaitForLastTask
+       8   Time_Regulate
+         8   -> InfoPrintf
+      24   get_current_time
+        24   -> OSMutexCreate
+        24   -> OSMutexPend
+        24   -> OSMutexPost
+        24   -> RTC_GetCounter
+        24   -> localtime
+       0   get_rtc_init_flag
+      56   printf_time_now
+        56   -> InfoPrintf
+        56   -> OSMutexCreate
+        56   -> OSMutexPend
+        56   -> OSMutexPost
+        56   -> RTC_GetCounter
+        56   -> localtime
+       8   user_open_rtc
+         8   -> BKP_ReadBackupRegister
+         8   -> BKP_WriteBackupRegister
+         8   -> InfoPrintf
+         8   -> RCC_ClearFlag
+         8   -> RCC_GetFlagStatus
+         8   -> RTC_Configuration
+         8   -> RTC_Configuration1
+         8   -> RTC_ITConfig
+         8   -> RTC_WaitForLastTask
+         8   -> RTC_WaitForSynchro
+         8   -> Rtc_Time_Adjust
+         8   -> Time_Regulate
+      40   write_rtc
+        40   -> OSMutexCreate
+        40   -> OSMutexPend
+        40   -> OSMutexPost
+        40   -> Rtc_Time_Adjust
+        40   -> mktime
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable10
+       4  ??DataTable10_1
+       4  ??DataTable10_2
+       4  ??DataTable10_3
+       4  ??DataTable10_4
+      68  ?_0
+      32  ?_1
+      32  ?_2
+      12  ?_3
+      44  ?_4
+      88  RTC_Configuration
+      84  RTC_Configuration1
+      22  Rtc_Time_Adjust
+      14  Time_Regulate
+      82  get_current_time
+       6  get_rtc_init_flag
+     108  printf_time_now
+      48  rtc_calibrate_flag
+          rtc_rd_wr_mutex
+     108  user_open_rtc
+     102  write_rtc
+
+ 
+  48 bytes in section .bss
+ 822 bytes in section .text
+ 
+ 822 bytes of CODE memory
+  48 bytes of DATA memory
+
+Errors: none
+Warnings: 2

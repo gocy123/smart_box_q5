@@ -1,0 +1,264 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:28
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_prio.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_prio.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_prio.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_prio.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_prio.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                 PRIORITY MANAGEMENT
+     10          *
+     11          * File    : OS_PRIO.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include  <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_prio__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          CPU_DATA   OSPrioTbl[OS_PRIO_TBL_SIZE];                     /* Declare the array local to this file to allow for  ... */
+     41                                                                      /* ... optimization.  In other words, this allows the ... */
+     42                                                                      /* ... table to be located in fast memory                 */
+     43          
+     44          /*
+     45          ************************************************************************************************************************
+     46          *                                               INITIALIZE THE PRIORITY LIST
+     47          *
+     48          * Description: This function is called by uC/OS-III to initialize the list of ready priorities.
+     49          *
+     50          * Arguments  : none
+     51          *
+     52          * Returns    : none
+     53          *
+     54          * Note       : This function is INTERNAL to uC/OS-III and your application should not call it.
+     55          ************************************************************************************************************************
+     56          */
+     57          
+     58          void  OS_PrioInit (void)
+     59          {
+     60              CPU_DATA  i;
+     61          
+     62          
+     63                                                                      /* Clear the bitmap table ... no task is ready            */
+     64              for (i = 0u; i < OS_PRIO_TBL_SIZE; i++) {
+     65                   OSPrioTbl[i] = (CPU_DATA)0;
+     66              }
+     67          }
+     68          
+     69          /*
+     70          ************************************************************************************************************************
+     71          *                                           GET HIGHEST PRIORITY TASK WAITING
+     72          *
+     73          * Description: This function is called by other uC/OS-III services to determine the highest priority task
+     74          *              waiting on the event.
+     75          *
+     76          * Arguments  : none
+     77          *
+     78          * Returns    : The priority of the Highest Priority Task (HPT) waiting for the event
+     79          *
+     80          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+     81          ************************************************************************************************************************
+     82          */
+     83          
+     84          OS_PRIO  OS_PrioGetHighest (void)
+     85          {
+     86              CPU_DATA  *p_tbl;
+     87              OS_PRIO    prio;
+     88          
+     89          
+     90              prio  = (OS_PRIO)0;
+     91              p_tbl = &OSPrioTbl[0];
+     92              while (*p_tbl == (CPU_DATA)0) {                         /* Search the bitmap table for the highest priority       */
+     93                  prio += DEF_INT_CPU_NBR_BITS;                       /* Compute the step of each CPU_DATA entry                */
+     94                  p_tbl++;
+     95              }
+     96              prio += (OS_PRIO)CPU_CntLeadZeros(*p_tbl);              /* Find the position of the first bit set at the entry    */
+     97              return (prio);
+     98          }
+     99          
+    100          /*
+    101          ************************************************************************************************************************
+    102          *                                                  INSERT PRIORITY
+    103          *
+    104          * Description: This function is called to insert a priority in the priority table.
+    105          *
+    106          * Arguments  : prio     is the priority to insert
+    107          *
+    108          * Returns    : none
+    109          *
+    110          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    111          ************************************************************************************************************************
+    112          */
+    113          
+    114          void  OS_PrioInsert (OS_PRIO  prio)
+    115          {
+    116              CPU_DATA  bit;
+    117              CPU_DATA  bit_nbr;
+    118              OS_PRIO   ix;
+    119          
+    120          
+    121              ix             = prio / DEF_INT_CPU_NBR_BITS;
+    122              bit_nbr        = (CPU_DATA)prio & (DEF_INT_CPU_NBR_BITS - 1u);
+    123              bit            = 1u;
+    124              bit          <<= (DEF_INT_CPU_NBR_BITS - 1u) - bit_nbr;
+    125              OSPrioTbl[ix] |= bit;
+    126          }
+    127          
+    128          /*
+    129          ************************************************************************************************************************
+    130          *                                                   REMOVE PRIORITY
+    131          *
+    132          * Description: This function is called to remove a priority in the priority table.
+    133          *
+    134          * Arguments  : prio     is the priority to remove
+    135          *
+    136          * Returns    : none
+    137          *
+    138          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    139          ************************************************************************************************************************
+    140          */
+    141          
+    142          void  OS_PrioRemove (OS_PRIO  prio)
+    143          {
+    144              CPU_DATA  bit;
+    145              CPU_DATA  bit_nbr;
+    146              OS_PRIO   ix;
+    147          
+    148          
+    149              ix             = prio / DEF_INT_CPU_NBR_BITS;
+    150              bit_nbr        = (CPU_DATA)prio & (DEF_INT_CPU_NBR_BITS - 1u);
+    151              bit            = 1u;
+    152              bit          <<= (DEF_INT_CPU_NBR_BITS - 1u) - bit_nbr;
+    153              OSPrioTbl[ix] &= ~bit;
+    154          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   OS_PrioGetHighest
+         8   -> CPU_CntLeadZeros
+       0   OS_PrioInit
+       4   OS_PrioInsert
+       4   OS_PrioRemove
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  OSPrioTbl
+      28  OS_PrioGetHighest
+      18  OS_PrioInit
+      34  OS_PrioInsert
+      36  OS_PrioRemove
+
+ 
+   4 bytes in section .bss
+ 120 bytes in section .text
+ 
+ 120 bytes of CODE memory
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: none

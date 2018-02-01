@@ -1,0 +1,1757 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:26
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_protocol_tx.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_protocol_tx.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\jt808_protocol_tx.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\jt808_protocol_tx.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_protocol_tx.c
+      1          #include "user_system_cfg.h"
+      2          
+      3          #ifdef  USE_PROTOCOL_JT808
+      4          #include <stdint.h>
+      5          #include <stdio.h>
+      6          #include <string.h>
+      7          
+      8          #include "os.h"
+      9          #include "os_cfg_app.h"	//TCB,STACK,PRIORITY,任务间消息的结构体定义和宏
+     10          #include "heads.h"
+     11          
+     12          
+     13          //#include "aes.h"
+     14          //#include "rsa_main.h"
+     15          #ifdef USE_SIM800_MODEM
+     16          #include "modem_sim800_app.h"
+     17          #endif
+     18          #ifdef USE_SIM6320_MODEM
+     19          #include "modem_sim6320_app.h"
+     20          #endif
+     21          
+     22          #ifdef USE_MC20_MODEM
+     23          #include "modem_MC20_app.h"
+     24          #include "modem_MC20_AT_pro.h"
+     25          #endif
+     26          
+     27          
+     28          #include "user_debug_app.h"
+     29          #include "jt808_telecom_prot_manage.h"
+     30          //#include "user_gps_app.h"
+     31          //#include "user_rtc_app.h"
+     32          
+     33          
+     34          
+     35          #include "jt808_protocol_tx.h"
+     36          #include "jt808_protocol_rx.h"
+     37          #include "jt808_pt_misc.h"
+     38          
+     39          #ifndef ONENET_IP
+     40          
+     41          #if (CAR_LICENSE_NUM_LEN==6)
+     42          uint8_t card[CAR_LICENSE_NUM_LEN]="zgcdef";
+     43          #else
+     44          uint8_t card[CAR_LICENSE_NUM_LEN]="粤B24680";
+     45          #endif
+     46          
+     47          #endif
+     48          
+     49          #define PD_REP_INFO_DATA_Q_MAX (6)
+     50          #define PD_REP_INFO_DATA_SAVE_Q_MAX (3)
+     51          OS_Q pd_rep_info_data_Q={0};
+     52          OS_Q pd_rep_info_data_save_Q={0};
+     53          
+     54          OS_TMR 	period_report_tmr;
+     55          
+     56          extern OS_Q 	pd_rep_info_data_Q;
+     57          extern OS_Q 	pd_rep_info_data_save_Q;
+     58          extern uint8_t 	aes_key_public[];
+     59          extern uint8_t	get_already_login_flag(void);
+     60          
+     61          
+     62          int get_report_period(void)
+     63          {
+     64          	//return 120;//N*100ms ,基本单位是100ms  zgc ,但滴答是1ms  ????
+     65          	return 20;//N*100ms ,基本单位是100ms  zgc ,但滴答是1ms  ????
+     66          }
+     67          
+     68          int get_gprs_send_fun(void)
+     69          {
+     70          	return 1;
+     71          	//return gprs_enable;
+     72          }
+     73          
+     74          
+     75          #define ____function_start____________________________________________________________
+     76          
+     77          //uint16_t 高低字节转换
+     78          unsigned short htons(unsigned short n)
+     79          {
+     80            return ((n & 0xff) << 8) | ((n & 0xff00) >> 8);
+     81          }
+     82          
+     83          /************************************************************
+     84          函数：get_check_sum ，计算异或校验和
+     85          输入:*p_data 需要计算校验和的源数据，len源数据字节数
+     86          输出:
+     87          返回值:异或校验和
+     88          作者:liaoxc 2015-11-10
+     89          ***************************************************************/
+     90          uint8_t get_check_sum(uint8_t *p_data,uint16_t len)
+     91          {
+     92          	uint8_t chk_sum;
+     93          
+     94          	chk_sum = *p_data++;
+     95          	len--;
+     96          	
+     97          	while(len--)
+     98          	{
+     99          		chk_sum ^=  *p_data++;
+    100          	}
+    101          
+    102          	return chk_sum;
+    103          }
+    104          
+    105          #define ____flow_serial_number___________________________________
+    106          
+    107          __no_init uint16_t jt808_serial_num;
+    108          
+    109          /************************************************************
+    110          函数：get_serial_num ，获取上传数据的流水号
+    111          输入:
+    112          输出:
+    113          返回值:协议流水号
+    114          作者:liaoxc 2015-11-16
+    115          ***************************************************************/
+    116          uint16_t get_serial_num(void)
+    117          {
+    118          	uint16_t tmp;
+    119          	//InfoPrintf("流水号=%d\r\n",sgmw_serial_num);
+    120          	tmp = jt808_serial_num;
+    121          	jt808_serial_num++;
+    122          	
+    123          	return tmp;
+    124          }
+    125          
+    126          uint8_t *get_phone_num(void)
+    127          {
+    128          	//这个就是EXLIVE的设备ID号,EXLIVE APP 添加设备那里对应的"设备ID"
+    129          	
+    130          	//APP添加设备界面的"SIM卡号"无意义(对终端代码无任何关联作用),
+    131          	//只是在APP的地图界面显示而已
+    132          	//static uint8_t phone_num[6]={0x02,0x88,0x20,0x16,0x08,0x05};
+    133          	//static uint8_t phone_num[6]={0x03,0x88,0x20,0x16,0x12,0x31}; 
+    134          	static uint8_t phone_num[6]={0x12,0x34,0x56,0x78,0x90,0x88}; //mobi
+    135          	//static uint8_t phone_num[6]={0x01,0x87,0x63,0x49,0x07,0x65};
+    136          	return phone_num;
+    137          }
+    138          
+    139          
+    140          /************************************************************
+    141          函数：reset_serial_num ，获取上传数据的流水号
+    142          输入:
+    143          输出:
+    144          返回值:协议流水号
+    145          作者:liaoxc 2015-11-16
+    146          ***************************************************************/
+    147          void reset_serial_num(void)
+    148          {
+    149          	jt808_serial_num = 1;
+    150          }
+    151          
+    152          #define ____escape__DeEscape____________________________________________
+    153          /************************************************************
+    154          函数：check_escape_bytes_amount ，计算需要转义的数据个数
+    155          输入:*p需要的源数据，len源数据字节数
+    156          输出:
+    157          返回值:需要转义的字节数
+    158          作者:zgc 2015-11-10
+    159          ***************************************************************/
+    160          int check_escape_bytes_amount(uint8_t *p,int len)
+    161          {
+    162          	int i,j=0;
+    163          	for(i=0;i<len;i++)
+    164          	{
+    165          		if(*p == JT808_PROTOCL_ESCAPE_CODE || *p == JT808_PROTOCOL_FIX)
+    166          		{
+    167          			j++;
+    168          		}
+    169          		p++;
+    170          	}
+    171          
+    172          	return j;
+    173          }
+    174          
+    175          /************************************************************
+    176          转义处理函数ｅ：把0x7E转成0x7D 0x02，0x7E转成0x7D 0x01
+    177          输入:*Src 未转义带头尾的协议包数据
+    178          输出:*Dst 转义后的带头尾的协议包数据
+    179          返回值:转义后的数据长度
+    180          作者:liaoxc 2015-11-10
+    181          ***************************************************************/
+    182          #if 1
+    183          uint16_t jt808_escape_package(uint8_t*Dst,uint16_t DstLen,uint8_t *Src,uint16_t SrcLen)
+    184          {
+    185          	uint16_t len=0;
+    186          	uint16_t i=0;
+    187          
+    188          //  7e xx xx xx xx xx xx.... 7e
+    189          	
+    190          	*Dst++ = *Src++; //head
+    191          	len++;
+    192          	
+    193          	for(i=1; i<SrcLen-1; i++)//从第二个不是head的字符开始
+    194          	{
+    195          		if(len < (DstLen-1))
+    196          		{
+    197          			if(*Src == JT808_PROTOCOL_FIX)
+    198          			{
+    199          				
+    200          				*Dst++ = JT808_PROTOCL_ESCAPE_CODE;
+    201          				*Dst++ = 0x02;
+    202          				Src++;
+    203          				len += 2;
+    204          			}
+    205          			else if(*Src == JT808_PROTOCL_ESCAPE_CODE)
+    206          			{
+    207          				
+    208          				*Dst++ = JT808_PROTOCL_ESCAPE_CODE;
+    209          				*Dst++ = 0x01;
+    210          				Src++;
+    211          				len += 2;
+    212          			}
+    213          			else
+    214          			{	
+    215          				*Dst++ = *Src++;
+    216          				len++;
+    217          			}
+    218          		}
+    219          		else
+    220          		{
+    221          			return 0;
+    222          		}
+    223          	}
+    224          	
+    225          	*Dst = *Src;//tail
+    226          	len ++;
+    227          
+    228          	return len;
+    229          }
+    230          #else
+    231          uint16_t jt808_escape_package(uint8_t*Dst,uint16_t DstLen,uint8_t *Src,uint16_t SrcLen)
+    232          {
+    233          	uint16_t len=1;
+    234          	uint16_t i=0;
+    235          	
+    236          	*Dst++ = *Src++; //head
+    237          	for(i=SrcLen;i > 2;i--)//从第二个不是head的字符开始
+    238          	{
+    239          		if(len > (DstLen-1)-1)
+    240          		{
+    241          			//return 0;
+    242          		}
+    243          	
+    244          		if(*Src == JT808_PROTOCOL_FIX)
+    245          		{
+    246          			
+    247          			*Dst++ = JT808_PROTOCL_ESCAPE_CODE;
+    248          			*Dst++ = 0x02;
+    249          			Src++;
+    250          			len += 2;
+    251          		}
+    252          		else if(*Src == JT808_PROTOCL_ESCAPE_CODE)
+    253          		{
+    254          			
+    255          			*Dst++ = JT808_PROTOCL_ESCAPE_CODE;
+    256          			*Dst++ = 0x01;
+    257          			Src++;
+    258          			len += 2;
+    259          		}
+    260          		else
+    261          		{	
+    262          			*Dst++ = *Src++;
+    263          			len++;
+    264          		}
+    265          	}
+    266          	
+    267          	*Dst = *Src;//tail
+    268          	len ++;
+    269          
+    270          	return len;
+    271          }
+    272          
+    273          #endif
+    274          
+    275          /*
+    276          反转义处理函数ｅ：把0x7D 0x01转成0x7D，0x7D 0x02转成0x7E
+    277          输入:*Src 未转义带头尾的协议包数据
+    278          输出:*Dst 转义后的带头尾的协议包数据
+    279          返回值:反转义后的数据长度
+    280          作者:liaoxc 2015-11-10 */
+    281          uint16_t jt808_DeEscape_package(uint8_t*Dst,uint8_t *Src,uint16_t SrcLen)
+    282          {
+    283          	uint16_t len=1;
+    284          	uint16_t i=0;
+    285          	
+    286          	*Dst++ = *Src++;//head
+    287          	i=2;
+    288          	while(i<SrcLen)//从第二个不是head的字符开始
+    289          	{
+    290          		if(*Src != JT808_PROTOCL_ESCAPE_CODE)
+    291          		{
+    292          			*Dst++ = *Src++;
+    293          			i++;
+    294          		}
+    295          		else
+    296          		{
+    297          			if(*(Src+1) == 0x02)
+    298          			{
+    299          				*Dst = JT808_PROTOCOL_FIX;
+    300          			}
+    301          			else if(*(Src+1) == 0x01)
+    302          			{
+    303          				*Dst = *Src;
+    304          			}
+    305          			else
+    306          			{
+    307          				*Dst++ = *Src;
+    308          				*Dst = *(Src+1);
+    309          
+    310          			}
+    311          			Src += 2;
+    312          			i += 2;
+    313          			Dst++;
+    314          			
+    315          		}			
+    316          		len++;
+    317          	}
+    318          	
+    319          	*Dst = *Src;//tail
+    320          	len ++;
+    321          	
+    322          	return len;
+    323          }
+    324          
+    325          
+    326          #define ____wr_air_protocol_frame__________________________________________________
+    327          
+    328          static uint8_t *jt808_pack_gps_info_area(MSG_DATE_TIME_T msg_time ,uint16_t *info_data_len)
+    329          {
+    330          	uint16_t malloc_len=0;
+    331          	GPS_INFO_REP_T *malloc_jt808_gps_info_data=NULL;	//信息体RAM区
+    332          	//uint8_t *ptr;
+    333          	gps_location_info_T gps_location_data={0};
+    334          	uint8_t i;
+    335              //uint8_t j;
+    336          	//BEIJING_TIME_T current_time={0};
+    337          	//int ret;
+    338          	//uint8_t temp_len;
+    339          	uint32_t temp_32;
+    340          
+    341          	float f_lati;
+    342          	float f_longi;
+    343          
+    344          	uint16_t unint_lati;
+    345          	uint16_t unint_longi;
+    346          
+    347          	
+    348          	uint16_t unint_lati_du;
+    349          	uint16_t unint_longi_du;
+    350          	
+    351          	float    float_lati_fen;
+    352          	float    float_longi_fen;
+    353          	
+    354          	float 	 float_lati_miao;
+    355          	float    float_longi_miao;
+    356          
+    357          	uint32_t u32_lati;
+    358          	uint32_t u32_longi;
+    359          	
+    360          	malloc_len=sizeof(GPS_INFO_REP_T);
+    361          	*info_data_len=malloc_len;
+    362          	malloc_jt808_gps_info_data=(GPS_INFO_REP_T *)user_malloc(malloc_len,__FUNCTION__);
+    363          	if(malloc_jt808_gps_info_data==NULL)
+    364          	{
+    365          		return NULL;
+    366          	}
+    367          
+    368          	//alarm DWORD
+    369          	malloc_jt808_gps_info_data->alarm_flags=0;
+    370          
+    371          	//status DWORD
+    372          	malloc_jt808_gps_info_data->status.acc_sta=1;//缺函数
+    373          	malloc_jt808_gps_info_data->status.gps_location_valid=gps_check_lacation_state();
+    374          	malloc_jt808_gps_info_data->status.latitude_type=gps_get_south_north();//1:south lati,0:north lati
+    375          	malloc_jt808_gps_info_data->status.longitude_type=gps_get_east_west();//1:west longi,0:east longi
+    376          	malloc_jt808_gps_info_data->status.bussiness_operate_sta=1;//1:verhicle is in bussiness operate sta,0:is in idle sta,
+    377          	malloc_jt808_gps_info_data->status.lati_longi_encrypt_sta=0;//1:encrypt,0:unenc
+    378          
+    379          	malloc_jt808_gps_info_data->status.loading_level=3;//0:empty verhi,1:half loading,2:reserve,3:full loading level
+    380          	malloc_jt808_gps_info_data->status.oil_way_sta=1;//1:normal,0: oil-way broken(disconnect)
+    381          	malloc_jt808_gps_info_data->status.electrical_circuit_sta=1;//1:verhicle electrical circuit ok,0:circuit broken(disconnect)
+    382          	malloc_jt808_gps_info_data->status.door_lock_sta=0;//1:door locked ,0:door unlocked
+    383          	malloc_jt808_gps_info_data->status.front_door_open_sta=0;//1:open ,0:closed
+    384          	malloc_jt808_gps_info_data->status.middle_door_open_sta=0;//1:open ,0:closed
+    385          	malloc_jt808_gps_info_data->status.back_door_open_sta=0;//1:open ,0:closed
+    386          
+    387          	malloc_jt808_gps_info_data->status.driver_door_open_sta=0;//1:open ,0:closed
+    388          	malloc_jt808_gps_info_data->status.undefine_door_open_sta=0;//1:open ,0:closed
+    389          	malloc_jt808_gps_info_data->status.use_gps_to_locate=1;//1:use,0:no use
+    390          	malloc_jt808_gps_info_data->status.use_beidou_to_locate=0;//1:use,0:no use
+    391          	malloc_jt808_gps_info_data->status.use_glonass_to_locate=0;//1:use,0:no use
+    392          	malloc_jt808_gps_info_data->status.use_galileo_to_locate=0;//1:use,0:no use
+    393          
+    394          	if(malloc_jt808_gps_info_data->status.gps_location_valid==1)
+    395          	{	
+    396          		gps_get_location_info(&gps_location_data);
+    397          		f_lati=atof((char const *)(gps_location_data.latitude));
+    398          		f_longi=atof((char const *)(gps_location_data.longitude));
+    399          		
+    400          		unint_lati=(uint16_t)f_lati;
+    401          		unint_longi=(uint16_t)f_longi;
+    402          		
+    403          		//InfoPrintf("f_lati=%d\r\n",f_lati);
+    404          		//InfoPrintf("f_longi=%d\r\n",f_longi);
+    405          
+    406          		//InfoPrintf("unint_lati=%d\r\n",unint_lati);
+    407          		//InfoPrintf("unint_longi=%d\r\n",unint_longi);
+    408          
+    409          		unint_lati_du=unint_lati/100;
+    410          		unint_longi_du=unint_longi/100;
+    411          		
+    412          		float_lati_fen=unint_lati%100;
+    413          		float_longi_fen=unint_longi%100;	
+    414          		
+    415          		f_lati-=unint_lati;
+    416          		f_longi-=unint_longi;
+    417          
+    418          		float_lati_miao=f_lati*60;
+    419          		float_longi_miao=f_longi*60;
+    420          
+    421          		f_lati= float_lati_fen/60 + float_lati_miao/3600;
+    422          		f_longi= float_longi_fen/60 + float_longi_miao/3600;
+    423          
+    424          		
+    425          
+    426          		f_lati*=1000000;
+    427          		f_longi*=1000000;
+    428          
+    429          		u32_lati=(uint32_t)f_lati+unint_lati_du*1000000;
+    430          		u32_longi=(uint32_t)f_longi+unint_longi_du*1000000;
+    431          		
+    432          		//InfoPrintf("%d%d%d%d%\r\n",f_lati,f_longi,unint_lati,unint_longi);
+    433          		//InfoPrintf("%d%d%d%d%\r\n",unint_lati_du,unint_lati_fen,unint_longi_fen,unint_longi_fen);
+    434          
+    435          		//pack latitude
+    436          		malloc_jt808_gps_info_data->latitude=u32_lati;			
+    437          
+    438          		//pack longitude
+    439          		malloc_jt808_gps_info_data->longitude=u32_longi;			
+    440          
+    441          		//pack altitude
+    442          		for(i=0;i<GPS_ALTITUDELEN;i++)
+    443          		{
+    444          			if(gps_location_data.altitude[i]=='.')
+    445          			{
+    446          				gps_location_data.altitude[i]='\0';
+    447          				break;
+    448          			}
+    449          		}
+    450          		malloc_jt808_gps_info_data->altitude=atoi((char const *)(gps_location_data.altitude));	
+    451          
+    452          		//pack gps speed
+    453          		for(i=1;i<=3;i++)//GPS_SPEEDLEN
+    454          		{
+    455          			if(gps_location_data.speed[i]=='.')
+    456          			{
+    457          				break;
+    458          			}
+    459          		}
+    460          		
+    461          		if(i<=3)
+    462          		{
+    463          			memmove(gps_location_data.speed+i,(gps_location_data.speed+i+1),(5-(i+1)));//GPS_SPEEDLEN
+    464          			gps_location_data.speed[4]='\0';
+    465          			
+    466          			temp_32=atoi((char const *)(gps_location_data.speed));
+    467          			temp_32=temp_32*1852; // km/h (放大1000倍)		
+    468          			if(i==1)
+    469          			{
+    470          				temp_32/=100000;
+    471          			}
+    472          			else if(i==2)
+    473          			{
+    474          				temp_32/=10000;
+    475          			}
+    476          			else if(i==3)
+    477          			{
+    478          				temp_32/=1000;
+    479          			}
+    480          			malloc_jt808_gps_info_data->speed = (uint16_t)temp_32;	
+    481          		}
+    482          		else
+    483          		{
+    484          			//GPS module output err string
+    485          		}
+    486          
+    487          		//pack gps direction
+    488          		malloc_jt808_gps_info_data->direction=atoi((char const *)(gps_location_data.speed_direction));
+    489          
+    490          		//pack date_time
+    491          		//ret=get_current_time(&current_time);
+    492          		
+    493          		malloc_jt808_gps_info_data->date_time[0]=((((uint8_t)(msg_time.year&0x3F)))/10)<<4;
+    494          		malloc_jt808_gps_info_data->date_time[0]|=(((uint8_t)(msg_time.year&0x3F)))%10;
+    495          
+    496          		malloc_jt808_gps_info_data->date_time[1]=((((uint8_t)(msg_time.mon&0x0F)))/10)<<4;
+    497          		malloc_jt808_gps_info_data->date_time[1]|=(((uint8_t)(msg_time.mon&0x0F)))%10;
+    498          
+    499          		malloc_jt808_gps_info_data->date_time[2]=((((uint8_t)(msg_time.day&0x1F)))/10)<<4;
+    500          		malloc_jt808_gps_info_data->date_time[2]|=((uint8_t)(msg_time.day&0x1F))%10;
+    501          
+    502          		malloc_jt808_gps_info_data->date_time[3]=((((uint8_t)(msg_time.hour&0x1F)))/10)<<4;
+    503          		malloc_jt808_gps_info_data->date_time[3]|=(((uint8_t)(msg_time.hour&0x1F)))%10;
+    504          
+    505          		malloc_jt808_gps_info_data->date_time[4]=((((uint8_t)(msg_time.min&0x3F)))/10)<<4;
+    506          		malloc_jt808_gps_info_data->date_time[4]|=(((uint8_t)(msg_time.min&0x3F)))%10;
+    507          		malloc_jt808_gps_info_data->date_time[5]=((((uint8_t)(msg_time.sec&0x3F)))/10)<<4;
+    508          		malloc_jt808_gps_info_data->date_time[5]|=(((uint8_t)(msg_time.sec&0x3F)))%10;		
+    509          	}
+    510          	
+    511          	//big end , little end switch
+    512          	malloc_jt808_gps_info_data->alarm_flags=high_low_switch_32(malloc_jt808_gps_info_data->alarm_flags);
+    513          	malloc_jt808_gps_info_data->uint32_status=high_low_switch_32(malloc_jt808_gps_info_data->uint32_status);
+    514          	malloc_jt808_gps_info_data->latitude=high_low_switch_32(malloc_jt808_gps_info_data->latitude);
+    515          	malloc_jt808_gps_info_data->longitude=high_low_switch_32(malloc_jt808_gps_info_data->longitude);
+    516          
+    517          	malloc_jt808_gps_info_data->altitude=high_low_switch_16(malloc_jt808_gps_info_data->altitude);
+    518          	malloc_jt808_gps_info_data->speed=high_low_switch_16(malloc_jt808_gps_info_data->speed);
+    519          	malloc_jt808_gps_info_data->direction=high_low_switch_16(malloc_jt808_gps_info_data->direction);
+    520          
+    521          	/*{
+    522          	uint8_t *tptr=(uint8_t *)malloc_jt808_gps_info_data;
+    523          	InfoPrintf("打包后,信息体:\r\n");
+    524          	for(i=0;i<malloc_len;i++)
+    525          	{
+    526          		InfoPrintf("%02X,",tptr[i]);
+    527          	}}
+    528          	InfoPrintf("\r\n");*/
+    529          
+    530          		
+    531          	return (uint8_t *)malloc_jt808_gps_info_data;
+    532          }
+    533          
+    534          
+    535          int jt808_pack_and_post_gps_info_q(void)
+    536          {
+    537          	OS_ERR os_err=OS_ERR_NONE;
+    538          	uint16_t pd_rep_info_len=0;
+    539          	uint8_t *ptr=NULL;
+    540          	BEIJING_TIME_T  rtcTime={0};
+    541          	MSG_DATE_TIME_T msg_time={0};
+    542           
+    543          	int ret=-1;
+    544          
+    545          	if(get_rtc_init_flag()==0)
+    546          	{
+    547          		InfoPrintf("rtc not init !!!!can`t pack,return!!!!!\r\n");
+    548          		return -1; 
+    549          	}
+    550          
+    551          	get_current_time(&rtcTime);
+    552          	rtcTime.year%=2000;
+    553          	if((rtcTime.year > 40)||(rtcTime.year < 16))
+    554          	{
+    555          		InfoPrintf("RTC时间错误 !!!%d\r\n",rtcTime.year);
+    556          		
+    557          		return -1;
+    558          	}
+    559          	
+    560          	msg_time.year=rtcTime.year;
+    561          	msg_time.mon=rtcTime.month;
+    562          	msg_time.day=rtcTime.day;
+    563          	msg_time.hour=rtcTime.hour;
+    564          	msg_time.min=rtcTime.minute;
+    565          	msg_time.sec=rtcTime.second;
+    566          
+    567          	ptr=jt808_pack_gps_info_area(msg_time,&pd_rep_info_len);
+    568          	if(ptr!=NULL)
+    569          	{
+    570          		//pack ok	
+    571          		ret=-1;
+    572          		OSQPost(&pd_rep_info_data_Q,ptr,pd_rep_info_len,OS_OPT_POST_FIFO,&os_err);
+    573          		if(os_err == OS_ERR_NONE)
+    574          		{
+    575          			ret=0;
+    576          			InfoPrintf("post pd_rep_info_data Q ok\r\n");
+    577          		}
+    578          		else
+    579          		{
+    580          			InfoPrintf("post pd_rep_info_data Q failed -%d- \r\n",os_err);
+    581          
+    582          			#if ENABLE_ITV
+    583          			OSQPost(&pd_rep_info_data_save_Q,ptr,pd_rep_info_len,OS_OPT_POST_FIFO,&os_err);
+    584          			if(os_err == OS_ERR_NONE)
+    585          			{
+    586          				ret=0;
+    587          			}
+    588          			#endif
+    589          			
+    590          			//数据量过快,无法满足缓冲
+    591          			user_free(ptr,__FUNCTION__);
+    592          			InfoPrintf("post pd_rep_info_data_save_Q failed -%d- \r\n",os_err);	
+    593          		}
+    594          	}
+    595          	else
+    596          	{
+    597          		InfoPrintf("pack pd package failed \r\n");
+    598          	}
+    599          
+    600          	return ret;
+    601          }
+    602          
+    603          
+    604          #define _____pack_protocol_frame__big_endian_transmode_________________
+    605          //
+    606          //
+    607          //
+    608          //================大端传输模式==================
+    609          //
+    610          //
+    611          //
+    612          
+    613          
+    614          /*
+    615          	brief: pack one total air protocol frame , encrypt it, escape it, 
+    616          	       and then return it`s pointer
+    617          */
+    618          static uint8_t *jt808_pack_one_protocol_frame(	uint16_t  msg_id,
+    619          												uint8_t  *pdu,
+    620          												uint16_t  pdu_len,
+    621          												uint16_t *fram_len,
+    622          												uint16_t *serial,
+    623          												uint8_t   multi_package_flag
+    624          							  				)
+    625          {
+    626          	uint16_t DeEscaped_malloc_len=0;
+    627          	uint16_t escaped_malloc_len=0;
+    628          	uint8_t *malloc_ptr=NULL;
+    629          	uint8_t *escaped_malloc_ptr=NULL;
+    630          	uint8_t *temp_ptr;
+    631          	uint16_t temp;
+    632          	//int i;
+    633          
+    634          	if(multi_package_flag>1)
+    635          	{
+    636          		return NULL;
+    637          	}
+    638          
+    639          	DeEscaped_malloc_len=1+12+pdu_len+1+1;
+    640          	if(multi_package_flag==1)
+    641          	{
+    642          		InfoPrintf("多包打包数据\r\n");
+    643          		DeEscaped_malloc_len+=4;//multi package
+    644          	}
+    645          	
+    646          	malloc_ptr=user_malloc(DeEscaped_malloc_len,__FUNCTION__);
+    647          	if(malloc_ptr!=NULL)
+    648          	{
+    649          		malloc_ptr[0]=JT808_PROTOCOL_FIX;
+    650          		
+    651          		malloc_ptr[1]=(uint8_t)(msg_id>>8);
+    652          		malloc_ptr[2]=(uint8_t)(msg_id);
+    653          
+    654          		malloc_ptr[3]=(uint8_t)((multi_package_flag<<5)|(pdu_len>>8));
+    655          		malloc_ptr[4]=(uint8_t)pdu_len;
+    656          
+    657          		temp_ptr=get_phone_num();
+    658          		memcpy(&malloc_ptr[5],temp_ptr,6);
+    659          
+    660          		temp=get_serial_num();
+    661          		*serial=temp;
+    662          		malloc_ptr[11]=(uint8_t)(temp>>8);
+    663          		malloc_ptr[12]=(uint8_t)temp;
+    664          
+    665          		memcpy(&malloc_ptr[13],pdu,pdu_len);
+    666          		
+    667          		malloc_ptr[13+pdu_len]=get_check_sum(&malloc_ptr[1],(DeEscaped_malloc_len-3));
+    668          		malloc_ptr[13+pdu_len+1]=JT808_PROTOCOL_FIX;
+    669          	}
+    670          	else
+    671          	{
+    672          		InfoPrintf("_malloc_fail_ 1_\r\n");
+    673          		return NULL;
+    674          	}
+    675          
+    676          	#if 0
+    677          	InfoPrintf("注册包,未转义(%d):",DeEscaped_malloc_len);
+    678          	for(i=0;i<DeEscaped_malloc_len;i++)InfoPrintf("%02X,",malloc_ptr[i]);
+    679          	InfoPrintf("\r\n");
+    680          	#endif
+    681          		
+    682          
+    683          	//escape operate
+    684          	temp=check_escape_bytes_amount(&malloc_ptr[1],(DeEscaped_malloc_len-3));
+    685          	escaped_malloc_len=DeEscaped_malloc_len+temp;
+    686          	escaped_malloc_ptr=user_malloc(escaped_malloc_len,__FUNCTION__);
+    687          	if(escaped_malloc_ptr!=NULL)
+    688          	{
+    689          		temp=jt808_escape_package(escaped_malloc_ptr,escaped_malloc_len,malloc_ptr,DeEscaped_malloc_len);	
+    690          		user_free(malloc_ptr,__FUNCTION__);
+    691          		if(temp!=0)
+    692          		{
+    693          			*fram_len=temp;
+    694          
+    695          			#if 0
+    696          			InfoPrintf("注册包,已转义(%d):",temp);
+    697          			for(i=0;i<temp;i++)InfoPrintf("%02X,",escaped_malloc_ptr[i]);
+    698          			InfoPrintf("\r\n");
+    699          			#endif
+    700          
+    701          			return escaped_malloc_ptr;
+    702          		}
+    703          		else
+    704          		{
+    705          			user_free(escaped_malloc_ptr,__FUNCTION__);	
+    706          		}
+    707          	}
+    708          	else
+    709          	{
+    710          		InfoPrintf("_malloc_fail_ 2_\r\n");
+    711          		user_free(malloc_ptr,__FUNCTION__);	
+    712          	}
+    713          
+    714          	return NULL;
+    715          }
+    716          
+    717          
+    718          #define _____pack_app_frame___________________________________________
+    719          
+    720          /*
+    721          	output : 
+    722          			result: the result value of the server ack
+    723          
+    724          	return :
+    725          				0 : rx ack frame from server
+    726          			others: no rx ack frame from server
+    727          */
+    728          static int jt808_wait_report_ack_q(uint16_t tx_serial,uint8_t *result)
+    729          {
+    730          	//#define jt808_wait_report_ack_q_print
+    731          	remote_result_q_t *p_msg;
+    732          	uint16_t pend_msg_len;
+    733          	uint8_t noAck_errAck_cnt=0;
+    734          	OS_ERR os_err;
+    735          	int ret=-2;
+    736          	uint8_t temp_result=0xFF;	
+    737          	while(1)
+    738          	{
+    739          		if(noAck_errAck_cnt < 2)
+    740          		{
+    741          			p_msg = (remote_result_q_t *)OSQPend(&rx_server_ack_q,T_5S,OS_OPT_PEND_BLOCKING,&pend_msg_len,NULL,&os_err);		
+    742          			if((NULL != p_msg)&&(pend_msg_len==sizeof(remote_result_q_t)))
+    743          			{
+    744          				if(p_msg->serial == tx_serial) 
+    745          				{
+    746          					if(p_msg->result==0)
+    747          					{
+    748          						#ifdef jt808_wait_report_ack_q_print
+    749          						InfoPrintf("report,ack ok,S=0x%04X\r\n",tx_serial);
+    750          						#endif
+    751          					}
+    752          					else
+    753          					{
+    754          						InfoPrintf("gprs rep,rx ack,S:%04X,R:%04X,but result=%u,take it as right rep...\r\n",tx_serial,p_msg->serial, p_msg->result);
+    755          					}
+    756          					
+    757          					temp_result=p_msg->result;
+    758          					//如果流水号对了,则直接返回本次定时上报OK，忽略平台解析的result
+    759          					ret = 0;
+    760          					
+    761          					user_free(p_msg,__FUNCTION__);
+    762          					break;
+    763          				}
+    764          				else
+    765          				{
+    766          					InfoPrintf("gprs rep,rx ack,S:%04X,R:%04X,result=%u,continue...\r\n",tx_serial,p_msg->serial, p_msg->result);
+    767          					noAck_errAck_cnt++;
+    768          					user_free(p_msg,__FUNCTION__);
+    769          					continue;
+    770          				}
+    771          			}
+    772          			else
+    773          			{
+    774          				InfoPrintf("gprs rep,no rx ack,S=0x%04X,continue wait...\r\n",tx_serial); 
+    775          				if(NULL != p_msg)
+    776          				{
+    777          					user_free(p_msg,__FUNCTION__);
+    778          				}	
+    779          				noAck_errAck_cnt++;
+    780          				continue;
+    781          			}
+    782          		}
+    783          		else
+    784          		{
+    785          			InfoPrintf("gprs rep,wait ack timeout,re_create socket!!!!!!!!!!!!!\r\n"); 
+    786          			modem_ReCreat_socket();
+    787          		}
+    788          
+    789          		break;
+    790          	}
+    791          	
+    792          	*result=temp_result;//平台解析数据的合法性
+    793          	
+    794          	return ret; 		//网络发送是否成功
+    795          }
+    796          
+    797          /*
+    798          	input:	
+    799          			info_data_ptr: point to the info_data RAM
+    800          			info_data_len: info_data length
+    801          			
+    802          	return:
+    803          			   0  : successful,    report and received ACK ok.
+    804          			others: report failed, need to save ITV
+    805          */
+    806          int jt808_pack_and_rep_frame(uint8_t *info_data_ptr,uint16_t info_data_len)
+    807          {
+    808          	#define jt808_pack_and_rep_frame_print
+    809              OS_ERR os_err;
+    810          	int ret = -1;
+    811          	uint16_t serial;
+    812          	uint8_t *package_ptr=NULL;
+    813          	uint16_t package_len;
+    814          	uint32_t temp;
+    815          	uint8_t result;
+    816              uint32_t i;
+    817          
+    818          	temp=OSTimeGet(&os_err);
+    819          
+    820          	package_ptr = jt808_pack_one_protocol_frame(TM_GPS_INFO_REP_ID,
+    821          												(uint8_t*)(info_data_ptr),
+    822          												info_data_len,
+    823          												&package_len,
+    824          												&serial,
+    825          												0);
+    826          	
+    827          	if(package_ptr == NULL)
+    828          	{
+    829          		return -1;
+    830          	}
+    831          
+    832          	ret=-2;
+    833          
+    834          	#ifdef jt808_pack_and_rep_frame_print
+    835          	InfoPrintf("JT808上报(%d):",package_len);
+    836          	for(i=0;i<package_len;i++)InfoPrintf("%02X,",package_ptr[i]);InfoPrintf("\r\n");
+    837          	#endif
+    838          
+    839          	if(modem_send_net_data(package_ptr,(uint32_t)package_len)>0)
+    840          	{
+    841          		#ifdef jt808_pack_and_rep_frame_print
+    842          		InfoPrintf("JT808上报发送完毕\r\n");InfoPrintf("等应答 !!!\r\n");
+    843          		#endif
+    844          		
+    845          		ret=jt808_wait_report_ack_q(serial,&result);
+    846          		if(result!=0)
+    847          		{
+    848          			InfoPrintf("pd rep,S=0x%04X,ack result value=%d,take is as ok !!!!\r\n",serial,result);
+    849          		}
+    850          	}
+    851          	else
+    852          	{
+    853          	   	InfoPrintf("pd rep,modem send failed,S=0x%04X !!!!!!!!!\r\n",serial);
+    854          	} 
+    855          
+    856          	user_free(package_ptr,__FUNCTION__);
+    857          
+    858          	
+    859          	if(ret==0)
+    860          	{
+    861          		#ifdef jt808_pack_and_rep_frame_print
+    862          		InfoPrintf("pd rep ok,  S=0x%04X used   time=%d ms\r\n",serial,OSTimeGet(&os_err)-temp);
+    863          		#endif
+    864          	}
+    865          	else
+    866          	{
+    867          		InfoPrintf("pd rep fail,S=0x%04X used  time=%d ms !!!!\r\n",serial,OSTimeGet(&os_err)-temp);
+    868          	}
+    869          	
+    870          	#ifdef jt808_pack_and_rep_frame_print
+    871          	printf_time_now();
+    872          	#endif
+    873          
+    874          	return ret;
+    875          }
+    876          
+    877          /*#pragma pack(1)
+    878          typedef struct wait_ack_{
+    879          	uint8_t  active_flag;
+    880          	union {
+    881          	uint32_t active_timestamp;
+    882          	uint8_t  active_timestamp_buf[4];
+    883          	};
+    884          	union {
+    885          	uint32_t timeout_timestamp;
+    886          	uint8_t  timeout_timestamp_buf[4];
+    887          	};
+    888          	union {
+    889          	uint16_t flow_num;
+    890          	uint8_t  flow_num_buf[2];
+    891          	};
+    892          	uint8_t  prot_package[1];
+    893          	
+    894          }WAIT_ACK_CACHE_T;
+    895          #pragma pack()
+    896          
+    897          #pragma pack(1)
+    898          typedef struct node_{
+    899          	struct node_ *p_next;
+    900          	WAIT_ACK_CACHE_T data;
+    901          }PT_NODE_T;
+    902          #pragma pack()
+    903          
+    904          PT_NODE_T *node_a=NULL,*node_b=NULL,node_c=NULL;*/
+    905          
+    906          /*
+    907          	return :
+    908          	          0  : register ok
+    909          		  others :fail
+    910          */
+    911          int jt808_pack_and_rep_register_frame(void)
+    912          {
+    913          	#define jt808_pack_and_rep_register_frame_print
+    914          	
+    915          	#define TM_TYPE_LEN (20) //注:是指字符串的长度，而不是整形数的位数
+    916          	#define TM_ID_LEN   (7)  //注:是指字符串的长度，而不是整形数的位数
+    917          	//车辆VIN(17位):LSVFA49J232037048
+    918          	
+    919          	uint16_t info_data_len;
+    920          	uint8_t  *p_fram;
+    921          	uint16_t packed_len;
+    922          	uint16_t sn;
+    923          	int ret;
+    924          	int temp_ret;
+    925              uint8_t result;
+    926          #ifdef jt808_pack_and_rep_register_frame_print
+    927          	int i;
+    928          	uint8_t *ptr;
+    929          	uint32_t temp;
+    930          	OS_ERR os_err;
+    931          #endif
+    932              
+    933          	REGISTER_INFO_T reg_info_data={0};
+    934          	uint32_t manufacturer_id;				//=88603;
+    935          	uint8_t  tm_type[TM_TYPE_LEN];			//="GTB1";
+    936          	uint8_t  tm_id[TM_ID_LEN];				//="2";
+    937          
+    938          	memset(tm_type,0,TM_TYPE_LEN);
+    939          	memset(tm_id,0,TM_ID_LEN);
+    940          	
+    941          	manufacturer_id=88603;
+    942          	memcpy(tm_type,"GTB1",4);
+    943          	memcpy(tm_id,"123456789088",2);
+    944          	
+    945          	//信息体
+    946          	reg_info_data.province_id=0;								//省
+    947          	reg_info_data.town_id=0;   		 							//县
+    948          	
+    949          	reg_info_data.manufacturer[4]=(uint8_t)((manufacturer_id>>0)&0xFF);		//制造商ID
+    950          	reg_info_data.manufacturer[3]=(uint8_t)((manufacturer_id>>8)&0xFF);
+    951          	reg_info_data.manufacturer[2]=(uint8_t)((manufacturer_id>>16)&0xFF);
+    952          	reg_info_data.manufacturer[1]=0;
+    953          	reg_info_data.manufacturer[0]=0;
+    954          	
+    955          	tm_type[TM_TYPE_LEN-1]=0x00;								//强制终端类型的最后一个字节为0x00
+    956          	memcpy(reg_info_data.tm_type,tm_type,TM_TYPE_LEN);			//终端类型  (20byte)
+    957          	
+    958          	memcpy(reg_info_data.tm_id,tm_id,TM_ID_LEN);				//终端ID     (7byte)
+    959          
+    960          	#ifndef ONENET_IP 
+    961          		//EXLIVE
+    962          		reg_info_data.license_plate_color=0x01; 					//车牌颜色
+    963          		memcpy(reg_info_data.license_num,card,CAR_LICENSE_NUM_LEN);
+    964          	#else
+    965          		//onenet
+    966          		reg_info_data.license_plate_color=0; 					//车牌颜色
+    967          		//使用ONENET时，不能在消息头里面携带车牌号码，
+    968          		//并且车牌颜色为填0
+    969          		//memcpy(reg_info_data.license_num,card,6);	
+    970          	#endif
+    971          	
+    972          	info_data_len= sizeof(REGISTER_INFO_T);
+    973          	
+    974          	#ifdef jt808_pack_and_rep_register_frame_print
+    975          		ptr=(uint8_t *)(&reg_info_data);
+    976          		InfoPrintf("\r\n\r\n\r\n注册信息体A(%d):",info_data_len);
+    977          		for(i=0;i<info_data_len;i++)InfoPrintf("%02X,",ptr[i]);InfoPrintf("\r\n");
+    978          		InfoPrintf("注册信息体B(%d):",info_data_len);
+    979          		for(i=0;i<info_data_len;i++)InfoPrintf("%c",ptr[i]);InfoPrintf("\r\n");
+    980          	#endif
+    981          
+    982          	//打包协议包
+    983          	ret=-1;
+    984          	p_fram=jt808_pack_one_protocol_frame( TM_REGISTER_ID,
+    985          									  	  (uint8_t *)(&reg_info_data),
+    986          									   	  info_data_len,
+    987          									      &packed_len,
+    988          									      &sn,
+    989          									      0
+    990          							  		    );
+    991          	//发送协议包
+    992          	if(p_fram!=NULL)
+    993          	{
+    994          		#ifdef jt808_pack_and_rep_register_frame_print
+    995          		InfoPrintf("注册包,将发送(%d):\r\n",packed_len);
+    996          		for(i=0;i<packed_len;i++)InfoPrintf("%02X ",p_fram[i]);InfoPrintf("\r\n");
+    997          		#endif	
+    998          		
+    999          		if(modem_send_net_data(p_fram,packed_len)>0)
+   1000          		{
+   1001          			#ifdef jt808_pack_and_rep_register_frame_print
+   1002          			InfoPrintf("JT808上报发送完毕\r\n");InfoPrintf("等应答 !!!\r\n");
+   1003          			#endif
+   1004          			
+   1005          			temp_ret=jt808_wait_report_ack_q(sn,&result);
+   1006          			if(temp_ret==0)//rx ack frame from the server
+   1007          			{
+   1008          				if(result==0)//ack result value is ok
+   1009          				{
+   1010          					ret=0;
+   1011          				}
+   1012          				else
+   1013          				{
+   1014          					InfoPrintf("register,modem send ok,but ack result value is %d !!!\r\n",result);
+   1015          				}
+   1016          			}
+   1017          			else
+   1018          			{
+   1019          				InfoPrintf("register,modem send ok,but no rx ack frame!!!\r\n");
+   1020          			}
+   1021          		}
+   1022          		else
+   1023          		{
+   1024          			InfoPrintf("register,modem send fail !!!\r\n");
+   1025          		}
+   1026          
+   1027          		user_free(p_fram,__FUNCTION__);
+   1028          	}
+   1029          
+   1030          	return ret;
+   1031          }
+   1032          
+   1033          /*
+   1034          	return:
+   1035          			   0: login ok
+   1036          		  others: fail
+   1037          */
+   1038          int jt808_pack_and_rep_login_frame(void)
+   1039          {
+   1040          	#define jt808_pack_and_rep_login_frame_print
+   1041          	
+   1042          	uint8_t  *p_fram;
+   1043          	uint16_t packed_len;
+   1044          	uint16_t sn;
+   1045          	int ret,temp_ret;
+   1046          	
+   1047          	int i;
+   1048          	uint8_t result;
+   1049          	
+   1050          	uint16_t info_data_len;
+   1051          	uint8_t *info_data_ptr;
+   1052          
+   1053          
+   1054          	info_data_len=strlen((char const *)(get_authorize_code()));
+   1055          	info_data_ptr=get_authorize_code();
+   1056          
+   1057          
+   1058          	
+   1059          
+   1060          	ret=-1;
+   1061          	p_fram=jt808_pack_one_protocol_frame( TM_GET_AUTHORISED_ID,
+   1062          										  info_data_ptr,
+   1063          										  info_data_len,
+   1064          										  &packed_len,
+   1065          										  &sn,
+   1066          										  0
+   1067          										);
+   1068          	//发送协议包
+   1069          	if(p_fram!=NULL)
+   1070          	{
+   1071          		#ifdef jt808_pack_and_rep_login_frame_print
+   1072          		InfoPrintf("\r\n\r\n\r\n鉴权包,将发送(%d):\r\n",packed_len);
+   1073          		for(i=0;i<packed_len;i++)InfoPrintf("%02X,",p_fram[i]);InfoPrintf("\r\n");
+   1074          		#endif	
+   1075          		
+   1076          		if(modem_send_net_data(p_fram,packed_len)>0)
+   1077          		{
+   1078          			#ifdef jt808_pack_and_rep_login_frame_print
+   1079          			InfoPrintf("JT808上报发送完毕\r\n");InfoPrintf("等应答 !!!\r\n");
+   1080          			#endif
+   1081          			
+   1082          			temp_ret=jt808_wait_report_ack_q(sn,&result);
+   1083          			if(temp_ret==0)//rx ack frame from the server
+   1084          			{
+   1085          				if(result==0)//ack result value is ok
+   1086          				{
+   1087          					ret=0;
+   1088          				}
+   1089          				else
+   1090          				{
+   1091          					InfoPrintf("login,modem send ok,but ack result value is %d !!!\r\n",result);
+   1092          				}
+   1093          			}
+   1094          			else
+   1095          			{
+   1096          				InfoPrintf("login,modem send ok,but no rx ack frame!!!\r\n");
+   1097          			}
+   1098          		}
+   1099          		else
+   1100          		{
+   1101          			InfoPrintf("login,modem send fail !!!\r\n");
+   1102          		}
+   1103          
+   1104          		user_free(p_fram,__FUNCTION__);
+   1105          	}
+   1106          
+   1107          	
+   1108          	return ret;
+   1109          }
+   1110          
+   1111          
+   1112          
+   1113          /*
+   1114          	input:
+   1115          			info_data_ptr: packed info data, not include frame HEAD,CRC,TAIL
+   1116          			info_data_len: length
+   1117          	return:
+   1118          				0 : save ok
+   1119          			others: save failed
+   1120          */
+   1121          int jt808_save_itv(uint8_t *info_data_ptr,uint32_t info_data_len)
+   1122          {
+   1123          	return 0;
+   1124          }
+   1125          
+   1126          
+   1127          /*
+   1128          	return:
+   1129          			0		: report ok
+   1130          			others	: report failed 
+   1131          */
+   1132          int jt808_pack_and_rep_itv_frame(uint8_t *data, uint16_t data_len)
+   1133          {
+   1134          	int ret = -1;
+   1135              #if 0    
+   1136              OS_ERR os_err;
+   1137              uint16_t package_len=0;
+   1138          	uint8_t *package_ptr=NULL;
+   1139          	//int i;
+   1140              uint16_t serial;
+   1141          
+   1142          	uint32_t temp;
+   1143          	uint8_t result;
+   1144          
+   1145          	temp=OSTimeGet(&os_err);
+   1146          	data[0] |= 0x80;//补报标志
+   1147          	//package_ptr = sgmw_pack_one_protocol_frame(UP_REPORT_MSG_ID,data,data_len,&package_len,&serial);
+   1148          	if(package_ptr == NULL)
+   1149          	{
+   1150          		return -1;
+   1151          	}
+   1152          
+   1153          	ret=-2;
+   1154          	if(modem_send_net_data(package_ptr,package_len)>0)
+   1155          	{
+   1156          		ret=jt808_wait_report_ack_q(serial,&result);
+   1157          	}
+   1158          	else
+   1159          	{
+   1160          	   InfoPrintf("ITV rep,modem send failed,S=0x%04X !!!!!!!!!\r\n",serial);
+   1161          	} 
+   1162          
+   1163          	if(ret==0)
+   1164          	{
+   1165          		InfoPrintf("ITV rep ok, S=0x%04X used   time=%d ms\r\n",serial,OSTimeGet(&os_err)-temp); 
+   1166          	}
+   1167          	else
+   1168          	{	
+   1169          		InfoPrintf("ITV rep fail, S=0x%04X used time=%d ms!!!!\r\n",serial,OSTimeGet(&os_err)-temp); 
+   1170          	}
+   1171          
+   1172          	user_free(package_ptr,__FUNCTION__);
+   1173          #endif
+   1174          	return ret;
+   1175          }
+   1176          
+   1177          
+   1178          
+   1179          void jt808_read_and_rep_itv(void)
+   1180          {
+   1181          	//read itv data
+   1182          	//...
+   1183          	
+   1184          	//pack and rep
+   1185          	jt808_pack_and_rep_itv_frame(NULL,0);
+   1186          }
+   1187          
+   1188          #define ____general_air_communication__________________________________________
+   1189          
+   1190          #define ____TASK___________AREA__________________________________________
+   1191          
+   1192          
+   1193          void pd_pack_info_data_tmr_callback(void*p_Tmr,void*p_Arg)
+   1194          {
+   1195          	OS_ERR os_err;
+   1196          	InfoPrintf("pd_pack_info_data_tmr_callback()---%d---\r\n",OSTimeGet(&os_err));
+   1197          	jt808_pack_and_post_gps_info_q();	
+   1198          }
+   1199          
+   1200          void create_and_start_pd_packing_timer(void)
+   1201          {
+   1202          	OS_ERR os_err;
+   1203          	//create the timer
+   1204          	OSTmrCreate(&period_report_tmr,
+   1205          				"period report tmr",
+   1206          				10,//N*100ms ,基本单位是100ms  zgc
+   1207          				get_report_period(), 
+   1208          				OS_OPT_TMR_PERIODIC,
+   1209          				pd_pack_info_data_tmr_callback,
+   1210          				NULL,
+   1211          				&os_err);
+   1212          	
+   1213          	OSTmrStart(&period_report_tmr, &os_err);
+   1214          }
+   1215          
+   1216          void change_report_period(uint32_t preriod)
+   1217          {
+   1218          	//该功能在这个版本的UCOS需要delete tmr,在重新创建 ????
+   1219          	if(period_report_tmr.Period != preriod)
+   1220          	{
+   1221          		//period_report_tmr.Period  = preriod;
+   1222          	}
+   1223          }
+   1224          
+   1225          void  remote_report_task_msg_handle(TASK_MSG_T *p_msg)
+   1226          {
+   1227          	//OS_ERR os_err;
+   1228          	//uint8_t error_flag=0;
+   1229          	#if 0
+   1230          	if(p_msg->msg_type == CTRL_MSG_TYPE)
+   1231          	{
+   1232          		if(PWR_CTRL_ON == p_msg->msg_son_type)
+   1233          		{
+   1234          			InfoPrintf("period_report task rx ctl msg: pwr on\r\n");
+   1235          		}
+   1236          		else if(PWR_CTRL_SLEEP == p_msg->msg_son_type)
+   1237          		{
+   1238          			InfoPrintf("period_report task rx ctl msg: sleep\r\n");
+   1239          			OSTaskSuspend(NULL,&os_err);
+   1240          		}
+   1241          		else if(PWR_CTRL_WAKEUP == p_msg->msg_son_type )
+   1242          		{
+   1243          			InfoPrintf("period_report task rx ctl msg: wake up\r\n");
+   1244          		}
+   1245          		else if(PWR_CTRL_STANDBY == p_msg->msg_son_type )
+   1246          		{
+   1247          			InfoPrintf("period_report task rx ctl msg: standby\r\n");
+   1248          		}
+   1249          		else
+   1250          		{
+   1251          			error_flag=2;
+   1252          		}
+   1253          	}
+   1254          	else if(p_msg->msg_type == PWR_STATE_MSG_TYPE)
+   1255          	{
+   1256          		InfoPrintf("period_report task rx msg:ACC=%u\r\n",p_msg->msg_son_type);
+   1257          	}	
+   1258          	else
+   1259          	{
+   1260          		error_flag=5;
+   1261          	}
+   1262          
+   1263          	if(error_flag!=0)
+   1264          	{
+   1265          		InfoPrintf("period report task rx err msg:---%d---!!!\r\n",error_flag);
+   1266          	}
+   1267          	#endif
+   1268          }
+   1269          
+   1270          
+   1271          void period_report_save_task(void*p_para)
+   1272          {
+   1273          	OS_ERR os_err;
+   1274          	//int i;
+   1275          	
+   1276          	uint8_t *ptr=NULL;
+   1277          	uint16_t rep_msg_len;
+   1278          	
+   1279          	OSQCreate(&pd_rep_info_data_save_Q,"pd_rep_info_data_save Q",PD_REP_INFO_DATA_SAVE_Q_MAX,&os_err);
+   1280          	if(os_err != OS_ERR_NONE)
+   1281          	{
+   1282          		InfoPrintf("create pd_rep_info_data_save Q fail\r\n");
+   1283          	}
+   1284          	
+   1285          	p_para = p_para;
+   1286          	while(1)
+   1287          	{	
+   1288          		ptr=(uint8_t *)OSQPend(&pd_rep_info_data_save_Q,T_10MS*3,OS_OPT_PEND_BLOCKING,&rep_msg_len,NULL,&os_err);
+   1289          		if(ptr != NULL)
+   1290          		{
+   1291          			if(jt808_save_itv((uint8_t *)ptr,rep_msg_len)!=0)
+   1292          			{
+   1293          				InfoPrintf("jt808_save_itv(xxx,%d)failed C !!\r\n",rep_msg_len);
+   1294          			}
+   1295          			else
+   1296          			{
+   1297          				InfoPrintf("jt808_save_itv(xxx,%d) ok (Q full)\r\n",rep_msg_len);
+   1298          			}
+   1299          			
+   1300          			user_free(ptr,__FUNCTION__);
+   1301          		}
+   1302          		
+   1303          		OSSchedRoundRobinYield(&os_err);
+   1304          	}
+   1305          }
+   1306          
+   1307          
+   1308          void remote_report_task(void*p_para)
+   1309          {
+   1310          	OS_ERR os_err;
+   1311             // uint32_t t_wait=0;
+   1312          	//int i;
+   1313          	int ret;
+   1314          	TASK_MSG_T *p_msg;
+   1315          	uint16_t msg_size;
+   1316          	uint8_t  *rep_msg=NULL;
+   1317          	uint16_t rep_msg_len=0; 
+   1318          	p_para = p_para;
+   1319          	
+   1320          	/*BEIJING_TIME_T temp_time;
+   1321          	temp_time.year=16;
+   1322          	temp_time.month=10;
+   1323          	temp_time.day=21;
+   1324          	temp_time.hour=15;
+   1325          	temp_time.minute=46;
+   1326          	temp_time.second=2;
+   1327          	write_rtc(temp_time);*/
+   1328          
+   1329          	#if 1
+   1330          	OSTaskCreate(&period_report_save_task_Tcb,
+   1331          				"tcb_period_report_save task",
+   1332          				(OS_TASK_PTR)    period_report_save_task,
+   1333          				(void          *)NULL,
+   1334          				PERIOD_REP_SAVE_TASK_PRIO,
+   1335          				(CPU_STK 	*)  period_rep_save_task_stk,
+   1336          				(CPU_STK_SIZE)  PERIOD_REP_SAVE_TASK_STK_SIZE/10,/* limit*/
+   1337          				(CPU_STK_SIZE)  PERIOD_REP_SAVE_TASK_STK_SIZE,
+   1338          				(OS_MSG_QTY)    PD_REPORT_SAVE_TASK_MSG_QTY,
+   1339          				(OS_TICK )      PD_REPORT_SAVE_TASK_TIME_QUANTA,
+   1340          				(void  *)       NULL,
+   1341          				(OS_OPT)        (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+   1342          				&os_err);	
+   1343          
+   1344          	if(os_err != OS_ERR_NONE)
+   1345          	{
+   1346          		InfoPrintf("creat period_report_save_task failed !!!\r\n");
+   1347          	}
+   1348          	#endif
+   1349          	
+   1350          	OSQCreate(&pd_rep_info_data_Q,"pd_rep_info_data Q",PD_REP_INFO_DATA_Q_MAX,&os_err);
+   1351          	if(os_err != OS_ERR_NONE)
+   1352          	{
+   1353          		InfoPrintf("create pd_rep_info_data Q fail\r\n");
+   1354          	}
+   1355          
+   1356          	//create the timer
+   1357          	create_and_start_pd_packing_timer();
+   1358          	
+   1359          	while(1)
+   1360          	{	
+   1361          		//----------------------------------------------------------------------------------------
+   1362          		p_msg = (TASK_MSG_T*)OSTaskQPend(1,OS_OPT_PEND_NON_BLOCKING,&msg_size,NULL,&os_err);	
+   1363                  if(NULL != p_msg)
+   1364          		{
+   1365          			remote_report_task_msg_handle(p_msg);	
+   1366          			user_free(p_msg,__FUNCTION__);
+   1367          		}
+   1368          
+   1369          		//---------------------------------------------------------------------------------------
+   1370          		rep_msg=(uint8_t *)OSQPend(&pd_rep_info_data_Q,1,OS_OPT_PEND_BLOCKING,&rep_msg_len,NULL,&os_err);
+   1371          		if(rep_msg != NULL)
+   1372          		{
+   1373          			if(get_already_login_flag()==1)
+   1374          			{
+   1375          				ret=jt808_pack_and_rep_frame((uint8_t *)rep_msg,rep_msg_len);
+   1376          				if(ret==0)
+   1377          				{
+   1378          					InfoPrintf("jt808_pack_and_rep_frame() ok\r\n");
+   1379          				}
+   1380          				else
+   1381          				{
+   1382          					InfoPrintf("jt808_pack_and_rep_frame() failed!!!\r\n");
+   1383          					#if ENABLE_ITV
+   1384          					if(jt808_save_itv((uint8_t *)rep_msg,rep_msg_len)!=0)
+   1385          					{
+   1386          						InfoPrintf("save_itv(xxx,%d)failed (net fault) !!\r\n",rep_msg_len);
+   1387          					}
+   1388          					else
+   1389          					{
+   1390          						InfoPrintf("save_itv(xxx,%d)ok (net fault) !!\r\n",rep_msg_len);
+   1391          					}
+   1392          					#endif
+   1393          				}	
+   1394          			}
+   1395          			else
+   1396          			{
+   1397          				InfoPrintf("save_itv(xxx,%d)failed -- (no login) !!\r\n",rep_msg_len);
+   1398          			
+   1399          				//save itv
+   1400          				#if ENABLE_ITV
+   1401          				if(jt808_save_itv((uint8_t *)&rep_msg[2],rep_msg_len)!=0)
+   1402          				{
+   1403          					InfoPrintf("save_itv(xxx,%d)failed (no login) !!\r\n",rep_msg_len);
+   1404          				}
+   1405          				else
+   1406          				{
+   1407          					InfoPrintf("save_itv(xxx,%d)ok (no login) !!\r\n",rep_msg_len);
+   1408          				}
+   1409          				#endif
+   1410          			}
+   1411          
+   1412          			user_free(rep_msg,__FUNCTION__);
+   1413          		}
+   1414                  
+   1415                  if(get_already_login_flag()==1)
+   1416          		{
+   1417                      //req_upgrade();
+   1418          			#if ENABLE_ITV
+   1419          			if((OSTimeGet(&os_err) - t_wait) > T_1S)
+   1420          			{
+   1421          				t_wait = OSTimeGet(&os_err);
+   1422          				if(get_gprs_send_fun() == 1)
+   1423          				{
+   1424          				   //sgmw_read_and_rep_itv();
+   1425          				}
+   1426          			}	
+   1427          			#endif
+   1428          		}
+   1429          
+   1430          		user_delay_ms(TIME_10ms);
+   1431          	}
+   1432          }
+   1433          
+   1434          #endif
+   1435          
+   1436          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   change_report_period
+       4   check_escape_bytes_amount
+      32   create_and_start_pd_packing_timer
+        32   -> OSTmrCreate
+        32   -> OSTmrStart
+        32   -> get_report_period
+       0   get_check_sum
+       0   get_gprs_send_fun
+       0   get_phone_num
+       0   get_report_period
+       0   get_serial_num
+       0   htons
+      12   jt808_DeEscape_package
+      12   jt808_escape_package
+      64   jt808_pack_and_post_gps_info_q
+        64   -> InfoPrintf
+        64   -> OSQPost
+        64   -> __aeabi_memclr4
+        64   -> get_current_time
+        64   -> get_rtc_init_flag
+        64   -> jt808_pack_gps_info_area
+        64   -> user_free
+      40   jt808_pack_and_rep_frame
+        40   -> InfoPrintf
+        40   -> OSTimeGet
+        40   -> jt808_pack_one_protocol_frame
+        40   -> jt808_wait_report_ack_q
+        40   -> modem_send_net_data
+        40   -> printf_time_now
+        40   -> user_free
+       0   jt808_pack_and_rep_itv_frame
+      32   jt808_pack_and_rep_login_frame
+        32   -> InfoPrintf
+        32   -> get_authorize_code
+        32   -> jt808_pack_one_protocol_frame
+        32   -> jt808_wait_report_ack_q
+        32   -> modem_send_net_data
+        32   -> strlen
+        32   -> user_free
+     112   jt808_pack_and_rep_register_frame
+       112   -> InfoPrintf
+       112   -> __aeabi_memclr4
+       112   -> __aeabi_memcpy
+       112   -> __aeabi_memcpy4
+       112   -> __aeabi_memset4
+       112   -> jt808_pack_one_protocol_frame
+       112   -> jt808_wait_report_ack_q
+       112   -> modem_send_net_data
+       112   -> user_free
+     144   jt808_pack_gps_info_area
+       144   -> __aeabi_d2f
+       144   -> __aeabi_f2iz
+       144   -> __aeabi_f2uiz
+       144   -> __aeabi_fadd
+       144   -> __aeabi_fdiv
+       144   -> __aeabi_fmul
+       144   -> __aeabi_fsub
+       144   -> __aeabi_i2f
+       144   -> __aeabi_memclr4
+       144   -> __aeabi_memmove
+       144   -> __aeabi_ui2f
+       144   -> atof
+       144   -> atoi
+       144   -> gps_check_lacation_state
+       144   -> gps_get_east_west
+       144   -> gps_get_location_info
+       144   -> gps_get_south_north
+       144   -> high_low_switch_16
+       144   -> high_low_switch_32
+       144   -> user_malloc
+      40   jt808_pack_one_protocol_frame
+        40   -> InfoPrintf
+        40   -> __aeabi_memcpy
+        40   -> check_escape_bytes_amount
+        40   -> get_check_sum
+        40   -> get_phone_num
+        40   -> get_serial_num
+        40   -> jt808_escape_package
+        40   -> user_free
+        40   -> user_malloc
+       0   jt808_read_and_rep_itv
+         0   -> jt808_pack_and_rep_itv_frame
+       0   jt808_save_itv
+      40   jt808_wait_report_ack_q
+        40   -> InfoPrintf
+        40   -> OSQPend
+        40   -> modem_ReCreat_socket
+        40   -> user_free
+       8   pd_pack_info_data_tmr_callback
+         8   -> InfoPrintf
+         8   -> OSTimeGet
+         8   -> jt808_pack_and_post_gps_info_q
+      32   period_report_save_task
+        32   -> InfoPrintf
+        32   -> OSQCreate
+        32   -> OSQPend
+        32   -> OSSchedRoundRobinYield
+        32   -> jt808_save_itv
+        32   -> user_free
+      56   remote_report_task
+        56   -> InfoPrintf
+        56   -> OSQCreate
+        56   -> OSQPend
+        56   -> OSTaskCreate
+        56   -> OSTaskQPend
+        56   -> create_and_start_pd_packing_timer
+        56   -> get_already_login_flag
+        56   -> jt808_pack_and_rep_frame
+        56   -> remote_report_task_msg_handle
+        56   -> user_delay_ms
+        56   -> user_free
+       0   remote_report_task_msg_handle
+       0   reset_serial_num
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable71
+       4  ??DataTable72
+       4  ??DataTable72_1
+       4  ??DataTable73
+       4  ??DataTable73_1
+       4  ??DataTable73_10
+       4  ??DataTable73_11
+       4  ??DataTable73_12
+       4  ??DataTable73_13
+       4  ??DataTable73_14
+       4  ??DataTable73_15
+       4  ??DataTable73_2
+       4  ??DataTable73_3
+       4  ??DataTable73_4
+       4  ??DataTable73_5
+       4  ??DataTable73_6
+       4  ??DataTable73_7
+       4  ??DataTable73_8
+       4  ??DataTable73_9
+      72  ?_0
+      28  ?_1
+      20  ?_10
+      20  ?_11
+      72  ?_12
+      56  ?_13
+      48  ?_14
+      60  ?_15
+      16  ?_16
+       8  ?_17
+       4  ?_18
+      20  ?_19
+      12  ?_2
+      16  ?_20
+      60  ?_21
+      48  ?_22
+      44  ?_23
+      48  ?_24
+      48  ?_25
+       8  ?_26
+      16  ?_27
+      24  ?_28
+      20  ?_29
+      44  ?_3
+       4  ?_30
+      24  ?_31
+       8  ?_32
+      56  ?_33
+      48  ?_34
+      32  ?_35
+      28  ?_36
+      56  ?_37
+      48  ?_38
+      28  ?_39
+      20  ?_4
+      44  ?_40
+      20  ?_41
+      24  ?_42
+      40  ?_43
+      36  ?_44
+      40  ?_45
+      28  ?_46
+      44  ?_47
+      20  ?_48
+      36  ?_49
+      32  ?_5
+      32  ?_50
+      40  ?_51
+      44  ?_52
+      40  ?_6
+      44  ?_7
+      28  ?_8
+      16  ?_9
+       8  card
+       2  change_report_period
+      34  check_escape_bytes_amount
+      52  create_and_start_pd_packing_timer
+      30  get_check_sum
+       4  get_gprs_send_fun
+       6  get_phone_num
+       4  get_report_period
+      12  get_serial_num
+      12  htons
+      84  jt808_DeEscape_package
+     106  jt808_escape_package
+     236  jt808_pack_and_post_gps_info_q
+     242  jt808_pack_and_rep_frame
+       6  jt808_pack_and_rep_itv_frame
+     194  jt808_pack_and_rep_login_frame
+     382  jt808_pack_and_rep_register_frame
+     794  jt808_pack_gps_info_area
+     282  jt808_pack_one_protocol_frame
+       6  jt808_read_and_rep_itv
+       4  jt808_save_itv
+       2  jt808_serial_num
+     192  jt808_wait_report_ack_q
+      24  pd_pack_info_data_tmr_callback
+      48  pd_rep_info_data_Q
+      48  pd_rep_info_data_save_Q
+     114  period_report_save_task
+      52  period_report_tmr
+       8  phone_num
+     246  remote_report_task
+       2  remote_report_task_msg_handle
+      10  reset_serial_num
+     256  -- Other
+
+ 
+   148 bytes in section .bss
+    16 bytes in section .data
+     2 bytes in section .noinit
+   168 bytes in section .rodata
+ 5 016 bytes in section .text
+ 
+ 5 016 bytes of CODE  memory
+   168 bytes of CONST memory
+   166 bytes of DATA  memory
+
+Errors: none
+Warnings: 2

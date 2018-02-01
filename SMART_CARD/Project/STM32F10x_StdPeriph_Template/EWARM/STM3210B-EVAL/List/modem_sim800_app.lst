@@ -1,0 +1,1901 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:27
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\modem\sim800\modem_sim800_app.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\modem\sim800\modem_sim800_app.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\modem_sim800_app.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\modem_sim800_app.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\modem\sim800\modem_sim800_app.c
+      1          #include "user_system_cfg.h"
+      2          
+      3          #ifdef USE_SIM800_MODEM
+      4          
+      5          #define PORT_TEST_MODEM 
+      6          
+      7          #include <stdint.h>
+      8          #include <stdio.h>
+      9          #include <string.h>
+     10          #include <stdlib.h>
+     11          
+     12          #include "os_cfg_app.h"			//TCB,STACK,PRIORITY,任务间消息的结构体定义和宏
+     13          
+     14          #include "os.h"
+     15          #include "heads.h"
+     16          #include "uart1_network_layer.h"
+     17          #include "modem_sim800_AT_pro.h"
+     18          #include "modem_sim800_app.h"
+     19          
+     20          #include "user_debug_app.h"
+     21          
+     22          
+     23          /*
+     24          此结构体:用于TCP连接, SOCKET创建与维护 的相关的变量标志控制(属于驱动层);
+     25          但是,不涉及 应用层空中协议相关的控制,如登陆,心跳,退陆等,它们被设计在report_task中(属于应用层).*/
+     26          static modem_t modem_ctl={0};
+     27          
+     28          OS_Q 		modem_send_at_rsp_q;
+     29          OS_Q 		modem_send_gprs_at_rsp_q;
+     30          OS_Q 		modem_receive_urc_q;
+     31          OS_Q 		modem_receive_gprs_data_q; 
+     32          
+     33          static OS_TMR 		modem_led_control_tmr;
+     34          static OS_MUTEX 	modem_uart_tx_ringbuf_mutex={0};//在多个任务里，可能嵌套使用该串口资源,所以要互斥
+     35          static OS_MUTEX 	modem_send_net_data_mutex={0};
+     36          
+     37          extern uint8_t     	get_already_login_flag(void);
+     38          extern int 			get_gprs_send_fun(void);
+     39          
+     40          
+     41          //代其他文件定义
+     42          #ifdef PORT_TEST_MODEM 
+     43          static char* get_remote_dn(void)
+     44          {
+     45          	#ifdef SGMW_IP
+     46          	static char *ip="120.55.166.5";
+     47          	#endif
+     48          	#ifdef WEIGE_IP
+     49          	static char *ip="120.25.67.37";
+     50          	#endif
+     51          	#ifdef ONENET_IP
+     52          	static char *ip="183.230.40.42";
+     53          	#endif
+     54          	#ifdef EXLIVE_IP
+     55          	static char *ip="121.42.162.93";
+     56          	#endif
+     57          
+     58          	return ip;
+     59          }
+     60          
+     61          static uint16_t get_remote_port(void)
+     62          {
+     63          	#ifdef SGMW_IP
+     64          	return 12398;
+     65          	#endif
+     66          	#ifdef WEIGE_IP
+     67          	return 8008;
+     68          	#endif
+     69          	#ifdef ONENET_IP
+     70          	return 4362;
+     71          	#endif
+     72          	#ifdef EXLIVE_IP
+     73          	return 6973;
+     74          	#endif
+     75          }
+     76          
+     77          
+     78          
+     79          uint8_t get_modem_err_state(void)
+     80          {
+     81            return 0;
+     82          }
+     83          
+     84          #endif
+     85          
+     86          
+     87          #define __MODEM____DRIVER________
+     88          
+     89          
+     90          /*
+     91          	input:
+     92          			0: led off
+     93          			1: led on
+     94          			2: toggle
+     95          */
+     96          static void modem_led_OnOff(uint8_t ctl)
+     97          {
+     98          	static uint8_t toggle_cnt=0;
+     99          	
+    100          	/*PINSEL_ConfigPin(4, 4, 0);
+    101          	GPIO_SetDir(4, (1<<4), GPIO_DIRECTION_OUTPUT);
+    102          
+    103          	
+    104          	if(ctl==1)
+    105          	{
+    106          		GPIO_OutputValue(4, (1<<4), 0);
+    107          	}
+    108          	else if(ctl==2)
+    109          	{
+    110          		toggle_cnt++;
+    111          		if((toggle_cnt%2)==0)
+    112          		{
+    113          			GPIO_OutputValue(4, (1<<4), 0);
+    114          		}
+    115          		else
+    116          		{
+    117          			GPIO_OutputValue(4, (1<<4), 1);
+    118          		}
+    119          	}
+    120          	else
+    121          	{
+    122          		GPIO_OutputValue(4, (1<<4), 1);
+    123          	}*/
+    124          }
+    125          
+    126          
+    127          /*
+    128          并没有严格按照模块的上电顺序要求!!!!
+    129          */
+    130          void modem_power_up(void)
+    131          {
+    132          	//modem VBUS Power
+    133          	/*PINSEL_ConfigPin(2, 3, 0);
+    134          	GPIO_SetDir(2, (1<<3), GPIO_DIRECTION_OUTPUT);
+    135          	GPIO_OutputValue(2, (1<<3), 0);
+    136          
+    137          	//modem PWRKEY
+    138          	PINSEL_ConfigPin(1, 27, 0);
+    139          	GPIO_SetDir(1, (1<<27), GPIO_DIRECTION_OUTPUT);
+    140          	GPIO_OutputValue(1, (1<<27), 1);
+    141          
+    142          	//modem reset pin
+    143          	PINSEL_ConfigPin(2, 2, 0);
+    144          	GPIO_SetDir(2, (1<<2), GPIO_DIRECTION_OUTPUT);
+    145          	GPIO_OutputValue(2, (1<<2), 0);
+    146          
+    147          	//modem 4.1V power en
+    148          	PINSEL_ConfigPin(2, 9, 0);
+    149          	GPIO_SetDir(2, (1<<9), GPIO_DIRECTION_OUTPUT);
+    150          	GPIO_OutputValue(2, (1<<9), 1);*/
+    151          }
+    152          
+    153          void modem_power_down(void)
+    154          {
+    155          	//3g_en pin
+    156          	//modem 4.1V power en
+    157          	/*PINSEL_ConfigPin(2, 9, 0);
+    158          	GPIO_SetDir(2, (1<<9), GPIO_DIRECTION_OUTPUT);
+    159          	GPIO_OutputValue(2, (1<<9), 0);
+    160          
+    161          	//modem PWRKEY
+    162          	PINSEL_ConfigPin(1, 27, 0);
+    163          	GPIO_SetDir(1, (1<<27), GPIO_DIRECTION_OUTPUT);
+    164          	GPIO_OutputValue(1, (1<<27), 0);
+    165          
+    166          	//reset pin
+    167          	PINSEL_ConfigPin(2, 2, 0);
+    168          	GPIO_SetDir(2, (1<<2), GPIO_DIRECTION_OUTPUT);
+    169          	GPIO_OutputValue(2, (1<<2), 0);
+    170          
+    171          	//modem VBUS Power
+    172          	PINSEL_ConfigPin(2, 3, 0);
+    173          	GPIO_SetDir(2, (1<<3), GPIO_DIRECTION_OUTPUT);
+    174          	GPIO_OutputValue(2, (1<<3), 0);*/
+    175          }
+    176          
+    177          void modem_open_module(void)
+    178          {
+    179          	InfoPrintf("modem_open_module()...\r\n");	
+    180          	modem_power_up();
+    181          	user_uart1_open();
+    182          }
+    183          
+    184          void modem_close_module(void)
+    185          {
+    186          	user_uart1_close();
+    187          	modem_power_down();
+    188          }
+    189          
+    190          #define __MODEM_____APP___________
+    191          
+    192          void *modem_pend_send_at_rsp_q(uint16_t wait_time,uint16_t *msg_size)
+    193          {
+    194          	uint8_t *ptr;
+    195          	OS_ERR os_err;
+    196          	ptr=(uint8_t *)OSQPend(&modem_send_at_rsp_q,wait_time,OS_OPT_PEND_BLOCKING,msg_size,NULL,&os_err);
+    197          	if((os_err==OS_ERR_NONE)&&(ptr!=NULL))
+    198          	{
+    199          		return ptr;
+    200          	}
+    201          
+    202          	if(ptr!=NULL)
+    203          	{
+    204          		user_free(ptr,__FUNCTION__);
+    205          	}
+    206          	return NULL;
+    207          }
+    208          
+    209          void *modem_pend_gprs_at_rsp_q(uint16_t wait_time,uint16_t *msg_size)
+    210          {
+    211          	uint8_t *ptr;
+    212          	OS_ERR os_err;
+    213          	ptr=(uint8_t *)OSQPend(&modem_send_gprs_at_rsp_q,wait_time,OS_OPT_PEND_BLOCKING,msg_size,NULL,&os_err);
+    214          	if((os_err==OS_ERR_NONE)&&(ptr!=NULL))
+    215          	{
+    216          		return ptr;
+    217          	}
+    218          
+    219          	if(ptr!=NULL)
+    220          	{
+    221          		user_free(ptr,__FUNCTION__);
+    222          	}
+    223          	return NULL;
+    224          }
+    225          
+    226          void *modem_pend_receive_urc_q(uint16_t wait_time,uint16_t *msg_size)
+    227          {
+    228          	uint8_t *ptr;
+    229          	OS_ERR os_err;
+    230          	ptr=(uint8_t *)OSQPend(&modem_receive_urc_q,wait_time,OS_OPT_PEND_BLOCKING,msg_size,NULL,&os_err);
+    231          	if((os_err==OS_ERR_NONE)&&(ptr!=NULL))
+    232          	{
+    233          		return ptr;
+    234          	}
+    235          
+    236          	if(ptr!=NULL)
+    237          	{
+    238          		user_free(ptr,__FUNCTION__);
+    239          	}
+    240          	return NULL;
+    241          }
+    242          
+    243          
+    244          void net_state_init(void)
+    245          {
+    246          	modem_ctl.rx_gprs_state=0;
+    247          	modem_ctl.waiting_cipsend_ack=0;
+    248          	modem_ctl.socket_link_state = 0;
+    249          }
+    250          
+    251          void net_state_deinit(void)
+    252          {
+    253          	modem_ctl.socket_link_state = 0;
+    254          }
+    255          
+    256          
+    257          /*
+    258          	brief: pack *buf data into Multiplexer format
+    259          
+    260          	return: 
+    261          			0		: successful
+    262          			others	: failed
+    263          */
+    264          static int modem_tx_at_cmd(uint8_t *src)
+    265          {
+    266          	int ret;
+    267              OS_ERR os_err;
+    268              
+    269          	OSMutexPend(&modem_uart_tx_ringbuf_mutex,0,OS_OPT_PEND_BLOCKING,NULL,&os_err);
+    270          	ret=uart1_send_data((uint8_t*)src, strlen((char const *)src));
+    271          	if(ret == strlen((char const *)src))
+    272          		ret = 0;
+    273          	else
+    274          		ret = 1;	
+    275          	OSMutexPost(&modem_uart_tx_ringbuf_mutex,OS_OPT_POST_NONE,&os_err);
+    276          	return ret;
+    277          }
+    278          
+    279          static int modem_wr_gprs_data(uint8_t *data,uint32_t len)
+    280          {
+    281          	int wr_len;
+    282          	OS_ERR os_err;
+    283          	
+    284          	OSMutexPend(&modem_uart_tx_ringbuf_mutex,0,OS_OPT_PEND_BLOCKING,NULL,&os_err);
+    285          	wr_len= uart1_send_data((uint8_t*)data, len);
+    286          	OSMutexPost(&modem_uart_tx_ringbuf_mutex,OS_OPT_POST_NONE,&os_err);
+    287          	return wr_len;
+    288          }
+    289          
+    290          int modem_send_net_data(uint8_t *p_data,uint32_t len)
+    291          {
+    292          	//#define modem_send_net_data_print
+    293          	char at_buf[18]="AT+CIPSEND=";
+    294          	char *p_msg;
+    295          	uint16_t msg_size;
+    296          	OS_ERR os_err;
+    297          	int i;
+    298          	int ret_len=0;
+    299          
+    300          	if(modem_ctl.socket_link_state != 1)
+    301          	{ 
+    302          		user_delay_ms(TIME_100ms);
+    303          		InfoPrintf("modem_send_net_data() failed --0--!!!\r\n");
+    304          		return 0;
+    305          	}
+    306          
+    307          	if(get_gprs_send_fun()==0)
+    308          	{
+    309          		user_delay_ms(TIME_100ms);
+    310          		InfoPrintf("modem_send_net_data() failed --GPRS SERVER CLOSE--!!!\r\n");
+    311          		return 0;		
+    312          	}
+    313          	
+    314          	OSMutexPend(&modem_send_net_data_mutex,0,OS_OPT_PEND_BLOCKING,NULL,&os_err);
+    315          
+    316          	sprintf( (char*)&at_buf[strlen((const char*)at_buf)], "%u\r", len);
+    317          
+    318          	user_delay_ms(TIME_10ms);
+    319          	p_msg=modem_pend_gprs_at_rsp_q(1,&msg_size);
+    320          	if(p_msg != NULL)
+    321          	{		
+    322          		user_free(p_msg,__FUNCTION__);
+    323          	}
+    324          	
+    325          	#ifdef modem_send_net_data_print
+    326          	InfoPrintf("%s\r\n",at_buf);
+    327          	#endif
+    328          	
+    329          	//--TX " AT+CIPSEND=xxx\r "
+    330          	modem_tx_at_cmd((uint8_t *)at_buf);
+    331          	modem_ctl.waiting_cipsend_ack=1;
+    332          	//wait for '>'
+    333          	p_msg=modem_pend_gprs_at_rsp_q(T_3S,&msg_size);
+    334          	modem_ctl.waiting_cipsend_ack=0;
+    335          	if(p_msg != NULL)
+    336          	{
+    337          		#ifdef modem_send_net_data_print
+    338          		InfoPrintf("等 > 括号结果:%s\r\n",p_msg);user_delay_ms(TIME_100ms);
+    339          		#endif
+    340          	
+    341                  if( strchr((const char*)p_msg,'>') != NULL)
+    342                  {
+    343          			user_free(p_msg,__FUNCTION__);
+    344          			
+    345          			if( modem_wr_gprs_data(p_data,len)==len)
+    346          			{	
+    347          				#ifdef modem_send_net_data_print
+    348          				InfoPrintf("发送GPRS数据--%d--字节:",len);
+    349          				for(i=0;i<len;i++)InfoPrintf("%02X,",p_data[i]);
+    350          				InfoPrintf("发送完毕,,,等待SEND OK....\r\n");
+    351          				#endif
+    352          				
+    353          				p_msg=modem_pend_gprs_at_rsp_q(T_5S,&msg_size);
+    354          				if(p_msg != NULL)
+    355          	            {
+    356          	            	#ifdef modem_send_net_data_print
+    357          					InfoPrintf("等 SEDN OK 括号结果:%s\r\n",p_msg);
+    358          					#endif
+    359          				
+    360          	                if(strstr((char*)p_msg,"SEND OK") != NULL)
+    361          					{
+    362          						user_free(p_msg,__FUNCTION__);
+    363          						OSMutexPost(&modem_send_net_data_mutex,OS_OPT_POST_NONE,&os_err);
+    364          						ret_len=len;
+    365          						return ret_len;
+    366          					}
+    367          					else
+    368          					{
+    369          						InfoPrintf("wait SEDN OK fail:%s\r\n",p_msg);
+    370          						user_free(p_msg,__FUNCTION__);
+    371          						ret_len=0;
+    372          					}
+    373          	            }
+    374          				else
+    375          				{
+    376          					InfoPrintf("gprs send:wait SEND OK timeout\r\n");
+    377          					ret_len=0;
+    378          				}
+    379          			}
+    380          			else
+    381          			{
+    382          				InfoPrintf("write ringbuf fail!!!\r\n");
+    383          				ret_len=0;
+    384          			}
+    385                  }
+    386          		else
+    387          		{
+    388          			InfoPrintf("AT+CIPSEND,wait > ,but rx :");
+    389          			for(i=0;i<msg_size;i++)InfoPrintf("%c",p_msg[i]);InfoPrintf("\r\n");
+    390          			
+    391          			user_free(p_msg,__FUNCTION__);
+    392          			ret_len=0;
+    393          		}
+    394          	}
+    395          	else
+    396          	{
+    397          		InfoPrintf("AT+CIPSEND,wait > timeout\r\n");
+    398          		ret_len=0;
+    399          	}
+    400          
+    401          	OSMutexPost(&modem_send_net_data_mutex,OS_OPT_POST_NONE,&os_err);
+    402          	modem_ReCreat_socket();
+    403          	return 0;	
+    404          }
+    405          
+    406          int modem_send_sms(uint8_t *pbuf,uint32_t len,uint8_t *dest)
+    407          {
+    408          	return 0;
+    409          }
+    410          
+    411          
+    412          /*
+    413          	input:
+    414          			cmd		: general AT cmd
+    415          			rsp1	: expected response 1
+    416          			rsp2	: expected response 2
+    417          			time_out: max time of waiting rsp1 and rsp2 
+    418          	return:
+    419          			NULL	: operation failed
+    420          			others	: sucess,return the pointer of the buffer that contain rsp1 and rsp2
+    421          */
+    422          //#define modem_send_cmd_wait_rsp_print
+    423          char* modem_send_cmd_wait_rsp(char *cmd,char*rsp1,char*rsp2,uint32_t time_out)
+    424          {
+    425          	#define RSP_MAX_LEN   80
+    426          	char  *p_msg=NULL,*p=NULL,*p_start_rsp2=NULL;
+    427          	uint16_t msg_size;
+    428          	uint32_t time_start,time_curr;
+    429              OS_ERR os_err;
+    430          	uint16_t Remain_len;
+    431          	char *compare_buf=NULL;
+    432          	char get_rsp1=0;
+    433          	uint8_t i;
+    434          
+    435          	static uint16_t fail_counter=0;
+    436          
+    437          	compare_buf=user_malloc(RSP_MAX_LEN,__FUNCTION__);
+    438          	if(compare_buf!=NULL)
+    439          	{
+    440          		memset(compare_buf,0,RSP_MAX_LEN);
+    441          	}
+    442          	else
+    443          	{
+    444          		return NULL;
+    445          	}
+    446          
+    447          	i=2;
+    448          	while(i--)
+    449          	{
+    450          		p_msg=modem_pend_send_at_rsp_q(2,&msg_size);
+    451          		if(p_msg != NULL)
+    452          		{
+    453          			InfoPrintf("有AT数据被丢弃-1-!!!\r\n");
+    454          			user_free(p_msg,__FUNCTION__);
+    455          		}
+    456          	}
+    457          	
+    458          	#ifdef modem_send_cmd_wait_rsp_print
+    459          	InfoPrintf("modem_send_cmd_wait_rsp:%s\n",cmd);
+    460          	#endif
+    461          	
+    462          	if(modem_tx_at_cmd((uint8_t*)cmd)!=0)
+    463          	{//uart tx buf full
+    464          		user_delay_ms(TIME_20ms);
+    465          		if(modem_tx_at_cmd((uint8_t*)cmd)!=0)
+    466          		{//uart tx buf full
+    467          			user_free(compare_buf,__FUNCTION__);
+    468          			return NULL;//uart tx failed
+    469          		}
+    470          	}
+    471          	
+    472          	//if(rsp2!=NULL)InfoPrintf("\r\n\r\n参数1:%s ,参数2:%s\r\n",rsp1,rsp2);
+    473          	Remain_len = 0;
+    474          	time_start =  OSTimeGet(&os_err);
+    475              time_curr = time_start;
+    476          	while( (time_curr - time_start) < time_out)
+    477          	{
+    478          		p_msg=modem_pend_send_at_rsp_q(T_10MS,&msg_size);
+    479          		if(p_msg != NULL)
+    480          		{	
+    481          			if((Remain_len + msg_size) >= RSP_MAX_LEN)
+    482          			{
+    483          				msg_size = RSP_MAX_LEN- Remain_len -2; //-2为预留空间
+    484          			}
+    485          
+    486          			memcpy(&compare_buf[Remain_len],p_msg,msg_size);
+    487          			Remain_len += msg_size;
+    488          			
+    489          			user_free(p_msg,__FUNCTION__);
+    490          
+    491          			if(get_rsp1==0)
+    492          			{			
+    493          				p = strstr((const char*)compare_buf,rsp1);
+    494          				if(p != NULL)
+    495          				{
+    496          					#ifdef modem_send_cmd_wait_rsp_print
+    497          					InfoPrintf("--AT cmd-1-%s--响应成功 pbuf=%s",cmd,compare_buf);
+    498          					#endif
+    499          					get_rsp1=1;
+    500          					if(rsp2 == NULL)
+    501          					{
+    502          						fail_counter=0;
+    503          						return compare_buf;
+    504          					}
+    505          					else
+    506          					{
+    507          						p_start_rsp2=p+strlen(rsp1);
+    508          					}
+    509          				} 
+    510          			}
+    511          			else 
+    512          			{
+    513          				p = strstr((const char*)p_start_rsp2,rsp2);
+    514          				if(p != NULL)
+    515          				{
+    516          					#ifdef modem_send_cmd_wait_rsp_print
+    517          					InfoPrintf("--AT cmd-2-%s--响应成功 pbuf=%s",cmd,compare_buf);
+    518          					#endif
+    519          					fail_counter=0;
+    520          					return compare_buf;
+    521          				} 
+    522          			}
+    523          			
+    524          			p = strstr((const char*)compare_buf,"ERROR");
+    525          			if(p != NULL)
+    526          			{
+    527          				#if 1
+    528          				InfoPrintf("--AT cmd--%s--响应为:%s,return...\r\n",cmd,compare_buf);
+    529          				#endif
+    530          				user_free(compare_buf,__FUNCTION__);
+    531          				
+    532          				fail_counter++;
+    533          				if(fail_counter>100)
+    534          				{
+    535          					fail_counter=0;
+    536          					modem_power_down();
+    537          					user_delay_ms(1000);
+    538          					modem_power_up();
+    539          				}
+    540          				
+    541          				return NULL;
+    542          			} 
+    543          		}
+    544          		
+    545          		time_curr = OSTimeGet(&os_err);
+    546          	}
+    547          	
+    548          	#if 1
+    549          	InfoPrintf("--AT cmd--%s--响应为:超时\r\n\r\n",cmd);
+    550          	#endif
+    551          	
+    552          	user_free(compare_buf,__FUNCTION__);
+    553          	fail_counter++;
+    554          	if(fail_counter>100)
+    555          	{
+    556          		fail_counter=0;
+    557          		modem_power_down();
+    558          		user_delay_ms(1000);
+    559          		modem_power_up();
+    560          	}
+    561          	return NULL;
+    562          }
+    563          
+    564          #define __different_gsm_module__config______________________________
+    565          /*
+    566          	return:
+    567          			0: failed
+    568          			1: successfully
+    569          */
+    570          static int modem_check_mod_ready(void)
+    571          {
+    572          	//OS_ERR os_err; 	
+    573          	unsigned char buf[50]={0};
+    574          	int i=0;
+    575              uint32_t len;
+    576          	//可设置固定的波特率,默认是自适应
+    577          	user_delay_ms(500*5+300);
+    578          	modem_tx_at_cmd("AT\r");
+    579          	while(1)
+    580          	{
+    581          		user_delay_ms(TIME_100ms);
+    582          		
+    583          		len = uart1_receive_data(buf,50);
+    584          		if(len != 0)
+    585          		{
+    586          			if(strstr((const char*)buf,"OK")!=NULL)
+    587                      {
+    588                      	InfoPrintf("modem boot ok !!!!\r\n");
+    589          				i=2;
+    590          				while(i--)
+    591          				{
+    592          					uart1_receive_data(buf,50);
+    593          					user_delay_ms(2);
+    594          				}
+    595                          return 1;
+    596                      }
+    597          		}
+    598          
+    599          		if(i++%25==0)//2.5 second
+    600          		{	
+    601          			modem_tx_at_cmd("AT\r");	
+    602          		}
+    603          		
+    604          		if(i++>75)//7.5 second
+    605          		{
+    606          			InfoPrintf("modem boot time out\r\n");
+    607          			return 0;
+    608          		}
+    609          	}
+    610          }
+    611          
+    612          static int modem_module_config(void)
+    613          {  
+    614          	char *p_msg;
+    615          	p_msg = modem_send_cmd_wait_rsp("ATE0\r","OK",NULL,T_1S);
+    616          	if(p_msg == NULL)
+    617          	{
+    618          		return -1;
+    619          	}
+    620          	user_free(p_msg,__FUNCTION__);
+    621          
+    622          	p_msg = modem_send_cmd_wait_rsp("AT+CFUN=1\r","OK",NULL,T_1S);
+    623          	if(p_msg == NULL)
+    624          	{
+    625          		return -1;
+    626          	}
+    627          	user_free(p_msg,__FUNCTION__);
+    628          
+    629          	#if 1
+    630          	p_msg = modem_send_cmd_wait_rsp("AT+CGMR\r","OK",NULL,T_1S);//软件版本号
+    631          	if(p_msg == NULL)
+    632          	{
+    633          		return -1;
+    634          	}
+    635          	user_free(p_msg,__FUNCTION__);
+    636          
+    637          	p_msg = modem_send_cmd_wait_rsp("AT+CGSN\r","OK",NULL,T_1S);//模块序列号 ID
+    638          	if(p_msg == NULL)
+    639          	{
+    640          		return -1;
+    641          	}
+    642          	user_free(p_msg,__FUNCTION__);
+    643          	#endif
+    644          		
+    645          	p_msg = modem_send_cmd_wait_rsp("AT+EXUNSOL=\"SQ\",1\r","OK",NULL,T_1S);//主动上报SQ
+    646          
+    647          	if(p_msg == NULL)
+    648          	{
+    649          		return -1;
+    650          	}
+    651          	user_free(p_msg,__FUNCTION__);
+    652              return 0;
+    653          }
+    654          
+    655          
+    656          
+    657          /*
+    658           *****************************************************************************************
+    659           *function name:modem_chk_reg_state
+    660           * Description: 检查 网络注册状态
+    661           * Arguments  : 
+    662           *
+    663           * Returns : 1，已经注册，0，没有注册
+    664           *			
+    665           *******************************************************************************************
+    666           */
+    667          
+    668          static int modem_chk_reg_state(void)
+    669          {
+    670          	char  *p_msg=NULL,*p=NULL;
+    671          	unsigned int tmp=0;
+    672          
+    673          	p_msg=modem_send_cmd_wait_rsp("AT+CREG?\r","+CREG: ","\r\nOK\r\n",T_1S);	
+    674          	if(p_msg != NULL)
+    675          	{
+    676          		p = strstr((const char*)p_msg,"+CREG: 0,1");
+    677          		//InfoPrintf("%s",p_msg);
+    678          		user_free(p_msg,__FUNCTION__);
+    679          		if(p == NULL)
+    680          		{
+    681          			return -1;
+    682          		} 
+    683          	}
+    684          
+    685          	p_msg=modem_send_cmd_wait_rsp("AT+CGATT?\r","+CGATT:","\r\nOK\r\n",T_1S);
+    686          	if(p_msg != NULL)
+    687          	{	
+    688          		//InfoPrintf("%s",p_msg);
+    689          		p = strstr((const char*)p_msg,"+CGATT: 1");
+    690          		user_free(p_msg,__FUNCTION__);
+    691          		if(p != NULL)
+    692          		{
+    693          			return 0;//OK	
+    694          		}
+    695          		else
+    696          		{
+    697          			return -1;	
+    698          		}
+    699          	}
+    700          
+    701          	p_msg = modem_send_cmd_wait_rsp("AT+CSQ\r","+CSQ","\r\nOK\r\n",T_1S);  //查询信号强度
+    702          	if(p_msg != NULL)
+    703          	{	
+    704          		p = strstr((const char*)p_msg,"+CSQ");	
+    705          		if(p != NULL)
+    706          		{
+    707          			sscanf((char*)p,"%*[^:]:%u[^,]",&tmp);
+    708          			modem_ctl.sig_qty_2g = tmp;
+    709          		}  
+    710          		user_free(p_msg,__FUNCTION__);
+    711          	}
+    712          	
+    713          	return -1;
+    714          }
+    715          
+    716          static int modem_check_link(void)
+    717          {
+    718          	char *p_msg;
+    719              uint16_t msg_size;
+    720          	uint32_t time_start;//,time_curr;
+    721          	OS_ERR os_err;
+    722          	
+    723          	p_msg=modem_pend_send_at_rsp_q(1,&msg_size);
+    724          	if(p_msg != NULL)
+    725          	{
+    726          		user_free(p_msg,__FUNCTION__);
+    727          	}
+    728          	
+    729              modem_tx_at_cmd("AT+CIFSR\r");
+    730          	time_start =  OSTimeGet(&os_err);
+    731          	
+    732          	while( (OSTimeGet(&os_err) - time_start) < T_4S)
+    733          	{
+    734          		p_msg=modem_pend_send_at_rsp_q(T_100MS,&msg_size);
+    735          		if(p_msg != NULL)
+    736          		{
+    737          			if(msg_size<5)
+    738          			{
+    739          				user_free(p_msg,__FUNCTION__);
+    740          				continue;
+    741          			}
+    742          			
+    743          			if(strstr((char const*)p_msg,"ERROR") != NULL)
+    744          			{
+    745          				InfoPrintf("get loc ip fail\r\n");
+    746          				user_free(p_msg,__FUNCTION__);
+    747          				return -1;
+    748          			}
+    749          
+    750          			//net is opened
+    751          			InfoPrintf("get loc ip ok,%s\r\n",p_msg);
+    752          			user_free(p_msg,__FUNCTION__);
+    753          			return 0;
+    754          		}
+    755          	}
+    756          	InfoPrintf("get loc ip fail, timeout!!!\r\n");
+    757          	return -1;
+    758          }
+    759          
+    760          static int modem_set_apn(void)
+    761          {
+    762          	char *p_msg;
+    763              
+    764          	p_msg=modem_send_cmd_wait_rsp("AT+CSTT=\"CMIOT\"\r","OK",NULL,T_1S);
+    765          	if(p_msg != NULL)
+    766          	{	
+    767          		user_free(p_msg,__FUNCTION__);
+    768          		return 0;
+    769          	}
+    770          
+    771          	return -1;
+    772          }
+    773          
+    774          static int modem_set_add_iphead(void)
+    775          {
+    776          	char *p_msg;
+    777          	p_msg = modem_send_cmd_wait_rsp("AT+CIPHEAD=1\r","OK",NULL,T_1S);
+    778          	if(p_msg  != NULL)
+    779          	{
+    780          		user_free(p_msg,__FUNCTION__);
+    781          		return 0;
+    782          	}
+    783          	
+    784          
+    785          	////+CIPCCFG: 5,2,1024,1,0,1460,50
+    786          	/*p_msg = modem_send_cmd_wait_rsp("AT+CIPCCFG=3,2,1024,1,0,1460,50\r","OK",T_1S);
+    787          	if(p_msg != NULL)
+    788          	{
+    789          		user_free(p_msg,__FUNCTION__);
+    790          		return 0;
+    791          	}
+    792          	*/
+    793          	return -1;
+    794          }
+    795          static int modem_shut_link(void)
+    796          {
+    797          	char *p_msg;
+    798              
+    799          	p_msg =modem_send_cmd_wait_rsp("AT+CIPSHUT\r","SHUT OK",NULL,T_2S);
+    800          	if(p_msg != NULL)
+    801          	{
+    802          		user_free(p_msg,__FUNCTION__);
+    803          	}
+    804          	return 0;
+    805          }
+    806          
+    807          static int modem_setup_link(void)
+    808          {
+    809          	char *p_msg;
+    810          	InfoPrintf("setup link,wait 86 S...\r\n");
+    811          	//p_msg=modem_send_cmd_wait_rsp("AT+CIICR\r","OK",NULL,T_1S*86);
+    812          	p_msg=modem_send_cmd_wait_rsp("AT+CIICR\r","OK",NULL,T_1S*6);
+    813          	if(p_msg != NULL)
+    814          	{
+    815          		user_free(p_msg,__FUNCTION__);
+    816          		return 0;
+    817          	}
+    818          	InfoPrintf("setup link fail\r\n");
+    819          	return -1;
+    820          }
+    821          
+    822          static int modem_setup_connect(char *dn,uint16_t port)
+    823          {
+    824          	char at_cmd[100]={0};
+    825          	char  *p_msg=NULL;
+    826          	uint16_t msg_size;
+    827          	uint32_t time_start,time_curr;
+    828          	OS_ERR os_err;
+    829          
+    830          	sprintf(at_cmd,"AT+CIPSTART=\"TCP\",\"%s\",%u\r",dn,port);
+    831          	
+    832          	//sprintf(at_cmd,"AT+CIPSTART=\"TCP\",\"202.105.139.90\",7015\r");//7016,7015
+    833          	//sprintf(at_cmd,"AT+CIPSTART=\"TCP\",\"120.55.166.5\",12398\r");
+    834          	//sprintf(at_cmd,"AT+CIPSTART=\"TCP\",\"120.55.166.5\",12398\r");
+    835          
+    836              InfoPrintf("modem_setup_connect...send at:%s\r\n",at_cmd);
+    837          	
+    838          	p_msg=modem_pend_send_at_rsp_q(1,&msg_size);
+    839          	if(p_msg != NULL)
+    840          	{
+    841          		user_free(p_msg,__FUNCTION__);
+    842          	}
+    843          	
+    844          	modem_tx_at_cmd((uint8_t*)at_cmd);
+    845          	
+    846          	time_start =  OSTimeGet(&os_err);
+    847          	time_curr = time_start;
+    848          	while( (time_curr - time_start) < T_6S)
+    849          	{
+    850          		p_msg=modem_pend_send_at_rsp_q(T_100MS,&msg_size);
+    851          		if(p_msg != NULL)
+    852          		{	
+    853          			if(strstr((const char*)p_msg,"CONNECT OK")!=NULL)
+    854          			{
+    855          				user_free(p_msg,__FUNCTION__);
+    856          				return 0;
+    857          			}
+    858          			else if(strstr((const char*)p_msg,"\r\nERROR\r\n")!=NULL)
+    859          			{
+    860          				//delay
+    861          				user_free(p_msg,__FUNCTION__);
+    862          				break;
+    863          			}
+    864          			else
+    865          			{
+    866          				user_free(p_msg,__FUNCTION__);
+    867          			}
+    868          		}
+    869          		time_curr = OSTimeGet(&os_err);
+    870          	}
+    871          	
+    872          	p_msg=modem_pend_send_at_rsp_q(T_100MS,&msg_size);
+    873          	if(p_msg != NULL)
+    874          	{	
+    875          		if(strstr((const char*)p_msg,"ALREADY CONNECT")!=NULL)
+    876          		{
+    877          			user_free(p_msg,__FUNCTION__);
+    878          			return 0;
+    879          		}
+    880          		else
+    881          		{
+    882          			user_free(p_msg,__FUNCTION__);
+    883          		}
+    884          	}
+    885          
+    886          	return -1;
+    887          }
+    888          
+    889          int modem_ReCreat_socket(void)
+    890          {
+    891          	modem_ctl.socket_link_state = 0;
+    892              return 0;
+    893          }
+    894          
+    895          void modem_check_SQ(void)
+    896          {
+    897          	char  *p_msg=NULL,*p=NULL;
+    898          	unsigned int tmp=0;
+    899          
+    900          	p_msg = modem_send_cmd_wait_rsp("AT+CSQ\r","+CSQ","\r\nOK\r\n",T_1S);  //查询信号强度
+    901          	if(p_msg != NULL)
+    902          	{	
+    903          		p = strstr((const char*)p_msg,"+CSQ");	
+    904          		if(p != NULL)
+    905          		{
+    906          		  sscanf((char*)p,"%*[^:]:%u[^,]",&tmp);
+    907          		  modem_ctl.sig_qty_2g = tmp;
+    908          		  InfoPrintf("-----------------------------------------------csq=%d\r\n",tmp);
+    909          		}  
+    910          
+    911          		user_free(p_msg,__FUNCTION__);
+    912          	}
+    913          }
+    914          
+    915          unsigned char modem_get_sig_val(void)
+    916          {
+    917          	return modem_ctl.sig_qty_2g;
+    918          
+    919          }
+    920          /*
+    921          	return : 
+    922          			1:get ok
+    923          			0:fail                             */
+    924          int modem_get_ccid(void)
+    925          {
+    926          	char *p_msg;
+    927          	int ret=0;
+    928          	
+    929          	 /*
+    930          	AT+CCID
+    931          
+    932          	89860040191572516655
+    933          
+    934          	OK
+    935          
+    936          	*/
+    937          	p_msg = modem_send_cmd_wait_rsp("AT+CCID\r","OK",NULL,T_2S);
+    938          	if(p_msg != NULL)
+    939          	{
+    940          		if((p_msg[2]>=0x30)&&(p_msg[2]<=0x39))
+    941          		{//正确的CCID号
+    942          			InfoPrintf("GET CCID OK:%s",p_msg);
+    943          			ret=1;
+    944          		}
+    945          		else
+    946          		{
+    947          			ret=0;
+    948          		}
+    949          		user_free(p_msg,__FUNCTION__);
+    950          	}
+    951          
+    952          	return ret;
+    953          }
+    954          
+    955          static void modem_manage_init(void)
+    956          {
+    957          	net_state_init();
+    958          }
+    959          
+    960          void modem_led_control(void*p_Tmr,void*p_Arg)
+    961          {
+    962           	OS_ERR os_err;
+    963            	static uint32_t modem_led_t_wait=0;
+    964          
+    965            	if(get_modem_err_state( )) //=1 mean err 0 mean ok if(ret==1)
+    966          	{
+    967          		modem_ctl.sig_qty_2g=0x00; //
+    968          		modem_led_OnOff(0);
+    969          	}
+    970          	else
+    971          	{
+    972          		if(get_already_login_flag()==1)
+    973          		{
+    974          			modem_led_OnOff(1);
+    975          		}
+    976          		else
+    977          		{
+    978          			if(OSTimeGet(&os_err)- modem_led_t_wait > T_1S)
+    979          			{
+    980          				modem_led_t_wait=OSTimeGet(&os_err);
+    981          				modem_led_OnOff(2);
+    982          			}
+    983          		}
+    984          	}
+    985          }
+    986          
+    987          /*
+    988          	input:
+    989          			sta: 
+    990          				0: socket closed
+    991          				1: socket setup ok
+    992          	brief:
+    993          	     	post socket state to high layer,
+    994          */
+    995          static int modem_post_socket_state_to_app(uint8_t sta)
+    996          {
+    997          	OS_ERR os_err=0Xffffffff;
+    998          	TASK_MSG_T *ptr;
+    999          	ptr=(TASK_MSG_T *)user_malloc(sizeof(TASK_MSG_T),__FUNCTION__);
+   1000          	if(ptr!=NULL)
+   1001          	{
+   1002          		ptr->msg_src_id=MODEM_MANAGE_TASK_ID;
+   1003          		ptr->msg_father_type=FATHER_MSG_T_MODEM_SOCKET_STATE;
+   1004          		ptr->msg_son_type=sta;
+   1005          		
+   1006          		OSTaskQPost(&telecom_prot_manage_task_Tcb,(void*)ptr,sizeof(TASK_MSG_T), OS_OPT_POST_FIFO,&os_err);
+   1007          		if(os_err!=0)
+   1008          		{
+   1009          			InfoPrintf("modem post net state to report task faild -%d-\r\n",os_err);
+   1010          			user_free(ptr,__FUNCTION__);
+   1011          		}
+   1012          	}
+   1013          	return os_err;
+   1014          }
+   1015          
+   1016          void modem_urc_handle(void * p_msg)
+   1017          {
+   1018              //OS_ERR os_err;
+   1019          	char *p = NULL;
+   1020          	unsigned int tmp=0;
+   1021              //InfoPrintf("modem_urc_handle,%s\r\n",in_buf);
+   1022          	if(strstr((char const*)p_msg,"\r\n+RING")!= NULL)
+   1023          	{
+   1024          		//modem_ctl.state = MODEM_STATE_PHONE;
+   1025          	}
+   1026          	else if(strstr((char const*)p_msg,"\r\nCLOSED")!= NULL)
+   1027          	{
+   1028          		modem_ReCreat_socket();
+   1029          	}
+   1030          	else if(strstr((char const*)p_msg,"+PDP: DEACT")!= NULL)
+   1031          	{
+   1032          		modem_ctl.tcp_link_state = 0;
+   1033          	}
+   1034          	else if(strstr((char const*)p_msg,"Call Ready")!= NULL)
+   1035          	{ 
+   1036          	}
+   1037          	else if(strstr((char const*)p_msg,"SMS Ready")!= NULL)
+   1038          	{ 
+   1039          	}
+   1040          	else if((p=strstr((char const*)p_msg,"+CSQN:"))!= NULL)
+   1041          	{ 
+   1042          		sscanf((char*)p,"%*[^:]:%u[^,]",&tmp);
+   1043          		modem_ctl.sig_qty_2g = tmp;
+   1044          		InfoPrintf("modem sig:%u\r\n",modem_ctl.sig_qty_2g);
+   1045          	} 
+   1046          	
+   1047          	user_free(p_msg,__FUNCTION__);
+   1048          }
+   1049          
+   1050          /*
+   1051          	input:
+   1052          			op_cls_network:
+   1053          						 	1: open network,setup socket connect
+   1054          						 	0: quit socket,set modem module idle.
+   1055          */
+   1056          void  modem_internet_control(uint8_t op_cls_network)
+   1057          {
+   1058           	OS_ERR os_err;
+   1059          	static uint32_t last_time;
+   1060          	
+   1061          	static enum MODEM_STATE setup_socket_step=MODEM_STATE_INIT;
+   1062          
+   1063          	if(setup_socket_step==MODEM_STATE_OFF)
+   1064          	{
+   1065          		setup_socket_step=MODEM_STATE_INIT;
+   1066          	}
+   1067          	
+   1068          	if(op_cls_network==1)
+   1069          	{//setup socket
+   1070          	
+   1071          		switch(setup_socket_step) 
+   1072          		{        			
+   1073          			case MODEM_STATE_RESET:
+   1074          				modem_power_down();
+   1075          				user_delay_ms(1000);
+   1076          				modem_power_up();
+   1077          				setup_socket_step = MODEM_STATE_INIT;
+   1078          				last_time = OSTimeGet(&os_err);
+   1079          				break;
+   1080          	    	case MODEM_STATE_INIT:
+   1081          				net_state_init();
+   1082          				modem_post_socket_state_to_app(0);
+   1083          				last_time = OSTimeGet(&os_err);
+   1084          	            setup_socket_step = MODEM_STATE_INIT_WAIT;
+   1085          			case MODEM_STATE_INIT_WAIT:
+   1086          				if( modem_module_config() == 0 ) //3秒
+   1087          	            {	// GSM模块初始化
+   1088          					InfoPrintf("-1-modem module init ok\r\n");
+   1089          					setup_socket_step = MODEM_STATE_CHK_CREG;
+   1090          					last_time = OSTimeGet(&os_err);
+   1091          				}
+   1092          				else
+   1093          				{
+   1094          					//InfoPrintf("modem module init fail\r\n");
+   1095          					if(OSTimeGet(&os_err) - last_time > T_1MIN)
+   1096          						setup_socket_step = MODEM_STATE_RESET;
+   1097          				}
+   1098          	         	break;
+   1099          	    	case MODEM_STATE_CHK_CREG:	
+   1100          				if(modem_chk_reg_state()==0)//CGATT //3秒
+   1101          				{
+   1102          					InfoPrintf("-2-注册到基站 ok\r\n");
+   1103          					setup_socket_step = MODEM_STATE_SHUT_LINK;
+   1104          				}
+   1105          				else
+   1106          				{
+   1107          					if(OSTimeGet(&os_err) - last_time > T_2MIN)
+   1108          						setup_socket_step = MODEM_STATE_RESET;
+   1109          					user_delay_ms(TIME_10ms);
+   1110          				} 
+   1111                          
+   1112          				{
+   1113          					static unsigned char ccid__flag=0;
+   1114          					if(ccid__flag==0)
+   1115          					{
+   1116          						ccid__flag=modem_get_ccid();
+   1117          					}
+   1118          				}
+   1119          	       		break;
+   1120          			case MODEM_STATE_SHUT_LINK:
+   1121          				net_state_init();
+   1122          				modem_shut_link();
+   1123          				setup_socket_step = MODEM_STATE_SET_APN;
+   1124          				break;
+   1125          			case MODEM_STATE_SET_APN:
+   1126          				if(!modem_set_apn())
+   1127          				{
+   1128          					InfoPrintf("-3-连接APN ok\r\n");
+   1129          					setup_socket_step = MODEM_STATE_NET_OPEN;
+   1130          				}
+   1131          				else
+   1132          				{
+   1133          					setup_socket_step = MODEM_STATE_INIT;
+   1134          				}
+   1135          				break;
+   1136          	        case MODEM_STATE_NET_OPEN:
+   1137          				if(!modem_setup_link())//setup gprs   //6秒
+   1138          				{
+   1139          					setup_socket_step = MODEM_STATE_CHK_NET;
+   1140          					InfoPrintf("-4-连接internet ok\r\n");
+   1141          				}
+   1142          				else
+   1143          				{
+   1144          					setup_socket_step = MODEM_STATE_SHUT_LINK;
+   1145          				}
+   1146          	            break;		
+   1147          			case MODEM_STATE_CHK_NET://get ip
+   1148          				if(modem_check_link()==0) 		//4秒
+   1149          				{
+   1150          					InfoPrintf("-5-get ip ok\r\n");
+   1151          					modem_ctl.tcp_link_state = 1;
+   1152          					setup_socket_step = MODEM_STATE_SOCKET_CREATE;
+   1153          				}
+   1154          				else
+   1155          				{
+   1156          					modem_ctl.tcp_link_state = 0;
+   1157          					setup_socket_step = MODEM_STATE_SHUT_LINK;
+   1158          				}
+   1159          				break;
+   1160          			case MODEM_STATE_SOCKET_CREATE://connect  
+   1161          				if(modem_setup_connect(get_remote_dn(),get_remote_port())==0) //6秒
+   1162          				{
+   1163          					InfoPrintf("-6-socket created ok\r\n");
+   1164          					modem_ctl.socket_link_state = 1;
+   1165          					modem_set_add_iphead();
+   1166          					modem_post_socket_state_to_app(1);
+   1167          					setup_socket_step = MODEM_STATE_GPRS;
+   1168          				}
+   1169          				else
+   1170          				{
+   1171          					modem_ctl.socket_link_state = 0;
+   1172          					setup_socket_step = MODEM_STATE_CHK_NET;
+   1173          				}
+   1174          	            break;	
+   1175          	   		case MODEM_STATE_GPRS:
+   1176          				if((modem_ctl.socket_link_state==1)&& (modem_ctl.tcp_link_state==1))
+   1177          				{
+   1178          					//check tcp link and socket state
+   1179          					//...
+   1180          				}	
+   1181          				else
+   1182          				{
+   1183          					setup_socket_step = MODEM_STATE_SHUT_LINK;
+   1184          				}
+   1185          	        	break;
+   1186          			case MODEM_EXIT_GPRS:
+   1187          				modem_setup_link();
+   1188          				setup_socket_step = MODEM_STATE_SHUT_LINK;
+   1189          			case MODEM_STATE_SLEEP:
+   1190          				break;
+   1191          	     	default:
+   1192          	      		InfoPrintf("error setup_socket_step!!-%d-\r\n",setup_socket_step);	
+   1193          	       		break;			
+   1194          	 	}
+   1195          	}
+   1196          	else
+   1197          	{//quit socket
+   1198          	
+   1199          		setup_socket_step=MODEM_STATE_OFF;
+   1200          		modem_shut_link();
+   1201          	}
+   1202          }
+   1203          
+   1204          void modem_manage_task_msg_handle(TASK_MSG_T *p_msg)
+   1205          {
+   1206          	//OS_ERR os_err;
+   1207          	
+   1208          	switch (p_msg->msg_src_id)
+   1209          	{
+   1210          		case DEV_MANAGE_TASK_ID:
+   1211          			switch (p_msg->msg_father_type)
+   1212          			{
+   1213          				case FATHER_MSG_T_TASK_POWER_CTRL:
+   1214          					switch (p_msg->msg_son_type)
+   1215          					{
+   1216          						case POWER_CTRL_PWR_ON:
+   1217          							InfoPrintf("modem rx ctl msg:pwr on\r\n");					
+   1218          							modem_open_module();
+   1219          							user_delay_ms(TIME_10ms);
+   1220          							InfoPrintf("===========================\r\n");
+   1221          							if(modem_check_mod_ready()!=0)//max wait time 11S
+   1222          							{
+   1223          								InfoPrintf("power up:2g module power up ok\r\n");
+   1224          							}
+   1225          							else
+   1226          							{
+   1227          								InfoPrintf("power up:2g module power up failed !!!\r\n");
+   1228          							}
+   1229          							
+   1230          							modem_ctl.rx_gprs_state=0;
+   1231          							modem_ctl.socket_ctl = SOCKET_CTL_SETUP_AND_KEEP;
+   1232          							break;
+   1233          
+   1234          						case POWER_CTRL_SLEEP:
+   1235          							InfoPrintf("modem rx ctl msg: sleep\r\n");
+   1236          							break;
+   1237          
+   1238          						case POWER_CTRL_WAKEUP:
+   1239          							InfoPrintf("modem rx ctl msg: wakeup\r\n");
+   1240          							break;
+   1241          
+   1242          						case POWER_CTRL_PWR_OFF:
+   1243          							InfoPrintf("modem rx ctl msg: power off\r\n");
+   1244          							break;
+   1245          							
+   1246          						default:
+   1247          							break;
+   1248          					}
+   1249          					break;
+   1250          					
+   1251          				default:
+   1252          					break;
+   1253          			}
+   1254          			break;
+   1255          
+   1256          		default:
+   1257          			break;		
+   1258          	}
+   1259          }
+   1260          
+   1261          /*
+   1262           *****************************************************************************************
+   1263           *function name:  modem_receive_task
+   1264           * Description: 接收模块的底层数据，对不同的数据进行分发到不同的任务
+   1265           * Arguments  : 读取模块的串口数据
+   1266           *
+   1267           * Returns : 
+   1268           *			
+   1269           *******************************************************************************************
+   1270           */
+   1271          void modem_receive_task(void*p_data)
+   1272          {
+   1273          	OS_ERR os_err; 
+   1274          	uint32_t last_time=0;
+   1275          	p_data = p_data;
+   1276          
+   1277          	OSQCreate(&modem_receive_urc_q,"modem_receive_urc_q",10,&os_err);
+   1278          	if(os_err != OS_ERR_NONE)
+   1279          	{
+   1280          		InfoPrintf("create modem_receive_urc q fail\r\n");
+   1281          	}
+   1282          
+   1283          	OSQCreate(&modem_send_at_rsp_q,"modem_send_at_rsp_q",2,&os_err);
+   1284          	if(os_err != OS_ERR_NONE)
+   1285          	{
+   1286          		InfoPrintf("create modem_send_at_rsp q fail\r\n");
+   1287          	}
+   1288          
+   1289          	OSQCreate(&modem_send_gprs_at_rsp_q,"modem_send_gprs_at_rsp_q",1,&os_err);
+   1290          	if(os_err != OS_ERR_NONE)
+   1291          	{
+   1292          		InfoPrintf("create modem_send_gprs_at_rsp q fail\r\n");
+   1293          	}
+   1294          
+   1295          	OSQCreate(&modem_receive_gprs_data_q,"rx_gprs_data q",5,&os_err);
+   1296          	if(os_err != OS_ERR_NONE)
+   1297          	{
+   1298          		InfoPrintf("create modem_recv_remote_data q fail\r\n");
+   1299          	}
+   1300          
+   1301          	//InfoPrintf("modem_receive_task() start ok\r\n");
+   1302          	while(1)
+   1303          	{	
+   1304          		if(modem_ctl.socket_ctl != SOCKET_CTL_CLOSED)
+   1305          		{
+   1306          			at_pro_2g_module_data(&modem_ctl.rx_gprs_state,&modem_ctl.waiting_cipsend_ack);
+   1307          		}
+   1308          		else
+   1309          		{
+   1310          			//InfoPrintf("socket_ctl==SOCKET_CTL_CLOSED ...\r\n");
+   1311          		}
+   1312          		user_delay_ms(TIME_10ms);
+   1313          		if(user_get_os_time()-last_time>T_1S)
+   1314          		{
+   1315          			last_time=user_get_os_time();
+   1316          			InfoPrintf("modem_receive_task loop...\r\n");
+   1317          		}
+   1318          	}
+   1319          }
+   1320          
+   1321          
+   1322          /*
+   1323           *****************************************************************************************
+   1324           *function name:  modem_manage_task
+   1325           * Description: 维护模块的状态切换，保持 IP，查询信号强度，发送gprs数据。开关机，休眠管理
+   1326           * Arguments  : 接收消息，根据不同消息执行不同功能。
+   1327           *
+   1328           * Returns : 
+   1329           *			
+   1330           *******************************************************************************************
+   1331           */
+   1332          //void modem_manage_task(void*p_data)
+   1333          void ModemManageTask(void*p_data)
+   1334          {
+   1335              OS_ERR os_err;
+   1336          	TASK_MSG_T* task_msg;
+   1337          	uint8_t *urc_msg; 
+   1338          	uint16_t msg_size;
+   1339          	uint32_t last_time=0;
+   1340          	//uint8_t ret=0;
+   1341          	
+   1342          	p_data = p_data;
+   1343          	
+   1344          	modem_manage_init();
+   1345          	modem_power_down();
+   1346          	
+   1347          	if(modem_send_net_data_mutex.Type != OS_OBJ_TYPE_MUTEX)
+   1348          	{
+   1349          		OSMutexCreate(&modem_send_net_data_mutex,"modem send net data mutex",&os_err);
+   1350          		if(os_err!=OS_ERR_NONE)
+   1351          		{
+   1352          			InfoPrintf("creat modem_send_net_data_mutex failed !!!\r\n");
+   1353          		}
+   1354          	}
+   1355          
+   1356          	if(modem_uart_tx_ringbuf_mutex.Type != OS_OBJ_TYPE_MUTEX)
+   1357          	{
+   1358          		OSMutexCreate(&modem_uart_tx_ringbuf_mutex,"modem_uart_tx_ringbuf_mutex",&os_err);
+   1359          		if(os_err!=OS_ERR_NONE)
+   1360          		{
+   1361          			InfoPrintf("creat modem_uart_tx_ringbuf_mutex failed !!!\r\n");
+   1362          		}
+   1363          	}
+   1364          	
+   1365          	#if 1
+   1366          	OSTaskCreate(&modem_receive_task_Tcb,
+   1367          				"modem_receive_task",
+   1368          				(OS_TASK_PTR)    modem_receive_task,
+   1369          				(void          *)NULL,
+   1370          				 MODEM_RECV_TASK_PRIO,
+   1371          				(CPU_STK 	*)  modem_receive_task_Stk,
+   1372          				(CPU_STK_SIZE)  MODEM_RECEIV_TASK_STK_SIZE/10,/* limit*/
+   1373          				(CPU_STK_SIZE)  MODEM_RECEIV_TASK_STK_SIZE,
+   1374          				(OS_MSG_QTY)    MODEM_RECV_TASK_MSG_QTY,
+   1375          				(OS_TICK )      MODEM_RECV_TASK_TIME_QUANTA,
+   1376          				(void  *)       NULL,
+   1377          				(OS_OPT)        (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+   1378          				&os_err);	
+   1379          
+   1380          	if(os_err != OS_ERR_NONE)
+   1381          	{
+   1382          		InfoPrintf("creat modem_receive_task Tcb failed !!!\r\n");
+   1383          	}
+   1384          	#endif
+   1385          
+   1386              OSTmrCreate(&modem_led_control_tmr,"modem_led_control_tmr",T_10MS,T_10MS,OS_OPT_TMR_PERIODIC,modem_led_control,NULL,&os_err);
+   1387          	OSTmrStart(&modem_led_control_tmr,&os_err);
+   1388          
+   1389          	while(1)
+   1390          	{
+   1391          		urc_msg = modem_pend_receive_urc_q(T_10MS*2,&msg_size);
+   1392          		if(urc_msg != NULL)
+   1393          		{
+   1394          			modem_urc_handle(urc_msg);
+   1395          		}
+   1396          		else if(os_err != OS_ERR_TIMEOUT)
+   1397          		{
+   1398          			user_delay_ms(TIME_10ms);
+   1399          		}
+   1400          		
+   1401          		task_msg = OSTaskQPend(0,OS_OPT_PEND_NON_BLOCKING,&msg_size,NULL,&os_err);
+   1402          		if(NULL != task_msg)
+   1403          		{
+   1404          			modem_manage_task_msg_handle(task_msg);
+   1405          			
+   1406          			user_free(task_msg,__FUNCTION__);
+   1407          		}
+   1408          		//socket control ----------------------------------------------------
+   1409          		if(modem_ctl.socket_ctl == SOCKET_CTL_CLOSED)
+   1410          		{
+   1411          			//do nothing		
+   1412          		}
+   1413          		else if(modem_ctl.socket_ctl == SOCKET_CTL_SETUP_AND_KEEP)
+   1414          		{
+   1415          			modem_internet_control(1);// max 6 second
+   1416          		}
+   1417          		else if(modem_ctl.socket_ctl == SOCKET_CTL_QUIT)
+   1418          		{
+   1419          			modem_internet_control(0);
+   1420          			modem_ctl.socket_ctl = SOCKET_CTL_CLOSED;
+   1421          		}
+   1422          
+   1423          		//fault detect ----------------------------------------------------
+   1424          
+   1425          		//InfoPrintf(".");
+   1426          		OSTimeDly(T_10MS,OS_OPT_TIME_DLY,&os_err);
+   1427          		if(user_get_os_time()-last_time>T_1S)
+   1428          		{
+   1429          			last_time=user_get_os_time();
+   1430          			InfoPrintf("ModemManageTask loop...\r\n");
+   1431          		}
+   1432          	}
+   1433          }
+   1434          
+   1435          #endif
+   1436          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      56   ModemManageTask
+        56   -> InfoPrintf
+        56   -> OSMutexCreate
+        56   -> OSTaskCreate
+        56   -> OSTaskQPend
+        56   -> OSTimeDly
+        56   -> OSTmrCreate
+        56   -> OSTmrStart
+        56   -> modem_internet_control
+        56   -> modem_manage_init
+        56   -> modem_manage_task_msg_handle
+        56   -> modem_pend_receive_urc_q
+        56   -> modem_power_down
+        56   -> modem_urc_handle
+        56   -> user_delay_ms
+        56   -> user_free
+        56   -> user_get_os_time
+       0   get_modem_err_state
+       0   get_remote_dn
+       0   get_remote_port
+       0   modem_ReCreat_socket
+      16   modem_check_SQ
+        16   -> InfoPrintf
+        16   -> modem_send_cmd_wait_rsp
+        16   -> sscanf
+        16   -> strstr
+        16   -> user_free
+      24   modem_check_link
+        24   -> InfoPrintf
+        24   -> OSTimeGet
+        24   -> modem_pend_send_at_rsp_q
+        24   -> modem_tx_at_cmd
+        24   -> strstr
+        24   -> user_free
+      72   modem_check_mod_ready
+        72   -> InfoPrintf
+        72   -> __aeabi_memclr4
+        72   -> modem_tx_at_cmd
+        72   -> strstr
+        72   -> uart1_receive_data
+        72   -> user_delay_ms
+      24   modem_chk_reg_state
+        24   -> modem_send_cmd_wait_rsp
+        24   -> sscanf
+        24   -> strstr
+        24   -> user_free
+       8   modem_close_module
+         0   -> modem_power_down
+         8   -> user_uart1_close
+      16   modem_get_ccid
+        16   -> InfoPrintf
+        16   -> modem_send_cmd_wait_rsp
+        16   -> user_free
+       0   modem_get_sig_val
+      16   modem_internet_control
+        16   -> InfoPrintf
+        16   -> OSTimeGet
+        16   -> get_remote_dn
+        16   -> get_remote_port
+        16   -> modem_check_link
+        16   -> modem_chk_reg_state
+        16   -> modem_get_ccid
+        16   -> modem_module_config
+        16   -> modem_post_socket_state_to_app
+        16   -> modem_power_down
+        16   -> modem_power_up
+        16   -> modem_set_add_iphead
+        16   -> modem_set_apn
+        16   -> modem_setup_connect
+        16   -> modem_setup_link
+        16   -> modem_shut_link
+        16   -> net_state_init
+        16   -> user_delay_ms
+       0   modem_led_OnOff
+      16   modem_led_control
+        16   -> OSTimeGet
+        16   -> get_already_login_flag
+        16   -> get_modem_err_state
+        16   -> modem_led_OnOff
+       0   modem_manage_init
+         0   -> net_state_init
+       8   modem_manage_task_msg_handle
+         0   -> InfoPrintf
+         8   -> InfoPrintf
+         8   -> modem_check_mod_ready
+         8   -> modem_open_module
+         8   -> user_delay_ms
+      16   modem_module_config
+        16   -> modem_send_cmd_wait_rsp
+        16   -> user_free
+       8   modem_open_module
+         8   -> InfoPrintf
+         8   -> modem_power_up
+         0   -> user_uart1_open
+      16   modem_pend_gprs_at_rsp_q
+        16   -> OSQPend
+        16   -> user_free
+      16   modem_pend_receive_urc_q
+        16   -> OSQPend
+        16   -> user_free
+      16   modem_pend_send_at_rsp_q
+        16   -> OSQPend
+        16   -> user_free
+      24   modem_post_socket_state_to_app
+        24   -> InfoPrintf
+        24   -> OSTaskQPost
+        24   -> user_free
+        24   -> user_malloc
+       0   modem_power_down
+       0   modem_power_up
+      16   modem_receive_task
+        16   -> InfoPrintf
+        16   -> OSQCreate
+        16   -> at_pro_2g_module_data
+        16   -> user_delay_ms
+        16   -> user_get_os_time
+      56   modem_send_cmd_wait_rsp
+        56   -> InfoPrintf
+        56   -> OSTimeGet
+        56   -> __aeabi_memcpy
+        56   -> __aeabi_memset
+        56   -> modem_pend_send_at_rsp_q
+        56   -> modem_power_down
+        56   -> modem_power_up
+        56   -> modem_tx_at_cmd
+        56   -> strlen
+        56   -> strstr
+        56   -> user_delay_ms
+        56   -> user_free
+        56   -> user_malloc
+      56   modem_send_net_data
+        56   -> InfoPrintf
+        56   -> OSMutexPend
+        56   -> OSMutexPost
+        56   -> __aeabi_memcpy4
+        56   -> get_gprs_send_fun
+        56   -> modem_ReCreat_socket
+        56   -> modem_pend_gprs_at_rsp_q
+        56   -> modem_tx_at_cmd
+        56   -> modem_wr_gprs_data
+        56   -> sprintf
+        56   -> strchr
+        56   -> strlen
+        56   -> strstr
+        56   -> user_delay_ms
+        56   -> user_free
+       0   modem_send_sms
+       8   modem_set_add_iphead
+         8   -> modem_send_cmd_wait_rsp
+         8   -> user_free
+       8   modem_set_apn
+         8   -> modem_send_cmd_wait_rsp
+         8   -> user_free
+     120   modem_setup_connect
+       120   -> InfoPrintf
+       120   -> OSTimeGet
+       120   -> __aeabi_memclr4
+       120   -> modem_pend_send_at_rsp_q
+       120   -> modem_tx_at_cmd
+       120   -> sprintf
+       120   -> strstr
+       120   -> user_free
+       8   modem_setup_link
+         8   -> InfoPrintf
+         8   -> modem_send_cmd_wait_rsp
+         8   -> user_free
+       8   modem_shut_link
+         8   -> modem_send_cmd_wait_rsp
+         8   -> user_free
+      24   modem_tx_at_cmd
+        24   -> OSMutexPend
+        24   -> OSMutexPost
+        24   -> strlen
+        24   -> uart1_send_data
+      16   modem_urc_handle
+        16   -> InfoPrintf
+        16   -> modem_ReCreat_socket
+        16   -> sscanf
+        16   -> strstr
+        16   -> user_free
+      24   modem_wr_gprs_data
+        24   -> OSMutexPend
+        24   -> OSMutexPost
+        24   -> uart1_send_data
+       0   net_state_deinit
+       0   net_state_init
+       0   strchr
+         0   -> __iar_Strchr
+       0   strstr
+         0   -> __iar_Strstr
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable123
+       4  ??DataTable124
+       4  ??DataTable125
+       4  ??DataTable130
+       4  ??DataTable130_1
+       4  ??DataTable138
+       4  ??DataTable138_1
+       4  ??DataTable139
+       4  ??DataTable139_1
+       4  ??DataTable139_2
+       4  ??DataTable140
+       4  ??DataTable141
+       4  ??DataTable141_1
+       4  ??DataTable141_2
+       4  ??DataTable141_3
+       4  ??DataTable141_4
+       4  ??DataTable141_5
+       4  ??DataTable141_6
+       4  ??DataTable141_7
+       4  ??DataTable141_8
+      16  ?_0
+      28  ?_1
+      28  ?_10
+       4  ?_11
+       4  ?_12
+      28  ?_13
+      24  ?_14
+       8  ?_15
+      36  ?_16
+      32  ?_17
+      52  ?_18
+       4  ?_19
+      20  ?_2
+       4  ?_20
+      24  ?_21
+      24  ?_22
+       8  ?_23
+      12  ?_24
+      12  ?_25
+      12  ?_26
+      20  ?_27
+      12  ?_28
+       8  ?_29
+      40  ?_3
+       8  ?_30
+      12  ?_31
+      12  ?_32
+       8  ?_33
+      12  ?_34
+       8  ?_35
+       8  ?_36
+      16  ?_37
+      12  ?_38
+      20  ?_39
+      56  ?_4
+      20  ?_40
+      32  ?_41
+      20  ?_42
+      16  ?_43
+      12  ?_44
+       8  ?_45
+      28  ?_46
+      12  ?_47
+      20  ?_48
+     100  ?_49
+       4  ?_5
+      28  ?_50
+      36  ?_51
+      12  ?_52
+      12  ?_53
+      16  ?_54
+      56  ?_55
+      12  ?_56
+      16  ?_57
+      52  ?_58
+       8  ?_59
+       8  ?_6
+      12  ?_60
+      12  ?_61
+      12  ?_62
+      12  ?_63
+       8  ?_64
+      16  ?_65
+      28  ?_66
+      20  ?_67
+      16  ?_68
+      24  ?_69
+      24  ?_7
+      16  ?_70
+      24  ?_71
+      32  ?_72
+      28  ?_73
+      32  ?_74
+      36  ?_75
+      44  ?_76
+      28  ?_77
+      28  ?_78
+      32  ?_79
+      36  ?_8
+      20  ?_80
+      36  ?_81
+      20  ?_82
+      36  ?_83
+      28  ?_84
+      40  ?_85
+      16  ?_86
+      40  ?_87
+      32  ?_88
+      28  ?_89
+      24  ?_9
+      48  ?_90
+      28  ?_91
+      48  ?_92
+      20  ?_93
+      44  ?_94
+      24  ?_95
+      28  ?_96
+     344  ModemManageTask
+       2  fail_counter
+       4  get_modem_err_state
+       8  get_remote_dn
+       6  get_remote_port
+       4  ip
+      10  modem_ReCreat_socket
+      82  modem_check_SQ
+     164  modem_check_link
+     142  modem_check_mod_ready
+     188  modem_chk_reg_state
+      12  modem_close_module
+     352  modem_ctl
+          setup_socket_step
+          ccid__flag
+          modem_uart_tx_ringbuf_mutex
+          modem_send_net_data_mutex
+          modem_led_t_wait
+          last_time
+          modem_send_at_rsp_q
+          modem_send_gprs_at_rsp_q
+          modem_receive_urc_q
+          modem_receive_gprs_data_q
+          modem_led_control_tmr
+      58  modem_get_ccid
+       8  modem_get_sig_val
+     436  modem_internet_control
+       2  modem_led_OnOff
+      78  modem_led_control
+       4  modem_manage_init
+     134  modem_manage_task_msg_handle
+     172  modem_module_config
+      22  modem_open_module
+      50  modem_pend_gprs_at_rsp_q
+      50  modem_pend_receive_urc_q
+      50  modem_pend_send_at_rsp_q
+      88  modem_post_socket_state_to_app
+       2  modem_power_down
+       2  modem_power_up
+     182  modem_receive_task
+     408  modem_send_cmd_wait_rsp
+     380  modem_send_net_data
+       4  modem_send_sms
+      40  modem_set_add_iphead
+      40  modem_set_apn
+     202  modem_setup_connect
+      56  modem_setup_link
+      36  modem_shut_link
+      74  modem_tx_at_cmd
+     150  modem_urc_handle
+      54  modem_wr_gprs_data
+      10  net_state_deinit
+      12  net_state_init
+       4  strchr
+       4  strstr
+     384  -- Other
+
+ 
+     2 bytes in section .bss
+   356 bytes in section .data
+   188 bytes in section .rodata
+ 6 288 bytes in section .text
+ 
+ 6 280 bytes of CODE  memory (+ 8 bytes shared)
+   188 bytes of CONST memory
+   358 bytes of DATA  memory
+
+Errors: none
+Warnings: 3

@@ -1,0 +1,1281 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:29
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_tmr.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_tmr.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_tmr.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_tmr.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_tmr.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                   TIMER MANAGEMENT
+     10          *
+     11          * File    : OS_TMR.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_tmr__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          #if OS_CFG_TMR_EN > 0u
+     41          /*
+     42          ************************************************************************************************************************
+     43          *                                                     CONSTANTS
+     44          ************************************************************************************************************************
+     45          */
+     46          
+     47          #define  OS_OPT_LINK_DLY       (OS_OPT)(0u)
+     48          #define  OS_OPT_LINK_PERIODIC  (OS_OPT)(1u)
+     49          
+     50          /*$PAGE*/
+     51          /*
+     52          ************************************************************************************************************************
+     53          *                                                   CREATE A TIMER
+     54          *
+     55          * Description: This function is called by your application code to create a timer.
+     56          *
+     57          * Arguments  : p_tmr           Is a pointer to a timer control block
+     58          *
+     59          *              p_name          Is a pointer to an ASCII string that is used to name the timer.  Names are useful for
+     60          *                              debugging.
+     61          *
+     62          *              dly             Initial delay.
+     63          *                              If the timer is configured for ONE-SHOT mode, this is the timeout used
+     64          *                              If the timer is configured for PERIODIC mode, this is the first timeout to wait for
+     65          *                              before the timer starts entering periodic mode
+     66          *
+     67          *              period          The 'period' being repeated for the timer.
+     68          *                              If you specified 'OS_OPT_TMR_PERIODIC' as an option, when the timer expires, it will
+     69          *                              automatically restart with the same period.
+     70          *
+     71          *              opt             Specifies either:
+     72          *
+     73          *                                  OS_OPT_TMR_ONE_SHOT       The timer counts down only once
+     74          *                                  OS_OPT_TMR_PERIODIC       The timer counts down and then reloads itself
+     75          *
+     76          *              p_callback      Is a pointer to a callback function that will be called when the timer expires.  The
+     77          *                              callback function must be declared as follows:
+     78          *
+     79          *                                  void  MyCallback (OS_TMR *p_tmr, void *p_arg);
+     80          *
+     81          *              p_callback_arg  Is an argument (a pointer) that is passed to the callback function when it is called.
+     82          *
+     83          *              p_err           Is a pointer to an error code.  '*p_err' will contain one of the following:
+     84          *
+     85          *                                 OS_ERR_NONE
+     86          *                                 OS_ERR_ILLEGAL_CREATE_RUN_TIME if you are trying to create the timer after you called
+     87          *                                                                  OSSafetyCriticalStart().
+     88          *                                 OS_ERR_OBJ_CREATED             if the timer has already been created
+     89          *                                 OS_ERR_OBJ_PTR_NULL            is 'p_tmr' is a NULL pointer
+     90          *                                 OS_ERR_OBJ_TYPE                if the object type is invalid
+     91          *                                 OS_ERR_OPT_INVALID             you specified an invalid option
+     92          *                                 OS_ERR_TMR_INVALID_DLY         you specified an invalid delay
+     93          *                                 OS_ERR_TMR_INVALID_PERIOD      you specified an invalid period
+     94          *                                 OS_ERR_TMR_ISR                 if the call was made from an ISR
+     95          *
+     96          * Returns    : none
+     97          *
+     98          * Note(s)    : 1) This function only creates the timer.  In other words, the timer is not started when created.  To
+     99          *                 start the timer, call OSTmrStart().
+    100          ************************************************************************************************************************
+    101          */
+    102          
+    103          void  OSTmrCreate (OS_TMR              *p_tmr,
+    104                             CPU_CHAR            *p_name,
+    105                             OS_TICK              dly,
+    106                             OS_TICK              period,
+    107                             OS_OPT               opt,
+    108                             OS_TMR_CALLBACK_PTR  p_callback,
+    109                             void                *p_callback_arg,
+    110                             OS_ERR              *p_err)
+    111          {
+    112              CPU_SR_ALLOC();
+    113          
+    114          
+    115          
+    116          #ifdef OS_SAFETY_CRITICAL
+    117              if (p_err == (OS_ERR *)0) {
+    118                  OS_SAFETY_CRITICAL_EXCEPTION();
+    119                  return;
+    120              }
+    121          #endif
+    122          
+    123          #ifdef OS_SAFETY_CRITICAL_IEC61508
+    124              if (OSSafetyCriticalStartFlag == DEF_TRUE) {
+    125                  *p_err = OS_ERR_ILLEGAL_CREATE_RUN_TIME;
+    126                  return;
+    127              }
+    128          #endif
+    129          
+    130          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    131              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* See if trying to call from an ISR                      */
+    132                  *p_err = OS_ERR_TMR_ISR;
+    133                  return;
+    134              }
+    135          #endif
+    136          
+    137          #if OS_CFG_ARG_CHK_EN > 0u
+    138              if (p_tmr == (OS_TMR *)0) {                             /* Validate 'p_tmr'                                       */
+    139                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    140                  return;
+    141              }
+    142          
+    143              switch (opt) {
+    144                  case OS_OPT_TMR_PERIODIC:
+    145                       if (period == (OS_TICK)0) {
+    146                           *p_err = OS_ERR_TMR_INVALID_PERIOD;
+    147                           return;
+    148                       }
+    149                       break;
+    150          
+    151                  case OS_OPT_TMR_ONE_SHOT:
+    152                       if (dly == (OS_TICK)0) {
+    153                           *p_err = OS_ERR_TMR_INVALID_DLY;
+    154                           return;
+    155                       }
+    156                       break;
+    157          
+    158                  default:
+    159                       *p_err = OS_ERR_OPT_INVALID;
+    160                       return;
+    161              }
+    162          #endif
+    163          
+    164              CPU_CRITICAL_ENTER();
+    165              p_tmr->State          = (OS_STATE           )OS_TMR_STATE_STOPPED;     /* Initialize the timer fields             */
+    166              p_tmr->Type           = (OS_OBJ_TYPE        )OS_OBJ_TYPE_TMR;
+    167              p_tmr->NamePtr        = (CPU_CHAR          *)p_name;
+    168              p_tmr->Dly            = (OS_TICK            )dly;
+    169              p_tmr->Match          = (OS_TICK            )0;
+    170              p_tmr->Remain         = (OS_TICK            )0;
+    171              p_tmr->Period         = (OS_TICK            )period;
+    172              p_tmr->Opt            = (OS_OPT             )opt;
+    173              p_tmr->CallbackPtr    = (OS_TMR_CALLBACK_PTR)p_callback;
+    174              p_tmr->CallbackPtrArg = (void              *)p_callback_arg;
+    175              p_tmr->NextPtr        = (OS_TMR            *)0;
+    176              p_tmr->PrevPtr        = (OS_TMR            *)0;
+    177          
+    178          #if OS_CFG_DBG_EN > 0u
+    179              OS_TmrDbgListAdd(p_tmr);
+    180          #endif
+    181              OSTmrQty++;                                             /* Keep track of the number of timers created             */
+    182          
+    183              CPU_CRITICAL_EXIT();
+    184              *p_err = OS_ERR_NONE;
+    185          }
+    186          
+    187          /*$PAGE*/
+    188          /*
+    189          ************************************************************************************************************************
+    190          *                                                   DELETE A TIMER
+    191          *
+    192          * Description: This function is called by your application code to delete a timer.
+    193          *
+    194          * Arguments  : p_tmr          Is a pointer to the timer to stop and delete.
+    195          *
+    196          *              p_err          Is a pointer to an error code.  '*p_err' will contain one of the following:
+    197          *
+    198          *                                 OS_ERR_NONE
+    199          *                                 OS_ERR_OBJ_TYPE             'p_tmr' is not pointing to a timer
+    200          *                                 OS_ERR_TMR_INVALID          'p_tmr' is a NULL pointer
+    201          *                                 OS_ERR_TMR_ISR              if the function was called from an ISR
+    202          *                                 OS_ERR_TMR_INACTIVE         if the timer was not created
+    203          *                                 OS_ERR_TMR_INVALID_STATE    the timer is in an invalid state
+    204          *
+    205          * Returns    : DEF_TRUE   if the timer was deleted
+    206          *              DEF_FALSE  if not or upon an error
+    207          ************************************************************************************************************************
+    208          */
+    209          
+    210          #if OS_CFG_TMR_DEL_EN > 0u
+    211          CPU_BOOLEAN  OSTmrDel (OS_TMR  *p_tmr,
+    212                                 OS_ERR  *p_err)
+    213          {
+    214              OS_ERR  err;
+    215          
+    216          
+    217          
+    218          #ifdef OS_SAFETY_CRITICAL
+    219              if (p_err == (OS_ERR *)0) {
+    220                  OS_SAFETY_CRITICAL_EXCEPTION();
+    221                  return (DEF_FALSE);
+    222              }
+    223          #endif
+    224          
+    225          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    226              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* See if trying to call from an ISR                      */
+    227                  *p_err  = OS_ERR_TMR_ISR;
+    228                  return (DEF_FALSE);
+    229              }
+    230          #endif
+    231          
+    232          #if OS_CFG_ARG_CHK_EN > 0u
+    233              if (p_tmr == (OS_TMR *)0) {
+    234                  *p_err = OS_ERR_TMR_INVALID;
+    235                  return (DEF_FALSE);
+    236              }
+    237          #endif
+    238          
+    239          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    240              if (p_tmr->Type != OS_OBJ_TYPE_TMR) {                   /* Make sure timer was created                            */
+    241                  *p_err = OS_ERR_OBJ_TYPE;
+    242                  return (DEF_FALSE);
+    243              }
+    244          #endif
+    245          
+    246              OSSchedLock(&err);
+    247          #if OS_CFG_DBG_EN > 0u
+    248              OS_TmrDbgListRemove(p_tmr);
+    249          #endif
+    250              OSTmrQty--;                                             /* One less timer                                         */
+    251          
+    252              switch (p_tmr->State) {
+    253                  case OS_TMR_STATE_RUNNING:
+    254                       OS_TmrUnlink(p_tmr);                           /* Remove from current wheel spoke                        */
+    255                       OS_TmrClr(p_tmr);
+    256                       OSSchedUnlock(&err);
+    257                       *p_err = OS_ERR_NONE;
+    258                       return (DEF_TRUE);
+    259          
+    260                  case OS_TMR_STATE_STOPPED:                          /* Timer has not started or ...                           */
+    261                  case OS_TMR_STATE_COMPLETED:                        /* ... timer has completed the ONE-SHOT time              */
+    262                       OS_TmrClr(p_tmr);                              /* Clear timer fields                                     */
+    263                       OSSchedUnlock(&err);
+    264                       *p_err = OS_ERR_NONE;
+    265                       return (DEF_TRUE);
+    266          
+    267                  case OS_TMR_STATE_UNUSED:                           /* Already deleted                                        */
+    268                       OSSchedUnlock(&err);
+    269                       *p_err = OS_ERR_TMR_INACTIVE;
+    270                       return (DEF_FALSE);
+    271          
+    272                  default:
+    273                       OSSchedUnlock(&err);
+    274                       *p_err = OS_ERR_TMR_INVALID_STATE;
+    275                       return (DEF_FALSE);
+    276              }
+    277          }
+    278          #endif
+    279          
+    280          /*$PAGE*/
+    281          /*
+    282          ************************************************************************************************************************
+    283          *                                    GET HOW MUCH TIME IS LEFT BEFORE A TIMER EXPIRES
+    284          *
+    285          * Description: This function is called to get the number of ticks before a timer times out.
+    286          *
+    287          * Arguments  : p_tmr    Is a pointer to the timer to obtain the remaining time from.
+    288          *
+    289          *              p_err    Is a pointer to an error code.  '*p_err' will contain one of the following:
+    290          *
+    291          *                           OS_ERR_NONE
+    292          *                           OS_ERR_OBJ_TYPE           'p_tmr' is not pointing to a timer
+    293          *                           OS_ERR_TMR_INVALID        'p_tmr' is a NULL pointer
+    294          *                           OS_ERR_TMR_ISR            if the call was made from an ISR
+    295          *                           OS_ERR_TMR_INACTIVE       'p_tmr' points to a timer that is not active
+    296          *                           OS_ERR_TMR_INVALID_STATE  the timer is in an invalid state
+    297          *
+    298          * Returns    : The time remaining for the timer to expire.  The time represents 'timer' increments.  In other words, if
+    299          *              OS_TmrTask() is signaled every 1/10 of a second then the returned value represents the number of 1/10 of
+    300          *              a second remaining before the timer expires.
+    301          ************************************************************************************************************************
+    302          */
+    303          
+    304          OS_TICK  OSTmrRemainGet (OS_TMR  *p_tmr,
+    305                                   OS_ERR  *p_err)
+    306          {
+    307              OS_TICK  remain;
+    308              OS_ERR   err;
+    309          
+    310          
+    311          
+    312          #ifdef OS_SAFETY_CRITICAL
+    313              if (p_err == (OS_ERR *)0) {
+    314                  OS_SAFETY_CRITICAL_EXCEPTION();
+    315                  return ((OS_TICK)0);
+    316              }
+    317          #endif
+    318          
+    319          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    320              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* See if trying to call from an ISR                      */
+    321                  *p_err = OS_ERR_TMR_ISR;
+    322                  return ((OS_TICK)0);
+    323              }
+    324          #endif
+    325          
+    326          #if OS_CFG_ARG_CHK_EN > 0u
+    327              if (p_tmr == (OS_TMR *)0) {
+    328                  *p_err = OS_ERR_TMR_INVALID;
+    329                  return ((OS_TICK)0);
+    330              }
+    331          #endif
+    332          
+    333          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    334              if (p_tmr->Type != OS_OBJ_TYPE_TMR) {                   /* Make sure timer was created                            */
+    335                  *p_err = OS_ERR_OBJ_TYPE;
+    336                  return ((OS_TICK)0);
+    337              }
+    338          #endif
+    339          
+    340              OSSchedLock(&err);
+    341              switch (p_tmr->State) {
+    342                  case OS_TMR_STATE_RUNNING:
+    343                       remain        = p_tmr->Match                   /* Determine how much time is left to timeout             */
+    344                                     - OSTmrTickCtr;
+    345                       p_tmr->Remain = remain;
+    346                       OSSchedUnlock(&err);
+    347                       *p_err        = OS_ERR_NONE;
+    348                       return (remain);
+    349          
+    350                  case OS_TMR_STATE_STOPPED:                          /* It's assumed that the timer has not started yet        */
+    351                       if (p_tmr->Opt == OS_OPT_TMR_PERIODIC) {
+    352                           if (p_tmr->Dly == 0u) {
+    353                               remain = p_tmr->Period;
+    354                           } else {
+    355                               remain = p_tmr->Dly;
+    356                           }
+    357                       } else {
+    358                           remain = p_tmr->Dly;
+    359                       }
+    360                       p_tmr->Remain = remain;
+    361                       OSSchedUnlock(&err);
+    362                       *p_err        = OS_ERR_NONE;
+    363                       return (remain);
+    364          
+    365                  case OS_TMR_STATE_COMPLETED:                        /* Only ONE-SHOT that timed out can be in this state      */
+    366                       OSSchedUnlock(&err);
+    367                       *p_err = OS_ERR_NONE;
+    368                       return ((OS_TICK)0);
+    369          
+    370                  case OS_TMR_STATE_UNUSED:
+    371                       OSSchedUnlock(&err);
+    372                       *p_err = OS_ERR_TMR_INACTIVE;
+    373                       return ((OS_TICK)0);
+    374          
+    375                  default:
+    376                       OSSchedUnlock(&err);
+    377                       *p_err = OS_ERR_TMR_INVALID_STATE;
+    378                       return ((OS_TICK)0);
+    379              }
+    380          }
+    381          
+    382          /*$PAGE*/
+    383          /*
+    384          ************************************************************************************************************************
+    385          *                                                   START A TIMER
+    386          *
+    387          * Description: This function is called by your application code to start a timer.
+    388          *
+    389          * Arguments  : p_tmr    Is a pointer to an OS_TMR
+    390          *
+    391          *              p_err    Is a pointer to an error code.  '*p_err' will contain one of the following:
+    392          *
+    393          *                           OS_ERR_NONE
+    394          *                           OS_ERR_OBJ_TYPE            if 'p_tmr' is not pointing to a timer
+    395          *                           OS_ERR_TMR_INVALID
+    396          *                           OS_ERR_TMR_INACTIVE        if the timer was not created
+    397          *                           OS_ERR_TMR_INVALID_STATE   the timer is in an invalid state
+    398          *                           OS_ERR_TMR_ISR             if the call was made from an ISR
+    399          *
+    400          * Returns    : DEF_TRUE      is the timer was started
+    401          *              DEF_FALSE     if not or upon an error
+    402          *
+    403          * Note(s)    : 1) When starting/restarting a timer, regardless if it is in PERIODIC or ONE-SHOT mode, the timer is 
+    404          *                 linked to the timer wheel with the OS_OPT_LINK_DLY option. This option sets the initial expiration 
+    405          *                 time for the timer. For timers in PERIODIC mode, subsequent expiration times are handled by 
+    406          *                 the OS_TmrTask().
+    407          ************************************************************************************************************************
+    408          */
+    409          
+    410          CPU_BOOLEAN  OSTmrStart (OS_TMR   *p_tmr,
+    411                                   OS_ERR   *p_err)
+    412          {
+    413              OS_ERR  err;
+    414          
+    415          
+    416          
+    417          #ifdef OS_SAFETY_CRITICAL
+    418              if (p_err == (OS_ERR *)0) {
+    419                  OS_SAFETY_CRITICAL_EXCEPTION();
+    420                  return (DEF_FALSE);
+    421              }
+    422          #endif
+    423          
+    424          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    425              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* See if trying to call from an ISR                      */
+    426                  *p_err = OS_ERR_TMR_ISR;
+    427                  return (DEF_FALSE);
+    428              }
+    429          #endif
+    430          
+    431          #if OS_CFG_ARG_CHK_EN > 0u
+    432              if (p_tmr == (OS_TMR *)0) {
+    433                  *p_err = OS_ERR_TMR_INVALID;
+    434                  return (DEF_FALSE);
+    435              }
+    436          #endif
+    437          
+    438          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    439              if (p_tmr->Type != OS_OBJ_TYPE_TMR) {                   /* Make sure timer was created                            */
+    440                  *p_err = OS_ERR_OBJ_TYPE;
+    441                  return (DEF_FALSE);
+    442              }
+    443          #endif
+    444          
+    445              OSSchedLock(&err);
+    446              switch (p_tmr->State) {
+    447                  case OS_TMR_STATE_RUNNING:                          /* Restart the timer                                      */
+    448                       OS_TmrUnlink(p_tmr);                           /* ... Stop the timer                                     */
+    449                       OS_TmrLink(p_tmr, OS_OPT_LINK_DLY);            /* ... Link timer to timer wheel (see Note #1).           */
+    450                       OSSchedUnlock(&err);
+    451                       *p_err = OS_ERR_NONE;
+    452                       return (DEF_TRUE);
+    453          
+    454                  case OS_TMR_STATE_STOPPED:                          /* Start the timer                                        */
+    455                  case OS_TMR_STATE_COMPLETED:
+    456                       OS_TmrLink(p_tmr, OS_OPT_LINK_DLY);            /* ... Link timer to timer wheel (see Note #1).           */
+    457                       OSSchedUnlock(&err);
+    458                       *p_err = OS_ERR_NONE;
+    459                       return (DEF_TRUE);
+    460          
+    461                  case OS_TMR_STATE_UNUSED:                           /* Timer not created                                      */
+    462                       OSSchedUnlock(&err);
+    463                       *p_err = OS_ERR_TMR_INACTIVE;
+    464                       return (DEF_FALSE);
+    465          
+    466                  default:
+    467                       OSSchedUnlock(&err);
+    468                       *p_err = OS_ERR_TMR_INVALID_STATE;
+    469                       return (DEF_FALSE);
+    470              }
+    471          }
+    472          
+    473          /*$PAGE*/
+    474          /*
+    475          ************************************************************************************************************************
+    476          *                                           FIND OUT WHAT STATE A TIMER IS IN
+    477          *
+    478          * Description: This function is called to determine what state the timer is in:
+    479          *
+    480          *                  OS_TMR_STATE_UNUSED     the timer has not been created
+    481          *                  OS_TMR_STATE_STOPPED    the timer has been created but has not been started or has been stopped
+    482          *                  OS_TMR_COMPLETED        the timer is in ONE-SHOT mode and has completed it's timeout
+    483          *                  OS_TMR_RUNNING          the timer is currently running
+    484          *
+    485          * Arguments  : p_tmr    Is a pointer to the desired timer
+    486          *
+    487          *              p_err    Is a pointer to an error code.  '*p_err' will contain one of the following:
+    488          *
+    489          *                           OS_ERR_NONE
+    490          *                           OS_ERR_OBJ_TYPE            if 'p_tmr' is not pointing to a timer
+    491          *                           OS_ERR_TMR_INVALID        'p_tmr' is a NULL pointer
+    492          *                           OS_ERR_TMR_INVALID_STATE  if the timer is not in a valid state
+    493          *                           OS_ERR_TMR_ISR            if the call was made from an ISR
+    494          *
+    495          * Returns    : The current state of the timer (see description).
+    496          ************************************************************************************************************************
+    497          */
+    498          
+    499          OS_STATE  OSTmrStateGet (OS_TMR  *p_tmr,
+    500                                   OS_ERR  *p_err)
+    501          {
+    502              OS_STATE  state;
+    503              CPU_SR_ALLOC();
+    504          
+    505          
+    506          
+    507          #ifdef OS_SAFETY_CRITICAL
+    508              if (p_err == (OS_ERR *)0) {
+    509                  OS_SAFETY_CRITICAL_EXCEPTION();
+    510                  return (OS_TMR_STATE_UNUSED);
+    511              }
+    512          #endif
+    513          
+    514          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    515              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* See if trying to call from an ISR                      */
+    516                  *p_err = OS_ERR_TMR_ISR;
+    517                  return (OS_TMR_STATE_UNUSED);
+    518              }
+    519          #endif
+    520          
+    521          #if OS_CFG_ARG_CHK_EN > 0u
+    522              if (p_tmr == (OS_TMR *)0) {
+    523                  *p_err = OS_ERR_TMR_INVALID;
+    524                  return (OS_TMR_STATE_UNUSED);
+    525              }
+    526          #endif
+    527          
+    528          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    529              if (p_tmr->Type != OS_OBJ_TYPE_TMR) {                   /* Make sure timer was created                            */
+    530                  *p_err = OS_ERR_OBJ_TYPE;
+    531                  return (OS_TMR_STATE_UNUSED);
+    532              }
+    533          #endif
+    534          
+    535              CPU_CRITICAL_ENTER();
+    536              state = p_tmr->State;
+    537              switch (state) {
+    538                  case OS_TMR_STATE_UNUSED:
+    539                  case OS_TMR_STATE_STOPPED:
+    540                  case OS_TMR_STATE_COMPLETED:
+    541                  case OS_TMR_STATE_RUNNING:
+    542                       *p_err = OS_ERR_NONE;
+    543                       break;
+    544          
+    545                  default:
+    546                       *p_err = OS_ERR_TMR_INVALID_STATE;
+    547                       break;
+    548              }
+    549              CPU_CRITICAL_EXIT();
+    550              return (state);
+    551          }
+    552          
+    553          /*$PAGE*/
+    554          /*
+    555          ************************************************************************************************************************
+    556          *                                                    STOP A TIMER
+    557          *
+    558          * Description: This function is called by your application code to stop a timer.
+    559          *
+    560          * Arguments  : p_tmr          Is a pointer to the timer to stop.
+    561          *
+    562          *              opt           Allows you to specify an option to this functions which can be:
+    563          *
+    564          *                               OS_OPT_TMR_NONE            Do nothing special but stop the timer
+    565          *                               OS_OPT_TMR_CALLBACK        Execute the callback function, pass it the callback argument
+    566          *                                                          specified when the timer was created.
+    567          *                               OS_OPT_TMR_CALLBACK_ARG    Execute the callback function, pass it the callback argument
+    568          *                                                          specified in THIS function call
+    569          *
+    570          *              callback_arg  Is a pointer to a 'new' callback argument that can be passed to the callback function
+    571          *                               instead of the timer's callback argument.  In other words, use 'callback_arg' passed in
+    572          *                               THIS function INSTEAD of p_tmr->OSTmrCallbackArg
+    573          *
+    574          *              p_err          Is a pointer to an error code.  '*p_err' will contain one of the following:
+    575          *                               OS_ERR_NONE
+    576          *                               OS_ERR_OBJ_TYPE            if 'p_tmr' is not pointing to a timer
+    577          *                               OS_ERR_OPT_INVALID         if you specified an invalid option for 'opt'
+    578          *                               OS_ERR_TMR_INACTIVE        if the timer was not created
+    579          *                               OS_ERR_TMR_INVALID         'p_tmr' is a NULL pointer
+    580          *                               OS_ERR_TMR_INVALID_STATE   the timer is in an invalid state
+    581          *                               OS_ERR_TMR_ISR             if the function was called from an ISR
+    582          *                               OS_ERR_TMR_NO_CALLBACK     if the timer does not have a callback function defined
+    583          *                               OS_ERR_TMR_STOPPED         if the timer was already stopped
+    584          *
+    585          * Returns    : DEF_TRUE       If we stopped the timer (if the timer is already stopped, we also return DEF_TRUE)
+    586          *              DEF_FALSE      If not
+    587          ************************************************************************************************************************
+    588          */
+    589          
+    590          CPU_BOOLEAN  OSTmrStop (OS_TMR   *p_tmr,
+    591                                  OS_OPT    opt,
+    592                                  void     *p_callback_arg,
+    593                                  OS_ERR   *p_err)
+    594          {
+    595              OS_TMR_CALLBACK_PTR  p_fnct;
+    596              OS_ERR               err;
+    597          
+    598          
+    599          
+    600          #ifdef OS_SAFETY_CRITICAL
+    601              if (p_err == (OS_ERR *)0) {
+    602                  OS_SAFETY_CRITICAL_EXCEPTION();
+    603                  return (DEF_FALSE);
+    604              }
+    605          #endif
+    606          
+    607          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    608              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {                        /* See if trying to call from an ISR            */
+    609                  *p_err = OS_ERR_TMR_ISR;
+    610                  return (DEF_FALSE);
+    611              }
+    612          #endif
+    613          
+    614          #if OS_CFG_ARG_CHK_EN > 0u
+    615              if (p_tmr == (OS_TMR *)0) {
+    616                  *p_err = OS_ERR_TMR_INVALID;
+    617                  return (DEF_FALSE);
+    618              }
+    619          #endif
+    620          
+    621          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    622              if (p_tmr->Type != OS_OBJ_TYPE_TMR) {                             /* Make sure timer was created                  */
+    623                  *p_err = OS_ERR_OBJ_TYPE;
+    624                  return (DEF_FALSE);
+    625              }
+    626          #endif
+    627          
+    628              OSSchedLock(&err);
+    629              switch (p_tmr->State) {
+    630                  case OS_TMR_STATE_RUNNING:
+    631                       OS_TmrUnlink(p_tmr);                                     /* Remove from current wheel spoke              */
+    632                       *p_err = OS_ERR_NONE;
+    633                       switch (opt) {
+    634                           case OS_OPT_TMR_CALLBACK:
+    635                                p_fnct = p_tmr->CallbackPtr;                         /* Execute callback function ...           */
+    636                                if (p_fnct != (OS_TMR_CALLBACK_PTR)0) {              /* ... if available                        */
+    637                                    (*p_fnct)((void *)p_tmr, p_tmr->CallbackPtrArg); /* Use callback arg when timer was created */
+    638                                } else {
+    639                                    *p_err = OS_ERR_TMR_NO_CALLBACK;
+    640                                }
+    641                                break;
+    642          
+    643                           case OS_OPT_TMR_CALLBACK_ARG:
+    644                                p_fnct = p_tmr->CallbackPtr;                    /* Execute callback function if available ...   */
+    645                                if (p_fnct != (OS_TMR_CALLBACK_PTR)0) {
+    646                                    (*p_fnct)((void *)p_tmr, p_callback_arg);   /* .. using the 'callback_arg' provided in call */
+    647                                } else {
+    648                                    *p_err = OS_ERR_TMR_NO_CALLBACK;
+    649                                }
+    650                                break;
+    651          
+    652                           case OS_OPT_TMR_NONE:
+    653                                break;
+    654          
+    655                           default:
+    656                               OSSchedUnlock(&err);
+    657                               *p_err = OS_ERR_OPT_INVALID;
+    658                               return (DEF_FALSE);
+    659                       }
+    660                       OSSchedUnlock(&err);
+    661                       return (DEF_TRUE);
+    662          
+    663                  case OS_TMR_STATE_COMPLETED:                                  /* Timer has already completed the ONE-SHOT or  */
+    664                  case OS_TMR_STATE_STOPPED:                                    /* ... timer has not started yet.               */
+    665                       OSSchedUnlock(&err);
+    666                       *p_err = OS_ERR_TMR_STOPPED;
+    667                       return (DEF_TRUE);
+    668          
+    669                  case OS_TMR_STATE_UNUSED:                                     /* Timer was not created                        */
+    670                       OSSchedUnlock(&err);
+    671                       *p_err = OS_ERR_TMR_INACTIVE;
+    672                       return (DEF_FALSE);
+    673          
+    674                  default:
+    675                       OSSchedUnlock(&err);
+    676                       *p_err = OS_ERR_TMR_INVALID_STATE;
+    677                       return (DEF_FALSE);
+    678              }
+    679          }
+    680          
+    681          /*$PAGE*/
+    682          /*
+    683          ************************************************************************************************************************
+    684          *                                                 CLEAR TIMER FIELDS
+    685          *
+    686          * Description: This function is called to clear all timer fields.
+    687          *
+    688          * Argument(s): p_tmr    is a pointer to the timer to clear
+    689          *              -----
+    690          *
+    691          * Returns    : none
+    692          *
+    693          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    694          ************************************************************************************************************************
+    695          */
+    696          
+    697          void  OS_TmrClr (OS_TMR *p_tmr)
+    698          {
+    699              p_tmr->State          = OS_TMR_STATE_UNUSED;            /* Clear timer fields                                     */
+    700              p_tmr->Type           = OS_OBJ_TYPE_NONE;
+    701              p_tmr->NamePtr        = (CPU_CHAR          *)((void *)"?TMR");
+    702              p_tmr->Dly            = (OS_TICK            )0;
+    703              p_tmr->Match          = (OS_TICK            )0;
+    704              p_tmr->Remain         = (OS_TICK            )0;
+    705              p_tmr->Period         = (OS_TICK            )0;
+    706              p_tmr->Opt            = (OS_OPT             )0;
+    707              p_tmr->CallbackPtr    = (OS_TMR_CALLBACK_PTR)0;
+    708              p_tmr->CallbackPtrArg = (void              *)0;
+    709              p_tmr->NextPtr        = (OS_TMR            *)0;
+    710              p_tmr->PrevPtr        = (OS_TMR            *)0;
+    711          }
+    712          
+    713          /*$PAGE*/
+    714          /*
+    715          ************************************************************************************************************************
+    716          *                                         ADD/REMOVE TIMER TO/FROM DEBUG TABLE
+    717          *
+    718          * Description: These functions are called by uC/OS-III to add or remove a timer to/from a timer debug table.
+    719          *
+    720          * Arguments  : p_tmr     is a pointer to the timer to add/remove
+    721          *
+    722          * Returns    : none
+    723          *
+    724          * Note(s)    : These functions are INTERNAL to uC/OS-III and your application should not call it.
+    725          ************************************************************************************************************************
+    726          */
+    727          
+    728          
+    729          #if OS_CFG_DBG_EN > 0u
+    730          void  OS_TmrDbgListAdd (OS_TMR  *p_tmr)
+    731          {
+    732              p_tmr->DbgPrevPtr               = (OS_TMR *)0;
+    733              if (OSTmrDbgListPtr == (OS_TMR *)0) {
+    734                  p_tmr->DbgNextPtr           = (OS_TMR *)0;
+    735              } else {
+    736                  p_tmr->DbgNextPtr           =  OSTmrDbgListPtr;
+    737                  OSTmrDbgListPtr->DbgPrevPtr =  p_tmr;
+    738              }
+    739              OSTmrDbgListPtr                 =  p_tmr;
+    740          }
+    741          
+    742          
+    743          
+    744          void  OS_TmrDbgListRemove (OS_TMR  *p_tmr)
+    745          {
+    746              OS_TMR  *p_tmr_next;
+    747              OS_TMR  *p_tmr_prev;
+    748          
+    749          
+    750              p_tmr_prev = p_tmr->DbgPrevPtr;
+    751              p_tmr_next = p_tmr->DbgNextPtr;
+    752          
+    753              if (p_tmr_prev == (OS_TMR *)0) {
+    754                  OSTmrDbgListPtr = p_tmr_next;
+    755                  if (p_tmr_next != (OS_TMR *)0) {
+    756                      p_tmr_next->DbgPrevPtr = (OS_TMR *)0;
+    757                  }
+    758                  p_tmr->DbgNextPtr = (OS_TMR *)0;
+    759          
+    760              } else if (p_tmr_next == (OS_TMR *)0) {
+    761                  p_tmr_prev->DbgNextPtr = (OS_TMR *)0;
+    762                  p_tmr->DbgPrevPtr      = (OS_TMR *)0;
+    763          
+    764              } else {
+    765                  p_tmr_prev->DbgNextPtr =  p_tmr_next;
+    766                  p_tmr_next->DbgPrevPtr =  p_tmr_prev;
+    767                  p_tmr->DbgNextPtr      = (OS_TMR *)0;
+    768                  p_tmr->DbgPrevPtr      = (OS_TMR *)0;
+    769              }
+    770          }
+    771          #endif
+    772          
+    773          /*$PAGE*/
+    774          /*
+    775          ************************************************************************************************************************
+    776          *                                             INITIALIZE THE TIMER MANAGER
+    777          *
+    778          * Description: This function is called by OSInit() to initialize the timer manager module.
+    779          *
+    780          * Argument(s): p_err    is a pointer to a variable that will contain an error code returned by this function.
+    781          *
+    782          *                           OS_ERR_NONE
+    783          *                           OS_ERR_TMR_STK_INVALID       if you didn't specify a stack for the timer task
+    784          *                           OS_ERR_TMR_STK_SIZE_INVALID  if you didn't allocate enough space for the timer stack
+    785          *                           OS_ERR_PRIO_INVALID          if you specified the same priority as the idle task
+    786          *                           OS_ERR_xxx                   any error code returned by OSTaskCreate()
+    787          *
+    788          * Returns    : none
+    789          *
+    790          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    791          ************************************************************************************************************************
+    792          */
+    793          
+    794          void  OS_TmrInit (OS_ERR  *p_err)
+    795          {
+    796              OS_TMR_SPOKE_IX   i;
+    797              OS_TMR_SPOKE     *p_spoke;
+    798          
+    799          
+    800          
+    801          #ifdef OS_SAFETY_CRITICAL
+    802              if (p_err == (OS_ERR *)0) {
+    803                  OS_SAFETY_CRITICAL_EXCEPTION();
+    804                  return;
+    805              }
+    806          #endif
+    807          
+    808          #if OS_CFG_DBG_EN > 0u
+    809              OSTmrDbgListPtr = (OS_TMR *)0;
+    810          #endif
+    811          
+    812              if (OSCfg_TmrTaskRate_Hz > (OS_RATE_HZ)0) {
+    813                  OSTmrUpdateCnt = OSCfg_TickRate_Hz / OSCfg_TmrTaskRate_Hz;
+    814              } else {
+    815                  OSTmrUpdateCnt = OSCfg_TickRate_Hz / (OS_RATE_HZ)10;
+    816              }
+    817              OSTmrUpdateCtr   = OSTmrUpdateCnt;
+    818          
+    819              OSTmrTickCtr     = (OS_TICK)0;
+    820          
+    821              OSTmrTaskTimeMax = (CPU_TS)0;
+    822          
+    823              for (i = 0u; i < OSCfg_TmrWheelSize; i++) {
+    824                  p_spoke                = &OSCfg_TmrWheel[i];
+    825                  p_spoke->NbrEntries    = (OS_OBJ_QTY)0;
+    826                  p_spoke->NbrEntriesMax = (OS_OBJ_QTY)0;
+    827                  p_spoke->FirstPtr      = (OS_TMR   *)0;
+    828              }
+    829          
+    830                                                                      /* ---------------- CREATE THE TIMER TASK --------------- */
+    831              if (OSCfg_TmrTaskStkBasePtr == (CPU_STK*)0) {
+    832                  *p_err = OS_ERR_TMR_STK_INVALID;
+    833                  return;
+    834              }
+    835          
+    836              if (OSCfg_TmrTaskStkSize < OSCfg_StkSizeMin) {
+    837                  *p_err = OS_ERR_TMR_STK_INVALID;
+    838                  return;
+    839              }
+    840          
+    841              if (OSCfg_TmrTaskPrio >= (OS_CFG_PRIO_MAX - 1u)) {
+    842                  *p_err = OS_ERR_PRIO_INVALID;
+    843                  return;
+    844              }
+    845          
+    846              OSTaskCreate((OS_TCB     *)&OSTmrTaskTCB,
+    847                           (CPU_CHAR   *)((void *)"uC/OS-III Timer Task"),
+    848                           (OS_TASK_PTR )OS_TmrTask,
+    849                           (void       *)0,
+    850                           (OS_PRIO     )OSCfg_TmrTaskPrio,
+    851                           (CPU_STK    *)OSCfg_TmrTaskStkBasePtr,
+    852                           (CPU_STK_SIZE)OSCfg_TmrTaskStkLimit,
+    853                           (CPU_STK_SIZE)OSCfg_TmrTaskStkSize,
+    854                           (OS_MSG_QTY  )0,
+    855                           (OS_TICK     )0,
+    856                           (void       *)0,
+    857                           (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    858                           (OS_ERR     *)p_err);
+    859          }
+    860          
+    861          /*$PAGE*/
+    862          /*
+    863          ************************************************************************************************************************
+    864          *                                         INSERT A TIMER INTO THE TIMER WHEEL
+    865          *
+    866          * Description: This function is called to insert the timer into the timer wheel.  The timer is always inserted at the
+    867          *              beginning of the list.
+    868          *
+    869          * Arguments  : p_tmr          Is a pointer to the timer to insert.
+    870          *              -----
+    871          *
+    872          *              opt            Is either:
+    873          *
+    874          *                               OS_OPT_LINK_PERIODIC    Means to re-insert the timer after a period expired
+    875          *                               OS_OPT_LINK_DLY         Means to insert    the timer the first time
+    876          *
+    877          * Returns    : none
+    878          *
+    879          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    880          ************************************************************************************************************************
+    881          */
+    882          
+    883          void  OS_TmrLink (OS_TMR      *p_tmr,
+    884                            OS_OPT       opt)
+    885          {
+    886              OS_TMR_SPOKE     *p_spoke;
+    887              OS_TMR           *p_tmr0;
+    888              OS_TMR           *p_tmr1;
+    889              OS_TMR_SPOKE_IX   spoke;
+    890          
+    891          
+    892          
+    893              p_tmr->State = OS_TMR_STATE_RUNNING;
+    894              if (opt == OS_OPT_LINK_PERIODIC) {                      /* Determine when timer will expire                      */
+    895                  p_tmr->Match = p_tmr->Period + OSTmrTickCtr;
+    896              } else {
+    897                  if (p_tmr->Dly == (OS_TICK)0) {
+    898                      p_tmr->Match = p_tmr->Period + OSTmrTickCtr;
+    899                  } else {
+    900                      p_tmr->Match = p_tmr->Dly    + OSTmrTickCtr;
+    901                  }
+    902              }
+    903              spoke  = (OS_TMR_SPOKE_IX)(p_tmr->Match % OSCfg_TmrWheelSize);
+    904              p_spoke = &OSCfg_TmrWheel[spoke];
+    905          
+    906              if (p_spoke->FirstPtr ==  (OS_TMR *)0) {                /* Link into timer wheel                                  */
+    907                  p_tmr->NextPtr      = (OS_TMR *)0;
+    908                  p_tmr->PrevPtr      = (OS_TMR *)0;
+    909                  p_spoke->FirstPtr   = p_tmr;
+    910                  p_spoke->NbrEntries = 1u;
+    911              } else {
+    912                  p_tmr->Remain  = p_tmr->Match                       /* Compute remaining time for timer                       */
+    913                                 - OSTmrTickCtr;
+    914                  p_tmr1         = p_spoke->FirstPtr;                 /* Point to current first timer in the list               */
+    915                  while (p_tmr1 != (OS_TMR *)0) {
+    916                      p_tmr1->Remain = p_tmr1->Match                  /* Compute time remaining of current timer in list        */
+    917                                     - OSTmrTickCtr;
+    918                      if (p_tmr->Remain > p_tmr1->Remain) {           /* Do we need to insert AFTER current timer in list?      */
+    919                          if (p_tmr1->NextPtr  != (OS_TMR *)0) {      /* Yes, are we pointing at the last timer in the list?    */
+    920                              p_tmr1            = p_tmr1->NextPtr;    /* No,  Point to next timer in the list                   */
+    921                          } else {
+    922                              p_tmr->NextPtr    = (OS_TMR *)0;
+    923                              p_tmr->PrevPtr    =  p_tmr1;
+    924                              p_tmr1->NextPtr   =  p_tmr;             /* Yes, timer to insert is now new last entry in the list */
+    925                              p_tmr1            = (OS_TMR *)0;        /* Break loop                                             */
+    926                          }
+    927                      } else {                                        /* Insert before the current timer                        */
+    928                          if (p_tmr1->PrevPtr == (OS_TMR *)0) {       /* Are we inserting before the first timer?               */
+    929                              p_tmr->PrevPtr    = (OS_TMR *)0;
+    930                              p_tmr->NextPtr    = p_tmr1;
+    931                              p_tmr1->PrevPtr   = p_tmr;
+    932                              p_spoke->FirstPtr = p_tmr;
+    933                          } else {                                    /* Insert in between 2 timers already in the list         */
+    934                              p_tmr0            = p_tmr1->PrevPtr;
+    935                              p_tmr->PrevPtr    = p_tmr0;
+    936                              p_tmr->NextPtr    = p_tmr1;
+    937                              p_tmr0->NextPtr   = p_tmr;
+    938                              p_tmr1->PrevPtr   = p_tmr;
+    939                          }
+    940                          p_tmr1 = (OS_TMR *)0;                       /* Break loop                                             */
+    941                      }
+    942                  }
+    943                  p_spoke->NbrEntries++;
+    944              }
+    945              if (p_spoke->NbrEntriesMax < p_spoke->NbrEntries) {     /* Keep track of maximum number of entries in each spoke  */
+    946                  p_spoke->NbrEntriesMax = p_spoke->NbrEntries;
+    947              }
+    948          }
+    949          
+    950          /*$PAGE*/
+    951          /*
+    952          ************************************************************************************************************************
+    953          *                                              RESET TIMER LIST PEAK DETECTOR
+    954          *
+    955          * Description: This function is used to reset the peak detector for the number of entries in each spoke.
+    956          *
+    957          * Arguments  : void
+    958          *
+    959          * Returns    : none
+    960          *
+    961          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+    962          ************************************************************************************************************************
+    963          */
+    964          
+    965          void  OS_TmrResetPeak (void)
+    966          {
+    967              OS_TMR_SPOKE     *p_spoke;
+    968              OS_TMR_SPOKE_IX   i;
+    969          
+    970          
+    971          
+    972              for (i = 0u; i < OSCfg_TmrWheelSize; i++) {
+    973                  p_spoke                = (OS_TMR_SPOKE *)&OSCfg_TmrWheel[i];
+    974                  p_spoke->NbrEntriesMax = (OS_OBJ_QTY    )0u;
+    975              }
+    976          }
+    977          
+    978          /*$PAGE*/
+    979          /*
+    980          ************************************************************************************************************************
+    981          *                                         REMOVE A TIMER FROM THE TIMER WHEEL
+    982          *
+    983          * Description: This function is called to remove the timer from the timer wheel.
+    984          *
+    985          * Arguments  : p_tmr          Is a pointer to the timer to remove.
+    986          *              -----
+    987          *
+    988          * Returns    : none
+    989          *
+    990          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    991          ************************************************************************************************************************
+    992          */
+    993          
+    994          void  OS_TmrUnlink (OS_TMR *p_tmr)
+    995          {
+    996              OS_TMR_SPOKE    *p_spoke;
+    997              OS_TMR          *p_tmr1;
+    998              OS_TMR          *p_tmr2;
+    999              OS_TMR_SPOKE_IX  spoke;
+   1000          
+   1001          
+   1002          
+   1003              spoke   = (OS_TMR_SPOKE_IX)(p_tmr->Match % OSCfg_TmrWheelSize);
+   1004              p_spoke = &OSCfg_TmrWheel[spoke];
+   1005          
+   1006              if (p_spoke->FirstPtr == p_tmr) {                       /* See if timer to remove is at the beginning of list     */
+   1007                  p_tmr1            = (OS_TMR *)p_tmr->NextPtr;
+   1008                  p_spoke->FirstPtr = (OS_TMR *)p_tmr1;
+   1009                  if (p_tmr1 != (OS_TMR *)0) {
+   1010                      p_tmr1->PrevPtr = (OS_TMR *)0;
+   1011                  }
+   1012              } else {
+   1013                  p_tmr1          = (OS_TMR *)p_tmr->PrevPtr;         /* Remove timer from somewhere in the list                */
+   1014                  p_tmr2          = (OS_TMR *)p_tmr->NextPtr;
+   1015                  p_tmr1->NextPtr = p_tmr2;
+   1016                  if (p_tmr2 != (OS_TMR *)0) {
+   1017                      p_tmr2->PrevPtr = (OS_TMR *)p_tmr1;
+   1018                  }
+   1019              }
+   1020              p_tmr->State   = OS_TMR_STATE_STOPPED;
+   1021              p_tmr->NextPtr = (OS_TMR *)0;
+   1022              p_tmr->PrevPtr = (OS_TMR *)0;
+   1023              p_spoke->NbrEntries--;
+   1024          }
+   1025          
+   1026          /*$PAGE*/
+   1027          /*
+   1028          ************************************************************************************************************************
+   1029          *                                                 TIMER MANAGEMENT TASK
+   1030          *
+   1031          * Description: This task is created by OS_TmrInit().
+   1032          *
+   1033          * Arguments  : none
+   1034          *
+   1035          * Returns    : none
+   1036          *
+   1037          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+   1038          ************************************************************************************************************************
+   1039          */
+   1040          
+   1041          void  OS_TmrTask (void *p_arg)
+   1042          {
+   1043              CPU_BOOLEAN          done;
+   1044              OS_ERR               err;
+   1045              OS_TMR_CALLBACK_PTR  p_fnct;
+   1046              OS_TMR_SPOKE        *p_spoke;
+   1047              OS_TMR              *p_tmr;
+   1048              OS_TMR              *p_tmr_next;
+   1049              OS_TMR_SPOKE_IX      spoke;
+   1050              CPU_TS               ts;
+   1051              CPU_TS               ts_start;
+   1052              CPU_TS               ts_end;
+   1053          
+   1054          
+   1055          
+   1056              p_arg = p_arg;                                               /* Not using 'p_arg', prevent compiler warning       */
+   1057              while (DEF_ON) {
+   1058                  (void)OSTaskSemPend((OS_TICK )0,                         /* Wait for signal indicating time to update tmrs    */
+   1059                                      (OS_OPT  )OS_OPT_PEND_BLOCKING,
+   1060                                      (CPU_TS *)&ts,
+   1061                                      (OS_ERR *)&err);
+   1062          
+   1063                  OSSchedLock(&err);
+   1064                  ts_start = OS_TS_GET();
+   1065                  OSTmrTickCtr++;                                          /* Increment the current time                        */
+   1066                  spoke    = (OS_TMR_SPOKE_IX)(OSTmrTickCtr % OSCfg_TmrWheelSize);
+   1067                  p_spoke  = &OSCfg_TmrWheel[spoke];
+   1068                  p_tmr    = p_spoke->FirstPtr;
+   1069                  done     = DEF_FALSE;
+   1070                  while (done == DEF_FALSE) {
+   1071                      if (p_tmr != (OS_TMR *)0) {
+   1072                          p_tmr_next = (OS_TMR *)p_tmr->NextPtr;           /* Point to next tmr to update because current ...   */
+   1073                                                                           /* ... timer could get unlinked from the wheel.      */
+   1074                          if (OSTmrTickCtr == p_tmr->Match) {              /* Process each timer that expires                   */
+   1075                              OS_TmrUnlink(p_tmr);                         /* Remove from current wheel spoke                   */
+   1076                              if (p_tmr->Opt == OS_OPT_TMR_PERIODIC) {
+   1077                                  OS_TmrLink(p_tmr,
+   1078                                             OS_OPT_LINK_PERIODIC);        /* Recalculate new position of timer in wheel        */
+   1079                              } else {
+   1080                                  p_tmr->State = OS_TMR_STATE_COMPLETED;   /* Indicate that the timer has completed             */
+   1081                              }
+   1082                              p_fnct = p_tmr->CallbackPtr;                 /* Execute callback function if available            */
+   1083                              if (p_fnct != (OS_TMR_CALLBACK_PTR)0) {
+   1084                                  (*p_fnct)((void *)p_tmr,
+   1085                                            p_tmr->CallbackPtrArg);
+   1086                              }
+   1087                              p_tmr = p_tmr_next;                          /* See if next timer matches                         */
+   1088                          } else {
+   1089                              done  = DEF_TRUE;
+   1090                          }
+   1091                      } else {
+   1092                          done = DEF_TRUE;
+   1093                      }
+   1094                  }
+   1095                  ts_end = OS_TS_GET() - ts_start;                         /* Measure execution time of timer task              */
+   1096                  OSSchedUnlock(&err);
+   1097                  if (ts_end > OSTmrTaskTimeMax) {
+   1098                      OSTmrTaskTimeMax = ts_end;
+   1099                  }
+   1100              }
+   1101          }
+   1102          
+   1103          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      32   OSTmrCreate
+        32   -> CPU_IntDisMeasStart
+        32   -> CPU_IntDisMeasStop
+        32   -> CPU_SR_Restore
+        32   -> CPU_SR_Save
+        32   -> OS_TmrDbgListAdd
+      16   OSTmrDel
+        16   -> OSSchedLock
+        16   -> OSSchedUnlock
+        16   -> OS_TmrClr
+        16   -> OS_TmrDbgListRemove
+        16   -> OS_TmrUnlink
+      24   OSTmrRemainGet
+        24   -> OSSchedLock
+        24   -> OSSchedUnlock
+      16   OSTmrStart
+        16   -> OSSchedLock
+        16   -> OSSchedUnlock
+        16   -> OS_TmrLink
+        16   -> OS_TmrUnlink
+      16   OSTmrStateGet
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+      24   OSTmrStop
+        24   -- Indirect call
+        24   -> OSSchedLock
+        24   -> OSSchedUnlock
+        24   -> OS_TmrUnlink
+       0   OS_TmrClr
+       0   OS_TmrDbgListAdd
+       0   OS_TmrDbgListRemove
+      40   OS_TmrInit
+        40   -> OSTaskCreate
+       8   OS_TmrLink
+       0   OS_TmrResetPeak
+      40   OS_TmrTask
+        40   -- Indirect call
+        40   -> CPU_TS_TmrRd
+        40   -> OSSchedLock
+        40   -> OSSchedUnlock
+        40   -> OSTaskSemPend
+        40   -> OS_TmrLink
+        40   -> OS_TmrUnlink
+       4   OS_TmrUnlink
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable15
+       4  ??DataTable15_1
+       4  ??DataTable15_10
+       4  ??DataTable15_11
+       4  ??DataTable15_12
+       4  ??DataTable15_13
+       4  ??DataTable15_14
+       4  ??DataTable15_15
+       4  ??DataTable15_16
+       4  ??DataTable15_17
+       4  ??DataTable15_18
+       4  ??DataTable15_2
+       4  ??DataTable15_3
+       4  ??DataTable15_4
+       4  ??DataTable15_5
+       4  ??DataTable15_6
+       4  ??DataTable15_7
+       4  ??DataTable15_8
+       4  ??DataTable15_9
+       8  ?_0
+      24  ?_1
+     180  OSTmrCreate
+     180  OSTmrDel
+     188  OSTmrRemainGet
+     168  OSTmrStart
+     106  OSTmrStateGet
+     230  OSTmrStop
+      38  OS_TmrClr
+      28  OS_TmrDbgListAdd
+      52  OS_TmrDbgListRemove
+     174  OS_TmrInit
+     182  OS_TmrLink
+      28  OS_TmrResetPeak
+     166  OS_TmrTask
+      78  OS_TmrUnlink
+
+ 
+ 1 906 bytes in section .text
+ 
+ 1 906 bytes of CODE memory
+
+Errors: none
+Warnings: none

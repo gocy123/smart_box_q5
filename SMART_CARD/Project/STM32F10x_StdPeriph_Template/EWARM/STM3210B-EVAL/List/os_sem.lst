@@ -1,0 +1,1115 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:28
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_sem.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_sem.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_sem.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_sem.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_sem.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                 SEMAPHORE MANAGEMENT
+     10          *
+     11          * File    : OS_SEM.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_sem__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          #if OS_CFG_SEM_EN > 0u
+     41          /*
+     42          ************************************************************************************************************************
+     43          *                                                  CREATE A SEMAPHORE
+     44          *
+     45          * Description: This function creates a semaphore.
+     46          *
+     47          * Arguments  : p_sem         is a pointer to the semaphore to initialize.  Your application is responsible for
+     48          *                            allocating storage for the semaphore.
+     49          *
+     50          *              p_name        is a pointer to the name you would like to give the semaphore.
+     51          *
+     52          *              cnt           is the initial value for the semaphore.
+     53          *                            If used to share resources, you should initialize to the number of resources available.
+     54          *                            If used to signal the occurrence of event(s) then you should initialize to 0.
+     55          *
+     56          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+     57          *
+     58          *                                OS_ERR_NONE                    if the call was successful
+     59          *                                OS_ERR_CREATE_ISR              if you called this function from an ISR
+     60          *                                OS_ERR_ILLEGAL_CREATE_RUN_TIME if you are trying to create the semaphore after you
+     61          *                                                                 called OSSafetyCriticalStart().
+     62          *                                OS_ERR_NAME                    if 'p_name' is a NULL pointer
+     63          *                                OS_ERR_OBJ_CREATED             if the semaphore has already been created
+     64          *                                OS_ERR_OBJ_PTR_NULL            if 'p_sem'  is a NULL pointer
+     65          *                                OS_ERR_OBJ_TYPE                if 'p_sem' has already been initialized to a different
+     66          *                                                               object type
+     67          *
+     68          * Returns    : none
+     69          ************************************************************************************************************************
+     70          */
+     71          
+     72          void  OSSemCreate (OS_SEM      *p_sem,
+     73                             CPU_CHAR    *p_name,
+     74                             OS_SEM_CTR   cnt,
+     75                             OS_ERR      *p_err)
+     76          {
+     77              CPU_SR_ALLOC();
+     78          
+     79          
+     80          
+     81          #ifdef OS_SAFETY_CRITICAL
+     82              if (p_err == (OS_ERR *)0) {
+     83                  OS_SAFETY_CRITICAL_EXCEPTION();
+     84                  return;
+     85              }
+     86          #endif
+     87          
+     88          #ifdef OS_SAFETY_CRITICAL_IEC61508
+     89              if (OSSafetyCriticalStartFlag == DEF_TRUE) {
+     90                  *p_err = OS_ERR_ILLEGAL_CREATE_RUN_TIME;
+     91                  return;
+     92              }
+     93          #endif
+     94          
+     95          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+     96              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to be called from an ISR                   */
+     97                  *p_err = OS_ERR_CREATE_ISR;
+     98                  return;
+     99              }
+    100          #endif
+    101          
+    102          #if OS_CFG_ARG_CHK_EN > 0u
+    103              if (p_sem == (OS_SEM *)0) {                             /* Validate 'p_sem'                                       */
+    104                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    105                  return;
+    106              }
+    107          #endif
+    108          
+    109              CPU_CRITICAL_ENTER();
+    110              p_sem->Type    = OS_OBJ_TYPE_SEM;                       /* Mark the data structure as a semaphore                 */
+    111              p_sem->Ctr     = cnt;                                   /* Set semaphore value                                    */
+    112              p_sem->TS      = (CPU_TS)0;
+    113              p_sem->NamePtr = p_name;                                /* Save the name of the semaphore                         */
+    114              OS_PendListInit(&p_sem->PendList);                      /* Initialize the waiting list                            */
+    115          
+    116          #if OS_CFG_DBG_EN > 0u
+    117              OS_SemDbgListAdd(p_sem);
+    118          #endif
+    119              OSSemQty++;
+    120          
+    121              CPU_CRITICAL_EXIT();
+    122              *p_err = OS_ERR_NONE;
+    123          }
+    124          
+    125          /*$PAGE*/
+    126          /*
+    127          ************************************************************************************************************************
+    128          *                                                  DELETE A SEMAPHORE
+    129          *
+    130          * Description: This function deletes a semaphore.
+    131          *
+    132          * Arguments  : p_sem         is a pointer to the semaphore to delete
+    133          *
+    134          *              opt           determines delete options as follows:
+    135          *
+    136          *                                OS_OPT_DEL_NO_PEND          Delete semaphore ONLY if no task pending
+    137          *                                OS_OPT_DEL_ALWAYS           Deletes the semaphore even if tasks are waiting.
+    138          *                                                            In this case, all the tasks pending will be readied.
+    139          *
+    140          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    141          *
+    142          *                                OS_ERR_NONE                 The call was successful and the semaphore was deleted
+    143          *                                OS_ERR_DEL_ISR              If you attempted to delete the semaphore from an ISR
+    144          *                                OS_ERR_OBJ_PTR_NULL         If 'p_sem' is a NULL pointer.
+    145          *                                OS_ERR_OBJ_TYPE             If 'p_sem' is not pointing at a semaphore
+    146          *                                OS_ERR_OPT_INVALID          An invalid option was specified
+    147          *                                OS_ERR_TASK_WAITING         One or more tasks were waiting on the semaphore
+    148          *
+    149          * Returns    : == 0          if no tasks were waiting on the semaphore, or upon error.
+    150          *              >  0          if one or more tasks waiting on the semaphore are now readied and informed.
+    151          *
+    152          * Note(s)    : 1) This function must be used with care.  Tasks that would normally expect the presence of the semaphore
+    153          *                 MUST check the return code of OSSemPend().
+    154          *              2) OSSemAccept() callers will not know that the intended semaphore has been deleted.
+    155          *              3) Because ALL tasks pending on the semaphore will be readied, you MUST be careful in applications where
+    156          *                 the semaphore is used for mutual exclusion because the resource(s) will no longer be guarded by the
+    157          *                 semaphore.
+    158          ************************************************************************************************************************
+    159          */
+    160          
+    161          #if OS_CFG_SEM_DEL_EN > 0u
+    162          OS_OBJ_QTY  OSSemDel (OS_SEM  *p_sem,
+    163                                OS_OPT   opt,
+    164                                OS_ERR  *p_err)
+    165          {
+    166              OS_OBJ_QTY     cnt;
+    167              OS_OBJ_QTY     nbr_tasks;
+    168              OS_PEND_DATA  *p_pend_data;
+    169              OS_PEND_LIST  *p_pend_list;
+    170              OS_TCB        *p_tcb;
+    171              CPU_TS         ts;
+    172              CPU_SR_ALLOC();
+    173          
+    174          
+    175          
+    176          #ifdef OS_SAFETY_CRITICAL
+    177              if (p_err == (OS_ERR *)0) {
+    178                  OS_SAFETY_CRITICAL_EXCEPTION();
+    179                  return ((OS_OBJ_QTY)0);
+    180              }
+    181          #endif
+    182          
+    183          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    184              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to delete a semaphore from an ISR          */
+    185                  *p_err = OS_ERR_DEL_ISR;
+    186                  return ((OS_OBJ_QTY)0);
+    187              }
+    188          #endif
+    189          
+    190          #if OS_CFG_ARG_CHK_EN > 0u
+    191              if (p_sem == (OS_SEM *)0) {                             /* Validate pointer to semaphore                          */
+    192                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    193                  return ((OS_OBJ_QTY)0);
+    194              }
+    195          #endif
+    196          
+    197          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    198              if (p_sem->Type != OS_OBJ_TYPE_SEM) {                   /* Make sure semaphore was created                        */
+    199                  *p_err = OS_ERR_OBJ_TYPE;
+    200                  return ((OS_OBJ_QTY)0);
+    201              }
+    202          #endif
+    203          
+    204              CPU_CRITICAL_ENTER();
+    205              p_pend_list = &p_sem->PendList;
+    206              cnt         = p_pend_list->NbrEntries;
+    207              nbr_tasks   = cnt;
+    208              switch (opt) {
+    209                  case OS_OPT_DEL_NO_PEND:                            /* Delete semaphore only if no task waiting               */
+    210                       if (nbr_tasks == (OS_OBJ_QTY)0) {
+    211          #if OS_CFG_DBG_EN > 0u
+    212                           OS_SemDbgListRemove(p_sem);
+    213          #endif
+    214                           OSSemQty--;
+    215                           OS_SemClr(p_sem);
+    216                           CPU_CRITICAL_EXIT();
+    217                           *p_err = OS_ERR_NONE;
+    218                       } else {
+    219                           CPU_CRITICAL_EXIT();
+    220                           *p_err = OS_ERR_TASK_WAITING;
+    221                       }
+    222                       break;
+    223          
+    224                  case OS_OPT_DEL_ALWAYS:                             /* Always delete the semaphore                            */
+    225                       OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    226                       ts = OS_TS_GET();                              /* Get local time stamp so all tasks get the same time    */
+    227                       while (cnt > 0u) {                             /* Remove all tasks on the pend list                      */
+    228                           p_pend_data = p_pend_list->HeadPtr;
+    229                           p_tcb       = p_pend_data->TCBPtr;
+    230                           OS_PendObjDel((OS_PEND_OBJ *)((void *)p_sem),
+    231                                         p_tcb,
+    232                                         ts);
+    233                           cnt--;
+    234                       }
+    235          #if OS_CFG_DBG_EN > 0u
+    236                       OS_SemDbgListRemove(p_sem);
+    237          #endif
+    238                       OSSemQty--;
+    239                       OS_SemClr(p_sem);
+    240                       OS_CRITICAL_EXIT_NO_SCHED();
+    241                       OSSched();                                     /* Find highest priority task ready to run                */
+    242                       *p_err = OS_ERR_NONE;
+    243                       break;
+    244          
+    245                  default:
+    246                       CPU_CRITICAL_EXIT();
+    247                       *p_err = OS_ERR_OPT_INVALID;
+    248                       break;
+    249              }
+    250              return ((OS_OBJ_QTY)nbr_tasks);
+    251          }
+    252          #endif
+    253          
+    254          /*$PAGE*/
+    255          /*
+    256          ************************************************************************************************************************
+    257          *                                                  PEND ON SEMAPHORE
+    258          *
+    259          * Description: This function waits for a semaphore.
+    260          *
+    261          * Arguments  : p_sem         is a pointer to the semaphore
+    262          *
+    263          *              timeout       is an optional timeout period (in clock ticks).  If non-zero, your task will wait for the
+    264          *                            resource up to the amount of time (in 'ticks') specified by this argument.  If you specify
+    265          *                            0, however, your task will wait forever at the specified semaphore or, until the resource
+    266          *                            becomes available (or the event occurs).
+    267          *
+    268          *              opt           determines whether the user wants to block if the semaphore is not available or not:
+    269          *
+    270          *                                OS_OPT_PEND_BLOCKING
+    271          *                                OS_OPT_PEND_NON_BLOCKING
+    272          *
+    273          *              p_ts          is a pointer to a variable that will receive the timestamp of when the semaphore was posted
+    274          *                            or pend aborted or the semaphore deleted.  If you pass a NULL pointer (i.e. (CPU_TS*)0)
+    275          *                            then you will not get the timestamp.  In other words, passing a NULL pointer is valid
+    276          *                            and indicates that you don't need the timestamp.
+    277          *
+    278          *              p_err         is a pointer to a variable that will contain an error code returned by this function.
+    279          *
+    280          *                                OS_ERR_NONE               The call was successful and your task owns the resource
+    281          *                                                          or, the event you are waiting for occurred.
+    282          *                                OS_ERR_OBJ_DEL            If 'p_sem' was deleted
+    283          *                                OS_ERR_OBJ_PTR_NULL       If 'p_sem' is a NULL pointer.
+    284          *                                OS_ERR_OBJ_TYPE           If 'p_sem' is not pointing at a semaphore
+    285          *                                OS_ERR_OPT_INVALID        If you specified an invalid value for 'opt'
+    286          *                                OS_ERR_PEND_ABORT         If the pend was aborted by another task
+    287          *                                OS_ERR_PEND_ISR           If you called this function from an ISR and the result
+    288          *                                                          would lead to a suspension.
+    289          *                                OS_ERR_PEND_WOULD_BLOCK   If you specified non-blocking but the semaphore was not
+    290          *                                                          available.
+    291          *                                OS_ERR_SCHED_LOCKED       If you called this function when the scheduler is locked
+    292          *                                OS_ERR_STATUS_INVALID     Pend status is invalid
+    293          *                                OS_ERR_TIMEOUT            The semaphore was not received within the specified
+    294          *                                                          timeout.
+    295          *
+    296          *
+    297          * Returns    : The current value of the semaphore counter or 0 if not available.
+    298          ************************************************************************************************************************
+    299          */
+    300          
+    301          OS_SEM_CTR  OSSemPend (OS_SEM   *p_sem,
+    302                                 OS_TICK   timeout,
+    303                                 OS_OPT    opt,
+    304                                 CPU_TS   *p_ts,
+    305                                 OS_ERR   *p_err)
+    306          {
+    307              OS_SEM_CTR    ctr;
+    308              OS_PEND_DATA  pend_data;
+    309              CPU_SR_ALLOC();
+    310          
+    311          
+    312          
+    313          #ifdef OS_SAFETY_CRITICAL
+    314              if (p_err == (OS_ERR *)0) {
+    315                  OS_SAFETY_CRITICAL_EXCEPTION();
+    316                  return ((OS_SEM_CTR)0);
+    317              }
+    318          #endif
+    319          
+    320          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    321              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Not allowed to call from an ISR                        */
+    322                  *p_err = OS_ERR_PEND_ISR;
+    323                  return ((OS_SEM_CTR)0);
+    324              }
+    325          #endif
+    326          
+    327          #if OS_CFG_ARG_CHK_EN > 0u
+    328              if (p_sem == (OS_SEM *)0) {                             /* Validate arguments                                     */
+    329                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    330                  return ((OS_SEM_CTR)0);
+    331              }
+    332          
+    333              switch (opt) {
+    334                  case OS_OPT_PEND_BLOCKING:
+    335                  case OS_OPT_PEND_NON_BLOCKING:
+    336                       break;
+    337          
+    338                  default:
+    339                       *p_err = OS_ERR_OPT_INVALID;
+    340                       return ((OS_SEM_CTR)0);
+    341              }
+    342          #endif
+    343          
+    344          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    345              if (p_sem->Type != OS_OBJ_TYPE_SEM) {                   /* Make sure semaphore was created                        */
+    346                  *p_err = OS_ERR_OBJ_TYPE;
+    347                  return ((OS_SEM_CTR)0);
+    348              }
+    349          #endif
+    350          
+    351              if (p_ts != (CPU_TS *)0) {
+    352                 *p_ts  = (CPU_TS)0;                                  /* Initialize the returned timestamp                      */
+    353              }
+    354              CPU_CRITICAL_ENTER();
+    355              if (p_sem->Ctr > (OS_SEM_CTR)0) {                       /* Resource available?                                    */
+    356                  p_sem->Ctr--;                                       /* Yes, caller may proceed                                */
+    357                  if (p_ts != (CPU_TS *)0) {
+    358                     *p_ts  = p_sem->TS;                              /*      get timestamp of last post                        */
+    359                  }
+    360                  ctr    = p_sem->Ctr;
+    361                  CPU_CRITICAL_EXIT();
+    362                  *p_err = OS_ERR_NONE;
+    363                  return (ctr);
+    364              }
+    365          
+    366              if ((opt & OS_OPT_PEND_NON_BLOCKING) != (OS_OPT)0) {    /* Caller wants to block if not available?                */
+    367                  ctr    = p_sem->Ctr;                                /* No                                                     */
+    368                  CPU_CRITICAL_EXIT();
+    369                  *p_err = OS_ERR_PEND_WOULD_BLOCK;
+    370                  return (ctr);
+    371              } else {                                                /* Yes                                                    */
+    372                  if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0) {    /* Can't pend when the scheduler is locked                */
+    373                      CPU_CRITICAL_EXIT();
+    374                      *p_err = OS_ERR_SCHED_LOCKED;
+    375                      return ((OS_SEM_CTR)0);
+    376                  }
+    377              }
+    378          
+    379              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();                  /* Lock the scheduler/re-enable interrupts                */
+    380              OS_Pend(&pend_data,                                     /* Block task pending on Semaphore                        */
+    381                      (OS_PEND_OBJ *)((void *)p_sem),
+    382                      OS_TASK_PEND_ON_SEM,
+    383                      timeout);
+    384          
+    385              OS_CRITICAL_EXIT_NO_SCHED();
+    386          
+    387              OSSched();                                              /* Find the next highest priority task ready to run       */
+    388          
+    389              CPU_CRITICAL_ENTER();
+    390              switch (OSTCBCurPtr->PendStatus) {
+    391                  case OS_STATUS_PEND_OK:                             /* We got the semaphore                                   */
+    392                       if (p_ts != (CPU_TS *)0) {
+    393                          *p_ts  =  OSTCBCurPtr->TS;
+    394                       }
+    395                       *p_err = OS_ERR_NONE;
+    396                       break;
+    397          
+    398                  case OS_STATUS_PEND_ABORT:                          /* Indicate that we aborted                               */
+    399                       if (p_ts != (CPU_TS *)0) {
+    400                          *p_ts  =  OSTCBCurPtr->TS;
+    401                       }
+    402                       *p_err = OS_ERR_PEND_ABORT;
+    403                       break;
+    404          
+    405                  case OS_STATUS_PEND_TIMEOUT:                        /* Indicate that we didn't get semaphore within timeout   */
+    406                       if (p_ts != (CPU_TS *)0) {
+    407                          *p_ts  = (CPU_TS  )0;
+    408                       }
+    409                       *p_err = OS_ERR_TIMEOUT;
+    410                       break;
+    411          
+    412                  case OS_STATUS_PEND_DEL:                            /* Indicate that object pended on has been deleted        */
+    413                       if (p_ts != (CPU_TS *)0) {
+    414                          *p_ts  =  OSTCBCurPtr->TS;
+    415                       }
+    416                       *p_err = OS_ERR_OBJ_DEL;
+    417                       break;
+    418          
+    419                  default:
+    420                       *p_err = OS_ERR_STATUS_INVALID;
+    421                       CPU_CRITICAL_EXIT();
+    422                       return ((OS_SEM_CTR)0);
+    423              }
+    424              ctr = p_sem->Ctr;
+    425              CPU_CRITICAL_EXIT();
+    426              return (ctr);
+    427          }
+    428          
+    429          /*$PAGE*/
+    430          /*
+    431          ************************************************************************************************************************
+    432          *                                             ABORT WAITING ON A SEMAPHORE
+    433          *
+    434          * Description: This function aborts & readies any tasks currently waiting on a semaphore.  This function should be used
+    435          *              to fault-abort the wait on the semaphore, rather than to normally signal the semaphore via OSSemPost().
+    436          *
+    437          * Arguments  : p_sem     is a pointer to the semaphore
+    438          *
+    439          *              opt       determines the type of ABORT performed:
+    440          *
+    441          *                            OS_OPT_PEND_ABORT_1          ABORT wait for a single task (HPT) waiting on the semaphore
+    442          *                            OS_OPT_PEND_ABORT_ALL        ABORT wait for ALL tasks that are  waiting on the semaphore
+    443          *                            OS_OPT_POST_NO_SCHED         Do not call the scheduler
+    444          *
+    445          *              p_err     is a pointer to a variable that will contain an error code returned by this function.
+    446          *
+    447          *                            OS_ERR_NONE                  At least one task waiting on the semaphore was readied and
+    448          *                                                         informed of the aborted wait; check return value for the
+    449          *                                                         number of tasks whose wait on the semaphore was aborted.
+    450          *                            OS_ERR_OBJ_PTR_NULL          If 'p_sem' is a NULL pointer.
+    451          *                            OS_ERR_OBJ_TYPE              If 'p_sem' is not pointing at a semaphore
+    452          *                            OS_ERR_OPT_INVALID           If you specified an invalid option
+    453          *                            OS_ERR_PEND_ABORT_ISR        If you called this function from an ISR
+    454          *                            OS_ERR_PEND_ABORT_NONE       No task were pending
+    455          *
+    456          * Returns    : == 0          if no tasks were waiting on the semaphore, or upon error.
+    457          *              >  0          if one or more tasks waiting on the semaphore are now readied and informed.
+    458          ************************************************************************************************************************
+    459          */
+    460          
+    461          #if OS_CFG_SEM_PEND_ABORT_EN > 0u
+    462          OS_OBJ_QTY  OSSemPendAbort (OS_SEM  *p_sem,
+    463                                      OS_OPT   opt,
+    464                                      OS_ERR  *p_err)
+    465          {
+    466              OS_PEND_LIST  *p_pend_list;
+    467              OS_TCB        *p_tcb;
+    468              CPU_TS         ts;
+    469              OS_OBJ_QTY     nbr_tasks;
+    470              CPU_SR_ALLOC();
+    471          
+    472          
+    473          
+    474          #ifdef OS_SAFETY_CRITICAL
+    475              if (p_err == (OS_ERR *)0) {
+    476                  OS_SAFETY_CRITICAL_EXCEPTION();
+    477                  return ((OS_OBJ_QTY)0u);
+    478              }
+    479          #endif
+    480          
+    481          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    482              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to Pend Abort from an ISR                  */
+    483                 *p_err =  OS_ERR_PEND_ABORT_ISR;
+    484                  return ((OS_OBJ_QTY)0u);
+    485              }
+    486          #endif
+    487          
+    488          #if OS_CFG_ARG_CHK_EN > 0u
+    489              if (p_sem == (OS_SEM *)0) {                             /* Validate 'p_sem'                                       */
+    490                 *p_err =  OS_ERR_OBJ_PTR_NULL;
+    491                  return ((OS_OBJ_QTY)0u);
+    492              }
+    493              switch (opt) {                                          /* Validate 'opt'                                         */
+    494                  case OS_OPT_PEND_ABORT_1:
+    495                  case OS_OPT_PEND_ABORT_ALL:
+    496                       break;
+    497          
+    498                  default:
+    499                      *p_err =  OS_ERR_OPT_INVALID;
+    500                       return ((OS_OBJ_QTY)0u);
+    501              }
+    502          #endif
+    503          
+    504          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    505              if (p_sem->Type != OS_OBJ_TYPE_SEM) {                   /* Make sure semaphore was created                        */
+    506                 *p_err =  OS_ERR_OBJ_TYPE;
+    507                  return ((OS_OBJ_QTY)0u);
+    508              }
+    509          #endif
+    510          
+    511              CPU_CRITICAL_ENTER();
+    512              p_pend_list = &p_sem->PendList;
+    513              if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0u) {        /* Any task waiting on semaphore?                         */
+    514                  CPU_CRITICAL_EXIT();                                /* No                                                     */
+    515                 *p_err =  OS_ERR_PEND_ABORT_NONE;
+    516                  return ((OS_OBJ_QTY)0u);
+    517              }
+    518          
+    519              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    520              nbr_tasks = 0u;
+    521              ts        = OS_TS_GET();                                /* Get local time stamp so all tasks get the same time    */
+    522              while (p_pend_list->NbrEntries > (OS_OBJ_QTY)0u) {
+    523                  p_tcb = p_pend_list->HeadPtr->TCBPtr;
+    524                  OS_PendAbort((OS_PEND_OBJ *)((void *)p_sem),
+    525                               p_tcb,
+    526                               ts);
+    527                  nbr_tasks++;
+    528                  if (opt != OS_OPT_PEND_ABORT_ALL) {                 /* Pend abort all tasks waiting?                          */
+    529                      break;                                          /* No                                                     */
+    530                  }
+    531              }
+    532              OS_CRITICAL_EXIT_NO_SCHED();
+    533          
+    534              if ((opt & OS_OPT_POST_NO_SCHED) == (OS_OPT)0u) {
+    535                  OSSched();                                          /* Run the scheduler                                      */
+    536              }
+    537          
+    538             *p_err = OS_ERR_NONE;
+    539              return (nbr_tasks);
+    540          }
+    541          #endif
+    542          
+    543          /*$PAGE*/
+    544          /*
+    545          ************************************************************************************************************************
+    546          *                                                 POST TO A SEMAPHORE
+    547          *
+    548          * Description: This function signals a semaphore
+    549          *
+    550          * Arguments  : p_sem    is a pointer to the semaphore
+    551          *
+    552          *              opt      determines the type of POST performed:
+    553          *
+    554          *                           OS_OPT_POST_1            POST and ready only the highest priority task waiting on semaphore
+    555          *                                                    (if tasks are waiting).
+    556          *                           OS_OPT_POST_ALL          POST to ALL tasks that are waiting on the semaphore
+    557          *
+    558          *                           OS_OPT_POST_NO_SCHED     Do not call the scheduler
+    559          *
+    560          *                           Note(s): 1) OS_OPT_POST_NO_SCHED can be added with one of the other options.
+    561          *
+    562          *              p_err    is a pointer to a variable that will contain an error code returned by this function.
+    563          *
+    564          *                           OS_ERR_NONE          The call was successful and the semaphore was signaled.
+    565          *                           OS_ERR_OBJ_PTR_NULL  If 'p_sem' is a NULL pointer.
+    566          *                           OS_ERR_OBJ_TYPE      If 'p_sem' is not pointing at a semaphore
+    567          *                           OS_ERR_SEM_OVF       If the post would cause the semaphore count to overflow.
+    568          *
+    569          * Returns    : The current value of the semaphore counter or 0 upon error.
+    570          ************************************************************************************************************************
+    571          */
+    572          
+    573          OS_SEM_CTR  OSSemPost (OS_SEM  *p_sem,
+    574                                 OS_OPT   opt,
+    575                                 OS_ERR  *p_err)
+    576          {
+    577              OS_SEM_CTR  ctr;
+    578              CPU_TS      ts;
+    579          
+    580          
+    581          
+    582          #ifdef OS_SAFETY_CRITICAL
+    583              if (p_err == (OS_ERR *)0) {
+    584                  OS_SAFETY_CRITICAL_EXCEPTION();
+    585                  return ((OS_SEM_CTR)0);
+    586              }
+    587          #endif
+    588          
+    589          #if OS_CFG_ARG_CHK_EN > 0u
+    590              if (p_sem == (OS_SEM *)0) {                             /* Validate 'p_sem'                                       */
+    591                 *p_err  = OS_ERR_OBJ_PTR_NULL;
+    592                  return ((OS_SEM_CTR)0);
+    593              }
+    594          #endif
+    595          
+    596          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    597              if (p_sem->Type != OS_OBJ_TYPE_SEM) {                   /* Make sure semaphore was created                        */
+    598                  *p_err = OS_ERR_OBJ_TYPE;
+    599                  return ((OS_SEM_CTR)0);
+    600              }
+    601          #endif
+    602          
+    603              ts = OS_TS_GET();                                       /* Get timestamp                                          */
+    604          
+    605          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+    606              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* See if called from an ISR                              */
+    607                  OS_IntQPost((OS_OBJ_TYPE)OS_OBJ_TYPE_SEM,           /* Post to ISR queue                                      */
+    608                              (void      *)p_sem,
+    609                              (void      *)0,
+    610                              (OS_MSG_SIZE)0,
+    611                              (OS_FLAGS   )0,
+    612                              (OS_OPT     )opt,
+    613                              (CPU_TS     )ts,
+    614                              (OS_ERR    *)p_err);
+    615                  return ((OS_SEM_CTR)0);
+    616              }
+    617          #endif
+    618          
+    619              ctr = OS_SemPost(p_sem,                                 /* Post to semaphore                                      */
+    620                               opt,
+    621                               ts,
+    622                               p_err);
+    623          
+    624              return (ctr);
+    625          }
+    626          
+    627          /*$PAGE*/
+    628          /*
+    629          ************************************************************************************************************************
+    630          *                                                    SET SEMAPHORE
+    631          *
+    632          * Description: This function sets the semaphore count to the value specified as an argument.  Typically, this value
+    633          *              would be 0 but of course, we can set the semaphore to any value.
+    634          *
+    635          *              You would typically use this function when a semaphore is used as a signaling mechanism
+    636          *              and, you want to reset the count value.
+    637          *
+    638          * Arguments  : p_sem     is a pointer to the semaphore
+    639          *
+    640          *              cnt       is the new value for the semaphore count.  You would pass 0 to reset the semaphore count.
+    641          *
+    642          *              p_err     is a pointer to a variable that will contain an error code returned by this function.
+    643          *
+    644          *                            OS_ERR_NONE           The call was successful and the semaphore value was set.
+    645          *                            OS_ERR_OBJ_PTR_NULL   If 'p_sem' is a NULL pointer.
+    646          *                            OS_ERR_OBJ_TYPE       If 'p_sem' is not pointing to a semaphore.
+    647          *                            OS_ERR_TASK_WAITING   If tasks are waiting on the semaphore.
+    648          *
+    649          * Returns    : None
+    650          ************************************************************************************************************************
+    651          */
+    652          
+    653          #if OS_CFG_SEM_SET_EN > 0u
+    654          void  OSSemSet (OS_SEM      *p_sem,
+    655                          OS_SEM_CTR   cnt,
+    656                          OS_ERR      *p_err)
+    657          {
+    658              OS_PEND_LIST  *p_pend_list;
+    659              CPU_SR_ALLOC();
+    660          
+    661          
+    662          
+    663          #ifdef OS_SAFETY_CRITICAL
+    664              if (p_err == (OS_ERR *)0) {
+    665                  OS_SAFETY_CRITICAL_EXCEPTION();
+    666                  return;
+    667              }
+    668          #endif
+    669          
+    670          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    671              if (OSIntNestingCtr > (OS_NESTING_CTR)0) {              /* Can't call this function from an ISR                   */
+    672                 *p_err = OS_ERR_SET_ISR;
+    673                  return;
+    674              }
+    675          #endif
+    676          
+    677          #if OS_CFG_ARG_CHK_EN > 0u
+    678              if (p_sem == (OS_SEM *)0) {                             /* Validate 'p_sem'                                       */
+    679                  *p_err = OS_ERR_OBJ_PTR_NULL;
+    680                  return;
+    681              }
+    682          #endif
+    683          
+    684          #if OS_CFG_OBJ_TYPE_CHK_EN > 0u
+    685              if (p_sem->Type != OS_OBJ_TYPE_SEM) {                   /* Make sure semaphore was created                        */
+    686                  *p_err = OS_ERR_OBJ_TYPE;
+    687                  return;
+    688              }
+    689          #endif
+    690          
+    691              *p_err = OS_ERR_NONE;
+    692              CPU_CRITICAL_ENTER();
+    693              if (p_sem->Ctr > (OS_SEM_CTR)0) {                       /* See if semaphore already has a count                   */
+    694                  p_sem->Ctr = cnt;                                   /* Yes, set it to the new value specified.                */
+    695              } else {
+    696                  p_pend_list = &p_sem->PendList;                     /* No                                                     */
+    697                  if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0) {     /*      See if task(s) waiting?                           */
+    698                      p_sem->Ctr = cnt;                               /*      No, OK to set the value                           */
+    699                  } else {
+    700                      *p_err     = OS_ERR_TASK_WAITING;
+    701                  }
+    702              }
+    703              CPU_CRITICAL_EXIT();
+    704          }
+    705          #endif
+    706          
+    707          /*$PAGE*/
+    708          /*
+    709          ************************************************************************************************************************
+    710          *                                           CLEAR THE CONTENTS OF A SEMAPHORE
+    711          *
+    712          * Description: This function is called by OSSemDel() to clear the contents of a semaphore
+    713          *
+    714          
+    715          * Argument(s): p_sem      is a pointer to the semaphore to clear
+    716          *              -----
+    717          *
+    718          * Returns    : none
+    719          *
+    720          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    721          ************************************************************************************************************************
+    722          */
+    723          
+    724          void  OS_SemClr (OS_SEM  *p_sem)
+    725          {
+    726              p_sem->Type    = OS_OBJ_TYPE_NONE;                      /* Mark the data structure as a NONE                      */
+    727              p_sem->Ctr     = (OS_SEM_CTR)0;                         /* Set semaphore value                                    */
+    728              p_sem->TS      = (CPU_TS    )0;                         /* Clear the time stamp                                   */
+    729              p_sem->NamePtr = (CPU_CHAR *)((void *)"?SEM");
+    730              OS_PendListInit(&p_sem->PendList);                      /* Initialize the waiting list                            */
+    731          }
+    732          
+    733          /*$PAGE*/
+    734          /*
+    735          ************************************************************************************************************************
+    736          *                                        ADD/REMOVE SEMAPHORE TO/FROM DEBUG LIST
+    737          *
+    738          * Description: These functions are called by uC/OS-III to add or remove a semaphore to/from the debug list.
+    739          *
+    740          * Arguments  : p_sem     is a pointer to the semaphore to add/remove
+    741          *
+    742          * Returns    : none
+    743          *
+    744          * Note(s)    : These functions are INTERNAL to uC/OS-III and your application should not call it.
+    745          ************************************************************************************************************************
+    746          */
+    747          
+    748          
+    749          #if OS_CFG_DBG_EN > 0u
+    750          void  OS_SemDbgListAdd (OS_SEM  *p_sem)
+    751          {
+    752              p_sem->DbgNamePtr               = (CPU_CHAR *)((void *)" ");
+    753              p_sem->DbgPrevPtr               = (OS_SEM   *)0;
+    754              if (OSSemDbgListPtr == (OS_SEM *)0) {
+    755                  p_sem->DbgNextPtr           = (OS_SEM   *)0;
+    756              } else {
+    757                  p_sem->DbgNextPtr           =  OSSemDbgListPtr;
+    758                  OSSemDbgListPtr->DbgPrevPtr =  p_sem;
+    759              }
+    760              OSSemDbgListPtr                 =  p_sem;
+    761          }
+    762          
+    763          
+    764          
+    765          void  OS_SemDbgListRemove (OS_SEM  *p_sem)
+    766          {
+    767              OS_SEM  *p_sem_next;
+    768              OS_SEM  *p_sem_prev;
+    769          
+    770          
+    771              p_sem_prev = p_sem->DbgPrevPtr;
+    772              p_sem_next = p_sem->DbgNextPtr;
+    773          
+    774              if (p_sem_prev == (OS_SEM *)0) {
+    775                  OSSemDbgListPtr = p_sem_next;
+    776                  if (p_sem_next != (OS_SEM *)0) {
+    777                      p_sem_next->DbgPrevPtr = (OS_SEM *)0;
+    778                  }
+    779                  p_sem->DbgNextPtr = (OS_SEM *)0;
+    780          
+    781              } else if (p_sem_next == (OS_SEM *)0) {
+    782                  p_sem_prev->DbgNextPtr = (OS_SEM *)0;
+    783                  p_sem->DbgPrevPtr      = (OS_SEM *)0;
+    784          
+    785              } else {
+    786                  p_sem_prev->DbgNextPtr =  p_sem_next;
+    787                  p_sem_next->DbgPrevPtr =  p_sem_prev;
+    788                  p_sem->DbgNextPtr      = (OS_SEM *)0;
+    789                  p_sem->DbgPrevPtr      = (OS_SEM *)0;
+    790              }
+    791          }
+    792          #endif
+    793          
+    794          /*$PAGE*/
+    795          /*
+    796          ************************************************************************************************************************
+    797          *                                                SEMAPHORE INITIALIZATION
+    798          *
+    799          * Description: This function is called by OSInit() to initialize the semaphore management.
+    800          *
+    801          
+    802          * Argument(s): p_err        is a pointer to a variable that will contain an error code returned by this function.
+    803          *
+    804          *                                OS_ERR_NONE     the call was successful
+    805          *
+    806          * Returns    : none
+    807          *
+    808          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    809          ************************************************************************************************************************
+    810          */
+    811          
+    812          void  OS_SemInit (OS_ERR  *p_err)
+    813          {
+    814          #ifdef OS_SAFETY_CRITICAL
+    815              if (p_err == (OS_ERR *)0) {
+    816                  OS_SAFETY_CRITICAL_EXCEPTION();
+    817                  return;
+    818              }
+    819          #endif
+    820          
+    821          #if OS_CFG_DBG_EN > 0u
+    822              OSSemDbgListPtr = (OS_SEM *)0;
+    823          #endif
+    824          
+    825              OSSemQty        = (OS_OBJ_QTY)0;
+    826              *p_err          = OS_ERR_NONE;
+    827          }
+    828          
+    829          /*$PAGE*/
+    830          /*
+    831          ************************************************************************************************************************
+    832          *                                                 POST TO A SEMAPHORE
+    833          *
+    834          * Description: This function signals a semaphore
+    835          *
+    836          * Arguments  : p_sem    is a pointer to the semaphore
+    837          *
+    838          *              opt      determines the type of POST performed:
+    839          *
+    840          *                           OS_OPT_POST_1            POST to a single waiting task
+    841          *                           OS_OPT_POST_ALL          POST to ALL tasks that are waiting on the semaphore
+    842          *
+    843          *                           OS_OPT_POST_NO_SCHED     Do not call the scheduler
+    844          *
+    845          *                           Note(s): 1) OS_OPT_POST_NO_SCHED can be added with one of the other options.
+    846          *
+    847          *              ts       is a timestamp indicating when the post occurred.
+    848          *
+    849          *              p_err    is a pointer to a variable that will contain an error code returned by this function.
+    850          *
+    851          *                           OS_ERR_NONE          The call was successful and the semaphore was signaled.
+    852          *                           OS_ERR_OBJ_PTR_NULL  If 'p_sem' is a NULL pointer.
+    853          *                           OS_ERR_OBJ_TYPE      If 'p_sem' is not pointing at a semaphore
+    854          *                           OS_ERR_SEM_OVF       If the post would cause the semaphore count to overflow.
+    855          *
+    856          * Returns    : The current value of the semaphore counter or 0 upon error.
+    857          *
+    858          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+    859          ************************************************************************************************************************
+    860          */
+    861          
+    862          OS_SEM_CTR  OS_SemPost (OS_SEM  *p_sem,
+    863                                  OS_OPT   opt,
+    864                                  CPU_TS   ts,
+    865                                  OS_ERR  *p_err)
+    866          {
+    867              OS_OBJ_QTY     cnt;
+    868              OS_SEM_CTR     ctr;
+    869              OS_PEND_LIST  *p_pend_list;
+    870              OS_PEND_DATA  *p_pend_data;
+    871              OS_PEND_DATA  *p_pend_data_next;
+    872              OS_TCB        *p_tcb;
+    873              CPU_SR_ALLOC();
+    874          
+    875          
+    876          
+    877              CPU_CRITICAL_ENTER();
+    878              p_pend_list = &p_sem->PendList;
+    879              if (p_pend_list->NbrEntries == (OS_OBJ_QTY)0) {         /* Any task waiting on semaphore?                         */
+    880                  switch (sizeof(OS_SEM_CTR)) {
+    881                      case 1u:
+    882                           if (p_sem->Ctr == DEF_INT_08U_MAX_VAL) {
+    883                               CPU_CRITICAL_EXIT();
+    884                               *p_err = OS_ERR_SEM_OVF;
+    885                               return ((OS_SEM_CTR)0);
+    886                           }
+    887                           break;
+    888          
+    889                      case 2u:
+    890                           if (p_sem->Ctr == DEF_INT_16U_MAX_VAL) {
+    891                               CPU_CRITICAL_EXIT();
+    892                               *p_err = OS_ERR_SEM_OVF;
+    893                               return ((OS_SEM_CTR)0);
+    894                           }
+    895                           break;
+    896          
+    897                      case 4u:
+    898                           if (p_sem->Ctr == DEF_INT_32U_MAX_VAL) {
+    899                               CPU_CRITICAL_EXIT();
+    900                               *p_err = OS_ERR_SEM_OVF;
+    901                               return ((OS_SEM_CTR)0);
+    902                           }
+    903                           break;
+    904          
+    905                      default:
+    906                           break;
+    907                  }
+    908                  p_sem->Ctr++;                                       /* No                                                     */
+    909                  ctr       = p_sem->Ctr;
+    910                  p_sem->TS = ts;                                     /* Save timestamp in semaphore control block              */
+    911                  CPU_CRITICAL_EXIT();
+    912                  *p_err    = OS_ERR_NONE;
+    913                  return (ctr);
+    914              }
+    915          
+    916              OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    917              if ((opt & OS_OPT_POST_ALL) != (OS_OPT)0) {             /* Post message to all tasks waiting?                     */
+    918                  cnt = p_pend_list->NbrEntries;                      /* Yes                                                    */
+    919              } else {
+    920                  cnt = (OS_OBJ_QTY)1;                                /* No                                                     */
+    921              }
+    922              p_pend_data = p_pend_list->HeadPtr;
+    923              while (cnt > 0u) {
+    924                  p_tcb            = p_pend_data->TCBPtr;
+    925                  p_pend_data_next = p_pend_data->NextPtr;
+    926                  OS_Post((OS_PEND_OBJ *)((void *)p_sem),
+    927                          p_tcb,
+    928                          (void      *)0,
+    929                          (OS_MSG_SIZE)0,
+    930                          ts);
+    931                  p_pend_data = p_pend_data_next;
+    932                  cnt--;
+    933              }
+    934              ctr = p_sem->Ctr;
+    935              OS_CRITICAL_EXIT_NO_SCHED();
+    936              if ((opt & OS_OPT_POST_NO_SCHED) == (OS_OPT)0) {
+    937                  OSSched();                                          /* Run the scheduler                                      */
+    938              }
+    939              *p_err = OS_ERR_NONE;
+    940              return (ctr);
+    941          }
+    942          
+    943          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   OSSemCreate
+        24   -> CPU_IntDisMeasStart
+        24   -> CPU_IntDisMeasStop
+        24   -> CPU_SR_Restore
+        24   -> CPU_SR_Save
+        24   -> OS_PendListInit
+        24   -> OS_SemDbgListAdd
+      32   OSSemDel
+        32   -> CPU_IntDisMeasStart
+        32   -> CPU_IntDisMeasStop
+        32   -> CPU_SR_Restore
+        32   -> CPU_SR_Save
+        32   -> CPU_TS_TmrRd
+        32   -> OSSched
+        32   -> OS_PendObjDel
+        32   -> OS_SemClr
+        32   -> OS_SemDbgListRemove
+      64   OSSemPend
+        64   -> CPU_IntDisMeasStart
+        64   -> CPU_IntDisMeasStop
+        64   -> CPU_SR_Restore
+        64   -> CPU_SR_Save
+        64   -> OSSched
+        64   -> OS_Pend
+      32   OSSemPendAbort
+        32   -> CPU_IntDisMeasStart
+        32   -> CPU_IntDisMeasStop
+        32   -> CPU_SR_Restore
+        32   -> CPU_SR_Save
+        32   -> CPU_TS_TmrRd
+        32   -> OSSched
+        32   -> OS_PendAbort
+      16   OSSemPost
+        16   -> CPU_TS_TmrRd
+         0   -> OS_SemPost
+      24   OSSemSet
+        24   -> CPU_IntDisMeasStart
+        24   -> CPU_IntDisMeasStop
+         0   -> CPU_SR_Restore
+        24   -> CPU_SR_Save
+       0   OS_SemClr
+         0   -> OS_PendListInit
+       0   OS_SemDbgListAdd
+       0   OS_SemDbgListRemove
+       0   OS_SemInit
+      40   OS_SemPost
+        40   -> CPU_IntDisMeasStart
+        40   -> CPU_IntDisMeasStop
+        40   -> CPU_SR_Restore
+        40   -> CPU_SR_Save
+        40   -> OSSched
+        40   -> OS_Post
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+       4  ??DataTable11_4
+       4  ??DataTable11_5
+       4  ??DataTable11_6
+       4  ??DataTable11_7
+       8  ?_0
+       2  ?_1
+     110  OSSemCreate
+     258  OSSemDel
+     368  OSSemPend
+     194  OSSemPendAbort
+      58  OSSemPost
+     106  OSSemSet
+      22  OS_SemClr
+      32  OS_SemDbgListAdd
+      52  OS_SemDbgListRemove
+      14  OS_SemInit
+     176  OS_SemPost
+
+ 
+     2 bytes in section .rodata
+ 1 430 bytes in section .text
+ 
+ 1 430 bytes of CODE  memory
+     2 bytes of CONST memory
+
+Errors: none
+Warnings: none

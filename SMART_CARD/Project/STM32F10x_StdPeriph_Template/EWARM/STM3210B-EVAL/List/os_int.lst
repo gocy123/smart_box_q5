@@ -1,0 +1,494 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:28
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_int.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_int.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_int.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_int.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_int.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                 ISR QUEUE MANAGEMENT
+     10          *
+     11          * File    : OS_INT.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include  <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_int__c = "$Id: $";
+     37          #endif
+     38          
+     39          
+     40          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+     41          /*$PAGE*/
+     42          /*
+     43          ************************************************************************************************************************
+     44          *                                                   POST TO ISR QUEUE
+     45          *
+     46          * Description: This function places contents of posts into an intermediate queue to help defer processing of interrupts
+     47          *              at the task level.
+     48          *
+     49          * Arguments  : type       is the type of kernel object the post is destined to:
+     50          *
+     51          *                             OS_OBJ_TYPE_SEM
+     52          *                             OS_OBJ_TYPE_Q
+     53          *                             OS_OBJ_TYPE_FLAG
+     54          *                             OS_OBJ_TYPE_TASK_MSG
+     55          *                             OS_OBJ_TYPE_TASK_SIGNAL
+     56          *
+     57          *              p_obj      is a pointer to the kernel object to post to.  This can be a pointer to a semaphore,
+     58          *              -----      a message queue or a task control clock.
+     59          *
+     60          *              p_void     is a pointer to a message that is being posted.  This is used when posting to a message
+     61          *                         queue or directly to a task.
+     62          *
+     63          *              msg_size   is the size of the message being posted
+     64          *
+     65          *              flags      if the post is done to an event flag group then this corresponds to the flags being
+     66          *                         posted
+     67          *
+     68          *              ts         is a timestamp as to when the post was done
+     69          *
+     70          *              opt        this corresponds to post options and applies to:
+     71          *
+     72          *                             OSFlagPost()
+     73          *                             OSSemPost()
+     74          *                             OSQPost()
+     75          *                             OSTaskQPost()
+     76          *
+     77          *              p_err      is a pointer to a variable that will contain an error code returned by this function.
+     78          *
+     79          *                             OS_ERR_NONE         if the post to the ISR queue was successful
+     80          *                             OS_ERR_INT_Q_FULL   if the ISR queue is full and cannot accepts any further posts.  This
+     81          *                                                 generally indicates that you are receiving interrupts faster than you
+     82          *                                                 can process them or, that you didn't make the ISR queue large enough.
+     83          *
+     84          * Returns    : none
+     85          *
+     86          * Note(s)    : none
+     87          ************************************************************************************************************************
+     88          */
+     89          
+     90          void  OS_IntQPost (OS_OBJ_TYPE    type,
+     91                             void          *p_obj,
+     92                             void          *p_void,
+     93                             OS_MSG_SIZE    msg_size,
+     94                             OS_FLAGS       flags,
+     95                             OS_OPT         opt,
+     96                             CPU_TS         ts,
+     97                             OS_ERR        *p_err)
+     98          {
+     99              CPU_SR_ALLOC();
+    100          
+    101          
+    102          
+    103          #ifdef OS_SAFETY_CRITICAL
+    104              if (p_err == (OS_ERR *)0) {
+    105                  OS_SAFETY_CRITICAL_EXCEPTION();
+    106                  return;
+    107              }
+    108          #endif
+    109          
+    110              CPU_CRITICAL_ENTER();
+    111              if (OSIntQNbrEntries < OSCfg_IntQSize) {                /* Make sure we haven't already filled the ISR queue      */
+    112                  OSIntQNbrEntries++;
+    113          
+    114                  if (OSIntQMaxNbrEntries < OSIntQNbrEntries) {
+    115                      OSIntQMaxNbrEntries = OSIntQNbrEntries;
+    116                  }
+    117          
+    118                  OSIntQInPtr->Type       = type;                     /* Save object type being posted                          */
+    119                  OSIntQInPtr->ObjPtr     = p_obj;                    /* Save pointer to object being posted                    */
+    120                  OSIntQInPtr->MsgPtr     = p_void;                   /* Save pointer to message if posting to a message queue  */
+    121                  OSIntQInPtr->MsgSize    = msg_size;                 /* Save the message size   if posting to a message queue  */
+    122                  OSIntQInPtr->Flags      = flags;                    /* Save the flags if posting to an event flag group       */
+    123                  OSIntQInPtr->Opt        = opt;                      /* Save post options                                      */
+    124                  OSIntQInPtr->TS         = ts;                       /* Save time stamp                                        */
+    125          
+    126                  OSIntQInPtr             =  OSIntQInPtr->NextPtr;    /* Point to the next interrupt handler queue entry        */
+    127          
+    128                  OSRdyList[0].NbrEntries = (OS_OBJ_QTY)1;            /* Make the interrupt handler task ready to run           */
+    129                  OSRdyList[0].HeadPtr    = &OSIntQTaskTCB;
+    130                  OSRdyList[0].TailPtr    = &OSIntQTaskTCB;
+    131                  OS_PrioInsert(0u);                                  /* Add task priority 0 in the priority table              */
+    132                  OSPrioSaved             = OSPrioCur;                /* Save current priority                                  */
+    133          
+    134                 *p_err                   = OS_ERR_NONE;
+    135              } else {
+    136                  OSIntQOvfCtr++;                                     /* Count the number of ISR queue overflows                */
+    137                 *p_err                   = OS_ERR_INT_Q_FULL;
+    138              }
+    139              CPU_CRITICAL_EXIT();
+    140          }
+    141          
+    142          /*$PAGE*/
+    143          /*
+    144          ************************************************************************************************************************
+    145          *                                               INTERRUPT QUEUE MANAGEMENT TASK
+    146          *
+    147          * Description: This task is created by OS_IntQTaskInit().
+    148          *
+    149          * Arguments  : p_arg     is a pointer to an optional argument that is passed during task creation.  For this function
+    150          *                        the argument is not used and will be a NULL pointer.
+    151          *
+    152          * Returns    : none
+    153          ************************************************************************************************************************
+    154          */
+    155          
+    156          void  OS_IntQRePost (void)
+    157          {
+    158              void         *p_obj;
+    159              void         *p_void;
+    160              OS_ERR        err;
+    161              OS_FLAGS      flags;
+    162              CPU_TS        ts;
+    163              OS_OBJ_TYPE   type;
+    164              OS_OPT        opt;
+    165              OS_MSG_SIZE   msg_size;
+    166              CPU_SR_ALLOC();
+    167          
+    168          
+    169          
+    170              CPU_CRITICAL_ENTER();
+    171              type         = OSIntQOutPtr->Type;                      /* Get local copy of queue item contents                  */
+    172              p_obj        = OSIntQOutPtr->ObjPtr;
+    173              p_void       = OSIntQOutPtr->MsgPtr;
+    174              msg_size     = OSIntQOutPtr->MsgSize;
+    175              flags        = OSIntQOutPtr->Flags;
+    176              opt          = OSIntQOutPtr->Opt;
+    177              ts           = OSIntQOutPtr->TS;
+    178              OSIntQOutPtr = OSIntQOutPtr->NextPtr;                   /* Point to next item in the ISR queue                    */
+    179              CPU_CRITICAL_EXIT();
+    180              switch (type) {                                         /* Re-post to task                                        */
+    181                  case OS_OBJ_TYPE_FLAG:
+    182          #if OS_CFG_FLAG_EN > 0u
+    183                       (void)OS_FlagPost((OS_FLAG_GRP *)p_obj,
+    184                                         (OS_FLAGS     )flags,
+    185                                         (OS_OPT       )opt,
+    186                                         (CPU_TS       )ts,
+    187                                         (OS_ERR      *)&err);
+    188          #endif
+    189                       break;
+    190          
+    191                  case OS_OBJ_TYPE_Q:
+    192          #if OS_CFG_Q_EN > 0u
+    193                       OS_QPost((OS_Q      *)p_obj,
+    194                                (void      *)p_void,
+    195                                (OS_MSG_SIZE)msg_size,
+    196                                (OS_OPT     )opt,
+    197                                (CPU_TS     )ts,
+    198                                (OS_ERR    *)&err);
+    199          #endif
+    200                       break;
+    201          
+    202                  case OS_OBJ_TYPE_SEM:
+    203          #if OS_CFG_SEM_EN > 0u
+    204                       (void)OS_SemPost((OS_SEM *)p_obj,
+    205                                        (OS_OPT  )opt,
+    206                                        (CPU_TS  )ts,
+    207                                        (OS_ERR *)&err);
+    208          #endif
+    209                       break;
+    210          
+    211                  case OS_OBJ_TYPE_TASK_MSG:
+    212          #if OS_CFG_TASK_Q_EN > 0u
+    213                       OS_TaskQPost((OS_TCB    *)p_obj,
+    214                                    (void      *)p_void,
+    215                                    (OS_MSG_SIZE)msg_size,
+    216                                    (OS_OPT     )opt,
+    217                                    (CPU_TS     )ts,
+    218                                    (OS_ERR    *)&err);
+    219          #endif
+    220                       break;
+    221          
+    222                  case OS_OBJ_TYPE_TASK_SIGNAL:
+    223                       (void)OS_TaskSemPost((OS_TCB *)p_obj,
+    224                                            (OS_OPT  )opt,
+    225                                            (CPU_TS  )ts,
+    226                                            (OS_ERR *)&err);
+    227                       break;
+    228          
+    229                  case OS_OBJ_TYPE_TICK:
+    230          #if OS_CFG_SCHED_ROUND_ROBIN_EN > 0u
+    231                       OS_SchedRoundRobin(&OSRdyList[OSPrioSaved]);
+    232          #endif
+    233          
+    234                       (void)OS_TaskSemPost((OS_TCB *)&OSTickTaskTCB,                /* Signal tick task                        */
+    235                                            (OS_OPT  )OS_OPT_POST_NONE,
+    236                                            (CPU_TS  )ts,
+    237                                            (OS_ERR *)&err);
+    238          #if OS_CFG_TMR_EN > 0u
+    239                       OSTmrUpdateCtr--;
+    240                       if (OSTmrUpdateCtr == (OS_CTR)0u) {
+    241                           OSTmrUpdateCtr = OSTmrUpdateCnt;
+    242                           ts             = OS_TS_GET();                             /* Get timestamp                           */
+    243                           (void)OS_TaskSemPost((OS_TCB *)&OSTmrTaskTCB,             /* Signal timer task                       */
+    244                                                (OS_OPT  )OS_OPT_POST_NONE,
+    245                                                (CPU_TS  )ts,
+    246                                                (OS_ERR *)&err);
+    247                       }
+    248          #endif
+    249                       break;
+    250          
+    251                  default:
+    252                       break;
+    253              }
+    254          }
+    255          
+    256          /*$PAGE*/
+    257          /*
+    258          ************************************************************************************************************************
+    259          *                                               INTERRUPT QUEUE MANAGEMENT TASK
+    260          *
+    261          * Description: This task is created by OS_IntQTaskInit().
+    262          *
+    263          * Arguments  : p_arg     is a pointer to an optional argument that is passed during task creation.  For this function
+    264          *                        the argument is not used and will be a NULL pointer.
+    265          *
+    266          * Returns    : none
+    267          ************************************************************************************************************************
+    268          */
+    269          
+    270          void  OS_IntQTask (void *p_arg)
+    271          {
+    272              CPU_BOOLEAN  done;
+    273              CPU_TS       ts_start;
+    274              CPU_TS       ts_end;
+    275              CPU_SR_ALLOC();
+    276          
+    277          
+    278          
+    279              p_arg = p_arg;                                          /* Not using 'p_arg', prevent compiler warning            */
+    280              while (DEF_ON) {
+    281                  done = DEF_FALSE;
+    282                  while (done == DEF_FALSE) {
+    283                      if (OSIntQNbrEntries == (OS_OBJ_QTY)0u) {
+    284                          CPU_CRITICAL_ENTER();
+    285                          OSRdyList[0].NbrEntries = (OS_OBJ_QTY)0u;   /* Remove from ready list                                 */
+    286                          OSRdyList[0].HeadPtr    = (OS_TCB   *)0;
+    287                          OSRdyList[0].TailPtr    = (OS_TCB   *)0;
+    288                          OS_PrioRemove(0u);                          /* Remove from the priority table                         */
+    289                          CPU_CRITICAL_EXIT();
+    290                          OSSched();
+    291                          done = DEF_TRUE;                            /* No more entries in the queue, we are done              */
+    292                      } else {
+    293                          ts_start = OS_TS_GET();
+    294                          OS_IntQRePost();
+    295                          ts_end   = OS_TS_GET() - ts_start;          /* Measure execution time of tick task                    */
+    296                          if (ts_end > OSIntQTaskTimeMax) {
+    297                              OSIntQTaskTimeMax = ts_end;
+    298                          }
+    299                          CPU_CRITICAL_ENTER();
+    300                          OSIntQNbrEntries--;
+    301                          CPU_CRITICAL_EXIT();
+    302                      }
+    303                  }
+    304              }
+    305          }
+    306          
+    307          /*$PAGE*/
+    308          /*
+    309          ************************************************************************************************************************
+    310          *                                                 INITIALIZE THE ISR QUEUE
+    311          *
+    312          * Description: This function is called by OSInit() to initialize the ISR queue.
+    313          *
+    314          * Arguments  : p_err    is a pointer to a variable that will contain an error code returned by this function.
+    315          *
+    316          *                           OS_ERR_INT_Q             If you didn't provide an ISR queue in OS_CFG.C
+    317          *                           OS_ERR_INT_Q_SIZE        If you didn't specify a large enough ISR queue.
+    318          *                           OS_ERR_STK_INVALID       If you specified a NULL pointer for the task of the ISR task
+    319          *                                                    handler
+    320          *                           OS_ERR_STK_SIZE_INVALID  If you didn't specify a stack size greater than the minimum
+    321          *                                                    specified by OS_CFG_STK_SIZE_MIN
+    322          *                           OS_ERR_???               An error code returned by OSTaskCreate().
+    323          *
+    324          * Returns    : none
+    325          *
+    326          * Note(s)    : none
+    327          ************************************************************************************************************************
+    328          */
+    329          
+    330          void  OS_IntQTaskInit (OS_ERR  *p_err)
+    331          {
+    332              OS_INT_Q      *p_int_q;
+    333              OS_INT_Q      *p_int_q_next;
+    334              OS_OBJ_QTY     i;
+    335          
+    336          
+    337          
+    338          #ifdef OS_SAFETY_CRITICAL
+    339              if (p_err == (OS_ERR *)0) {
+    340                  OS_SAFETY_CRITICAL_EXCEPTION();
+    341                  return;
+    342              }
+    343          #endif
+    344          
+    345              OSIntQOvfCtr = (OS_QTY)0u;                              /* Clear the ISR queue overflow counter                   */
+    346          
+    347              if (OSCfg_IntQBasePtr == (OS_INT_Q *)0) {
+    348                 *p_err = OS_ERR_INT_Q;
+    349                  return;
+    350              }
+    351          
+    352              if (OSCfg_IntQSize < (OS_OBJ_QTY)2u) {
+    353                 *p_err = OS_ERR_INT_Q_SIZE;
+    354                  return;
+    355              }
+    356          
+    357              OSIntQTaskTimeMax = (CPU_TS)0;
+    358          
+    359              p_int_q           = OSCfg_IntQBasePtr;                  /* Initialize the circular ISR queue                      */
+    360              p_int_q_next      = p_int_q;
+    361              p_int_q_next++;
+    362              for (i = 0u; i < OSCfg_IntQSize; i++) {
+    363                  p_int_q->Type    =  OS_OBJ_TYPE_NONE;
+    364                  p_int_q->ObjPtr  = (void      *)0;
+    365                  p_int_q->MsgPtr  = (void      *)0;
+    366                  p_int_q->MsgSize = (OS_MSG_SIZE)0u;
+    367                  p_int_q->Flags   = (OS_FLAGS   )0u;
+    368                  p_int_q->Opt     = (OS_OPT     )0u;
+    369                  p_int_q->NextPtr = p_int_q_next;
+    370                  p_int_q++;
+    371                  p_int_q_next++;
+    372              }
+    373              p_int_q--;
+    374              p_int_q_next        = OSCfg_IntQBasePtr;
+    375              p_int_q->NextPtr    = p_int_q_next;
+    376              OSIntQInPtr         = p_int_q_next;
+    377              OSIntQOutPtr        = p_int_q_next;
+    378              OSIntQNbrEntries    = (OS_OBJ_QTY)0u;
+    379              OSIntQMaxNbrEntries = (OS_OBJ_QTY)0u;
+    380          
+    381                                                                      /* -------------- CREATE THE ISR QUEUE TASK ------------- */
+    382              if (OSCfg_IntQTaskStkBasePtr == (CPU_STK *)0) {
+    383                 *p_err = OS_ERR_STK_INVALID;
+    384                  return;
+    385              }
+    386          
+    387              if (OSCfg_IntQTaskStkSize < OSCfg_StkSizeMin) {
+    388                 *p_err = OS_ERR_STK_SIZE_INVALID;
+    389                  return;
+    390              }
+    391          
+    392              OSTaskCreate((OS_TCB     *)&OSIntQTaskTCB,
+    393                           (CPU_CHAR   *)((void *)"uC/OS-III ISR Queue Task"),
+    394                           (OS_TASK_PTR )OS_IntQTask,
+    395                           (void       *)0,
+    396                           (OS_PRIO     )0u,                          /* This task is ALWAYS at priority '0' (i.e. highest)     */
+    397                           (CPU_STK    *)OSCfg_IntQTaskStkBasePtr,
+    398                           (CPU_STK_SIZE)OSCfg_IntQTaskStkLimit,
+    399                           (CPU_STK_SIZE)OSCfg_IntQTaskStkSize,
+    400                           (OS_MSG_QTY  )0u,
+    401                           (OS_TICK     )0u,
+    402                           (void       *)0,
+    403                           (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    404                           (OS_ERR     *)p_err);
+    405          }
+    406          
+    407          #endif
+
+
+ 
+
+ 
+
+
+Errors: none
+Warnings: none

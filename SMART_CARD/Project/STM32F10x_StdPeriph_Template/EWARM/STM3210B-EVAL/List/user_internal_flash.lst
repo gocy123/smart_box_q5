@@ -1,0 +1,645 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:33
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\internal_flash\user_internal_flash.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\internal_flash\user_internal_flash.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\user_internal_flash.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\user_internal_flash.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\internal_flash\user_internal_flash.c
+      1          #include "user_internal_flash.h"
+      2          #include "stm32f10x_flash.h"
+      3          
+      4          
+      5          
+      6          
+      7          /* Private define ------------------------------------------------------------*/
+      8          /* Define the STM32F10x FLASH Page Size depending on the used STM32 device */
+      9          #if defined (STM32F10X_HD) || defined (STM32F10X_HD_VL) || defined (STM32F10X_CL) || defined (STM32F10X_XL)
+     10            #define FLASH_PAGE_SIZE    ((uint16_t)0x800)
+     11          #else
+     12            #define FLASH_PAGE_SIZE    ((uint16_t)0x400)
+     13          #endif
+     14          
+     15          #define BANK1_WRITE_START_ADDR  ((uint32_t)0x08008000)
+     16          #define BANK1_WRITE_END_ADDR    ((uint32_t)0x0800C000)
+     17          
+     18          #ifdef STM32F10X_XL
+     19           #define BANK2_WRITE_START_ADDR   ((uint32_t)0x08088000)
+     20           #define BANK2_WRITE_END_ADDR     ((uint32_t)0x0808C000)
+     21          #endif /* STM32F10X_XL */
+     22          
+     23          uint8_t CrcTable[256] = {	//CRC-8
+     24            0x00,0x07,0x0E,0x09,0x1C,0x1B,0x12,0x15,0x38,0x3F,0x36,0x31,0x24,0x23,0x2A,0x2D,	
+     25            0x70,0x77,0x7E,0x79,0x6C,0x6B,0x62,0x65,0x48,0x4F,0x46,0x41,0x54,0x53,0x5A,0x5D,	
+     26            0xE0,0xE7,0xEE,0xE9,0xFC,0xFB,0xF2,0xF5,0xD8,0xDF,0xD6,0xD1,0xC4,0xC3,0xCA,0xCD,	
+     27            0x90,0x97,0x9E,0x99,0x8C,0x8B,0x82,0x85,0xA8,0xAF,0xA6,0xA1,0xB4,0xB3,0xBA,0xBD,	
+     28            0xC7,0xC0,0xC9,0xCE,0xDB,0xDC,0xD5,0xD2,0xFF,0xF8,0xF1,0xF6,0xE3,0xE4,0xED,0xEA,	
+     29            0xB7,0xB0,0xB9,0xBE,0xAB,0xAC,0xA5,0xA2,0x8F,0x88,0x81,0x86,0x93,0x94,0x9D,0x9A,	
+     30            0x27,0x20,0x29,0x2E,0x3B,0x3C,0x35,0x32,0x1F,0x18,0x11,0x16,0x03,0x04,0x0D,0x0A,	
+     31            0x57,0x50,0x59,0x5E,0x4B,0x4C,0x45,0x42,0x6F,0x68,0x61,0x66,0x73,0x74,0x7D,0x7A,	
+     32            0x89,0x8E,0x87,0x80,0x95,0x92,0x9B,0x9C,0xB1,0xB6,0xBF,0xB8,0xAD,0xAA,0xA3,0xA4,	
+     33            0xF9,0xFE,0xF7,0xF0,0xE5,0xE2,0xEB,0xEC,0xC1,0xC6,0xCF,0xC8,0xDD,0xDA,0xD3,0xD4,	
+     34            0x69,0x6E,0x67,0x60,0x75,0x72,0x7B,0x7C,0x51,0x56,0x5F,0x58,0x4D,0x4A,0x43,0x44,	
+     35            0x19,0x1E,0x17,0x10,0x05,0x02,0x0B,0x0C,0x21,0x26,0x2F,0x28,0x3D,0x3A,0x33,0x34,	
+     36            0x4E,0x49,0x40,0x47,0x52,0x55,0x5C,0x5B,0x76,0x71,0x78,0x7F,0x6A,0x6D,0x64,0x63,	
+     37            0x3E,0x39,0x30,0x37,0x22,0x25,0x2C,0x2B,0x06,0x01,0x08,0x0F,0x1A,0x1D,0x14,0x13,	
+     38            0xAE,0xA9,0xA0,0xA7,0xB2,0xB5,0xBC,0xBB,0x96,0x91,0x98,0x9F,0x8A,0x8D,0x84,0x83,	
+     39            0xDE,0xD9,0xD0,0xD7,0xC2,0xC5,0xCC,0xCB,0xE6,0xE1,0xE8,0xEF,0xFA,0xFD,0xF4,0xF3};
+     40          
+     41          int internal_flash_erase(uint32_t start_Page_Address,uint16_t page_num)
+     42          {
+     43          	/*!< At this stage the microcontroller clock setting is already configured, 
+     44          	   this is done through SystemInit() function which is called from startup
+     45          	   file (startup_stm32f10x_xx.s) before to branch to application main.
+     46          	   To reconfigure the default setting of SystemInit() function, refer to
+     47          	   system_stm32f10x.c file
+     48          	 */     
+     49          	uint32_t EraseCounter = 0x00;
+     50          	FLASH_Status FLASHStatus = FLASH_COMPLETE;
+     51          
+     52          	/* Porgram FLASH Bank1 ********************************************************/       
+     53          	/* Unlock the Flash Bank1 Program Erase controller */
+     54          	FLASH_UnlockBank1();
+     55          
+     56          	/* Clear All pending flags */
+     57          	FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);	
+     58          
+     59          	/* Erase the FLASH pages */
+     60          	for(EraseCounter = 0; (EraseCounter < page_num) && (FLASHStatus == FLASH_COMPLETE); EraseCounter++)
+     61          	{
+     62          		FLASHStatus = FLASH_ErasePage(start_Page_Address + (FLASH_PAGE_SIZE * EraseCounter));
+     63          	}
+     64          	FLASH_LockBank1();
+     65          	return 0;
+     66          }
+     67          
+     68          int internal_flash_wr_ecartek(uint32_t flash_word_Address,uint32_t data_32)//0x8000EC00
+     69          {
+     70          	/*!< At this stage the microcontroller clock setting is already configured, 
+     71          	   this is done through SystemInit() function which is called from startup
+     72          	   file (startup_stm32f10x_xx.s) before to branch to application main.
+     73          	   To reconfigure the default setting of SystemInit() function, refer to
+     74          	   system_stm32f10x.c file
+     75          	 */     
+     76          	uint32_t Address = 0;
+     77          	FLASH_Status FLASHStatus = FLASH_COMPLETE;
+     78          	
+     79          	/* Porgram FLASH Bank1 ********************************************************/       
+     80          	/* Unlock the Flash Bank1 Program Erase controller */
+     81          	FLASH_UnlockBank1();
+     82          
+     83          	/* Clear All pending flags */
+     84          	FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);	
+     85          	
+     86          	/* Program Flash Bank1 */
+     87          	Address = flash_word_Address;
+     88          	FLASHStatus = FLASH_ProgramWord(Address, 0xECEC1313);
+     89          	if(FLASHStatus!=FLASH_COMPLETE)
+     90          	{
+     91          		return -1;
+     92          	}
+     93          	FLASHStatus = FLASH_ProgramWord(Address+4, data_32);
+     94          	if(FLASHStatus!=FLASH_COMPLETE)
+     95          	{
+     96          		return -1;
+     97          	}
+     98          	
+     99          	FLASH_LockBank1();
+    100          
+    101          	return 0;
+    102          }
+    103          
+    104          int internal_flash_wr_common(uint32_t flash_word_Address,uint8_t *ptr,uint32_t len_byte)//0x8000EC00
+    105          {
+    106          	/*!< At this stage the microcontroller clock setting is already configured, 
+    107          	   this is done through SystemInit() function which is called from startup
+    108          	   file (startup_stm32f10x_xx.s) before to branch to application main.
+    109          	   To reconfigure the default setting of SystemInit() function, refer to
+    110          	   system_stm32f10x.c file
+    111          	 */     
+    112          	uint32_t Address = 0;
+    113          	uint32_t data_wr = 0;
+    114          	uint8_t *data_ptr=ptr;
+    115          	uint32_t i;
+    116          	uint32_t len_word;
+    117          	FLASH_Status FLASHStatus = FLASH_COMPLETE;
+    118          
+    119          	len_word=len_byte/4;
+    120          	if(len_byte%4!=0)
+    121          	{
+    122          		len_word++;
+    123          	}
+    124          	
+    125          	/* Porgram FLASH Bank1 ********************************************************/       
+    126          	/* Unlock the Flash Bank1 Program Erase controller */
+    127          	FLASH_UnlockBank1();
+    128          
+    129          	/* Clear All pending flags */
+    130          	FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);	
+    131          	
+    132          	/* Program Flash Bank1 */
+    133          	for(i=0;i<len_word;i++)
+    134          	{
+    135          		Address = flash_word_Address;
+    136          		data_wr = *( uint32_t*)ptr;
+    137          		FLASHStatus = FLASH_ProgramWord(Address, data_wr);
+    138          		if(FLASHStatus!=FLASH_COMPLETE)
+    139          		{
+    140          			return -1;
+    141          		}
+    142          
+    143          		Address+=4;
+    144          		ptr+=4;
+    145          	}
+    146          	
+    147          	FLASH_LockBank1();
+    148          
+    149          	return 0;
+    150          }
+    151          
+    152          int internal_flash_rd_common(uint32_t flash_word_Address,uint8_t *rd_buf,uint32_t rd_len)//0x8000EC00
+    153          {
+    154          	uint32_t *ptr;
+    155          	uint32_t offset_addr,i;
+    156          	uint8_t tempbuf[4];
+    157          	uint32_t temp;
+    158          	uint32_t num;
+    159          	
+    160          	offset_addr=flash_word_Address;
+    161          	ptr=(uint32_t *)rd_buf;
+    162          
+    163          	num=rd_len/4;
+    164          
+    165          	for(i=0;i<num;i++)
+    166          	{
+    167          		ptr[i]=*( uint32_t*) flash_word_Address;	 //__IO
+    168          		flash_word_Address+=4;
+    169          	}
+    170          
+    171          	if(rd_len%4!=0)
+    172          	{
+    173          		temp=*( uint32_t*) flash_word_Address;	 //__IO
+    174          		tempbuf[0]=(uint8_t)temp;
+    175          		tempbuf[1]=(uint8_t)(temp>>8);
+    176          		tempbuf[2]=(uint8_t)(temp>>16);
+    177          		tempbuf[3]=(uint8_t)(temp>>24);
+    178          
+    179          		temp=rd_len%4;
+    180          
+    181          		for(i=0;i<temp;i++)
+    182          		{
+    183          			rd_buf[num*4+i]=tempbuf[i];
+    184          		}
+    185          	}
+    186          
+    187          
+    188          
+    189          	return 0;
+    190          }
+    191          
+    192          
+    193          uint32_t internal_flash_rd(uint32_t flash_word_addres)
+    194          {
+    195          	return *( uint32_t*) flash_word_addres;	 //__IO
+    196          }
+    197          
+    198          
+    199          
+    200          /*******************************************************************************
+    201          * Function Name  : Cal_crc8
+    202          * Description    : CRC-8
+    203          * Input          : ptr - 数组地址
+    204                            len - 长度
+    205          * Output         : None
+    206          * Return         : ECBYTE - 计算结果
+    207          *******************************************************************************/
+    208          uint8_t Cal_crc8(uint8_t *ptr, uint8_t len) 
+    209          {
+    210          	uint8_t CRCValue = 0;
+    211          	for(uint8_t i = 0; i < len; i++)
+    212          		CRCValue = CrcTable[CRCValue ^ ptr[i]]; //查表方式计算CRC
+    213          
+    214          	return CRCValue;
+    215          }
+    216          
+    217          /*******************************************************************************
+    218          * Function Name  : FLASH_ProgramMoreWord
+    219          * Description    : 连续写入多字节到指定FLASH地址，此函数必须在FLASH_WriteXXXX系列函数中使用，
+    220          * Input          : addr - 待写入起始地址，必须为4的倍数，否则会导致硬件错误
+    221                             dwData - 待写入数组首地址
+    222                             len - 待写入数组长度(DWORD)
+    223          * Output         : None
+    224          * Return         : None 
+    225          *******************************************************************************/
+    226          void FLASH_ProgramMoreWord(uint32_t addr, uint32_t* dwData, uint8_t len) 
+    227          {
+    228          	for(uint8_t i = 0; i < len; i++) 
+    229          	{
+    230          		FLASH_ProgramWord(addr + i * 4, *((uint32_t *)dwData + i));  //写入FLASH
+    231          	}
+    232          }
+    233          
+    234          /*******************************************************************************
+    235          * Function Name  : FLASH_ReadMoreWord
+    236          * Description    : 连续读出多字节到指定FLASH地址
+    237          * Input          : addr - 待读出起始地址，必须为4的倍数，否则会导致硬件错误
+    238                             dwData - 待读出数组首地址
+    239                             len - 待读出数组长度
+    240          * Output         : None
+    241          * Return         : None 
+    242          *******************************************************************************/
+    243          void FLASH_ReadMoreWord(uint32_t addr, uint32_t* dwData, uint8_t len) 
+    244          {
+    245            	for(uint8_t i = 0; i < len; i++)
+    246            	{
+    247             	 	*((uint32_t *)dwData + i) = *((vu32 *)addr + i); //读出FLASH数据
+    248            	}
+    249          }
+    250          
+    251          
+    252          /*******************************************************************************
+    253          * Function Name  : FLASH_WriteRemoteID
+    254          * Description    : 存储遥控ID值等数据到指定FLASH地址
+    255          * Input          : remote - 遥控器属性数组指针，只获取其中20Byte数据
+    256          * Output         : None
+    257          * Return         : bool - TRUE, FALSE
+    258          *******************************************************************************/
+    259          bool FLASH_WriteRemoteID(REMOTE_STATUS* remote) 
+    260          {
+    261          	uint8_t Tmp[32];
+    262          	volatile FLASH_Status FLASHStatus = FLASH_COMPLETE;
+    263          
+    264          	//应该要禁止中断
+    265          
+    266          	//if(READ_STUDYKEY == Bit_RESET) 	//解锁FLASH写保护
+    267          	{
+    268          		FLASH_Unlock();
+    269          	}
+    270          	
+    271          	FLASH_ClearFlag(FLASH_FLAG_BSY | FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
+    272          	FLASHStatus = FLASH_ErasePage(REMOTE_ID_ADDR_HOME);	//块擦除 (1K bytes)
+    273          	if(FLASHStatus != FLASH_COMPLETE)					//设置FLASH写保护 
+    274          	{ 
+    275          		FLASH_Lock(); 
+    276          		return FALSE; 
+    277          	}
+    278          	
+    279          	remote->Crcid = Cal_crc8(&remote->Totle, 29); //20Byte
+    280          	
+    281          	FLASH_ProgramMoreWord(REMOTE_ID_ADDR_HOME,   (uint32_t *)(&remote->Crcid), 8); //保存第一块数据区
+    282          	
+    283          	FLASH_ProgramMoreWord(REMOTE_ID_ADDR_HOME+32,(uint32_t *)(&remote->Crcid), 8); //保存第二块数据区
+    284          	
+    285          	FLASH_Lock();	//设置FLASH写保护
+    286          	
+    287          	//第一块数据区比对
+    288          	FLASH_ReadMoreWord(REMOTE_ID_ADDR_HOME,   (uint32_t *)Tmp, 8);
+    289          	if(memcmp(Tmp, (uint8_t *)(&remote->Crcid), 30)) 
+    290          	{
+    291          		return FALSE; 
+    292          	}
+    293          	
+    294          	//第二块数据区比对
+    295          	FLASH_ReadMoreWord(REMOTE_ID_ADDR_HOME+32,(uint32_t *)Tmp, 8);
+    296          	if(memcmp(Tmp, (uint8_t *)(&remote->Crcid), 30)) 
+    297          	{
+    298          		return FALSE; 
+    299          	}
+    300          
+    301          	return TRUE;
+    302          }
+    303          
+    304          
+    305          /*******************************************************************************
+    306          * Function Name  : FLASH_WriteRemoteLOQ
+    307          * Description    : 存储遥控LOQ值等数据到指定FLASH地址
+    308          * Input          : remote - 遥控器属性数组指针，只获取其中16Byte数据
+    309          * Output         : None
+    310          * Return         : bool - TRUE, FALSE
+    311          *******************************************************************************/
+    312          bool FLASH_WriteRemoteLOQ(REMOTE_STATUS* remote)
+    313          {
+    314          	uint8_t Tmp[32];
+    315          	uint32_t addr;
+    316          	volatile FLASH_Status FLASHStatus = FLASH_COMPLETE;
+    317          
+    318          	//应该要禁止中断。。。。。。。
+    319          	
+    320          	FLASH_Unlock();	//解锁FLASH写保护
+    321          	
+    322          	FLASH_ClearFlag(FLASH_FLAG_BSY | FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
+    323          
+    324          	//每次写入，占用32字节的FLASH空间
+    325          	for(addr = REMOTE_LOQ_ADDR_HOME; ;addr += 32) // (本划分区域为3072字节) 0x0800F400
+    326          	{ 
+    327          		if(addr >= REMOTE_LOQ_ADDR_END)  									//已经写满,则擦除全部，再从起始地址开始写
+    328          		{
+    329          			FLASHStatus = FLASH_ErasePage(REMOTE_LOQ_ADDR_HOME);	  		//第一块擦除 (每块为1024字节)
+    330          			
+    331          			if(FLASHStatus == FLASH_COMPLETE)  
+    332          			{
+    333          				FLASHStatus = FLASH_ErasePage(REMOTE_LOQ_ADDR_HOME + 1024);	//第二块擦除
+    334          			}
+    335          			
+    336          			if(FLASHStatus == FLASH_COMPLETE)  
+    337          			{
+    338          				FLASHStatus = FLASH_ErasePage(REMOTE_LOQ_ADDR_HOME + 2048);	//第三块擦除
+    339          			}
+    340          			
+    341          			if(FLASHStatus != FLASH_COMPLETE) //设置FLASH写保护
+    342          			{ 
+    343          				FLASH_Lock();	
+    344          				return FALSE;
+    345          			}
+    346          
+    347          			//再从起始地址开始写一小块
+    348          			addr = REMOTE_LOQ_ADDR_HOME;
+    349          		}
+    350          
+    351          		//从起始地址开始，检查每32个字节的前4个字节的值,直到找到空白小块(32 bytes)
+    352          		
+    353          		if((*(vu32 *)addr & 0x00FF0000) != 0x00EC0000)  //未写区域
+    354          		{
+    355          			//每个32字节的小块的 前4个字节 中的第3个字节不是0xEC,则表示该小块未被写过。
+    356          			
+    357          			break;
+    358          		}
+    359          	}
+    360          
+    361          	remote->Ecar = 0xEC;							//未写标志(因为已全局擦除过了，所以可以直接写入)
+    362          	remote->Crcloq = Cal_crc8(&remote->Index, 19); 	//16Byte
+    363          	
+    364          	FLASH_ProgramMoreWord(addr,   (uint32_t *)(&remote->Crcloq), 5); //保存第一块数据区
+    365          	
+    366          	FLASH_ProgramMoreWord(addr+32,(uint32_t *)(&remote->Crcloq), 5); //保存第二块数据区  重复保存2次 ??????????
+    367          
+    368          	FLASH_Lock();//设置FLASH写保护
+    369          
+    370          	FLASH_ReadMoreWord(addr,   (uint32_t *)Tmp, 5);
+    371          	if(memcmp(Tmp, (uint8_t *)(&remote->Crcloq), 20)) //第一块数据区比对
+    372          	{
+    373          		return FALSE;
+    374          	}
+    375          	
+    376          	FLASH_ReadMoreWord(addr+32,(uint32_t *)Tmp, 5); //?????????  +16  ??????????????????????????????????????
+    377          	
+    378          	if(memcmp(Tmp, (uint8_t *)(&remote->Crcloq), 20)) //第二块数据区比对
+    379          	{
+    380          		return FALSE;
+    381          	}
+    382          	
+    383          	return TRUE;
+    384          }
+    385          
+    386          
+    387          
+    388          
+    389          /*******************************************************************************
+    390          * Function Name  : FLASH_ReadRemoteID
+    391          * Description    : 从指定FLASH地址读取遥控ID值等数据
+    392          * Input          : remote - 遥控器属性数组指针，只获取其中20Byte数据
+    393          * Output         : None
+    394          * Return         : bool - TRUE, FALSE
+    395          *******************************************************************************/
+    396          bool FLASH_ReadRemoteID(REMOTE_STATUS* remote) 
+    397          {
+    398          	FLASH_ReadMoreWord(REMOTE_ID_ADDR_HOME, (uint32_t *)(&remote->Crcid), 8);  			//读第一块数据区数据 (6*4=24 bytes)
+    399          	
+    400          	if(remote->Crcid != Cal_crc8(&remote->Totle, 29))  								//数据CRC错误 
+    401          	{
+    402          		FLASH_ReadMoreWord(REMOTE_ID_ADDR_HOME + 32, (uint32_t *)(&remote->Crcid), 8); 	//读第二块数据区数据 (6*4=24 bytes)
+    403          		if(remote->Crcid != Cal_crc8(&remote->Totle, 29))  							//数据CRC错误 
+    404          		{
+    405          			memset(&remote->Crcid, 0x00, 29); //两块数据都错误，清空数据区
+    406          			return FALSE;
+    407          		}
+    408          	}
+    409            
+    410            	return TRUE;
+    411          }
+    412          
+    413          /*******************************************************************************
+    414          * Function Name  : FLASH_ReadRemoteLOQ
+    415          * Description    : 从指定FLASH地址读取遥控LOQ值等数据
+    416          * Input          : remote - 遥控器属性数组指针，只获取其中16Byte数据
+    417          * Output         : None
+    418          * Return         : bool - TRUE, FALSE
+    419          *******************************************************************************/
+    420          bool FLASH_ReadRemoteLOQ(REMOTE_STATUS* remote) 
+    421          {
+    422          	uint32_t addr = REMOTE_LOQ_ADDR_END;
+    423          	
+    424          	while(1)   //从结尾一直查询到开始
+    425          	{
+    426          		addr -= 32;
+    427          		if((*(vu32 *)addr & 0x00FF0000) == 0x00EC0000)  //未写区域 比较起始地址的第2个字节 LOW ---HIGH (0,1,'2',3)
+    428          		{
+    429          			//查到了最新写入的LDQ
+    430          			break;
+    431          		}
+    432          		
+    433          		if(addr <= REMOTE_LOQ_ADDR_HOME)   //整大片LDQ区域都从未写过
+    434          		{
+    435          			memset(&remote->Crcloq, 0x00, 20);  //清空数据区，赋值LDQ值为0。
+    436          			return FALSE;
+    437          		}
+    438          	}
+    439          	
+    440          	FLASH_ReadMoreWord(addr, (uint32_t *)(&remote->Crcloq), 5);  //读第一块数据区数据
+    441          	if(remote->Crcloq != Cal_crc8(&remote->Index, 19))   	//数据CRC错误 
+    442          	{  
+    443          		FLASH_ReadMoreWord(addr + 32, (uint32_t *)(&remote->Crcloq), 5); //读第二块数据区数据
+    444          
+    445          		if(remote->Crcloq != Cal_crc8(&remote->Index, 19))   		//数据CRC错误
+    446          		{
+    447          			return FALSE;
+    448          		}
+    449          	}
+    450          	
+    451          	return TRUE;
+    452          }
+    453          
+    454          
+    455          
+    456          
+    457          
+    458          
+    459          
+    460          
+    461          
+    462          
+    463          
+    464          
+    465          
+    466          
+    467          
+    468          
+    469          
+    470          
+    471          
+    472          
+    473          
+    474          
+    475          
+    476          
+    477          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Cal_crc8
+      24   FLASH_ProgramMoreWord
+        24   -> FLASH_ProgramWord
+       4   FLASH_ReadMoreWord
+       8   FLASH_ReadRemoteID
+         8   -> Cal_crc8
+         8   -> FLASH_ReadMoreWord
+         8   -> memset
+      16   FLASH_ReadRemoteLOQ
+        16   -> Cal_crc8
+        16   -> FLASH_ReadMoreWord
+        16   -> memset
+      56   FLASH_WriteRemoteID
+        56   -> Cal_crc8
+        56   -> FLASH_ClearFlag
+        56   -> FLASH_ErasePage
+        56   -> FLASH_Lock
+        56   -> FLASH_ProgramMoreWord
+        56   -> FLASH_ReadMoreWord
+        56   -> FLASH_Unlock
+        56   -> memcmp
+      56   FLASH_WriteRemoteLOQ
+        56   -> Cal_crc8
+        56   -> FLASH_ClearFlag
+        56   -> FLASH_ErasePage
+        56   -> FLASH_Lock
+        56   -> FLASH_ProgramMoreWord
+        56   -> FLASH_ReadMoreWord
+        56   -> FLASH_Unlock
+        56   -> memcmp
+      24   internal_flash_erase
+        24   -> FLASH_ClearFlag
+        24   -> FLASH_ErasePage
+        24   -> FLASH_LockBank1
+        24   -> FLASH_UnlockBank1
+       0   internal_flash_rd
+      16   internal_flash_rd_common
+      24   internal_flash_wr_common
+        24   -> FLASH_ClearFlag
+        24   -> FLASH_LockBank1
+        24   -> FLASH_ProgramWord
+        24   -> FLASH_UnlockBank1
+      16   internal_flash_wr_ecartek
+        16   -> FLASH_ClearFlag
+        16   -> FLASH_LockBank1
+        16   -> FLASH_ProgramWord
+        16   -> FLASH_UnlockBank1
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+       4  ??DataTable5_5
+       4  ??DataTable5_6
+       4  ??DataTable5_7
+       4  ??DataTable5_8
+      30  Cal_crc8
+     256  CrcTable
+      34  FLASH_ProgramMoreWord
+      26  FLASH_ReadMoreWord
+      70  FLASH_ReadRemoteID
+     112  FLASH_ReadRemoteLOQ
+     144  FLASH_WriteRemoteID
+     218  FLASH_WriteRemoteLOQ
+      50  internal_flash_erase
+       4  internal_flash_rd
+      74  internal_flash_rd_common
+      64  internal_flash_wr_common
+      60  internal_flash_wr_ecartek
+
+ 
+ 256 bytes in section .data
+ 922 bytes in section .text
+ 
+ 922 bytes of CODE memory
+ 256 bytes of DATA memory
+
+Errors: none
+Warnings: 8

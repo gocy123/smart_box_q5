@@ -1,0 +1,719 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:29
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_time.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_time.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_time.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_time.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_time.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                   TIME MANAGEMENT
+     10          *
+     11          * File    : OS_TIME.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_time__c = "$Id: $";
+     37          #endif
+     38          
+     39          /*
+     40          ************************************************************************************************************************
+     41          *                                                  DELAY TASK 'n' TICKS
+     42          *
+     43          * Description: This function is called to delay execution of the currently running task until the specified number of
+     44          *              system ticks expires.  This, of course, directly equates to delaying the current task for some time to
+     45          *              expire.  No delay will result if the specified delay is 0.  If the specified delay is greater than 0
+     46          *              then, a context switch will result.
+     47          *
+     48          * Arguments  : dly       is a value in 'clock ticks' that the task will either delay for or, the target match value
+     49          *                        of the tick counter (OSTickCtr).  Note that specifying 0 means the task is not to delay.
+     50          *
+     51          *                        depending on the option argument, the task will wake up when OSTickCtr reaches:
+     52          *
+     53          *                            OS_OPT_TIME_DLY      : OSTickCtr + dly
+     54          *                            OS_OPT_TIME_TIMEOUT  : OSTickCtr + dly
+     55          *                            OS_OPT_TIME_MATCH    : dly
+     56          *                            OS_OPT_TIME_PERIODIC : OSTCBCurPtr->TickCtrPrev + dly
+     57          *
+     58          *              opt       specifies whether 'dly' represents absolute or relative time; default option marked with *** :
+     59          *
+     60          *                        *** OS_OPT_TIME_DLY        specifies a relative time from the current value of OSTickCtr.
+     61          *                            OS_OPT_TIME_TIMEOUT    same as OS_OPT_TIME_DLY.
+     62          *                            OS_OPT_TIME_MATCH      indicates that 'dly' specifies the absolute value that OSTickCtr
+     63          *                                                   must reach before the task will be resumed.
+     64          *                            OS_OPT_TIME_PERIODIC   indicates that 'dly' specifies the periodic value that OSTickCtr
+     65          *                                                   must reach before the task will be resumed.
+     66          *
+     67          *              p_err     is a pointer to a variable that will contain an error code from this call.
+     68          *
+     69          *                            OS_ERR_NONE            the call was successful and the delay occurred.
+     70          *                            OS_ERR_OPT_INVALID     if you specified an invalid option for this function.
+     71          *                            OS_ERR_SCHED_LOCKED    can't delay when the scheduler is locked.
+     72          *                            OS_ERR_TIME_DLY_ISR    if you called this function from an ISR.
+     73          *                            OS_ERR_TIME_ZERO_DLY   if you specified a delay of zero.
+     74          *
+     75          * Returns    : none
+     76          ************************************************************************************************************************
+     77          */
+     78          
+     79          void  OSTimeDly (OS_TICK   dly,
+     80                           OS_OPT    opt,
+     81                           OS_ERR   *p_err)
+     82          {
+     83              CPU_SR_ALLOC();
+     84          
+     85          
+     86          
+     87          #ifdef OS_SAFETY_CRITICAL
+     88              if (p_err == (OS_ERR *)0) {
+     89                  OS_SAFETY_CRITICAL_EXCEPTION();
+     90                  return;
+     91              }
+     92          #endif
+     93          
+     94          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+     95              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to call from an ISR                        */
+     96                 *p_err = OS_ERR_TIME_DLY_ISR;
+     97                  return;
+     98              }
+     99          #endif
+    100          
+    101              if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0u) {       /* Can't delay when the scheduler is locked               */
+    102                 *p_err = OS_ERR_SCHED_LOCKED;
+    103                  return;
+    104              }
+    105          
+    106              switch (opt) {
+    107                  case OS_OPT_TIME_DLY:
+    108                  case OS_OPT_TIME_TIMEOUT:
+    109                  case OS_OPT_TIME_PERIODIC:
+    110                       if (dly == (OS_TICK)0u) {                      /* 0 means no delay!                                      */
+    111                          *p_err = OS_ERR_TIME_ZERO_DLY;
+    112                           return;
+    113                       }
+    114                       break;
+    115          
+    116                  case OS_OPT_TIME_MATCH:
+    117                       break;
+    118          
+    119                  default:
+    120                      *p_err = OS_ERR_OPT_INVALID;
+    121                       return;
+    122              }
+    123          
+    124              OS_CRITICAL_ENTER();
+    125              OSTCBCurPtr->TaskState = OS_TASK_STATE_DLY;
+    126              OS_TickListInsert(OSTCBCurPtr,
+    127                                dly,
+    128                                opt,
+    129                                p_err);
+    130              if (*p_err != OS_ERR_NONE) {
+    131                   OS_CRITICAL_EXIT_NO_SCHED();
+    132                   return;
+    133              }
+    134              OS_RdyListRemove(OSTCBCurPtr);                          /* Remove current task from ready list                    */
+    135              OS_CRITICAL_EXIT_NO_SCHED();
+    136              OSSched();                                              /* Find next task to run!                                 */
+    137             *p_err = OS_ERR_NONE;
+    138          }
+    139          
+    140          /*$PAGE*/
+    141          /*
+    142          ************************************************************************************************************************
+    143          *                                             DELAY TASK FOR SPECIFIED TIME
+    144          *
+    145          * Description: This function is called to delay execution of the currently running task until some time expires.  This
+    146          *              call allows you to specify the delay time in HOURS, MINUTES, SECONDS and MILLISECONDS instead of ticks.
+    147          *
+    148          * Arguments  : hours     specifies the number of hours that the task will be delayed (max. is 999 if the tick rate is
+    149          *                        1000 Hz or less otherwise, a higher value would overflow a 32-bit unsigned counter).
+    150          *
+    151          *              minutes   specifies the number of minutes (max. 59 if 'opt' is OS_OPT_TIME_HMSM_STRICT)
+    152          *
+    153          *              seconds   specifies the number of seconds (max. 59 if 'opt' is OS_OPT_TIME_HMSM_STRICT)
+    154          *
+    155          *              milli     specifies the number of milliseconds (max. 999 if 'opt' is OS_OPT_TIME_HMSM_STRICT)
+    156          *
+    157          *              opt       specifies time delay bit-field options logically OR'd; default options marked with *** :
+    158          *
+    159          *                        *** OS_OPT_TIME_DLY        specifies a relative time from the current value of OSTickCtr.
+    160          *                            OS_OPT_TIME_TIMEOUT    same as OS_OPT_TIME_DLY.
+    161          *                            OS_OPT_TIME_MATCH      indicates that the delay specifies the absolute value that OSTickCtr
+    162          *                                                   must reach before the task will be resumed.
+    163          *                            OS_OPT_TIME_PERIODIC   indicates that the delay specifies the periodic value that OSTickCtr
+    164          *                                                   must reach before the task will be resumed.
+    165          *
+    166          *                        *** OS_OPT_TIME_HMSM_STRICT            strictly allow only hours        (0...99)
+    167          *                                                                                   minutes      (0...59)
+    168          *                                                                                   seconds      (0...59)
+    169          *                                                                                   milliseconds (0...999)
+    170          *                            OS_OPT_TIME_HMSM_NON_STRICT        allow any value of  hours        (0...999)
+    171          *                                                                                   minutes      (0...9999)
+    172          *                                                                                   seconds      (0...65535)
+    173          *                                                                                   milliseconds (0...4294967295)
+    174          *
+    175          *              p_err     is a pointer to a variable that will receive an error code from this call.
+    176          *
+    177          *                            OS_ERR_NONE                        If the function returns from the desired delay
+    178          *                            OS_ERR_OPT_INVALID                 If you specified an invalid option for 'opt'
+    179          *                            OS_ERR_SCHED_LOCKED                Can't delay when the scheduler is locked
+    180          *                            OS_ERR_TIME_DLY_ISR                If called from an ISR
+    181          *                            OS_ERR_TIME_INVALID_HOURS          If you didn't specify a valid value for 'hours'
+    182          *                            OS_ERR_TIME_INVALID_MINUTES        If you didn't specify a valid value for 'minutes'
+    183          *                            OS_ERR_TIME_INVALID_SECONDS        If you didn't specify a valid value for 'seconds'
+    184          *                            OS_ERR_TIME_INVALID_MILLISECONDS   If you didn't specify a valid value for 'milli'
+    185          *                            OS_ERR_TIME_ZERO_DLY               If hours, minutes, seconds and milli are all 0
+    186          *
+    187          * Returns    : none
+    188          *
+    189          * Note(s)    : 1) The resolution on the milliseconds depends on the tick rate.  For example, you can't do a 10 mS delay
+    190          *                 if the ticker interrupts every 100 mS.  In this case, the delay would be set to 0.  The actual delay
+    191          *                 is rounded to the nearest tick.
+    192          *
+    193          *              2) Although this function allows you to delay a task for many, many hours, it's not recommended to put
+    194          *                 a task to sleep for that long.
+    195          ************************************************************************************************************************
+    196          */
+    197          
+    198          #if OS_CFG_TIME_DLY_HMSM_EN > 0u
+    199          void  OSTimeDlyHMSM (CPU_INT16U  hours,
+    200                               CPU_INT16U  minutes,
+    201                               CPU_INT16U  seconds,
+    202                               CPU_INT32U  milli,
+    203                               OS_OPT      opt,
+    204                               OS_ERR     *p_err)
+    205          {
+    206          #if OS_CFG_ARG_CHK_EN > 0u
+    207              CPU_BOOLEAN  opt_invalid;
+    208              CPU_BOOLEAN  opt_non_strict;
+    209          #endif
+    210              OS_OPT       opt_time;
+    211              OS_RATE_HZ   tick_rate;
+    212              OS_TICK      ticks;
+    213              CPU_SR_ALLOC();
+    214          
+    215          
+    216          
+    217          #ifdef OS_SAFETY_CRITICAL
+    218              if (p_err == (OS_ERR *)0) {
+    219                  OS_SAFETY_CRITICAL_EXCEPTION();
+    220                  return;
+    221              }
+    222          #endif
+    223          
+    224          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    225              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to call from an ISR                        */
+    226                 *p_err = OS_ERR_TIME_DLY_ISR;
+    227                  return;
+    228              }
+    229          #endif
+    230          
+    231              if (OSSchedLockNestingCtr > (OS_NESTING_CTR)0u) {       /* Can't delay when the scheduler is locked               */
+    232                 *p_err = OS_ERR_SCHED_LOCKED;
+    233                  return;
+    234              }
+    235          
+    236              opt_time = opt & OS_OPT_TIME_MASK;                      /* Retrieve time options only.                            */
+    237              switch (opt_time) {
+    238                  case OS_OPT_TIME_DLY:
+    239                  case OS_OPT_TIME_TIMEOUT:
+    240                  case OS_OPT_TIME_PERIODIC:
+    241                       if (milli == (CPU_INT32U)0u) {                 /* Make sure we didn't specify a 0 delay                  */
+    242                           if (seconds == (CPU_INT16U)0u) {
+    243                               if (minutes == (CPU_INT16U)0u) {
+    244                                   if (hours == (CPU_INT16U)0u) {
+    245                                      *p_err = OS_ERR_TIME_ZERO_DLY;
+    246                                       return;
+    247                                   }
+    248                               }
+    249                           }
+    250                       }
+    251                       break;
+    252          
+    253                  case OS_OPT_TIME_MATCH:
+    254                       break;
+    255          
+    256                  default:
+    257                      *p_err = OS_ERR_OPT_INVALID;
+    258                       return;
+    259              }
+    260          
+    261          #if OS_CFG_ARG_CHK_EN > 0u                                  /* Validate arguments to be within range                  */
+    262              opt_invalid = DEF_BIT_IS_SET_ANY(opt, ~OS_OPT_TIME_OPTS_MASK);
+    263              if (opt_invalid == DEF_YES) {
+    264                 *p_err = OS_ERR_OPT_INVALID;
+    265                  return;
+    266              }
+    267          
+    268              opt_non_strict = DEF_BIT_IS_SET(opt, OS_OPT_TIME_HMSM_NON_STRICT);
+    269              if (opt_non_strict != DEF_YES) {
+    270                   if (milli   > (CPU_INT32U)999u) {
+    271                      *p_err = OS_ERR_TIME_INVALID_MILLISECONDS;
+    272                       return;
+    273                   }
+    274                   if (seconds > (CPU_INT16U)59u) {
+    275                      *p_err = OS_ERR_TIME_INVALID_SECONDS;
+    276                       return;
+    277                   }
+    278                   if (minutes > (CPU_INT16U)59u) {
+    279                      *p_err = OS_ERR_TIME_INVALID_MINUTES;
+    280                       return;
+    281                   }
+    282                   if (hours   > (CPU_INT16U)99u) {
+    283                      *p_err = OS_ERR_TIME_INVALID_HOURS;
+    284                       return;
+    285                   }
+    286              } else {
+    287                   if (minutes > (CPU_INT16U)9999u) {
+    288                      *p_err = OS_ERR_TIME_INVALID_MINUTES;
+    289                       return;
+    290                   }
+    291                   if (hours   > (CPU_INT16U)999u) {
+    292                      *p_err = OS_ERR_TIME_INVALID_HOURS;
+    293                       return;
+    294                   }
+    295              }
+    296          #endif
+    297          
+    298                                                                      /* Compute the total number of clock ticks required..     */
+    299                                                                      /* .. (rounded to the nearest tick)                       */
+    300              tick_rate = OSCfg_TickRate_Hz;
+    301              ticks     = ((OS_TICK)hours * (OS_TICK)3600u + (OS_TICK)minutes * (OS_TICK)60u + (OS_TICK)seconds) * tick_rate
+    302                        + (tick_rate * ((OS_TICK)milli + (OS_TICK)500u / tick_rate)) / (OS_TICK)1000u;
+    303          
+    304              if (ticks > (OS_TICK)0u) {
+    305                  OS_CRITICAL_ENTER();
+    306                  OSTCBCurPtr->TaskState = OS_TASK_STATE_DLY;
+    307                  OS_TickListInsert(OSTCBCurPtr,
+    308                                    ticks,
+    309                                    opt_time,
+    310                                    p_err);
+    311                  if (*p_err != OS_ERR_NONE) {
+    312                       OS_CRITICAL_EXIT_NO_SCHED();
+    313                       return;
+    314                  }
+    315                  OS_RdyListRemove(OSTCBCurPtr);                      /* Remove current task from ready list                    */
+    316                  OS_CRITICAL_EXIT_NO_SCHED();
+    317                  OSSched();                                          /* Find next task to run!                                 */
+    318                 *p_err = OS_ERR_NONE;
+    319              } else {
+    320                 *p_err = OS_ERR_TIME_ZERO_DLY;
+    321              }
+    322          }
+    323          #endif
+    324          /*$PAGE*/
+    325          /*
+    326          ************************************************************************************************************************
+    327          *                                                RESUME A DELAYED TASK
+    328          *
+    329          * Description: This function is used resume a task that has been delayed through a call to either OSTimeDly() or
+    330          *              OSTimeDlyHMSM().  Note that cannot call this function to resume a task that is waiting for an event
+    331          *              with timeout.
+    332          *
+    333          * Arguments  : p_tcb    is a pointer to the TCB of the task to resume.
+    334          *
+    335          *              p_err    is a pointer to a variable that will receive an error code
+    336          *
+    337          *                           OS_ERR_NONE                  Task has been resumed
+    338          *                           OS_ERR_STATE_INVALID         Task is in an invalid state
+    339          *                           OS_ERR_TIME_DLY_RESUME_ISR   Task is not waiting for time to expire
+    340          *                           OS_ERR_TIME_NOT_DLY          Task is not waiting for time to expire
+    341          *                           OS_ERR_TASK_SUSPENDED        Task cannot be resumed, it was suspended by OSTaskSuspend()
+    342          *
+    343          * Note(s)    : none
+    344          ************************************************************************************************************************
+    345          */
+    346          
+    347          #if OS_CFG_TIME_DLY_RESUME_EN > 0u
+    348          void  OSTimeDlyResume (OS_TCB  *p_tcb,
+    349                                 OS_ERR  *p_err)
+    350          {
+    351              CPU_SR_ALLOC();
+    352          
+    353          
+    354          
+    355          #ifdef OS_SAFETY_CRITICAL
+    356              if (p_err == (OS_ERR *)0) {
+    357                  OS_SAFETY_CRITICAL_EXCEPTION();
+    358                  return;
+    359              }
+    360          #endif
+    361          
+    362          #if OS_CFG_CALLED_FROM_ISR_CHK_EN > 0u
+    363              if (OSIntNestingCtr > (OS_NESTING_CTR)0u) {             /* Not allowed to call from an ISR                        */
+    364                  *p_err = OS_ERR_TIME_DLY_RESUME_ISR;
+    365                  return;
+    366              }
+    367          #endif
+    368          
+    369          #if OS_CFG_ARG_CHK_EN > 0u
+    370              if (p_tcb == (OS_TCB *)0) {                             /* Not possible for the running task to be delayed!       */
+    371                 *p_err = OS_ERR_TASK_NOT_DLY;
+    372                  return;
+    373              }
+    374          #endif
+    375          
+    376              CPU_CRITICAL_ENTER();
+    377              switch (p_tcb->TaskState) {
+    378                  case OS_TASK_STATE_RDY:                             /* Cannot Abort delay if task is ready                    */
+    379                       CPU_CRITICAL_EXIT();
+    380                      *p_err = OS_ERR_TASK_NOT_DLY;
+    381                       break;
+    382          
+    383                  case OS_TASK_STATE_DLY:
+    384                       OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    385                       p_tcb->TaskState = OS_TASK_STATE_RDY;
+    386                       OS_TickListRemove(p_tcb);                      /* Remove task from tick list                             */
+    387                       OS_RdyListInsert(p_tcb);                       /* Add to ready list                                      */
+    388                       OS_CRITICAL_EXIT_NO_SCHED();
+    389                      *p_err = OS_ERR_NONE;
+    390                       break;
+    391          
+    392                  case OS_TASK_STATE_PEND:
+    393                       CPU_CRITICAL_EXIT();
+    394                      *p_err = OS_ERR_TASK_NOT_DLY;
+    395                       break;
+    396          
+    397                  case OS_TASK_STATE_PEND_TIMEOUT:
+    398                       CPU_CRITICAL_EXIT();
+    399                      *p_err = OS_ERR_TASK_NOT_DLY;
+    400                       break;
+    401          
+    402                  case OS_TASK_STATE_SUSPENDED:
+    403                       CPU_CRITICAL_EXIT();
+    404                      *p_err = OS_ERR_TASK_NOT_DLY;
+    405                       break;
+    406          
+    407                  case OS_TASK_STATE_DLY_SUSPENDED:
+    408                       OS_CRITICAL_ENTER_CPU_CRITICAL_EXIT();
+    409                       p_tcb->TaskState = OS_TASK_STATE_SUSPENDED;
+    410                       OS_TickListRemove(p_tcb);                      /* Remove task from tick list                             */
+    411                       OS_CRITICAL_EXIT_NO_SCHED();
+    412                      *p_err            = OS_ERR_TASK_SUSPENDED;
+    413                       break;
+    414          
+    415                  case OS_TASK_STATE_PEND_SUSPENDED:
+    416                       CPU_CRITICAL_EXIT();
+    417                      *p_err = OS_ERR_TASK_NOT_DLY;
+    418                       break;
+    419          
+    420                  case OS_TASK_STATE_PEND_TIMEOUT_SUSPENDED:
+    421                       CPU_CRITICAL_EXIT();
+    422                      *p_err = OS_ERR_TASK_NOT_DLY;
+    423                       break;
+    424          
+    425                  default:
+    426                       CPU_CRITICAL_EXIT();
+    427                      *p_err = OS_ERR_STATE_INVALID;
+    428                       break;
+    429              }
+    430          
+    431              OSSched();
+    432          }
+    433          #endif
+    434          /*$PAGE*/
+    435          /*
+    436          ************************************************************************************************************************
+    437          *                                               GET CURRENT SYSTEM TIME
+    438          *
+    439          * Description: This function is used by your application to obtain the current value of the counter which keeps track of
+    440          *              the number of clock ticks.
+    441          *
+    442          * Arguments  : p_err    is a pointer to a variable that will receive an error code
+    443          *
+    444          *                           OS_ERR_NONE           If the call was successful
+    445          *
+    446          * Returns    : The current value of OSTickCtr
+    447          ************************************************************************************************************************
+    448          */
+    449          
+    450          OS_TICK  OSTimeGet (OS_ERR  *p_err)
+    451          {
+    452              OS_TICK  ticks;
+    453              CPU_SR_ALLOC();
+    454          
+    455          
+    456          
+    457          #ifdef OS_SAFETY_CRITICAL
+    458              if (p_err == (OS_ERR *)0) {
+    459                  OS_SAFETY_CRITICAL_EXCEPTION();
+    460                  return ((OS_TICK)0);
+    461              }
+    462          #endif
+    463          
+    464              CPU_CRITICAL_ENTER();
+    465              ticks = OSTickCtr;
+    466              CPU_CRITICAL_EXIT();
+    467             *p_err = OS_ERR_NONE;
+    468              return (ticks);
+    469          }
+    470          
+    471          /*
+    472          ************************************************************************************************************************
+    473          *                                                   SET SYSTEM CLOCK
+    474          *
+    475          * Description: This function sets the counter which keeps track of the number of clock ticks.
+    476          *
+    477          * Arguments  : ticks    is the desired tick value
+    478          *
+    479          *              p_err    is a pointer to a variable that will receive an error code
+    480          *
+    481          *                           OS_ERR_NONE           If the call was successful
+    482          *
+    483          * Returns    : none
+    484          ************************************************************************************************************************
+    485          */
+    486          
+    487          void  OSTimeSet (OS_TICK   ticks,
+    488                           OS_ERR   *p_err)
+    489          {
+    490              CPU_SR_ALLOC();
+    491          
+    492          
+    493          
+    494          #ifdef OS_SAFETY_CRITICAL
+    495              if (p_err == (OS_ERR *)0) {
+    496                  OS_SAFETY_CRITICAL_EXCEPTION();
+    497                  return;
+    498              }
+    499          #endif
+    500          
+    501              CPU_CRITICAL_ENTER();
+    502              OSTickCtr = ticks;
+    503              CPU_CRITICAL_EXIT();
+    504             *p_err     = OS_ERR_NONE;
+    505          }
+    506          
+    507          /*$PAGE*/
+    508          /*
+    509          ************************************************************************************************************************
+    510          *                                                 PROCESS SYSTEM TICK
+    511          *
+    512          * Description: This function is used to signal to uC/OS-III the occurrence of a 'system tick' (also known as a
+    513          *              'clock tick').  This function should be called by the tick ISR.
+    514          *
+    515          * Arguments  : none
+    516          *
+    517          * Returns    : none
+    518          ************************************************************************************************************************
+    519          */
+    520          
+    521          void  OSTimeTick (void)
+    522          {
+    523              OS_ERR  err;
+    524          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+    525              CPU_TS  ts;
+    526          #endif
+    527          
+    528          
+    529              OSTimeTickHook();                                       /* Call user definable hook                               */
+    530          
+    531          #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+    532          
+    533              ts = OS_TS_GET();                                       /* Get timestamp                                          */
+    534              OS_IntQPost((OS_OBJ_TYPE) OS_OBJ_TYPE_TICK,             /* Post to ISR queue                                      */
+    535                          (void      *)&OSRdyList[OSPrioCur],
+    536                          (void      *) 0,
+    537                          (OS_MSG_SIZE) 0u,
+    538                          (OS_FLAGS   ) 0u,
+    539                          (OS_OPT     ) 0u,
+    540                          (CPU_TS     ) ts,
+    541                          (OS_ERR    *)&err);
+    542          
+    543          #else
+    544          
+    545             (void)OSTaskSemPost((OS_TCB *)&OSTickTaskTCB,            /* Signal tick task                                       */
+    546                                 (OS_OPT  ) OS_OPT_POST_NONE,
+    547                                 (OS_ERR *)&err);
+    548          
+    549          
+    550          #if OS_CFG_SCHED_ROUND_ROBIN_EN > 0u
+    551              OS_SchedRoundRobin(&OSRdyList[OSPrioCur]);
+    552          #endif
+    553          
+    554          #if OS_CFG_TMR_EN > 0u
+    555              OSTmrUpdateCtr--;
+    556              if (OSTmrUpdateCtr == (OS_CTR)0u) {
+    557                  OSTmrUpdateCtr = OSTmrUpdateCnt;
+    558                  OSTaskSemPost((OS_TCB *)&OSTmrTaskTCB,              /* Signal timer task                                      */
+    559                                (OS_OPT  ) OS_OPT_POST_NONE,
+    560                                (OS_ERR *)&err);
+    561              }
+    562          #endif
+    563          
+    564          #endif
+    565          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   OSTimeDly
+        24   -> CPU_IntDisMeasStart
+        24   -> CPU_IntDisMeasStop
+         0   -> CPU_SR_Restore
+        24   -> CPU_SR_Restore
+        24   -> CPU_SR_Save
+        24   -> OSSched
+        24   -> OS_RdyListRemove
+        24   -> OS_TickListInsert
+      24   OSTimeDlyHMSM
+        24   -> CPU_IntDisMeasStart
+        24   -> CPU_IntDisMeasStop
+         0   -> CPU_SR_Restore
+        24   -> CPU_SR_Restore
+        24   -> CPU_SR_Save
+        24   -> OSSched
+        24   -> OS_RdyListRemove
+        24   -> OS_TickListInsert
+      16   OSTimeDlyResume
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+         0   -> OSSched
+        16   -> OS_RdyListInsert
+        16   -> OS_TickListRemove
+      16   OSTimeGet
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+      16   OSTimeSet
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+       8   OSTimeTick
+         8   -> OSTaskSemPost
+         8   -> OSTimeTickHook
+         8   -> OS_SchedRoundRobin
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_10
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+       4  ??DataTable5_5
+       4  ??DataTable5_6
+       4  ??DataTable5_7
+       4  ??DataTable5_8
+       4  ??DataTable5_9
+     166  OSTimeDly
+     324  OSTimeDlyHMSM
+     170  OSTimeDlyResume
+      36  OSTimeGet
+      36  OSTimeSet
+      62  OSTimeTick
+
+ 
+ 838 bytes in section .text
+ 
+ 838 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,461 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V7.40.7.9843/W32 for ARM 30/Jan/2018  14:31:25            #
+#     Copyright 1999-2015 IAR Systems AB.                                     #
+#                                                                             #
+#           Source file   =  D:\SmartCardBox\SMART_CARD\Project\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\lib_mem_a.asm#
+#           List file     =  D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\lib_mem_a.lst#
+#           Object file   =  D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\lib_mem_a.o#
+#           Command line  =  D:\SmartCardBox\SMART_CARD\Project\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\lib_mem_a.asm #
+#                            -OD:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj #
+#                            -s+ -M<> -w+ -r                                  #
+#                            -LD:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List #
+#                            -t8 --cpu Cortex-M3 --fpu None                   #
+#                                                                             #
+###############################################################################
+
+    1                           ;*********************************************
+                                ***********************************************
+                                ************
+    2                           ;                                             
+                                   uC/LIB
+    3                           ;                                       
+                                 CUSTOM LIBRARY MODULES
+    4                           ;
+    5                           ;                          (c) Copyright
+                                 2004-2011; Micrium, Inc.; Weston, FL
+    6                           ;
+    7                           ;               All rights reserved. 
+                                 Protected by international copyright
+                                 laws.
+    8                           ;
+    9                           ;               uC/LIB is provided in source
+                                 form to registered licensees ONLY.  It is
+                                 
+   10                           ;               illegal to distribute this
+                                 source code to any third party unless you
+                                 receive 
+   11                           ;               written permission by an
+                                 authorized Micrium representative.  Knowledge
+                                 of 
+   12                           ;               the source code may NOT be
+                                 used to develop a similar product.
+   13                           ;
+   14                           ;               Please help us continue to
+                                 provide the Embedded community with the finest
+                                 
+   15                           ;               software available.  Your
+                                 honesty is greatly appreciated.
+   16                           ;
+   17                           ;               You can contact us at
+                                 www.micrium.com.
+   18                           ;*********************************************
+                                ***********************************************
+                                ************
+   19                           
+   20                           
+   21                           ;*********************************************
+                                ***********************************************
+                                ************
+   22                           ;
+   23                           ;                                     STANDARD
+                                 MEMORY OPERATIONS
+   24                           ;
+   25                           ;                                          
+                                 ARM-Cortex-M3
+   26                           ;                                          
+                                 IAR Compiler
+   27                           ;
+   28                           ; Filename      : lib_mem_a.asm
+   29                           ; Version       : V1.35.00
+   30                           ; Programmer(s) : JDH
+   31                           ;                 BAN
+   32                           ;*********************************************
+                                ***********************************************
+                                ************
+   33                           ; Note(s)       : (1) NO compiler-supplied
+                                 standard library functions are used in library
+                                 or product software.
+   34                           ;
+   35                           ;                     (a) ALL standard library
+                                 functions are implemented in the custom
+                                 library modules :
+   36                           ;
+   37                           ;                         (1) \<Custom Library
+                                 Directory>\lib*.*
+   38                           ;
+   39                           ;                         (2) \<Custom Library
+                                 Directory>\Ports\<cpu>\<compiler>\lib*_a.*
+   40                           ;
+   41                           ;                               where
+   42                           ;                                      
+                                 <Custom Library Directory>      directory path
+                                 for custom library software
+   43                           ;                                       <cpu> 
+                                                          directory name for
+                                 specific processor (CPU)
+   44                           ;                                      
+                                 <compiler>                      directory name
+                                 for specific compiler
+   45                           ;
+   46                           ;                     (b) Product-specific
+                                 library functions are implemented in
+                                 individual products.
+   47                           ;
+   48                           ;                 (2) Assumes ARM CPU mode
+                                 configured for Little Endian.
+   49                           ;*********************************************
+                                ***********************************************
+                                ************
+   50                           
+   51                           
+   52                           ;*********************************************
+                                ***********************************************
+                                ************
+   53                           ;                                          
+                                 PUBLIC FUNCTIONS
+   54                           ;*********************************************
+                                ***********************************************
+                                ************
+   55                           
+   56                                   PUBLIC  Mem_Copy
+   57                           
+   58                           
+   59                           ;*********************************************
+                                ***********************************************
+                                ************
+   60                           ;                                      CODE
+                                 GENERATION DIRECTIVES
+   61                           ;*********************************************
+                                ***********************************************
+                                ************
+   62                           
+   63                                   RSEG CODE:CODE:NOROOT(2)
+   64                           
+   65                           
+   66                           ;$PAGE
+   67                           ;*********************************************
+                                ***********************************************
+                                ************
+   68                           ;                                            
+                                 Mem_Copy()
+   69                           ;
+   70                           ; Description : Copy data octets from one
+                                 buffer to another buffer.
+   71                           ;
+   72                           ; Argument(s) : pdest       Pointer to
+                                 destination memory buffer.
+   73                           ;
+   74                           ;               psrc        Pointer to source 
+                                     memory buffer.
+   75                           ;
+   76                           ;               size        Number of data
+                                 buffer octets to copy.
+   77                           ;
+   78                           ; Return(s)   : none.
+   79                           ;
+   80                           ; Caller(s)   : Application.
+   81                           ;
+   82                           ; Note(s)     : (1) Null copies allowed (i.e.
+                                 0-octet size).
+   83                           ;
+   84                           ;               (2) Memory buffers NOT checked
+                                 for overlapping.
+   85                           ;
+   86                           ;               (3) Modulo arithmetic is used
+                                 to determine whether a memory buffer starts on
+                                 a 'CPU_ALIGN'
+   87                           ;                   address boundary.
+   88                           ;
+   89                           ;               (4) ARM Cortex-M3 processors
+                                 use a subset of the ARM Thumb-2 instruction
+                                 set which does
+   90                           ;                   NOT support 16-bit
+                                 conditional branch instructions but ONLY
+                                 supports 8-bit conditional 
+   91                           ;                   branch instructions.
+   92                           ;
+   93                           ;                   Therefore, branches
+                                 exceeding 8-bit, signed, relative offsets
+                                 :
+   94                           ;
+   95                           ;                   (a) CANNOT be implemented
+                                 with     conditional branches; but ...
+   96                           ;                   (b) MUST   be implemented
+                                 with non-conditional branches.
+   97                           ;*********************************************
+                                ***********************************************
+                                ************
+   98                           
+   99                           ; void  Mem_Copy (void        *pdest,       ; 
+                                 ==>  R0
+  100                           ;                 void        *psrc,        ; 
+                                 ==>  R1
+  101                           ;                 CPU_SIZE_T   size)        ; 
+                                 ==>  R2
+  102                           
+  103                           Mem_Copy:
+  104    00000000 0028                  CMP         R0, #0
+  105    00000002 00D1                  BNE         Mem_Copy_1
+  106    00000004 7047                  BX          LR                      ;
+                                                     return if pdest ==
+                                                     NULL
+  107                           
+  108                           Mem_Copy_1:
+  109    00000006 0029                  CMP         R1, #0
+  110    00000008 00D1                  BNE         Mem_Copy_2
+  111    0000000A 7047                  BX          LR                      ;
+                                                     return if psrc  ==
+                                                     NULL
+  112                           
+  113                           Mem_Copy_2:
+  114    0000000C 002A                  CMP         R2, #0
+  115    0000000E 00D1                  BNE         Mem_Copy_3
+  116    00000010 7047                  BX          LR                      ;
+                                                     return if size  ==
+                                                     0
+  117                           
+  118                           Mem_Copy_3:
+  119    00000012 2DE9F81F              STMFD       SP!, {R3-R12}           ;
+                                                     save registers on
+                                                     stack
+  120                           
+  121                           
+  122                           ;$PAGE
+  123                           Chk_Align_32:                               ;
+                                 check if both dest & src 32-bit aligned
+  124    00000016 00F00303              AND         R3, R0, #0x03
+  125    0000001A 01F00304              AND         R4, R1, #0x03
+  126    0000001E A342                  CMP         R3, R4
+  127    00000020 11D1                  BNE         Chk_Align_16            ;
+                                                      not 32-bit aligned, check
+                                                      for 16-bit alignment
+  128                           
+  129    00000022 C3F10403              RSB         R3, R3, #0x04           ;
+                                                     compute 1-2-3 pre-copy
+                                                     bytes (to align to the
+                                                     next 32-bit boundary)
+  130    00000026 03F00303              AND         R3, R3, #0x03
+  131                           
+  132                           Pre_Copy_1:
+  133    0000002A 012B                  CMP         R3, #1                  ;
+                                                     copy 1-2-3 bytes (to align
+                                                     to the next 32-bit
+                                                     boundary)
+  134    0000002C 1DD3                  BCC         Copy_32_1               ;
+                                                      start real 32-bit
+                                                      copy
+  135    0000002E 012A                  CMP         R2, #1                  ;
+                                                     check if any more data to
+                                                     copy
+  136    00000030 00D2                  BCS         Pre_Copy_1_Cont
+  137    00000032 F2E0                  B           Mem_Copy_END            ;  
+                                                              no more data to
+                                                      copy (see Note #4b)
+  138                           
+  139                           Pre_Copy_1_Cont:
+  140    00000034 11F8014B              LDRB        R4, [R1], #1
+  141    00000038 00F8014B              STRB        R4, [R0], #1
+  142    0000003C A3F10103              SUB         R3, R3, #1
+  143    00000040 A2F10102              SUB         R2, R2, #1
+  144    00000044 F1E7                  B           Pre_Copy_1
+  145                           
+  146                           
+  147                           Chk_Align_16:                               ;
+                                 check if both dest & src 16-bit aligned
+  148    00000046 00F00103              AND         R3, R0, #0x01
+  149    0000004A 01F00104              AND         R4, R1, #0x01
+  150    0000004E A342                  CMP         R3, R4
+  151    00000050 00D0                  BEQ         Pre_Copy_2
+  152    00000052 94E0                  B           Copy_08_1               ;
+                                                      not 16-bit aligned, start
+                                                      8-bit copy (see Note
+                                                      #4b)
+  153                           
+  154                           Pre_Copy_2:
+  155    00000054 012B                  CMP         R3, #1                  ;
+                                                     copy 1 byte (to align to
+                                                     the next 16-bit boundary)
+  156    00000056 44D3                  BCC         Copy_16_1               ;
+                                                      start real 16-bit
+                                                      copy
+  157                           
+  158    00000058 11F8014B              LDRB        R4, [R1], #1
+  159    0000005C 00F8014B              STRB        R4, [R0], #1
+  160    00000060 A3F10103              SUB         R3, R3, #1
+  161    00000064 A2F10102              SUB         R2, R2, #1
+  162    00000068 F4E7                  B           Pre_Copy_2
+  163                           
+  164                           
+  165                           Copy_32_1:
+  166    0000006A B2F5B47F              CMP         R2, #(04*10*09)         ;
+                                                     Copy 9 chunks of 10 32-bit
+                                                     words (360 octets per
+                                                     loop)
+  167    0000006E 26D3                  BCC         Copy_32_2
+  168    00000070 B1E8F81F              LDMIA       R1!, {R3-R12}
+  169    00000074 A0E8F81F              STMIA       R0!, {R3-R12}
+  170    00000078 B1E8F81F              LDMIA       R1!, {R3-R12}
+  171    0000007C A0E8F81F              STMIA       R0!, {R3-R12}
+  172    00000080 B1E8F81F              LDMIA       R1!, {R3-R12}
+  173    00000084 A0E8F81F              STMIA       R0!, {R3-R12}
+  174    00000088 B1E8F81F              LDMIA       R1!, {R3-R12}
+  175    0000008C A0E8F81F              STMIA       R0!, {R3-R12}
+  176    00000090 B1E8F81F              LDMIA       R1!, {R3-R12}
+  177    00000094 A0E8F81F              STMIA       R0!, {R3-R12}
+  178    00000098 B1E8F81F              LDMIA       R1!, {R3-R12}
+  179    0000009C A0E8F81F              STMIA       R0!, {R3-R12}
+  180    000000A0 B1E8F81F              LDMIA       R1!, {R3-R12}
+  181    000000A4 A0E8F81F              STMIA       R0!, {R3-R12}
+  182    000000A8 B1E8F81F              LDMIA       R1!, {R3-R12}
+  183    000000AC A0E8F81F              STMIA       R0!, {R3-R12}
+  184    000000B0 B1E8F81F              LDMIA       R1!, {R3-R12}
+  185    000000B4 A0E8F81F              STMIA       R0!, {R3-R12}
+  186    000000B8 A2F5B472              SUB         R2, R2, #(04*10*09)
+  187    000000BC D5E7                  B           Copy_32_1
+  188                           
+  189                           Copy_32_2:
+  190    000000BE 282A                  CMP         R2, #(04*10*01)         ;
+                                                     Copy chunks of 10 32-bit
+                                                     words (40 octets per
+                                                     loop)
+  191    000000C0 06D3                  BCC         Copy_32_3
+  192    000000C2 B1E8F81F              LDMIA       R1!, {R3-R12}
+  193    000000C6 A0E8F81F              STMIA       R0!, {R3-R12}
+  194    000000CA A2F12802              SUB         R2, R2, #(04*10*01)
+  195    000000CE F6E7                  B           Copy_32_2
+  196                           
+  197                           Copy_32_3:
+  198    000000D0 042A                  CMP         R2, #(04*01*01)         ;
+                                                     Copy remaining 32-bit
+                                                     words
+  199    000000D2 06D3                  BCC         Copy_16_1
+  200    000000D4 51F8043B              LDR         R3, [R1], #4
+  201    000000D8 40F8043B              STR         R3, [R0], #4
+  202    000000DC A2F10402              SUB         R2, R2, #(04*01*01)
+  203    000000E0 F6E7                  B           Copy_32_3
+  204                           
+  205                           ;$PAGE
+  206                           Copy_16_1:
+  207    000000E2 202A                  CMP         R2, #(02*01*16)         ;
+                                                     Copy chunks of 16 16-bit
+                                                     words (32 bytes per
+                                                     loop)
+  208    000000E4 42D3                  BCC         Copy_16_2
+  209    000000E6 31F8023B              LDRH        R3, [R1], #2
+  210    000000EA 20F8023B              STRH        R3, [R0], #2
+  211    000000EE 31F8023B              LDRH        R3, [R1], #2
+  212    000000F2 20F8023B              STRH        R3, [R0], #2
+  213    000000F6 31F8023B              LDRH        R3, [R1], #2
+  214    000000FA 20F8023B              STRH        R3, [R0], #2
+  215    000000FE 31F8023B              LDRH        R3, [R1], #2
+  216    00000102 20F8023B              STRH        R3, [R0], #2
+  217    00000106 31F8023B              LDRH        R3, [R1], #2
+  218    0000010A 20F8023B              STRH        R3, [R0], #2
+  219    0000010E 31F8023B              LDRH        R3, [R1], #2
+  220    00000112 20F8023B              STRH        R3, [R0], #2
+  221    00000116 31F8023B              LDRH        R3, [R1], #2
+  222    0000011A 20F8023B              STRH        R3, [R0], #2
+  223    0000011E 31F8023B              LDRH        R3, [R1], #2
+  224    00000122 20F8023B              STRH        R3, [R0], #2
+  225    00000126 31F8023B              LDRH        R3, [R1], #2
+  226    0000012A 20F8023B              STRH        R3, [R0], #2
+  227    0000012E 31F8023B              LDRH        R3, [R1], #2
+  228    00000132 20F8023B              STRH        R3, [R0], #2
+  229    00000136 31F8023B              LDRH        R3, [R1], #2
+  230    0000013A 20F8023B              STRH        R3, [R0], #2
+  231    0000013E 31F8023B              LDRH        R3, [R1], #2
+  232    00000142 20F8023B              STRH        R3, [R0], #2
+  233    00000146 31F8023B              LDRH        R3, [R1], #2
+  234    0000014A 20F8023B              STRH        R3, [R0], #2
+  235    0000014E 31F8023B              LDRH        R3, [R1], #2
+  236    00000152 20F8023B              STRH        R3, [R0], #2
+  237    00000156 31F8023B              LDRH        R3, [R1], #2
+  238    0000015A 20F8023B              STRH        R3, [R0], #2
+  239    0000015E 31F8023B              LDRH        R3, [R1], #2
+  240    00000162 20F8023B              STRH        R3, [R0], #2
+  241    00000166 A2F12002              SUB         R2, R2, #(02*01*16)
+  242    0000016A BAE7                  B           Copy_16_1
+  243                           
+  244                           Copy_16_2:
+  245    0000016C 022A                  CMP         R2, #(02*01*01)         ;
+                                                     Copy remaining 16-bit
+                                                     words
+  246    0000016E 06D3                  BCC         Copy_08_1
+  247    00000170 31F8023B              LDRH        R3, [R1], #2
+  248    00000174 20F8023B              STRH        R3, [R0], #2
+  249    00000178 A2F10202              SUB         R2, R2, #(02*01*01)
+  250    0000017C F6E7                  B           Copy_16_2
+  251                           
+  252                           ;$PAGE
+  253                           Copy_08_1:
+  254    0000017E 102A                  CMP         R2, #(01*01*16)         ;
+                                                     Copy chunks of 16 8-bit
+                                                     words (16 bytes per
+                                                     loop)
+  255    00000180 42D3                  BCC         Copy_08_2
+  256    00000182 11F8013B              LDRB        R3, [R1], #1
+  257    00000186 00F8013B              STRB        R3, [R0], #1
+  258    0000018A 11F8013B              LDRB        R3, [R1], #1
+  259    0000018E 00F8013B              STRB        R3, [R0], #1
+  260    00000192 11F8013B              LDRB        R3, [R1], #1
+  261    00000196 00F8013B              STRB        R3, [R0], #1
+  262    0000019A 11F8013B              LDRB        R3, [R1], #1
+  263    0000019E 00F8013B              STRB        R3, [R0], #1
+  264    000001A2 11F8013B              LDRB        R3, [R1], #1
+  265    000001A6 00F8013B              STRB        R3, [R0], #1
+  266    000001AA 11F8013B              LDRB        R3, [R1], #1
+  267    000001AE 00F8013B              STRB        R3, [R0], #1
+  268    000001B2 11F8013B              LDRB        R3, [R1], #1
+  269    000001B6 00F8013B              STRB        R3, [R0], #1
+  270    000001BA 11F8013B              LDRB        R3, [R1], #1
+  271    000001BE 00F8013B              STRB        R3, [R0], #1
+  272    000001C2 11F8013B              LDRB        R3, [R1], #1
+  273    000001C6 00F8013B              STRB        R3, [R0], #1
+  274    000001CA 11F8013B              LDRB        R3, [R1], #1
+  275    000001CE 00F8013B              STRB        R3, [R0], #1
+  276    000001D2 11F8013B              LDRB        R3, [R1], #1
+  277    000001D6 00F8013B              STRB        R3, [R0], #1
+  278    000001DA 11F8013B              LDRB        R3, [R1], #1
+  279    000001DE 00F8013B              STRB        R3, [R0], #1
+  280    000001E2 11F8013B              LDRB        R3, [R1], #1
+  281    000001E6 00F8013B              STRB        R3, [R0], #1
+  282    000001EA 11F8013B              LDRB        R3, [R1], #1
+  283    000001EE 00F8013B              STRB        R3, [R0], #1
+  284    000001F2 11F8013B              LDRB        R3, [R1], #1
+  285    000001F6 00F8013B              STRB        R3, [R0], #1
+  286    000001FA 11F8013B              LDRB        R3, [R1], #1
+  287    000001FE 00F8013B              STRB        R3, [R0], #1
+  288    00000202 A2F11002              SUB         R2, R2, #(01*01*16)
+  289    00000206 BAE7                  B           Copy_08_1
+  290                           
+  291                           Copy_08_2:
+  292    00000208 012A                  CMP         R2, #(01*01*01)         ;
+                                                     Copy remaining 8-bit
+                                                     words
+  293    0000020A 06D3                  BCC         Mem_Copy_END
+  294    0000020C 11F8013B              LDRB        R3, [R1], #1
+  295    00000210 00F8013B              STRB        R3, [R0], #1
+  296    00000214 A2F10102              SUB         R2, R2, #(01*01*01)
+  297    00000218 F6E7                  B           Copy_08_2
+  298                           
+  299                           
+  300                           Mem_Copy_END:
+  301    0000021A BDE8F81F              LDMFD       SP!, {R3-R12}           ;
+                                                     restore registers from
+                                                     stack
+  302    0000021E 7047                  BX          LR                      ;
+                                                     return
+  303                           
+  304                           
+  305                                   END
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 544         #
+##############################
+
+
+
+

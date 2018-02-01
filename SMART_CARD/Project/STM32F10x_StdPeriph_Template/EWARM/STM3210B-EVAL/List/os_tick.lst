@@ -1,0 +1,642 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:28
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_tick.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_tick.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\os_tick.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\os_tick.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\OS\uCOS-III\Source\os_tick.c
+      1          /*
+      2          ***********************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                   TICK MANAGEMENT
+     10          *
+     11          * File    : OS_TICK.C
+     12          * By      : JJL
+     13          * Version : V3.02.00
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #include <os.h>
+     34          
+     35          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     36          const  CPU_CHAR  *os_tick__c = "$Id: $";
+     37          #endif
+     38          
+     39          /*
+     40          ************************************************************************************************************************
+     41          *                                                  LOCAL PROTOTYPES
+     42          ************************************************************************************************************************
+     43          */
+     44          
+     45          
+     46          /*
+     47          ************************************************************************************************************************
+     48          *                                                      TICK TASK
+     49          *
+     50          * Description: This task is internal to uC/OS-III and is triggered by the tick interrupt.
+     51          *
+     52          * Arguments  : p_arg     is an argument passed to the task when the task is created (unused).
+     53          *
+     54          * Returns    : none
+     55          *
+     56          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+     57          ************************************************************************************************************************
+     58          */
+     59          
+     60          void  OS_TickTask (void *p_arg)
+     61          {
+     62              OS_ERR  err;
+     63              CPU_TS  ts;
+     64          
+     65          
+     66              p_arg = p_arg;                                          /* Prevent compiler warning                               */
+     67          
+     68              while (DEF_ON) {
+     69                  (void)OSTaskSemPend((OS_TICK  )0,
+     70                                      (OS_OPT   )OS_OPT_PEND_BLOCKING,
+     71                                      (CPU_TS  *)&ts,
+     72                                      (OS_ERR  *)&err);               /* Wait for signal from tick interrupt                    */
+     73                  if (err == OS_ERR_NONE) {
+     74                      if (OSRunning == OS_STATE_OS_RUNNING) {
+     75                          OS_TickListUpdate();                        /* Update all tasks waiting for time                      */
+     76                      }
+     77                  }
+     78              }
+     79          }
+     80          
+     81          /*$PAGE*/
+     82          /*
+     83          ************************************************************************************************************************
+     84          *                                                 INITIALIZE TICK TASK
+     85          *
+     86          * Description: This function is called by OSInit() to create the tick task.
+     87          *
+     88          * Arguments  : p_err   is a pointer to a variable that will hold the value of an error code:
+     89          *
+     90          *                          OS_ERR_TICK_STK_INVALID   if the pointer to the tick task stack is a NULL pointer
+     91          *                          OS_ERR_TICK_STK_SIZE      indicates that the specified stack size
+     92          *                          OS_ERR_PRIO_INVALID       if the priority you specified in the configuration is invalid
+     93          *                                                      (There could be only one task at the Idle Task priority)
+     94          *                                                      (Maybe the priority you specified is higher than OS_CFG_PRIO_MAX-1
+     95          *                          OS_ERR_??                 other error code returned by OSTaskCreate()
+     96          *
+     97          * Returns    : none
+     98          *
+     99          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+    100          ************************************************************************************************************************
+    101          */
+    102          
+    103          void  OS_TickTaskInit (OS_ERR  *p_err)
+    104          {
+    105          #ifdef OS_SAFETY_CRITICAL
+    106              if (p_err == (OS_ERR *)0) {
+    107                  OS_SAFETY_CRITICAL_EXCEPTION();
+    108                  return;
+    109              }
+    110          #endif
+    111          
+    112              OSTickCtr         = (OS_TICK)0u;                        /* Clear the tick counter                                 */
+    113          
+    114              OSTickTaskTimeMax = (CPU_TS)0u;
+    115          
+    116          
+    117              OS_TickListInit();                                      /* Initialize the tick list data structures               */
+    118          
+    119                                                                      /* ---------------- CREATE THE TICK TASK ---------------- */
+    120              if (OSCfg_TickTaskPrio >= (OS_CFG_PRIO_MAX - 1u)) {     /* Only one task at the 'Idle Task' priority              */
+    121                  *p_err = OS_ERR_PRIO_INVALID;
+    122                  return;
+    123              }
+    124          
+    125              OSTaskCreate((OS_TCB     *)&OSTickTaskTCB,
+    126                           (CPU_CHAR   *)((void *)"uC/OS-III Tick Task"),
+    127                           (OS_TASK_PTR )OS_TickTask,
+    128                           (void       *)0,
+    129                           (OS_PRIO     )OSCfg_TickTaskPrio,
+    130                           (CPU_STK    *)OSCfg_TickTaskStkBasePtr,
+    131                           (CPU_STK_SIZE)OSCfg_TickTaskStkLimit,
+    132                           (CPU_STK_SIZE)OSCfg_TickTaskStkSize,
+    133                           (OS_MSG_QTY  )0u,
+    134                           (OS_TICK     )0u,
+    135                           (void       *)0,
+    136                           (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    137                           (OS_ERR     *)p_err);
+    138          }
+    139          
+    140          /*$PAGE*/
+    141          /*
+    142          ************************************************************************************************************************
+    143          *                                               INITIALIZE THE TICK LIST
+    144          *
+    145          * Description: This function initializes the tick handling data structures of uC/OS-III.
+    146          *
+    147          * Arguments  : none
+    148          *
+    149          * Returns    : None
+    150          *
+    151          * Note(s)    : This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    152          ************************************************************************************************************************
+    153          */
+    154          
+    155          void  OS_TickListInit (void)
+    156          {
+    157              OS_TICK_SPOKE_IX   i;
+    158              OS_TICK_SPOKE     *p_spoke;
+    159          
+    160          
+    161          
+    162              for (i = 0u; i < OSCfg_TickWheelSize; i++) {
+    163                  p_spoke                = (OS_TICK_SPOKE *)&OSCfg_TickWheel[i];
+    164                  p_spoke->FirstPtr      = (OS_TCB        *)0;
+    165                  p_spoke->NbrEntries    = (OS_OBJ_QTY     )0u;
+    166                  p_spoke->NbrEntriesMax = (OS_OBJ_QTY     )0u;
+    167              }
+    168          }
+    169          
+    170          /*$PAGE*/
+    171          /*
+    172          ************************************************************************************************************************
+    173          *                                                ADD TASK TO TICK LIST
+    174          *
+    175          * Description: This function is called to place a task in a list of task waiting for either time to expire or waiting to
+    176          *              timeout on a pend call.
+    177          *
+    178          * Arguments  : p_tcb          is a pointer to the OS_TCB of the task to add to the tick list
+    179          *              -----
+    180          *
+    181          *              time           represents either the 'match' value of OSTickCtr or a relative time from the current
+    182          *                             value of OSTickCtr as specified by the 'opt' argument..
+    183          *
+    184          *                             relative when 'opt' is set to OS_OPT_TIME_DLY
+    185          *                             relative when 'opt' is set to OS_OPT_TIME_TIMEOUT
+    186          *                             match    when 'opt' is set to OS_OPT_TIME_MATCH
+    187          *                             periodic when 'opt' is set to OS_OPT_TIME_PERIODIC
+    188          *
+    189          *              opt            is an option specifying how to calculate time.  The valid values are:
+    190          *              ---
+    191          *                                 OS_OPT_TIME_DLY
+    192          *                                 OS_OPT_TIME_TIMEOUT
+    193          *                                 OS_OPT_TIME_PERIODIC
+    194          *                                 OS_OPT_TIME_MATCH
+    195          *
+    196          *              p_err          is a pointer to a variable that will contain an error code returned by this function.
+    197          *              -----
+    198          *                                 OS_ERR_NONE           the call was successful and the time delay was scheduled.
+    199          *                                 OS_ERR_TIME_ZERO_DLY  if delay is zero or already occurred.
+    200          *
+    201          * Returns    : None
+    202          *
+    203          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    204          *
+    205          *              2) This function is assumed to be called with interrupts disabled.
+    206          ************************************************************************************************************************
+    207          */
+    208          
+    209          void  OS_TickListInsert (OS_TCB   *p_tcb,
+    210                                   OS_TICK   time,
+    211                                   OS_OPT    opt,
+    212                                   OS_ERR   *p_err)
+    213          {
+    214              OS_TICK            tick_delta;
+    215              OS_TICK            tick_next;
+    216              OS_TICK_SPOKE     *p_spoke;
+    217              OS_TCB            *p_tcb0;
+    218              OS_TCB            *p_tcb1;
+    219              OS_TICK_SPOKE_IX   spoke;
+    220          
+    221          
+    222          
+    223              if (opt == OS_OPT_TIME_MATCH) {                              /* Task time is absolute.                            */
+    224                  tick_delta = time - OSTickCtr - 1u;
+    225                  if (tick_delta > OS_TICK_TH_RDY) {                       /* If delay already occurred, ...                    */
+    226                      p_tcb->TickCtrMatch = (OS_TICK        )0u;
+    227                      p_tcb->TickRemain   = (OS_TICK        )0u;
+    228                      p_tcb->TickSpokePtr = (OS_TICK_SPOKE *)0;
+    229                     *p_err               =  OS_ERR_TIME_ZERO_DLY;         /* ... do NOT delay.                                 */
+    230                      return;
+    231                  }
+    232                  p_tcb->TickCtrMatch = time;
+    233                  p_tcb->TickRemain   = tick_delta + 1u;
+    234          
+    235              } else if (time > (OS_TICK)0u) {
+    236                  if (opt == OS_OPT_TIME_PERIODIC) {                       /* Task time is periodic.                            */
+    237                      tick_next  = p_tcb->TickCtrPrev + time;
+    238                      tick_delta = tick_next - OSTickCtr - 1u;
+    239                      if (tick_delta < time) {                             /* If next periodic delay did NOT already occur, ... */
+    240                          p_tcb->TickCtrMatch = tick_next;                 /* ... set  next  periodic delay;                ... */
+    241                      } else {
+    242                          p_tcb->TickCtrMatch = OSTickCtr + time;          /* ... else reset periodic delay.                    */
+    243                      }
+    244                      p_tcb->TickRemain   = p_tcb->TickCtrMatch - OSTickCtr;
+    245                      p_tcb->TickCtrPrev  = p_tcb->TickCtrMatch;
+    246          
+    247                  } else {                                                 /* Task time is relative to current.                 */
+    248                      p_tcb->TickCtrMatch = OSTickCtr + time;
+    249                      p_tcb->TickRemain   = time;
+    250                  }
+    251          
+    252              } else {                                                     /* Zero time delay; ...                              */
+    253                  p_tcb->TickCtrMatch = (OS_TICK        )0u;
+    254                  p_tcb->TickRemain   = (OS_TICK        )0u;
+    255                  p_tcb->TickSpokePtr = (OS_TICK_SPOKE *)0;
+    256                 *p_err               =  OS_ERR_TIME_ZERO_DLY;             /* ... do NOT delay.                                 */
+    257                  return;
+    258              }
+    259          
+    260          
+    261              spoke   = (OS_TICK_SPOKE_IX)(p_tcb->TickCtrMatch % OSCfg_TickWheelSize);
+    262              p_spoke = &OSCfg_TickWheel[spoke];
+    263          
+    264              if (p_spoke->NbrEntries == (OS_OBJ_QTY)0u) {                 /* First entry in the spoke                          */
+    265                  p_tcb->TickNextPtr   = (OS_TCB   *)0;
+    266                  p_tcb->TickPrevPtr   = (OS_TCB   *)0;
+    267                  p_spoke->FirstPtr    =  p_tcb;
+    268                  p_spoke->NbrEntries  = (OS_OBJ_QTY)1u;
+    269              } else {
+    270                  p_tcb1     = p_spoke->FirstPtr;                          /* Point to current first TCB in the list            */
+    271                  while (p_tcb1 != (OS_TCB *)0) {
+    272                      p_tcb1->TickRemain = p_tcb1->TickCtrMatch            /* Compute time remaining of current TCB in list     */
+    273                                         - OSTickCtr;
+    274                      if (p_tcb->TickRemain > p_tcb1->TickRemain) {        /* Do we need to insert AFTER current TCB in list?   */
+    275                          if (p_tcb1->TickNextPtr != (OS_TCB *)0) {        /* Yes, are we pointing at the last TCB in the list? */
+    276                              p_tcb1               =  p_tcb1->TickNextPtr; /* No,  Point to next TCB in the list                */
+    277                          } else {
+    278                              p_tcb->TickNextPtr   = (OS_TCB *)0;
+    279                              p_tcb->TickPrevPtr   =  p_tcb1;
+    280                              p_tcb1->TickNextPtr  =  p_tcb;               /* Yes, TCB to add is now new last entry in the list */
+    281                              p_tcb1               = (OS_TCB *)0;          /* Break loop                                        */
+    282                          }
+    283                      } else {                                             /* Insert before the current TCB                     */
+    284                          if (p_tcb1->TickPrevPtr == (OS_TCB *)0) {        /* Are we inserting before the first TCB?            */
+    285                              p_tcb->TickPrevPtr   = (OS_TCB *)0;
+    286                              p_tcb->TickNextPtr   =  p_tcb1;
+    287                              p_tcb1->TickPrevPtr  =  p_tcb;
+    288                              p_spoke->FirstPtr    =  p_tcb;
+    289                          } else {                                         /* Insert in between 2 TCBs already in the list      */
+    290                              p_tcb0               =  p_tcb1->TickPrevPtr;
+    291                              p_tcb->TickPrevPtr   =  p_tcb0;
+    292                              p_tcb->TickNextPtr   =  p_tcb1;
+    293                              p_tcb0->TickNextPtr  =  p_tcb;
+    294                              p_tcb1->TickPrevPtr  =  p_tcb;
+    295                          }
+    296                          p_tcb1 = (OS_TCB *)0;                            /* Break loop                                        */
+    297                      }
+    298                  }
+    299                  p_spoke->NbrEntries++;
+    300              }
+    301              if (p_spoke->NbrEntriesMax < p_spoke->NbrEntries) {          /* Keep track of maximum # of entries in each spoke  */
+    302                  p_spoke->NbrEntriesMax = p_spoke->NbrEntries;
+    303              }
+    304              p_tcb->TickSpokePtr = p_spoke;                               /* Link back to tick spoke                           */
+    305             *p_err               = OS_ERR_NONE;
+    306          }
+    307          
+    308          /*$PAGE*/
+    309          /*
+    310          ************************************************************************************************************************
+    311          *                                         REMOVE A TASK FROM THE TICK LIST
+    312          *
+    313          * Description: This function is called to remove a task from the tick list
+    314          *
+    315          * Arguments  : p_tcb          Is a pointer to the OS_TCB to remove.
+    316          *              -----
+    317          *
+    318          * Returns    : none
+    319          *
+    320          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    321          *
+    322          *              2) This function is assumed to be called with interrupts disabled.
+    323          ************************************************************************************************************************
+    324          */
+    325          
+    326          void  OS_TickListRemove (OS_TCB  *p_tcb)
+    327          {
+    328              OS_TICK_SPOKE  *p_spoke;
+    329              OS_TCB         *p_tcb1;
+    330              OS_TCB         *p_tcb2;
+    331          
+    332          
+    333          
+    334              p_spoke = p_tcb->TickSpokePtr;
+    335              if (p_spoke != (OS_TICK_SPOKE *)0) {                              /* Confirm that task is in tick list            */
+    336                  p_tcb->TickRemain = (OS_TICK)0u;
+    337                  if (p_spoke->FirstPtr == p_tcb) {                             /* Is timer to remove at the beginning of list? */
+    338                      p_tcb1            = (OS_TCB *)p_tcb->TickNextPtr;         /* Yes                                          */
+    339                      p_spoke->FirstPtr = p_tcb1;
+    340                      if (p_tcb1 != (OS_TCB *)0) {
+    341                          p_tcb1->TickPrevPtr = (void *)0;
+    342                      }
+    343                  } else {
+    344                      p_tcb1              = p_tcb->TickPrevPtr;                 /* No, remove timer from somewhere in the list  */
+    345                      p_tcb2              = p_tcb->TickNextPtr;
+    346                      p_tcb1->TickNextPtr = p_tcb2;
+    347                      if (p_tcb2 != (OS_TCB *)0) {
+    348                          p_tcb2->TickPrevPtr = p_tcb1;
+    349                      }
+    350                  }
+    351                  p_tcb->TickNextPtr  = (OS_TCB        *)0;
+    352                  p_tcb->TickPrevPtr  = (OS_TCB        *)0;
+    353                  p_tcb->TickSpokePtr = (OS_TICK_SPOKE *)0;
+    354                  p_tcb->TickCtrMatch = (OS_TICK        )0u;
+    355                  p_spoke->NbrEntries--;
+    356              }
+    357          }
+    358          
+    359          /*$PAGE*/
+    360          /*
+    361          ************************************************************************************************************************
+    362          *                                              RESET TICK LIST PEAK DETECTOR
+    363          *
+    364          * Description: This function is used to reset the peak detector for the number of entries in each spoke.
+    365          *
+    366          * Arguments  : void
+    367          *
+    368          * Returns    : none
+    369          *
+    370          * Note(s)    : This function is INTERNAL to uC/OS-III and your application should not call it.
+    371          ************************************************************************************************************************
+    372          */
+    373          
+    374          
+    375          void  OS_TickListResetPeak (void)
+    376          {
+    377              OS_TICK_SPOKE_IX   i;
+    378              OS_TICK_SPOKE     *p_spoke;
+    379          
+    380          
+    381          
+    382              for (i = 0u; i < OSCfg_TickWheelSize; i++) {
+    383                  p_spoke                = (OS_TICK_SPOKE *)&OSCfg_TickWheel[i];
+    384                  p_spoke->NbrEntriesMax = (OS_OBJ_QTY     )0u;
+    385              }
+    386          }
+    387          
+    388          /*$PAGE*/
+    389          /*
+    390          ************************************************************************************************************************
+    391          *                                                UPDATE THE TICK LIST
+    392          *
+    393          * Description: This function is called when a tick occurs and determines if the timeout waiting for a kernel object has
+    394          *              expired or a delay has expired.
+    395          *
+    396          * Arguments  : non
+    397          *
+    398          * Returns    : none
+    399          *
+    400          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    401          ************************************************************************************************************************
+    402          */
+    403          
+    404          void  OS_TickListUpdate (void)
+    405          {
+    406              CPU_BOOLEAN        done;
+    407              OS_TICK_SPOKE     *p_spoke;
+    408              OS_TCB            *p_tcb;
+    409              OS_TCB            *p_tcb_next;
+    410              OS_TICK_SPOKE_IX   spoke;
+    411              CPU_TS             ts_start;
+    412              CPU_TS             ts_end;
+    413              CPU_SR_ALLOC();
+    414          
+    415          
+    416              OS_CRITICAL_ENTER();
+    417              ts_start = OS_TS_GET();
+    418              OSTickCtr++;                                                       /* Keep track of the number of ticks           */
+    419              spoke    = (OS_TICK_SPOKE_IX)(OSTickCtr % OSCfg_TickWheelSize);
+    420              p_spoke  = &OSCfg_TickWheel[spoke];
+    421              p_tcb    = p_spoke->FirstPtr;
+    422              done     = DEF_FALSE;
+    423              while (done == DEF_FALSE) {
+    424                  if (p_tcb != (OS_TCB *)0) {
+    425                      p_tcb_next = p_tcb->TickNextPtr;                           /* Point to next TCB to update                 */
+    426                      switch (p_tcb->TaskState) {
+    427                          case OS_TASK_STATE_RDY:
+    428                          case OS_TASK_STATE_PEND:
+    429                          case OS_TASK_STATE_SUSPENDED:
+    430                          case OS_TASK_STATE_PEND_SUSPENDED:
+    431                               break;
+    432          
+    433                          case OS_TASK_STATE_DLY:
+    434                               p_tcb->TickRemain = p_tcb->TickCtrMatch           /* Compute time remaining of current TCB       */
+    435                                                 - OSTickCtr;
+    436                               if (OSTickCtr == p_tcb->TickCtrMatch) {           /* Process each TCB that expires               */
+    437                                   p_tcb->TaskState = OS_TASK_STATE_RDY;
+    438                                   OS_TaskRdy(p_tcb);                            /* Make task ready to run                      */
+    439                               } else {
+    440                                   done             = DEF_TRUE;                  /* Don't find a match, we're done!             */
+    441                               }
+    442                               break;
+    443          
+    444                          case OS_TASK_STATE_PEND_TIMEOUT:
+    445                               p_tcb->TickRemain = p_tcb->TickCtrMatch           /* Compute time remaining of current TCB       */
+    446                                                 - OSTickCtr;
+    447                               if (OSTickCtr == p_tcb->TickCtrMatch) {           /* Process each TCB that expires               */
+    448          #if (OS_MSG_EN > 0u)
+    449                                   p_tcb->MsgPtr     = (void      *)0;
+    450                                   p_tcb->MsgSize    = (OS_MSG_SIZE)0u;
+    451          #endif
+    452                                   p_tcb->TS         = OS_TS_GET();
+    453                                   OS_PendListRemove(p_tcb);                     /* Remove from wait list                       */
+    454                                   OS_TaskRdy(p_tcb);
+    455                                   p_tcb->TaskState  = OS_TASK_STATE_RDY;
+    456                                   p_tcb->PendStatus = OS_STATUS_PEND_TIMEOUT;   /* Indicate pend timed out                     */
+    457                                   p_tcb->PendOn     = OS_TASK_PEND_ON_NOTHING;  /* Indicate no longer pending                  */
+    458                               } else {
+    459                                   done              = DEF_TRUE;                 /* Don't find a match, we're done!             */
+    460                               }
+    461                               break;
+    462          
+    463                          case OS_TASK_STATE_DLY_SUSPENDED:
+    464                               p_tcb->TickRemain = p_tcb->TickCtrMatch           /* Compute time remaining of current TCB       */
+    465                                                 - OSTickCtr;
+    466                               if (OSTickCtr == p_tcb->TickCtrMatch) {           /* Process each TCB that expires               */
+    467                                   p_tcb->TaskState  = OS_TASK_STATE_SUSPENDED;
+    468                                   OS_TickListRemove(p_tcb);                     /* Remove from current wheel spoke             */
+    469                               } else {
+    470                                   done              = DEF_TRUE;                 /* Don't find a match, we're done!             */
+    471                               }
+    472                               break;
+    473          
+    474                          case OS_TASK_STATE_PEND_TIMEOUT_SUSPENDED:
+    475                               p_tcb->TickRemain = p_tcb->TickCtrMatch           /* Compute time remaining of current TCB       */
+    476                                                 - OSTickCtr;
+    477                               if (OSTickCtr == p_tcb->TickCtrMatch) {           /* Process each TCB that expires               */
+    478          #if (OS_MSG_EN > 0u)
+    479                                   p_tcb->MsgPtr     = (void      *)0;
+    480                                   p_tcb->MsgSize    = (OS_MSG_SIZE)0u;
+    481          #endif
+    482                                   p_tcb->TS         = OS_TS_GET();
+    483                                   OS_PendListRemove(p_tcb);                     /* Remove from wait list                       */
+    484                                   OS_TickListRemove(p_tcb);                     /* Remove from current wheel spoke             */
+    485                                   p_tcb->TaskState  = OS_TASK_STATE_SUSPENDED;
+    486                                   p_tcb->PendStatus = OS_STATUS_PEND_TIMEOUT;   /* Indicate pend timed out                     */
+    487                                   p_tcb->PendOn     = OS_TASK_PEND_ON_NOTHING;  /* Indicate no longer pending                  */
+    488                               } else {
+    489                                   done              = DEF_TRUE;                 /* Don't find a match, we're done!             */
+    490                               }
+    491                               break;
+    492          
+    493                          default:
+    494                               break;
+    495                      }
+    496                      p_tcb = p_tcb_next;
+    497                  } else {
+    498                      done  = DEF_TRUE;
+    499                  }
+    500              }
+    501              ts_end = OS_TS_GET() - ts_start;                                   /* Measure execution time of tick task         */
+    502              if (ts_end > OSTickTaskTimeMax) {
+    503                  OSTickTaskTimeMax = ts_end;
+    504              }
+    505              OS_CRITICAL_EXIT();
+    506          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   OS_TickListInit
+      12   OS_TickListInsert
+       0   OS_TickListRemove
+       0   OS_TickListResetPeak
+      32   OS_TickListUpdate
+        32   -> CPU_IntDisMeasStart
+        32   -> CPU_IntDisMeasStop
+         0   -> CPU_SR_Restore
+        32   -> CPU_SR_Save
+        32   -> CPU_TS_TmrRd
+        32   -> OS_PendListRemove
+        32   -> OS_TaskRdy
+        32   -> OS_TickListRemove
+      16   OS_TickTask
+        16   -> OSTaskSemPend
+        16   -> OS_TickListUpdate
+      48   OS_TickTaskInit
+        48   -> OSTaskCreate
+        48   -> OS_TickListInit
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_10
+       4  ??DataTable6_11
+       4  ??DataTable6_2
+       4  ??DataTable6_3
+       4  ??DataTable6_4
+       4  ??DataTable6_5
+       4  ??DataTable6_6
+       4  ??DataTable6_7
+       4  ??DataTable6_8
+       4  ??DataTable6_9
+      20  ?_0
+      32  OS_TickListInit
+     240  OS_TickListInsert
+      58  OS_TickListRemove
+      28  OS_TickListResetPeak
+     364  OS_TickListUpdate
+      38  OS_TickTask
+      88  OS_TickTaskInit
+
+ 
+ 916 bytes in section .text
+ 
+ 916 bytes of CODE memory
+
+Errors: none
+Warnings: none

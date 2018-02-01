@@ -1,0 +1,425 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        30/Jan/2018  14:31:26
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_telecom_prot_manage.c
+#    Command line =  
+#        D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_telecom_prot_manage.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_MD -D USE_STM3210B_EVAL -lcN
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List
+#        -o
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj
+#        --no_unroll --no_inline --no_tbaa --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.2\arm\INC\c\DLib_Config_Full.h" -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\BSP\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-CPU\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uC-LIB\Ports\ARM-Cortex-M3\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Source\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\OS\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\CMSIS\CM3\CoreSupport\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\Utility\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart1\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart2\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\user_debug\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\dev_manage\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\sim800\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\protocol_communication\protocol_jt808\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rtc\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\gps\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\network_layer\nwl_uart3\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\modem\quecelMC20\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\rf\
+#        -I
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\..\..\App\internal_flash\
+#        -Om --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\CMSIS\Include\"
+#    List file    =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\List\jt808_telecom_prot_manage.lst
+#    Object file  =  
+#        D:\SmartCardBox\SMART_CARD\Project\STM32F10x_StdPeriph_Template\EWARM\STM3210B-EVAL\Obj\jt808_telecom_prot_manage.o
+#
+###############################################################################
+
+D:\SmartCardBox\SMART_CARD\Project\App\protocol_communication\protocol_jt808\jt808_telecom_prot_manage.c
+      1          #include "user_system_cfg.h"
+      2          
+      3          #ifdef USE_PROTOCOL_JT808
+      4          
+      5          #include <stdint.h>
+      6          #include <stdio.h>
+      7          #include <stdlib.h>
+      8          #include "os.h"
+      9          #ifdef USE_SIM800_MODEM
+     10          #include "modem_sim800_app.h"
+     11          #endif
+     12          #ifdef USE_SIM6320_MODEM
+     13          #include "modem_sim6320_app.h"
+     14          #endif
+     15          
+     16          #ifdef USE_MC20_MODEM
+     17          #include "modem_MC20_app.h"
+     18          #endif
+     19          
+     20          
+     21          #include "jt808_telecom_prot_manage.h"
+     22          #include "user_debug_app.h"
+     23          
+     24          #include "os_cfg_app.h"			//TCB,STACK,PRIORITY,任务间消息的结构体定义和宏
+     25          
+     26          
+     27          #include "jt808_protocol_rx.h"
+     28          #include "jt808_protocol_tx.h"
+     29          #include "jt808_pt_misc.h"
+     30          
+     31          
+     32          static USER_AIR_PROTOCOL_NET_MANAGE_T AirProtocol_link_manager={0};
+     33          
+     34          //----终端登录状态标志位1登录，0未登录---
+     35          uint8_t get_already_login_flag(void)
+     36          {
+     37          	if(AIR_PT_STA_LOGIN_OK == AirProtocol_link_manager.link_state )
+     38          	{
+     39          		return 1;
+     40          	}
+     41          	else
+     42          	{
+     43          		return 0;
+     44          	}	
+     45          }
+     46          
+     47          static void telecom_prot_manage_task_msg_handle(TASK_MSG_T *p_msg)
+     48          {
+     49          	OS_ERR os_err;
+     50          	uint8_t error_flag=0;
+     51          	uint8_t temp;
+     52          	switch(p_msg->msg_father_type)
+     53          	{
+     54          		case FATHER_MSG_T_TASK_POWER_CTRL:
+     55          			if(POWER_CTRL_PWR_ON == p_msg->msg_son_type)
+     56          			{
+     57          				InfoPrintf("report task rx ctl msg: pwr on\r\n");
+     58          			}
+     59          			else if(POWER_CTRL_SLEEP== p_msg->msg_son_type)
+     60          			{
+     61          				user_delay_ms(TIME_50ms);
+     62          				InfoPrintf("report task rx ctl msg: sleep\r\n");
+     63          				AirProtocol_link_manager.link_state = AIR_PT_STA_CONN_OFF;
+     64          				OSTmrStop(&period_report_tmr,OS_OPT_TMR_NONE,NULL,&os_err);
+     65          				OSTaskSuspend(NULL,&os_err);
+     66          			}
+     67          			else if(POWER_CTRL_WAKEUP== p_msg->msg_son_type )
+     68          			{
+     69          				InfoPrintf("report task rx ctl msg: wake up\r\n");
+     70          				change_report_period(get_report_period());
+     71          			}
+     72          			else
+     73          			{
+     74          				error_flag=2;
+     75          			}
+     76          			break;
+     77          		case FATHER_MSG_T_MODEM_SOCKET_STATE:
+     78          			InfoPrintf("report task rx msg:socket state=%u\r\n",p_msg->msg_son_type); 
+     79          			temp = p_msg->msg_son_type;
+     80          			if(temp==0)
+     81          			{
+     82          				AirProtocol_link_manager.link_state=AIR_PT_STA_CONN_OFF;
+     83          				AirProtocol_link_manager.login_step=0;
+     84          				AirProtocol_link_manager.logout_step=0;
+     85          			}
+     86          			else if(temp==1)
+     87          			{
+     88          				AirProtocol_link_manager.link_state=AIR_PT_STA_SOCKET_CREATE_OK;
+     89          				AirProtocol_link_manager.login_step=1;
+     90          			}		
+     91          			break;
+     92          		case FATHER_MSG_T_ACC_STATUS_INDICATION:
+     93          			//InfoPrintf("report task rx msg:ACC=%u\r\n",p_msg->msg_son_type);
+     94          			break;
+     95          		case FATHER_MSG_T_REPORT_DATA:
+     96          			//可用于警情上报 等等， 及时上报，不需进入缓冲池
+     97          			break;
+     98          		case FATHER_MSG_T_ACK_TO_SERVER_SET:
+     99          			//暂时屏蔽
+    100          			//InfoPrintf("report task rx msg:ack to server set,cmd=0x%04X,result=%d\r\n",p_msg->msg_son_type,p_msg->result);
+    101          			/*ack_server_set_param(p_msg->serial,p_msg->msg_son_type,p_msg->result);
+    102          
+    103          			if(DN_SET_REPORT_PERIOD_MSG_ID == p_msg->msg_son_type)
+    104          			{
+    105          				change_report_period(get_report_period());
+    106          			}*/
+    107          			break;
+    108          		case FATHER_MSG_T_ACK_TO_SERVER_QRY:
+    109          			//暂时屏蔽
+    110          			//InfoPrintf("report task rx msg:ack to server qry\r\n");
+    111          			//ack_server_query_param(p_msg->serial,p_msg->msg_son_type);
+    112          		break;
+    113          
+    114          		default:
+    115          			error_flag=5;
+    116          			break;
+    117          		
+    118          	}
+    119          	
+    120          	if(error_flag!=0)
+    121          	{
+    122          		InfoPrintf("report task rx err msg:---%d---!!!\r\n",error_flag);
+    123          	}
+    124          }
+    125          
+    126          #define ______COMMUNICATION__TASK__________________________________________________
+    127          
+    128          void telecom_protocol_manage_task(void*p_para)
+    129          {
+    130          	OS_ERR os_err;
+    131          	static uint16_t msg_size;
+    132          	uint32_t last_time=0;
+    133          	static uint32_t last_prot_time=0;
+    134          	//uint8_t i;
+    135          	//uint8_t *ptr;
+    136          	TASK_MSG_T *p_msg;
+    137          
+    138          	p_para = p_para;
+    139          	//=====read the period report time
+    140          	
+    141          	#if 1
+    142          	OSTaskCreate((OS_TCB     *)&remote_receive_task_Tcb,
+    143          			     (CPU_CHAR   *)((void *)"remote receive Task"),
+    144          			     (OS_TASK_PTR )remote_receive_task,
+    145          			     (void       *)0,
+    146          			     (OS_PRIO     )REMOTE_RECEIVE_TASK_PRIO,
+    147          			     (CPU_STK    *)remote_receive_task_stk,
+    148          			     (CPU_STK_SIZE)(REMOTE_RECEIVE_TASK_STK_SIZE/10),
+    149          			     (CPU_STK_SIZE)REMOTE_RECEIVE_TASK_STK_SIZE,
+    150          			     (OS_MSG_QTY  )REMOTE_RECEIVE_TASK_MSG_QTY,
+    151          			     (OS_TICK     )REMOTE_RECEIVE_TASK_TIME_QUANTA,
+    152          			     (void       *)0,
+    153          			     (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    154          			     (OS_ERR     *)&os_err);
+    155          	if(os_err!=OS_ERR_NONE)
+    156          	{
+    157          		return ;
+    158          	}
+    159          	else
+    160          	{
+    161          		InfoPrintf("remote receive Task created ok\r\n");
+    162          	}
+    163          	#endif
+    164          
+    165          	#if 1
+    166          	OSTaskCreate(&remote_report_task_Tcb,
+    167          				"remote_report_task Tcb",
+    168          				(OS_TASK_PTR)    remote_report_task,
+    169          				(void          *)NULL,
+    170          				REMOTE_REPORT_TASK_PRIO,
+    171          				(CPU_STK 	*)  remote_report_task_stk,
+    172          				(CPU_STK_SIZE)  REMOTE_REPORT_TASK_STK_SIZE/10,/* limit*/
+    173          				(CPU_STK_SIZE)  REMOTE_REPORT_TASK_STK_SIZE,
+    174          				(OS_MSG_QTY)    REMOTE_REPORT_TASK_MSG_QTY,
+    175          				(OS_TICK )      REMOTE_REPORT_TASK_TIME_QUANTA,
+    176          				(void  *)       NULL,
+    177          				(OS_OPT)        (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    178          				&os_err);	
+    179          
+    180          	if(os_err != OS_ERR_NONE)
+    181          	{
+    182          		InfoPrintf("creat remote_report task failed !!!\r\n");
+    183          	}
+    184          	#endif
+    185          
+    186          	
+    187          	AirProtocol_link_manager.link_state = AIR_PT_STA_CONN_OFF;
+    188          
+    189          	while(1)
+    190          	{			
+    191          		do
+    192          		{
+    193          			p_msg = (TASK_MSG_T *)OSTaskQPend(T_10MS*2,OS_OPT_PEND_BLOCKING,&msg_size,NULL,&os_err);	
+    194          	        if(NULL != p_msg)
+    195          			{
+    196          				telecom_prot_manage_task_msg_handle(p_msg);
+    197          				user_free(p_msg,__FUNCTION__);
+    198          			}
+    199          			
+    200          		}while(NULL != p_msg);
+    201          
+    202          
+    203          		//-----log in && out manage----------------------------------------------------------
+    204          		if(AirProtocol_link_manager.login_step == 0)
+    205          		{
+    206          			last_prot_time=user_get_os_time();
+    207          		}
+    208          		
+    209          		if(AirProtocol_link_manager.login_step > 0)
+    210          		{//login ...
+    211          			AirProtocol_link_manager.logout_step=0;	
+    212          			
+    213          			if(AirProtocol_link_manager.login_step==1)
+    214          			{
+    215          				if(get_register_ok_flag()==0)
+    216          				{
+    217          					InfoPrintf("register.......\r\n");
+    218          					//if(jt808_pack_and_rep_register_frame()==0)
+    219          					if(1)
+    220          					{
+    221          						InfoPrintf("register ok\r\n");
+    222          						AirProtocol_link_manager.login_step=2;
+    223          						last_prot_time=user_get_os_time();
+    224          					}
+    225          					else
+    226          					{
+    227          						user_delay_ms(3000);
+    228          					}
+    229          
+    230          					if(OSTimeGet(&os_err)-last_prot_time >= T_1MIN)
+    231          					{
+    232          						AirProtocol_link_manager.login_step=0;
+    233          						modem_ReCreat_socket();	
+    234          					}
+    235          				}
+    236          				else
+    237          				{
+    238          					AirProtocol_link_manager.login_step=2;
+    239          				}
+    240          				//AirProtocol_link_manager.login_step=2; //zgc
+    241          			}
+    242          			else if(AirProtocol_link_manager.login_step==2)
+    243          			{
+    244          				InfoPrintf("login........\r\n");
+    245          				if(jt808_pack_and_rep_login_frame()==0)
+    246          				{
+    247          					InfoPrintf("login ok\r\n");
+    248          					AirProtocol_link_manager.link_state = AIR_PT_STA_LOGIN_OK;
+    249          					AirProtocol_link_manager.login_step=0;
+    250          				}
+    251          				else
+    252          				{
+    253          					user_delay_ms(3000);
+    254          					InfoPrintf("telecom_protocol_manage task:login failed\r\n");
+    255          				}
+    256          			}
+    257          		}
+    258          		else if(AirProtocol_link_manager.logout_step > 0)
+    259          		{//req logout ...
+    260          			//sgmw_logout();
+    261          			AirProtocol_link_manager.link_state = AIR_PT_STA_LOGOUT_OK;	
+    262          			
+    263          			AirProtocol_link_manager.logout_step=0;	
+    264          			AirProtocol_link_manager.login_step=0;
+    265          		}
+    266          
+    267          		if(user_get_os_time()-last_time>T_1S)
+    268          		{
+    269          			last_time=user_get_os_time();
+    270          			//InfoPrintf("telecom_protocol_manage task loop...\r\n");
+    271          		}
+    272          	}
+    273          }
+    274          
+    275          
+    276          #endif
+    277          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   get_already_login_flag
+      16   telecom_prot_manage_task_msg_handle
+        16   -> InfoPrintf
+        16   -> OSTaskSuspend
+        16   -> OSTmrStop
+        16   -> change_report_period
+        16   -> get_report_period
+        16   -> user_delay_ms
+      56   telecom_protocol_manage_task
+        56   -> InfoPrintf
+        56   -> OSTaskCreate
+        56   -> OSTaskQPend
+        56   -> OSTimeGet
+        56   -> get_register_ok_flag
+        56   -> jt808_pack_and_rep_login_frame
+        56   -> modem_ReCreat_socket
+        56   -> telecom_prot_manage_task_msg_handle
+        56   -> user_delay_ms
+        56   -> user_free
+        56   -> user_get_os_time
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable17
+       4  ??DataTable17_1
+       4  ??DataTable17_2
+       4  ??DataTable17_3
+       4  ??DataTable17_4
+       4  ??DataTable17_5
+       4  ??DataTable17_6
+       4  ??DataTable17_7
+      36  ?_0
+      32  ?_1
+      16  ?_10
+      16  ?_11
+      12  ?_12
+      44  ?_13
+      36  ?_2
+      40  ?_3
+      40  ?_4
+      20  ?_5
+      36  ?_6
+      24  ?_7
+      40  ?_8
+      20  ?_9
+      10  AirProtocol_link_manager
+          last_prot_time
+          msg_size
+      16  get_already_login_flag
+     170  telecom_prot_manage_task_msg_handle
+     372  telecom_protocol_manage_task
+      32  -- Other
+
+ 
+    10 bytes in section .bss
+ 1 034 bytes in section .text
+ 
+ 1 034 bytes of CODE memory
+    10 bytes of DATA memory
+
+Errors: none
+Warnings: 4
