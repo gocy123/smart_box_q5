@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        01/Feb/2018  10:27:30
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        05/Feb/2018  13:43:45
 # Copyright 1999-2015 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
@@ -173,9 +173,9 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
      95          	
      96          	InfoPrintf("power_on_smart card()\r\n");
      97          	KEY_PWR_ON;
-     98          	smart_card_need_dly_pwr_off_flag=1;
-     99          	smart_card_pwr_status=1;
-    100          	remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+     98          	smart_card_pwr_status=1;
+     99          	remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+    100          	smart_card_need_dly_pwr_off_flag=1;
     101          }
     102          
     103          void power_off_smart_card(void)
@@ -211,1890 +211,1944 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
     133          		{
     134          			DelayXms(time);  //延时，下次鸣叫
     135          		}
-    136          	}
-    137          }
-    138          
-    139          void AddTimeDriveAlarm(u8 index, u16 time) 
-    140          {
-    141          	while(index) 
-    142          	{
-    143          		BEEP_ON; 
-    144          		//LED_ON;
-    145          		DelayXms(time);  
-    146          		BEEP_OFF; 
-    147          		//LED_OFF;
-    148          		
-    149          		if(--index == 0) 
-    150          		{
-    151          			break; //鸣叫结束
-    152          		}
-    153          		else
-    154          		{
-    155          			DelayXms(time);  //延时，下次鸣叫
-    156          		}
-    157          	}
-    158          }
-    159          
-    160          void LED_flash(u8 index, u16 time) 
-    161          {
-    162          	while(index) 
-    163          	{
-    164          		//LED_ON;
-    165          		DelayXms(time);  
-    166          		//LED_OFF;
-    167          		
-    168          		if(--index == 0) 
-    169          		{
-    170          			break; //鸣叫结束
-    171          		}
-    172          		else
-    173          		{
-    174          			DelayXms(time);  //延时，下次鸣叫
-    175          		}
-    176          	}
-    177          }
-    178          
-    179          void control_car_power(CAR_POWER_STATUS ctl) 
-    180          {
-    181          	OS_ERR os_err;
-    182          	
-    183          	InfoPrintf("control_car_power(%d)\r\n",ctl);
-    184          	switch(ctl)
-    185          	{
-    186          		case CAR_OFF: //OFF档
-    187          			CAR_START_KEY_ON;
-    188          			DelayXms(1000);
-    189          			CAR_START_KEY_OFF;
-    190          			DelayXms(100);
-    191          			CAR_START_KEY_ON;
-    192          			DelayXms(300);
-    193          			CAR_START_KEY_OFF;
-    194          			break; 
-    195          		case CAR_ACC: //ACC档
-    196          			//START_OFF; 
-    197          			//ON_OFF; 
-    198          			//ACC_ON; 
-    199          			DelayXms(50);
-    200          			break;  
-    201          		case CAR_ON : //ON档
-    202          			//ACC_ON; 
-    203          			//ON_ON;  
-    204          			DelayXms(700);
-    205          			//START_OFF; 
-    206          			break;  
-    207          		case CAR_RUN: //点火
-    208          			CAR_START_KEY_ON;
-    209          			DelayXms(800);
-    210          			CAR_START_KEY_OFF;
-    211          			DelayXms(100);
-    212          			break; 
-    213          		default: 
-    214          			break;
-    215            	}
-    216          }
-    217          
+    136          		IWDG_ReloadCounter();
+    137          	}
+    138          }
+    139          
+    140          void AddTimeDriveAlarm(u8 index, u16 time) 
+    141          {
+    142          	while(index) 
+    143          	{
+    144          		BEEP_ON; 
+    145          		//LED_ON;
+    146          		DelayXms(time);  
+    147          		BEEP_OFF; 
+    148          		//LED_OFF;
+    149          		
+    150          		if(--index == 0) 
+    151          		{
+    152          			break; //鸣叫结束
+    153          		}
+    154          		else
+    155          		{
+    156          			DelayXms(time);  //延时，下次鸣叫
+    157          		}
+    158          	}
+    159          }
+    160          
+    161          void LED_flash(u8 index, u16 time) 
+    162          {
+    163          	while(index) 
+    164          	{
+    165          		//LED_ON;
+    166          		DelayXms(time);  
+    167          		//LED_OFF;
+    168          		
+    169          		if(--index == 0) 
+    170          		{
+    171          			break; //鸣叫结束
+    172          		}
+    173          		else
+    174          		{
+    175          			DelayXms(time);  //延时，下次鸣叫
+    176          		}
+    177          	}
+    178          }
+    179          
+    180          void control_car_power(CAR_POWER_STATUS ctl) 
+    181          {
+    182          	OS_ERR os_err;
+    183          	
+    184          	InfoPrintf("control_car_power(%d)\r\n",ctl);
+    185          	switch(ctl)
+    186          	{
+    187          		case CAR_OFF: //OFF档
+    188          			CAR_START_KEY_ON;
+    189          			DelayXms(1000);
+    190          			CAR_START_KEY_OFF;
+    191          			DelayXms(100);
+    192          			CAR_START_KEY_ON;
+    193          			DelayXms(300);
+    194          			CAR_START_KEY_OFF;
+    195          			break; 
+    196          		case CAR_ACC: //ACC档
+    197          			//START_OFF; 
+    198          			//ON_OFF; 
+    199          			//ACC_ON; 
+    200          			DelayXms(50);
+    201          			break;  
+    202          		case CAR_ON : //ON档
+    203          			//ACC_ON; 
+    204          			//ON_ON;  
+    205          			DelayXms(700);
+    206          			//START_OFF; 
+    207          			break;  
+    208          		case CAR_RUN: //点火
+    209          			CAR_START_KEY_ON;
+    210          			DelayXms(800);
+    211          			CAR_START_KEY_OFF;
+    212          			DelayXms(100);
+    213          			break; 
+    214          		default: 
+    215          			break;
+    216            	}
+    217          }
     218          
-    219          /*******************************************************************************
-    220          * Function Name  : ctl_car_remote_start_or_stop
-    221          * Description    : 设置汽车遥控点火
-    222          * Input          : None
-    223          * Output         : None
-    224          * Return         : None 
-    225          *******************************************************************************/
-    226          void ctl_car_remote_start(void) 
-    227          {	
-    228          	InfoPrintf("ctl_car_remote_start\r\n");
-    229          
-    230          	if(car_power != CAR_RUN)  	//未发动
-    231          	{
-    232          		power_on_smart_card();//智能卡2秒钟后要断电，防止砸玻璃偷车开走
-    233          		DelayXms(300);
-    234          		InfoPrintf("车辆未发动\r\n");		
-    235          		InfoPrintf("模拟踩刹车\r\n");
-    236          		BREAK_ON;
-    237          		DelayXms(400);
-    238          		InfoPrintf("远程发动!!!!!!\r\n");
-    239          		control_car_power(CAR_RUN);
-    240          		InfoPrintf("模拟踩刹车释放!!\r\n");
-    241          		BREAK_OFF;
-    242          		DelayXms(400);
-    243          		InfoPrintf("远程启动OK\r\n\r\n");
-    244          	}
-    245          	else
-    246          	{
-    247          		InfoPrintf("车辆已启动，无需再次启动\r\n\r\n");
-    248          	}
-    249          }
-    250          
-    251          void ctl_car_remote_stop(void) 
-    252          {	
-    253          	InfoPrintf("ctl_car_remote_stop...\r\n");
-    254          	control_car_power(CAR_OFF);
-    255          	DelayXms(200);	
-    256          	InfoPrintf("熄火成功\r\n");
-    257          
+    219          
+    220          /*******************************************************************************
+    221          * Function Name  : ctl_car_remote_start_or_stop
+    222          * Description    : 设置汽车遥控点火
+    223          * Input          : None
+    224          * Output         : None
+    225          * Return         : None 
+    226          *******************************************************************************/
+    227          void ctl_car_remote_start(void) 
+    228          {	
+    229          	OS_ERR os_err;
+    230          	InfoPrintf("ctl_car_remote_start\r\n");
+    231          
+    232          	if(car_power != CAR_RUN)  	//未发动
+    233          	{
+    234          		if(smart_card_pwr_status!=1)
+    235          		{
+    236          			power_on_smart_card();//智能卡2秒钟后要断电，防止砸玻璃偷车开走
+    237          		}
+    238          		
+    239          		DelayXms(300);
+    240          		InfoPrintf("车辆未发动\r\n");		
+    241          		InfoPrintf("模拟踩刹车\r\n");
+    242          		BREAK_ON;
+    243          		KEY_LOCK_ON;
+    244          		DelayXms(600);
+    245          		KEY_LOCK_OFF;
+    246          		InfoPrintf("远程发动!!!!!!\r\n");
+    247          		control_car_power(CAR_RUN);
+    248          		InfoPrintf("模拟踩刹车释放!!\r\n");
+    249          		DelayXms(400);//这个延时必须有
+    250          		BREAK_OFF;
+    251          		InfoPrintf("远程启动OK\r\n\r\n");
+    252          		remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+    253          	}
+    254          	else
+    255          	{
+    256          		InfoPrintf("车辆已启动，无需再次启动\r\n\r\n");
+    257          	}
     258          }
     259          
-    260          
-    261          
-    262          void GPIO_Configuration(void)
-    263          {
-    264          	#if 1
-    265          	GPIO_InitTypeDef GPIO_InitStructure;
+    260          void ctl_car_remote_stop(void) 
+    261          {	
+    262          	InfoPrintf("ctl_car_remote_stop...\r\n");
+    263          	control_car_power(CAR_OFF);
+    264          	DelayXms(200);	
+    265          	InfoPrintf("熄火成功\r\n");
     266          
-    267          	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable, ENABLE);  //失能JTAG,使能SWD
+    267          }
     268          
-    269          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;
-    270          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-    271          	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-    272          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
-    273          	GPIO_Init(GPIOB, &GPIO_InitStructure); 
-    274          
+    269          
+    270          
+    271          void GPIO_Configuration(void)
+    272          {
+    273          	#if 1
+    274          	GPIO_InitTypeDef GPIO_InitStructure;
     275          
-    276          	//A口 输入
-    277          	#ifdef EN_ADC1_CHN1
-    278          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_BAT_CHECK;
-    279          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
-    280          	GPIO_Init(GPIOA, &GPIO_InitStructure);
-    281          	#else
-    282          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_ON_DETECT;
-    283          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-    284          	GPIO_Init(GPIOA, &GPIO_InitStructure);
-    285          	#endif
-    286          	//A口 上拉输入
-    287          	GPIO_InitStructure.GPIO_Pin =  GPIO_PIN_RX_MISO ;
-    288          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-    289          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
-    290          	
-    291          	//A口 悬浮输入
-    292          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_RX_RX|GPIO_PIN_CHECK_BREAK; 
-    293          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-    294          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
-    295          	
-    296          	//A口 推挽输出
-    297          	GPIO_InitStructure.GPIO_Pin= GPIO_PIN_RX_SCK
-    298          								|GPIO_PIN_RX_SEL
-    299          								|GPIO_PIN_RX_MOSI;
-    300          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    301          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
-    302          
-    303          	//A口 上啦输入
-    304          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_RX_RX; 
-    305          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-    306          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
-    307          	
-    308          	//A口 复用推挽输出
-    309          
-    310          
-    311          	
-    312          
-    313          	//B口 下拉输入
-    314          	//GPIO_InitStructure.GPIO_Pin = GPIO_PIN_STARTKEY;
-    315          	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
-    316          	//GPIO_Init(GPIOB, &GPIO_InitStructure);
-    317          	
-    318          	//B口 上拉输入
-    319          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_ACC_DETECT|GPIO_PIN_STUDYKEY;
-    320          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-    321          	GPIO_Init(GPIOB, &GPIO_InitStructure);
-    322          
-    323          	//B口 悬浮输入
-    324          	
-    325          	//B口 开漏输出
-    326          	//GPIO_InitStructure.GPIO_Pin = GPIO_PIN_LED;
-    327          	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
-    328          	//GPIO_Init(GPIOB, &GPIO_InitStructure); 
-    329          	
-    330          	//B口 推挽输出
-    331          	GPIO_InitStructure.GPIO_Pin =   GPIO_PIN_START_KEY|GPIO_PIN_BREAK_OUT |GPIO_PIN_BEEP|
-    332          	                                GPIO_PIN_KEY_PWR|KEY_PIN_UNLOCK|KEY_PIN_LOCK|KEY_PIN_TRUNK|KEY_PIN_ALARM;
-    333          	GPIO_InitStructure.GPIO_Mode =  GPIO_Mode_Out_PP;
-    334          	GPIO_Init(GPIOB, &GPIO_InitStructure);
-    335          	
-    336          	//B口 复用推挽输出
-    337          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_125KL| GPIO_PIN_125KR;
-    338          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-    339          	GPIO_Init(GPIOB, &GPIO_InitStructure);
-    340          	
-    341          	KEY_UNLOCK_OFF;
-    342          	KEY_LOCK_OFF;;
-    343          	KEY_TRUNK_OFF;
-    344          	KEY_ALARM_OFF;
-    345          	CAR_START_KEY_OFF;
-    346          	BEEP_OFF;
-    347          	#endif
-    348          }
-    349          
-    350          
-    351          uc8 BasePlus[42] = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,1,0,0,1,1,0,0,1,0};	//LF信号引导
-    352          u16 lf_dst_WUPA=0x4148;
-    353          u16 lf_dst_WUPB=0x0000;
-    354          u8  main_key_sn=0;
-    355          u8 enable_lf_tx_flag=1;
-    356          /*******************************************************************************
-    357          * Function Name : LFSendData
-    358          * Description 	: 低频编码发送物理层函数
-    359          * Input         : lfdata - 发送的数据指针
-    360                            lfcount - 发送的数据字节数
-    361                            outchannel - 选择发送的通道号
-    362          * Output        : None
-    363          * Return        : None
-    364          *******************************************************************************/
-    365          void LFSendData(u8 *lfdata, u8 lfcount, u16 outchannel) 
-    366          {
-    367          	//#define LFSendData_print
-    368          	u8 index = 0;
-    369          	u16 t2cycle = 64;
-    370          	u8  DataPlus[96]={0};
-    371          	//u32 i;
-    372          	u8 a,b;
-    373          	OS_ERR os_err;
-    374          
-    375          	//return;
-    376          
-    377          	OSSchedLock(&os_err);
-    378          
-    379          	#ifdef LFSendData_print
-    380          	InfoPrintf("LFSendData(");
-    381          	for(a=0;a<lfcount;a++)
-    382          	{
-    383          		InfoPrintf("%02X,",lfdata[a]);
-    384          	}
-    385          	InfoPrintf(")\r\n");
-    386          	#else
-    387          	//InfoPrintf(".");
-    388          	#endif
-    389          	
-    390          	/*
-    391          	字节内是大端(高位在前)方式传送，字节间是小端方式
-    392          	*/
-    393          
-    394          	//每个字节的数据需要用16位的bit流来表示,所以需要乘以16
-    395          	//(曼码:一位需要一高一低的电平,所以一个字节8位,8x2==16); zgc add
-    396          	lfcount = lfcount << 4; 			
-    397          	for(index = 0; index < lfcount; ) 	//将发送的数据，转化成比特流数组
-    398          	{
-    399          		a=lfdata[index >> 4];
-    400          		b=(1 << (7 - ((index >> 1) & 0x07)));
-    401          	
-    402          		//if((lfdata[index >> 4] & (1 << (7 - ((index >> 1) & 0x07)))) != 0) 
-    403          		if((a & b) != 0) 
-    404          		{
-    405          			DataPlus[index++] = 0;
-    406          			DataPlus[index++] = 1;
-    407          		}
-    408          		else 
-    409          		{
-    410          			DataPlus[index++] = 1;
-    411          			DataPlus[index++] = 0;
-    412          		}
-    413          	}
-    414          	
-    415          	TIM2_counting_now_flag = TRUE;
-    416          	TIM_Cmd(TIM2, ENABLE);
-    417          	//NVIC_SETFAULTMASK();
-    418          	TIM_Cmd(LF125K_TIMx, ENABLE);
-    419          	TIM_CtrlPWMOutputs(LF125K_TIMx, ENABLE);	//开启定时器计数
-    420          	TIM_CCxCmd(LF125K_TIMx, LF125KR_Channelx, TIM_CCx_Disable);
-    421          	TIM_CCxCmd(LF125K_TIMx, LF125KL_Channelx, TIM_CCx_Disable);
-    422          	TIM_SetCounter(TIM2, 0);//清零  
-    423          	__disable_irq();
-    424          	
-    425          	//发送引导脉冲
-    426          	for(index = 0; index < 42; index++) 	
-    427          	{
-    428          		if(index == 0) 
-    429          		{
-    430          			TIM_CCxCmd(LF125K_TIMx, outchannel, BasePlus[index] == 0 ? TIM_CCx_Disable : TIM_CCx_Enable);
-    431          		}
-    432          		else 
-    433          		{
-    434          			if(BasePlus[index] == 0) 
-    435          			{
-    436          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Disable);
-    437          			}
-    438          			else if(BasePlus[index - 1] == 0) //连续两个1，中间不再重新启动PWM，防止波形畸变
-    439          			{
-    440          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Enable);
-    441          			}
-    442          		}
-    443          		
-    444          		while(TIM_GetCounter(TIM2) < t2cycle && TIM2_counting_now_flag == TRUE) 
-    445          		{
-    446          		}
-    447          		
-    448          		t2cycle += 64;  //2*64=128us
-    449          	}
-    450          
-    451          	#if 1
-    452          	//发送数据脉冲
-    453          	for(index = 0; index < lfcount; index++) 	
-    454          	{
-    455          		if(index == 0) 
-    456          		{
-    457          			TIM_CCxCmd(LF125K_TIMx, outchannel, DataPlus[index] == 0 ? TIM_CCx_Disable : TIM_CCx_Enable);
-    458          		}
-    459          		else 
-    460          		{
-    461          			if(DataPlus[index] == 0) 
-    462          			{
-    463          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Disable);
-    464          			}
-    465          			else if(DataPlus[index - 1] == 0)//连续两个1，中间不再重新启动PWM，防止波形畸变 
-    466          			{
-    467          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Enable);
-    468          			}
-    469          		}
-    470          		
-    471          		while(TIM_GetCounter(TIM2) < t2cycle && TIM2_counting_now_flag == TRUE) 
-    472          		{
-    473          		}
-    474          		
-    475          		t2cycle += 64;	//2*64=128us
-    476          	}
-    477          	#endif
-    478          	__enable_irq();
-    479          	
-    480          	TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Disable);
-    481          	TIM_Cmd(TIM2, DISABLE);
-    482          	//while(1);
-    483          
-    484          
-    485          	
-    486          	TIM_Cmd(LF125K_TIMx, DISABLE);
-    487          	TIM2_counting_now_flag = FALSE;
-    488          
-    489          	
-    490          	
-    491          	OSSchedUnlock(&os_err);
+    276          	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable, ENABLE);  //失能JTAG,使能SWD
+    277          
+    278          	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;
+    279          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    280          	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+    281          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
+    282          	GPIO_Init(GPIOB, &GPIO_InitStructure); 
+    283          
+    284          
+    285          	//A口 输入
+    286          	#ifdef EN_ADC1_CHN1
+    287          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_BAT_CHECK;
+    288          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
+    289          	GPIO_Init(GPIOA, &GPIO_InitStructure);
+    290          	#else
+    291          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_ON_DETECT;
+    292          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    293          	GPIO_Init(GPIOA, &GPIO_InitStructure);
+    294          	#endif
+    295          	//A口 上拉输入
+    296          	GPIO_InitStructure.GPIO_Pin =  GPIO_PIN_RX_MISO ;
+    297          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    298          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
+    299          	
+    300          	//A口 悬浮输入
+    301          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_RX_RX|GPIO_PIN_CHECK_BREAK; 
+    302          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    303          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
+    304          	
+    305          	//A口 推挽输出
+    306          	GPIO_InitStructure.GPIO_Pin= GPIO_PIN_RX_SCK
+    307          								|GPIO_PIN_RX_SEL
+    308          								|GPIO_PIN_RX_MOSI;
+    309          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    310          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
+    311          
+    312          	//A口 上啦输入
+    313          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_RX_RX; 
+    314          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    315          	GPIO_Init(GPIOA, &GPIO_InitStructure); 
+    316          	
+    317          	//A口 复用推挽输出
+    318          
+    319          
+    320          	
+    321          
+    322          	//B口 下拉输入
+    323          	//GPIO_InitStructure.GPIO_Pin = GPIO_PIN_STARTKEY;
+    324          	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
+    325          	//GPIO_Init(GPIOB, &GPIO_InitStructure);
+    326          	
+    327          	//B口 上拉输入
+    328          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_ACC_DETECT|GPIO_PIN_STUDYKEY;
+    329          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    330          	GPIO_Init(GPIOB, &GPIO_InitStructure);
+    331          
+    332          	//B口 悬浮输入
+    333          	
+    334          	//B口 开漏输出
+    335          	//GPIO_InitStructure.GPIO_Pin = GPIO_PIN_LED;
+    336          	//GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
+    337          	//GPIO_Init(GPIOB, &GPIO_InitStructure); 
+    338          	
+    339          	//B口 推挽输出
+    340          	GPIO_InitStructure.GPIO_Pin =   GPIO_PIN_START_KEY|GPIO_PIN_BREAK_OUT |GPIO_PIN_BEEP|
+    341          	                                GPIO_PIN_KEY_PWR|KEY_PIN_UNLOCK|KEY_PIN_LOCK|KEY_PIN_TRUNK|KEY_PIN_ALARM;
+    342          	GPIO_InitStructure.GPIO_Mode =  GPIO_Mode_Out_PP;
+    343          	GPIO_Init(GPIOB, &GPIO_InitStructure);
+    344          	
+    345          	//B口 复用推挽输出
+    346          	GPIO_InitStructure.GPIO_Pin = GPIO_PIN_125KL| GPIO_PIN_125KR;
+    347          	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    348          	GPIO_Init(GPIOB, &GPIO_InitStructure);
+    349          	
+    350          	KEY_UNLOCK_OFF;
+    351          	KEY_LOCK_OFF;;
+    352          	KEY_TRUNK_OFF;
+    353          	KEY_ALARM_OFF;
+    354          	CAR_START_KEY_OFF;
+    355          	BEEP_OFF;
+    356          	#endif
+    357          }
+    358          
+    359          
+    360          uc8 BasePlus[42] = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,1,0,0,1,1,0,0,1,0};	//LF信号引导
+    361          u16 lf_dst_WUPA=0x4148;
+    362          u16 lf_dst_WUPB=0x0000;
+    363          u8  main_key_sn=0;
+    364          u8 enable_lf_tx_flag=1;
+    365          /*******************************************************************************
+    366          * Function Name : LFSendData
+    367          * Description 	: 低频编码发送物理层函数
+    368          * Input         : lfdata - 发送的数据指针
+    369                            lfcount - 发送的数据字节数
+    370                            outchannel - 选择发送的通道号
+    371          * Output        : None
+    372          * Return        : None
+    373          *******************************************************************************/
+    374          void LFSendData(u8 *lfdata, u8 lfcount, u16 outchannel) 
+    375          {
+    376          	//#define LFSendData_print
+    377          	u8 index = 0;
+    378          	u16 t2cycle = 64;
+    379          	u8  DataPlus[96]={0};
+    380          	//u32 i;
+    381          	u8 a,b;
+    382          	OS_ERR os_err;
+    383          
+    384          	//return;
+    385          
+    386          	OSSchedLock(&os_err);
+    387          
+    388          	#ifdef LFSendData_print
+    389          	InfoPrintf("LFSendData(");
+    390          	for(a=0;a<lfcount;a++)
+    391          	{
+    392          		InfoPrintf("%02X,",lfdata[a]);
+    393          	}
+    394          	InfoPrintf(")\r\n");
+    395          	#else
+    396          	//InfoPrintf(".");
+    397          	#endif
+    398          	
+    399          	/*
+    400          	字节内是大端(高位在前)方式传送，字节间是小端方式
+    401          	*/
+    402          
+    403          	//每个字节的数据需要用16位的bit流来表示,所以需要乘以16
+    404          	//(曼码:一位需要一高一低的电平,所以一个字节8位,8x2==16); zgc add
+    405          	lfcount = lfcount << 4; 			
+    406          	for(index = 0; index < lfcount; ) 	//将发送的数据，转化成比特流数组
+    407          	{
+    408          		a=lfdata[index >> 4];
+    409          		b=(1 << (7 - ((index >> 1) & 0x07)));
+    410          	
+    411          		//if((lfdata[index >> 4] & (1 << (7 - ((index >> 1) & 0x07)))) != 0) 
+    412          		if((a & b) != 0) 
+    413          		{
+    414          			DataPlus[index++] = 0;
+    415          			DataPlus[index++] = 1;
+    416          		}
+    417          		else 
+    418          		{
+    419          			DataPlus[index++] = 1;
+    420          			DataPlus[index++] = 0;
+    421          		}
+    422          	}
+    423          	
+    424          	TIM2_counting_now_flag = TRUE;
+    425          	TIM_Cmd(TIM2, ENABLE);
+    426          	//NVIC_SETFAULTMASK();
+    427          	TIM_Cmd(LF125K_TIMx, ENABLE);
+    428          	TIM_CtrlPWMOutputs(LF125K_TIMx, ENABLE);	//开启定时器计数
+    429          	TIM_CCxCmd(LF125K_TIMx, LF125KR_Channelx, TIM_CCx_Disable);
+    430          	TIM_CCxCmd(LF125K_TIMx, LF125KL_Channelx, TIM_CCx_Disable);
+    431          	TIM_SetCounter(TIM2, 0);//清零  
+    432          	__disable_irq();
+    433          	
+    434          	//发送引导脉冲
+    435          	for(index = 0; index < 42; index++) 	
+    436          	{
+    437          		if(index == 0) 
+    438          		{
+    439          			TIM_CCxCmd(LF125K_TIMx, outchannel, BasePlus[index] == 0 ? TIM_CCx_Disable : TIM_CCx_Enable);
+    440          		}
+    441          		else 
+    442          		{
+    443          			if(BasePlus[index] == 0) 
+    444          			{
+    445          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Disable);
+    446          			}
+    447          			else if(BasePlus[index - 1] == 0) //连续两个1，中间不再重新启动PWM，防止波形畸变
+    448          			{
+    449          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Enable);
+    450          			}
+    451          		}
+    452          		
+    453          		while(TIM_GetCounter(TIM2) < t2cycle && TIM2_counting_now_flag == TRUE) 
+    454          		{
+    455          		}
+    456          		
+    457          		t2cycle += 64;  //2*64=128us
+    458          	}
+    459          
+    460          	#if 1
+    461          	//发送数据脉冲
+    462          	for(index = 0; index < lfcount; index++) 	
+    463          	{
+    464          		if(index == 0) 
+    465          		{
+    466          			TIM_CCxCmd(LF125K_TIMx, outchannel, DataPlus[index] == 0 ? TIM_CCx_Disable : TIM_CCx_Enable);
+    467          		}
+    468          		else 
+    469          		{
+    470          			if(DataPlus[index] == 0) 
+    471          			{
+    472          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Disable);
+    473          			}
+    474          			else if(DataPlus[index - 1] == 0)//连续两个1，中间不再重新启动PWM，防止波形畸变 
+    475          			{
+    476          				TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Enable);
+    477          			}
+    478          		}
+    479          		
+    480          		while(TIM_GetCounter(TIM2) < t2cycle && TIM2_counting_now_flag == TRUE) 
+    481          		{
+    482          		}
+    483          		
+    484          		t2cycle += 64;	//2*64=128us
+    485          	}
+    486          	#endif
+    487          	__enable_irq();
+    488          	
+    489          	TIM_CCxCmd(LF125K_TIMx, outchannel, TIM_CCx_Disable);
+    490          	TIM_Cmd(TIM2, DISABLE);
+    491          	//while(1);
     492          
-    493          	
-    494          }
-    495          
-    496          void SendAwakeLF(void) 
-    497          {
-    498          	u8 LFData[6];
-    499          	#if 0
-    500          	//static u8 cnt=0;
-    501          	//cnt++;
-    502          	//if(cnt%3!=0)return;
-    503          	
-    504          	if(enable_lf_tx_flag==0)
-    505          	{
-    506          		InfoPrintf(".");
-    507          		return;
-    508          	}
-    509          	
-    510          	if((READ_STUDYKEY == Bit_RESET))//&&(StudyTime<STUDY_TIME*2))   //按住学习键，停发LF
-    511          	{
-    512          		return;
-    513          	}
-    514          	
-    515          	if(car_power == CAR_RUN)// && Car->remote_started == FALSE)  //按键发动状态,停发LF
-    516          	{
-    517          		//InfoPrintf("车已本地启动，不发WAKE UP 帧\r\n");
-    518          		return;
-    519          	}
-    520          	
-    521          	if(Remote.Index > 2) 
-    522          	{
-    523          		Remote.Index = 0;
-    524          	}
-    525          	#endif
-    526          
-    527          	//InfoPrintf("发送低频侦测数据:\r\n");
-    528          	LFData[0] = (u8)(lf_dst_WUPA>>8);
-    529          	LFData[1] = (u8)lf_dst_WUPA;
-    530          	//LFData[0] = (u8)(0x5555>>8);
-    531          	//LFData[1] = (u8)0x5555;	
-    532          	LFData[2] = main_key_sn;
-    533          	LFData[3] = 0x88;
-    534          
-    535          	//LFData[4] = 0x55;
-    536          	//LFData[5] = 0xa5;
-    537          
-    538          	{
-    539          	static u8 cnt=0;
-    540          	cnt++;
-    541          	//if(cnt%5==0)
-    542          	InfoPrintf("AWAKE:(KEY total:%d)(ID:%02X,%02X)(DATA:%02X,%02X)\r\n",Remote.Totle,LFData[0],LFData[1],LFData[2],LFData[3]);	
-    543          	}
-    544          
-    545          	LFSendData(LFData, 4, LF125KR_Channelx);	//LF通道1发送，2字节
-    546          	//LFSendData(LFData, 4, LF125KR_Channelx);	//LF通道1发送，2字节
-    547          	//DelayXms(5);
-    548          	//LFSendData(LFData, 4, LF125KL_Channelx);	//LF通道2发送，2字节
-    549          	LFSendData(LFData, 4, LF125KL_Channelx);	//LF通道2发送，2字节
-    550          	//DelayXms(5);
-    551          }
-    552          
-    553          /*
-    554          通过0000ID 发送唤醒ID给钥匙，钥匙接收到此唤醒ID后，保存，并配置此ID到channel 1,
-    555          之后主板将循环发送此ID，以唤醒钥匙。
-    556          */
-    557          u8 SendStudyLF(void) 
-    558          {
-    559          	u8 LFData[6];
-    560          	u8 sn;
-    561          	//InfoPrintf("-");	
-    562          	IWDG_ReloadCounter();	//喂狗
-    563          	if(car_power == CAR_RUN )//&& Car->remote_started == FALSE)  //按键发动状态,停发LF
-    564          	{
-    565          		InfoPrintf("cancel B\r\n");
-    566          		return 1;
-    567          	}
-    568          	
-    569          	if(Remote.Index > 2) 
-    570          	{
-    571          		Remote.Index = 0;
-    572          	}
-    573          
-    574          	LFData[0]=0x00;
-    575          	LFData[1]=0x00;
-    576          	LFData[2] = (u8)(lf_dst_WUPA>>8);
-    577          	LFData[3] = (u8)lf_dst_WUPA;
-    578          	
-    579          	LFData[4] = key_sn;	
-    580          
-    581          	LFData[5] = ~key_sn;	
-    582          	
-    583          	InfoPrintf("发送低频学习按键命令:(%02X,%02X,%02X,%02X,%02X)\r\n",LFData[0],LFData[1],LFData[2],LFData[3],LFData[4]);
-    584          	LFSendData(LFData, 5, LF125KR_Channelx);	//LF通道1发送，2字节
-    585          	LFSendData(LFData, 5, LF125KL_Channelx);	//LF通道2发送，2字节
-    586          	LFSendData(LFData, 5, LF125KR_Channelx);	//LF通道1发送，2字节
-    587          	LFSendData(LFData, 5, LF125KL_Channelx);	//LF通道2发送，2字节
-    588          
-    589          	return 0;
-    590          }
-    591          u8 	RangData[4] = {0,0,0,0};//START_KEY LF随机数组
-    592          void RangVlue(u8* rangdata) 
-    593          {
-    594          	OS_ERR os_err;
-    595            u32 rtcvlue = user_get_os_time();//获取当前RTC时间
-    596            
-    597            rangdata[0] = (u8)((rtcvlue>>24) ^ (rtcvlue>>16) ^ (rtcvlue>>8) ^ rtcvlue ^ (MCURegID>>8) ^ MCURegID);
-    598            rangdata[1] = rangdata[0] ^ rangdata[1] ^ rangdata[2] ^ 0xEC;
-    599            rangdata[2] = Cal_crc8(rangdata, 2);
-    600            rangdata[3] = 0x00;
-    601          }
-    602          
-    603          void SendStartLF(void) 
-    604          {
-    605          	#define SendStartLF_print
-    606          	u8 LFData[6];
-    607          
-    608          
-    609          	LFData[0] = ~(u8)(lf_dst_WUPA>>8);
-    610          	LFData[1] = ~(u8)lf_dst_WUPA;
-    611          	
-    612          	RangVlue(RangData); //生成随机数
-    613          	RangData[3]=main_key_sn;
-    614          	
-    615          	*(u32 *)(&LFData[2]) = *(u32 *)(&RangData[0]);
-    616          	InfoPrintf("发送启动校验...%02X,%02X,%02X,%02X,%02X,%02X\r\n",LFData[0],LFData[1],LFData[2],LFData[3],LFData[4],LFData[5]);	
-    617          	LFSendData(LFData, 6, LF125KR_Channelx); //LF通道1发送，6字节
-    618          	LFSendData(LFData, 6, LF125KL_Channelx); //LF通道2发送，6字节
-    619          }
-    620          
-    621          
-    622          /*******************************************************************************
-    623          * Function Name : ValueRange
-    624          * Description 	: 判断某数值是否在给定数值之间
-    625          * Input         : compare - 待判定的值
-    626                            original - 给定比较的值
-    627                            power - 判定精度，1--50%内，2--25%内，3--12.5%内
-    628          * Output        : None
-    629          * Return        : bool - 在指定范围内TRUE
-    630          *******************************************************************************/
-    631          static bool ValueRange(u16 compare, u16 original, u8 power) 
-    632          {
-    633          	u16 finally = 0;
-    634          	original = original >> 1;	//定时器TIM2为2us基本单位，如40ms = 20000
-    635          	finally = original >> power;
-    636          	if(compare > (original + finally) || compare < (original - finally)) 
-    637          	{
-    638          		return FALSE;
-    639          	}
-    640          	else 
-    641          	{
-    642          		return TRUE;
-    643          	}
-    644          }
-    645          
-    646          /*******************************************************************************
-    647          * Function Name : UhfRevData_V7
-    648          * Description   : RF接收解码，V7方式
-    649          * Input         : uhfdata - 接收解码后数据存储地址
-    650                            checktime - 持续接收解码时长：ms
-    651          * Output        : None
-    652          * Return        : u8 - 接收到的字节数
-    653          *******************************************************************************/
-    654          static u8 UhfRevData_V7(u8 *uhfdata, u16 checktime) 
-    655          {
-    656          	OS_ERR os_err;
-    657          	u8  index = 0;
-    658          	u8  uhf_bit_state = 0;
-    659          	u16 uhf_pulse_h = 0;
-    660          	u16 uhf_pulse_l = 0;
-    661          	u16 filter_value;
-    662          	u16 falling_timestamp;
-    663          	u16 rising_timestamp;
-    664          
-    665          	OSSchedLock(&os_err);
-    666          
-    667          
-    668          	rising_timestamp = U16_MAX - checktime * 500;			//2us基础时间
-    669          	//fallingvalue = risingvalue;
-    670          
-    671          	TIM2_counting_now_flag = TRUE;
-    672          	TIM_Cmd(TIM2, ENABLE);
-    673          	TIM_SetCounter(TIM2, rising_timestamp);//设置定时器开始计时值,如果不做任何有效动作，15ms后，会产生溢出中断
-    674          
-    675          	while(1)//检测引导脉冲T=590us
-    676          	{
-    677          		//wait low
-    678          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE )	//循环检测脉冲，为低电平结束
-    679          		{
-    680          			//首次执行,假设一直是高电平，则15ms后超时，定时器也将失能
-    681          		}
-    682          
-    683          		//low appeared,then filtering
-    684          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;	//设置毛刺脉冲干扰时间间隔
-    685          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
-    686          		{
-    687          		}
-    688          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE) 
-    689          		{
+    493          
+    494          	
+    495          	TIM_Cmd(LF125K_TIMx, DISABLE);
+    496          	TIM2_counting_now_flag = FALSE;
+    497          
+    498          	
+    499          	
+    500          	OSSchedUnlock(&os_err);
+    501          
+    502          	
+    503          }
+    504          
+    505          void SendAwakeLF(void) 
+    506          {
+    507          	u8 LFData[6];
+    508          	#if 0
+    509          	//static u8 cnt=0;
+    510          	//cnt++;
+    511          	//if(cnt%3!=0)return;
+    512          	
+    513          	if(enable_lf_tx_flag==0)
+    514          	{
+    515          		InfoPrintf(".");
+    516          		return;
+    517          	}
+    518          	
+    519          	if((READ_STUDYKEY == Bit_RESET))//&&(StudyTime<STUDY_TIME*2))   //按住学习键，停发LF
+    520          	{
+    521          		return;
+    522          	}
+    523          	
+    524          	if(car_power == CAR_RUN)// && Car->remote_started == FALSE)  //按键发动状态,停发LF
+    525          	{
+    526          		//InfoPrintf("车已本地启动，不发WAKE UP 帧\r\n");
+    527          		return;
+    528          	}
+    529          	
+    530          	if(Remote.Index > 2) 
+    531          	{
+    532          		Remote.Index = 0;
+    533          	}
+    534          	#endif
+    535          
+    536          	//InfoPrintf("发送低频侦测数据:\r\n");
+    537          	LFData[0] = (u8)(lf_dst_WUPA>>8);
+    538          	LFData[1] = (u8)lf_dst_WUPA;
+    539          	//LFData[0] = (u8)(0x5555>>8);
+    540          	//LFData[1] = (u8)0x5555;	
+    541          	LFData[2] = main_key_sn;
+    542          	LFData[3] = 0x88;
+    543          
+    544          	//LFData[4] = 0x55;
+    545          	//LFData[5] = 0xa5;
+    546          
+    547          	{
+    548          	static u8 cnt=0;
+    549          	cnt++;
+    550          	if(cnt%8==0)
+    551          	InfoPrintf("AWAKE:(KEY total:%d)(ID:%02X,%02X)(DATA:%02X,%02X)\r\n",Remote.Totle,LFData[0],LFData[1],LFData[2],LFData[3]);	
+    552          	}
+    553          
+    554          	LFSendData(LFData, 4, LF125KR_Channelx);	//LF通道1发送，2字节
+    555          	//LFSendData(LFData, 4, LF125KR_Channelx);	//LF通道1发送，2字节
+    556          	//DelayXms(5);
+    557          	//LFSendData(LFData, 4, LF125KL_Channelx);	//LF通道2发送，2字节
+    558          	LFSendData(LFData, 4, LF125KL_Channelx);	//LF通道2发送，2字节
+    559          	//DelayXms(5);
+    560          }
+    561          
+    562          /*
+    563          通过0000ID 发送唤醒ID给钥匙，钥匙接收到此唤醒ID后，保存，并配置此ID到channel 1,
+    564          之后主板将循环发送此ID，以唤醒钥匙。
+    565          */
+    566          u8 SendStudyLF(void) 
+    567          {
+    568          	u8 LFData[6];
+    569          	u8 sn;
+    570          	//InfoPrintf("-");	
+    571          	IWDG_ReloadCounter();	//喂狗
+    572          	if(car_power == CAR_RUN )//&& Car->remote_started == FALSE)  //按键发动状态,停发LF
+    573          	{
+    574          		InfoPrintf("cancel B\r\n");
+    575          		return 1;
+    576          	}
+    577          	
+    578          	if(Remote.Index > 2) 
+    579          	{
+    580          		Remote.Index = 0;
+    581          	}
+    582          
+    583          	LFData[0]=0x00;
+    584          	LFData[1]=0x00;
+    585          	LFData[2] = (u8)(lf_dst_WUPA>>8);
+    586          	LFData[3] = (u8)lf_dst_WUPA;
+    587          	
+    588          	LFData[4] = key_sn;	
+    589          
+    590          	LFData[5] = ~key_sn;	
+    591          	
+    592          	InfoPrintf("发送低频学习按键命令:(%02X,%02X,%02X,%02X,%02X)\r\n",LFData[0],LFData[1],LFData[2],LFData[3],LFData[4]);
+    593          	LFSendData(LFData, 5, LF125KR_Channelx);	//LF通道1发送，2字节
+    594          	LFSendData(LFData, 5, LF125KL_Channelx);	//LF通道2发送，2字节
+    595          	LFSendData(LFData, 5, LF125KR_Channelx);	//LF通道1发送，2字节
+    596          	LFSendData(LFData, 5, LF125KL_Channelx);	//LF通道2发送，2字节
+    597          
+    598          	return 0;
+    599          }
+    600          u8 	RangData[4] = {0,0,0,0};//START_KEY LF随机数组
+    601          void RangVlue(u8* rangdata) 
+    602          {
+    603          	OS_ERR os_err;
+    604            u32 rtcvlue = user_get_os_time();//获取当前RTC时间
+    605            
+    606            rangdata[0] = (u8)((rtcvlue>>24) ^ (rtcvlue>>16) ^ (rtcvlue>>8) ^ rtcvlue ^ (MCURegID>>8) ^ MCURegID);
+    607            rangdata[1] = rangdata[0] ^ rangdata[1] ^ rangdata[2] ^ 0xEC;
+    608            rangdata[2] = Cal_crc8(rangdata, 2);
+    609            rangdata[3] = 0x00;
+    610          }
+    611          
+    612          void SendStartLF(void) 
+    613          {
+    614          	#define SendStartLF_print
+    615          	u8 LFData[6];
+    616          
+    617          
+    618          	LFData[0] = ~(u8)(lf_dst_WUPA>>8);
+    619          	LFData[1] = ~(u8)lf_dst_WUPA;
+    620          	
+    621          	RangVlue(RangData); //生成随机数
+    622          	RangData[3]=main_key_sn;
+    623          	
+    624          	*(u32 *)(&LFData[2]) = *(u32 *)(&RangData[0]);
+    625          	InfoPrintf("发送启动校验...%02X,%02X,%02X,%02X,%02X,%02X\r\n",LFData[0],LFData[1],LFData[2],LFData[3],LFData[4],LFData[5]);	
+    626          	LFSendData(LFData, 6, LF125KR_Channelx); //LF通道1发送，6字节
+    627          	LFSendData(LFData, 6, LF125KL_Channelx); //LF通道2发送，6字节
+    628          }
+    629          
+    630          
+    631          /*******************************************************************************
+    632          * Function Name : ValueRange
+    633          * Description 	: 判断某数值是否在给定数值之间
+    634          * Input         : compare - 待判定的值
+    635                            original - 给定比较的值
+    636                            power - 判定精度，1--50%内，2--25%内，3--12.5%内
+    637          * Output        : None
+    638          * Return        : bool - 在指定范围内TRUE
+    639          *******************************************************************************/
+    640          static bool ValueRange(u16 compare, u16 original, u8 power) 
+    641          {
+    642          	u16 finally = 0;
+    643          	original = original >> 1;	//定时器TIM2为2us基本单位，如40ms = 20000
+    644          	finally = original >> power;
+    645          	if(compare > (original + finally) || compare < (original - finally)) 
+    646          	{
+    647          		return FALSE;
+    648          	}
+    649          	else 
+    650          	{
+    651          		return TRUE;
+    652          	}
+    653          }
+    654          
+    655          /*******************************************************************************
+    656          * Function Name : UhfRevData_V7
+    657          * Description   : RF接收解码，V7方式
+    658          * Input         : uhfdata - 接收解码后数据存储地址
+    659                            checktime - 持续接收解码时长：ms
+    660          * Output        : None
+    661          * Return        : u8 - 接收到的字节数
+    662          *******************************************************************************/
+    663          static u8 UhfRevData_V7(u8 *uhfdata, u16 checktime) 
+    664          {
+    665          	OS_ERR os_err;
+    666          	u8  index = 0;
+    667          	u8  uhf_bit_state = 0;
+    668          	u16 uhf_pulse_h = 0;
+    669          	u16 uhf_pulse_l = 0;
+    670          	u16 filter_value;
+    671          	u16 falling_timestamp;
+    672          	u16 rising_timestamp;
+    673          
+    674          	OSSchedLock(&os_err);
+    675          
+    676          
+    677          	rising_timestamp = U16_MAX - checktime * 500;			//2us基础时间
+    678          	//fallingvalue = risingvalue;
+    679          
+    680          	TIM2_counting_now_flag = TRUE;
+    681          	TIM_Cmd(TIM2, ENABLE);
+    682          	TIM_SetCounter(TIM2, rising_timestamp);//设置定时器开始计时值,如果不做任何有效动作，15ms后，会产生溢出中断
+    683          
+    684          	while(1)//检测引导脉冲T=590us
+    685          	{
+    686          		//wait low
+    687          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE )	//循环检测脉冲，为低电平结束
+    688          		{
+    689          			//首次执行,假设一直是高电平，则15ms后超时，定时器也将失能
     690          		}
     691          
-    692          		//low stable		
-    693          		falling_timestamp = TIM_GetCounter(TIM2);
-    694          		uhf_pulse_h = falling_timestamp - rising_timestamp; //获得高电平脉冲的时长 ----首次运行到这里时，无意义，不准确，因为不知道高电平是何时开始的。
-    695          
-    696          
-    697          		//wait high
-    698          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
-    699          		{
-    700          		}
-    701          
-    702          		//high appear,then filtering
-    703          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
-    704          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
-    705          		{
-    706          		}
+    692          		//low appeared,then filtering
+    693          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;	//设置毛刺脉冲干扰时间间隔
+    694          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
+    695          		{
+    696          		}
+    697          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE) 
+    698          		{
+    699          		}
+    700          
+    701          		//low stable		
+    702          		falling_timestamp = TIM_GetCounter(TIM2);
+    703          		uhf_pulse_h = falling_timestamp - rising_timestamp; //获得高电平脉冲的时长 ----首次运行到这里时，无意义，不准确，因为不知道高电平是何时开始的。
+    704          
+    705          
+    706          		//wait high
     707          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
     708          		{
     709          		}
     710          
-    711          		//high stable
-    712          		rising_timestamp = TIM_GetCounter(TIM2);
-    713          		uhf_pulse_l = rising_timestamp - falling_timestamp; 	//获得低电平脉冲的时长----首次运行到这里时，这个时长准确
-    714          
-    715          
-    716          
-    717          		//check timeout
-    718          		if(TIM2_counting_now_flag == FALSE)//定时器超时，返回
-    719          		{
-    720          			OSSchedUnlock(&os_err);
-    721          			return 0;
-    722          		}
-    723          		
-    724          		//检测接收到的脉冲是否符合规定值，符合计数器加1，但是中间任何一次判断无效后,直接清零，重新从零开始
-    725          		if(FALSE == ValueRange(uhf_pulse_h, 295, 2) || FALSE == ValueRange(uhf_pulse_l, 295, 2)) 
-    726          		{
-    727          			index=0;
-    728          		}
-    729          		else 
-    730          		{
-    731          			index++;
-    732          		}
-    733          		
-    734          		if(index > 11)	 //连续符合规定值脉冲个数大于11，继续
+    711          		//high appear,then filtering
+    712          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
+    713          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
+    714          		{
+    715          		}
+    716          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
+    717          		{
+    718          		}
+    719          
+    720          		//high stable
+    721          		rising_timestamp = TIM_GetCounter(TIM2);
+    722          		uhf_pulse_l = rising_timestamp - falling_timestamp; 	//获得低电平脉冲的时长----首次运行到这里时，这个时长准确
+    723          
+    724          
+    725          
+    726          		//check timeout
+    727          		if(TIM2_counting_now_flag == FALSE)//定时器超时，返回
+    728          		{
+    729          			OSSchedUnlock(&os_err);
+    730          			return 0;
+    731          		}
+    732          		
+    733          		//检测接收到的脉冲是否符合规定值，符合计数器加1，但是中间任何一次判断无效后,直接清零，重新从零开始
+    734          		if(FALSE == ValueRange(uhf_pulse_h, 295, 2) || FALSE == ValueRange(uhf_pulse_l, 295, 2)) 
     735          		{
-    736          			//InfoPrintf("=======777=======");	
-    737          			index = 0;
-    738          			break;
-    739          		}
-    740          	}
-    741          
-    742          	//假设前面的15ms时间没用完，就已经检测到了11次引导脉冲了,
-    743          	//那么TIM2_counting_now_flag 还是为TRUE，那么经过下面代码的赋值，会在130ms后在中断里被置为FALSE
-    744          	
-    745          	//假设刚好用完15ms，那么就会TIM2_counting_now_flag被置为FALSE
-    746          
-    747          
-    748          	
-    749          	TIM_SetCounter(TIM2, 0);	//设置定时器超时130ms 65536 * 2 us 约等于130ms
-    750          	falling_timestamp= 0;
-    751          	rising_timestamp= 0;
-    752          	memset(uhfdata, 0x00, 15); //初始化数组
+    736          			index=0;
+    737          		}
+    738          		else 
+    739          		{
+    740          			index++;
+    741          		}
+    742          		
+    743          		if(index > 11)	 //连续符合规定值脉冲个数大于11，继续
+    744          		{
+    745          			//InfoPrintf("=======777=======");	
+    746          			index = 0;
+    747          			break;
+    748          		}
+    749          	}
+    750          
+    751          	//假设前面的15ms时间没用完，就已经检测到了11次引导脉冲了,
+    752          	//那么TIM2_counting_now_flag 还是为TRUE，那么经过下面代码的赋值，会在130ms后在中断里被置为FALSE
     753          	
-    754          	TIM2_counting_now_flag = TRUE; //zgc add,如果不做任何赋值操作，130ms后，会被置为FALSE
-    755          	
-    756          	while(1)	//检测引导脉冲，1个周期，T=1.18ms
-    757          	{
-    758          		//wait high
-    759          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
-    760          		{
-    761          		}
-    762          		//hign appear,then filtering...
-    763          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
-    764          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
-    765          		{
-    766          		}
-    767          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
-    768          		{
-    769          		}
-    770          		//high stable
-    771          		rising_timestamp = TIM_GetCounter(TIM2);
-    772          		uhf_pulse_l = rising_timestamp - falling_timestamp; //获得高电平脉冲的时长
-    773          
-    774          		//wait low
-    775          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE)
-    776          		{ 
-    777          		}
-    778          		//low appeared
-    779          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
-    780          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
-    781          		{
-    782          		}
-    783          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE) 
-    784          		{
-    785          		}
-    786          		
-    787          		//low stable
-    788          		falling_timestamp = TIM_GetCounter(TIM2);
-    789          		uhf_pulse_h = falling_timestamp - rising_timestamp; //获得低电平脉冲的时长
-    790          
-    791          		if(TIM2_counting_now_flag == FALSE) 
-    792          		{
-    793          			OSSchedUnlock(&os_err);
-    794          			return 0;
-    795          		}
-    796          		
-    797          		if(ValueRange(uhf_pulse_l, 590, 2) == TRUE && ValueRange(uhf_pulse_h, 590, 2) == TRUE) 
-    798          		{
-    799          			break; //only check one period ,check ok,break!
-    800          		}
-    801          	}
-    802          
-    803          	TIM_SetCounter(TIM2, 0);
-    804          	filter_value = (UHFPLUSE_V7 >> 1);
-    805          	while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE)	//延时1/2T
-    806          	{
-    807          	}
-    808          
-    809          	TIM_SetCounter(TIM2, 0);//130ms的计时
-    810          	index = 2;
-    811          	uhf_bit_state = 0;	//数据帧起始电平
-    812          	falling_timestamp = 0;
-    813          	rising_timestamp = 0;
-    814          	do{
-    815          		//wait pin voltage change
-    816          		while(READ_UHF_IN == (BitAction)uhf_bit_state && TIM2_counting_now_flag == TRUE) 
-    817          		{
-    818          		}
-    819          		//changed ,then filter...
-    820          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
-    821          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
-    822          		{
-    823          		}
-    824          		while(READ_UHF_IN == (BitAction)uhf_bit_state && TIM2_counting_now_flag == TRUE) 
-    825          		{
-    826          		}
-    827          		//filter ok,and pin voltage changed to a stable state
-    828          		rising_timestamp = TIM_GetCounter(TIM2);
-    829          		uhf_pulse_l = rising_timestamp - falling_timestamp;	//获得一个脉冲的时长
-    830          		if(rising_timestamp > 60000) 						//检测波形超过130ms，计数器清零，继续
+    754          	//假设刚好用完15ms，那么就会TIM2_counting_now_flag被置为FALSE
+    755          
+    756          
+    757          	
+    758          	TIM_SetCounter(TIM2, 0);	//设置定时器超时130ms 65536 * 2 us 约等于130ms
+    759          	falling_timestamp= 0;
+    760          	rising_timestamp= 0;
+    761          	memset(uhfdata, 0x00, 15); //初始化数组
+    762          	
+    763          	TIM2_counting_now_flag = TRUE; //zgc add,如果不做任何赋值操作，130ms后，会被置为FALSE
+    764          	
+    765          	while(1)	//检测引导脉冲，1个周期，T=1.18ms
+    766          	{
+    767          		//wait high
+    768          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
+    769          		{
+    770          		}
+    771          		//hign appear,then filtering...
+    772          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
+    773          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
+    774          		{
+    775          		}
+    776          		while(READ_UHF_IN == Bit_RESET && TIM2_counting_now_flag == TRUE) 
+    777          		{
+    778          		}
+    779          		//high stable
+    780          		rising_timestamp = TIM_GetCounter(TIM2);
+    781          		uhf_pulse_l = rising_timestamp - falling_timestamp; //获得高电平脉冲的时长
+    782          
+    783          		//wait low
+    784          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE)
+    785          		{ 
+    786          		}
+    787          		//low appeared
+    788          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
+    789          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
+    790          		{
+    791          		}
+    792          		while(READ_UHF_IN == Bit_SET && TIM2_counting_now_flag == TRUE) 
+    793          		{
+    794          		}
+    795          		
+    796          		//low stable
+    797          		falling_timestamp = TIM_GetCounter(TIM2);
+    798          		uhf_pulse_h = falling_timestamp - rising_timestamp; //获得低电平脉冲的时长
+    799          
+    800          		if(TIM2_counting_now_flag == FALSE) 
+    801          		{
+    802          			OSSchedUnlock(&os_err);
+    803          			return 0;
+    804          		}
+    805          		
+    806          		if(ValueRange(uhf_pulse_l, 590, 2) == TRUE && ValueRange(uhf_pulse_h, 590, 2) == TRUE) 
+    807          		{
+    808          			break; //only check one period ,check ok,break!
+    809          		}
+    810          	}
+    811          
+    812          	TIM_SetCounter(TIM2, 0);
+    813          	filter_value = (UHFPLUSE_V7 >> 1);
+    814          	while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE)	//延时1/2T
+    815          	{
+    816          	}
+    817          
+    818          	TIM_SetCounter(TIM2, 0);//130ms的计时
+    819          	index = 2;
+    820          	uhf_bit_state = 0;	//数据帧起始电平
+    821          	falling_timestamp = 0;
+    822          	rising_timestamp = 0;
+    823          	do{
+    824          		//wait pin voltage change
+    825          		while(READ_UHF_IN == (BitAction)uhf_bit_state && TIM2_counting_now_flag == TRUE) 
+    826          		{
+    827          		}
+    828          		//changed ,then filter...
+    829          		filter_value = TIM_GetCounter(TIM2) + UHFFILTER;
+    830          		while(TIM_GetCounter(TIM2) < filter_value && TIM2_counting_now_flag == TRUE) 
     831          		{
-    832          			rising_timestamp = 0;
-    833          			TIM_SetCounter(TIM2, 2);			//130ms
-    834          		}
-    835          		
-    836          		falling_timestamp = rising_timestamp;
-    837          		uhf_bit_state = !uhf_bit_state;
-    838          		if(uhf_pulse_l > (UHFPLUSE_V7 << 1))		//一帧数据完，检测到不符规定的脉冲，结束
-    839          		{
-    840          			break;
-    841          		}
-    842          
-    843          		if(uhf_pulse_l < UHFMAST_V7) 
-    844          		{
-    845          			index++;
-    846          			if(index & 0x01)
-    847          			{
-    848          				uhfdata[index >> 4] |= uhf_bit_state << (7 - ((index & 0x0F) >> 1));	//低字节，高位，在前
-    849          			}
+    832          		}
+    833          		while(READ_UHF_IN == (BitAction)uhf_bit_state && TIM2_counting_now_flag == TRUE) 
+    834          		{
+    835          		}
+    836          		//filter ok,and pin voltage changed to a stable state
+    837          		rising_timestamp = TIM_GetCounter(TIM2);
+    838          		uhf_pulse_l = rising_timestamp - falling_timestamp;	//获得一个脉冲的时长
+    839          		if(rising_timestamp > 60000) 						//检测波形超过130ms，计数器清零，继续
+    840          		{
+    841          			rising_timestamp = 0;
+    842          			TIM_SetCounter(TIM2, 2);			//130ms
+    843          		}
+    844          		
+    845          		falling_timestamp = rising_timestamp;
+    846          		uhf_bit_state = !uhf_bit_state;
+    847          		if(uhf_pulse_l > (UHFPLUSE_V7 << 1))		//一帧数据完，检测到不符规定的脉冲，结束
+    848          		{
+    849          			break;
     850          		}
-    851          		else 
-    852          		{
-    853          			index += 2;
-    854          			uhfdata[index >> 4] |= uhf_bit_state << (7 - ((index & 0x0F) >> 1));
-    855          		}
-    856          
-    857          	}while(index < 238 && TIM2_counting_now_flag == TRUE);
-    858          	
-    859          	TIM_Cmd(TIM2, DISABLE);
-    860          	TIM2_counting_now_flag = FALSE;
-    861          	OSSchedUnlock(&os_err);
-    862          	return (index >> 4);
-    863          }
-    864          
+    851          
+    852          		if(uhf_pulse_l < UHFMAST_V7) 
+    853          		{
+    854          			index++;
+    855          			if(index & 0x01)
+    856          			{
+    857          				uhfdata[index >> 4] |= uhf_bit_state << (7 - ((index & 0x0F) >> 1));	//低字节，高位，在前
+    858          			}
+    859          		}
+    860          		else 
+    861          		{
+    862          			index += 2;
+    863          			uhfdata[index >> 4] |= uhf_bit_state << (7 - ((index & 0x0F) >> 1));
+    864          		}
     865          
-    866          //bool HandRemoteUnlock;
-    867          /*******************************************************************************
-    868          * Description   : 验证遥控器数据是否合法
-    869          * Input         : None
-    870          * Output        : None
-    871          * Return        : bool - TRUE, FALSE
-    872          
+    866          	}while(index < 238 && TIM2_counting_now_flag == TRUE);
+    867          	
+    868          	TIM_Cmd(TIM2, DISABLE);
+    869          	TIM2_counting_now_flag = FALSE;
+    870          	OSSchedUnlock(&os_err);
+    871          	return (index >> 4);
+    872          }
     873          
-    874             0  1  2  3  4  5  6  7  8  9  10 11 
-    875          RX:50,E3,00,80,06,27,59,3A,38,58,9D,2A,
-    876          -------------------------------------RX计步器值:006CDA03
-    877          -----------------------------------本地计步器值:006CDA03
-    878          -------------------------------------------差值:00000000
-    879          计数步进不在范围内 
-    880          *******************************************************************************/
-    881          static bool CheckRemoteValueIsAllow(u32 *ptr) 
-    882          {
-    883          	#define CheckRemoteValueIsAllow_print
-    884          	u32 rx_loq;
-    885          	u32 calc_loq;
-    886          	u32 rx_rf_id;
-    887          	u8 i;
-    888          
-    889          
-    890          	#ifdef CheckRemoteValueIsAllow_print
-    891          	InfoPrintf("解密前:");
-    892          	for(i=0;i<11+1;i++)
-    893          	{
-    894          		InfoPrintf("%02X,",Data[i]);
-    895          	}
-    896          	InfoPrintf("\r\n");
-    897          	#endif	
-    898          	
-    899          	if(Data[1] == REMOTE_MARK_V8) 		//......解密数据
-    900          	{
-    901          		IV8_Decrypt(&Data[3]);///here
-    902          	}
-    903          	else if(Data[1] == REMOTE_MARK_V7)	//......解密数据
-    904          	{ 
-    905          		V7_Decrypt(&Data[3]);
-    906          	}
-    907          	else 
-    908          	{
-    909          	
-    910          	};
-    911          
-    912          	#ifdef CheckRemoteValueIsAllow_print
-    913          	InfoPrintf("解密后:");
-    914          	for(i=0;i<11+1;i++)
-    915          	{
-    916          		InfoPrintf("%02X,",Data[i]);
-    917          	}
-    918          	InfoPrintf("\r\n");
-    919          	#endif
-    920          	
-    921          
-    922          	//解密了8个字节，存放与 Data[3~~10]
-    923          	
-    924          	if((Data[10] != (Data[11]&0xF0))&&(Data[11]!=0x7F)&&(Data[11]!=0x49))  //解密后键值与明文键值不一致 
-    925          	{
-    926          		#ifdef CheckRemoteValueIsAllow_print
-    927          		InfoPrintf("解密后键值与明文键值不一致 \r\n");
-    928          		#endif
-    929          		
-    930          		return FALSE;
-    931          	}
-    932          
-    933          	Data[10] = 0x00;  //计步值的高8位清0 (bit[31~~24] =00000000b)
-    934          
-    935          	/*
-    936          	当前Data[3~~10]:
-    937          	  	50,E3,00,XX,XX,XX,XX,XX,XX,XX,00,2A,
-    938          
-    939          	Data[3~~6] : ID	
-    940          	Data[7~~10]: 计步值 ,Data[10]=0x00	 0x09627B16 
-    941          	
-    942          	*/
+    874          
+    875          //bool HandRemoteUnlock;
+    876          /*******************************************************************************
+    877          * Description   : 验证遥控器数据是否合法
+    878          * Input         : None
+    879          * Output        : None
+    880          * Return        : bool - TRUE, FALSE
+    881          
+    882          
+    883             0  1  2  3  4  5  6  7  8  9  10 11 
+    884          RX:50,E3,00,80,06,27,59,3A,38,58,9D,2A,
+    885          -------------------------------------RX计步器值:006CDA03
+    886          -----------------------------------本地计步器值:006CDA03
+    887          -------------------------------------------差值:00000000
+    888          计数步进不在范围内 
+    889          *******************************************************************************/
+    890          static bool CheckRemoteValueIsAllow(u32 *ptr) 
+    891          {
+    892          	#define CheckRemoteValueIsAllow_print
+    893          	u32 rx_loq;
+    894          	u32 calc_loq;
+    895          	u32 rx_rf_id;
+    896          	u8 i;
+    897          
+    898          
+    899          	#ifdef CheckRemoteValueIsAllow_print
+    900          	InfoPrintf("解密前:");
+    901          	for(i=0;i<11+1;i++)
+    902          	{
+    903          		InfoPrintf("%02X,",Data[i]);
+    904          	}
+    905          	InfoPrintf("\r\n");
+    906          	#endif	
+    907          	
+    908          	if(Data[1] == REMOTE_MARK_V8) 		//......解密数据
+    909          	{
+    910          		IV8_Decrypt(&Data[3]);///here
+    911          	}
+    912          	else if(Data[1] == REMOTE_MARK_V7)	//......解密数据
+    913          	{ 
+    914          		V7_Decrypt(&Data[3]);
+    915          	}
+    916          	else 
+    917          	{
+    918          	
+    919          	};
+    920          
+    921          	#ifdef CheckRemoteValueIsAllow_print
+    922          	InfoPrintf("解密后:");
+    923          	for(i=0;i<11+1;i++)
+    924          	{
+    925          		InfoPrintf("%02X,",Data[i]);
+    926          	}
+    927          	InfoPrintf("\r\n");
+    928          	#endif
+    929          	
+    930          
+    931          	//解密了8个字节，存放与 Data[3~~10]
+    932          	
+    933          	if((Data[10] != (Data[11]&0xF0))&&(Data[11]!=0x7F)&&(Data[11]!=0x49))  //解密后键值与明文键值不一致 
+    934          	{
+    935          		#ifdef CheckRemoteValueIsAllow_print
+    936          		InfoPrintf("解密后键值与明文键值不一致 \r\n");
+    937          		#endif
+    938          		
+    939          		return FALSE;
+    940          	}
+    941          
+    942          	Data[10] = 0x00;  //计步值的高8位清0 (bit[31~~24] =00000000b)
     943          
-    944          	//Remote.Totle=2;
-    945          	//Remote.Rfid[0]=0x09627B16;
-    946          	//Remote.Rfid[1]=0x08EF4ED9;
-    947              
-    948              
-    949          	if(Remote.Totle>0)
-    950          	{
-    951          		#ifdef CheckRemoteValueIsAllow_print
-    952          		InfoPrintf("---已学习遥控数量:%d---\r\n",Remote.Totle);
-    953          
-    954          		for(i=0;i<Remote.Totle;i++)
-    955          		{
-    956          			InfoPrintf("LOCAL[%d]=0x%08X\r\n",i,Remote.Rfid[i]);
-    957          		}
-    958          		
-    959          		InfoPrintf("RX rfid= 0x%08X \r\n",(*(u32 *) &Data[3]));
-    960          		#endif
-    961          		rx_rf_id = *(u32 *) &Data[3];
-    962          		for(u8 i = 0; i < Remote.Totle; i++)   //逐个与保存的遥控器属性比较
-    963          		{
-    964          			if(Remote.Rfid[i] == rx_rf_id)  //ID值一致
-    965          			{
-    966          				rx_loq = *(u32 *)(&Data[7]);//注意，Data[10]已被强制赋值为0x00
-    967          				calc_loq = (rx_loq - Remote.Rfloq[i]) & 0x00FFFFFF;
-    968          				#if 0
-    969          				InfoPrintf("----本地计步器值:%08X\r\n",Remote.Rfloq[i]);
-    970          				InfoPrintf("------RX计步器值:%08X\r\n",rx_loq);
-    971          				InfoPrintf("------------差值:%08X\r\n",calc_loq);
-    972          				#endif
-    973          
-    974          				
-    975          				if(/*calc_loq > 800 ||*/ calc_loq == 0)
-    976          				//if(calc_loq == 0)  
-    977          				{
-    978          					InfoPrintf("计数步进不在范围内--差值: %d \r\n",calc_loq);
-    979          					
-    980          					return FALSE;
-    981          				}
-    982          				else 
-    983          				{		
-    984          					#ifdef CheckRemoteValueIsAllow_print
-    985          					InfoPrintf("遥控命令有效\r\n");
-    986          					#endif		
-    987          
-    988          					if(ptr!=NULL)
-    989          					{
-    990          						*((u32*)(ptr))=rx_rf_id;
-    991          					}
-    992          					Remote.Rfloq[i] = *(u32 *) &Data[7];  	//记录新计数
-    993          					
-    994          					FLASH_WriteRemoteLOQ(&Remote);  		//保存到FLASH
-    995          					
-    996          					return TRUE;
-    997          				}
-    998          			}
-    999          
-   1000          			#ifdef CheckRemoteValueIsAllow_print	
-   1001          			if(i==Remote.Totle-1)
-   1002          	       	{
-   1003          	       	 	InfoPrintf("ID不匹配!!!!!LOCAL=%08X,RX=%08X!!!!\r\n\r\n\r\n",Remote.Rfid[i],(*(u32 *) &Data[3]));
-   1004          	       	}
-   1005          			#endif
-   1006          		}
-   1007          	}
-   1008          	else
-   1009             	{
-   1010             		#ifdef CheckRemoteValueIsAllow_print
-   1011             	 	InfoPrintf("未学习RF60的ID\r\n");
-   1012          		#endif
-   1013             	}
-   1014          	
-   1015          	return FALSE;
-   1016          }
-   1017          
-   1018          static void RemoteKeyActive(u16 key) 
-   1019          {	
-   1020          	OS_ERR os_err;
-   1021          	static uint32_t last_short_key_trunk_timestamp=0;
-   1022          	static uint32_t last_short_key_unlock_timestamp=0;
-   1023          	static uint32_t last_short_key_lock_timestamp=0;
-   1024          
-   1025          	switch(key) 
-   1026          	{
-   1027          		case KEY_BOX:
-   1028          			InfoPrintf("接收到尾箱--短按键\r\n");
-   1029          			if(smart_card_pwr_status==0)
-   1030          			{
-   1031          				power_on_smart_card();
-   1032          				DelayXms(600);
-   1033          			}
-   1034          			else
-   1035          			{
-   1036          				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
-   1037          			}
-   1038          			last_short_key_trunk_timestamp=OSTimeGet(&os_err);
-   1039          			KEY_TRUNK_ON;
-   1040          			DelayXms(350);
-   1041          			KEY_TRUNK_OFF;
-   1042          			break;
-   1043          		case KEY_BOX_L:
-   1044          			if(last_short_key_trunk_timestamp+T_1S>OSTimeGet(&os_err))
-   1045          			{
-   1046          				last_short_key_trunk_timestamp=OSTimeGet(&os_err);
-   1047          				InfoPrintf("接收到尾箱--长按键\r\n");
-   1048          				if(smart_card_pwr_status==0)
-   1049          				{
-   1050          					power_on_smart_card();
-   1051          					DelayXms(700);
-   1052          				}
-   1053          				else
-   1054          				{
-   1055          					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
-   1056          				}
-   1057          				KEY_TRUNK_ON;
-   1058          				KEY_TRUNK_L_time_stamp=OSTimeGet(&os_err);
-   1059          			}
-   1060          			else
-   1061          			{
-   1062          				InfoPrintf("接收到(无效)尾箱长按键\r\n");
-   1063          			}
-   1064          			break;
-   1065          		case KEY_UNLOCK:
-   1066          			InfoPrintf("接收到解锁--短按键\r\n");
-   1067          			if(smart_card_pwr_status==0)
-   1068          			{
-   1069          				power_on_smart_card();
-   1070          				DelayXms(800);
-   1071          			}
-   1072          			else
-   1073          			{
-   1074          				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+    944          	/*
+    945          	当前Data[3~~10]:
+    946          	  	50,E3,00,XX,XX,XX,XX,XX,XX,XX,00,2A,
+    947          
+    948          	Data[3~~6] : ID	
+    949          	Data[7~~10]: 计步值 ,Data[10]=0x00	 0x09627B16 
+    950          	
+    951          	*/
+    952          
+    953          	//Remote.Totle=2;
+    954          	//Remote.Rfid[0]=0x09627B16;
+    955          	//Remote.Rfid[1]=0x08EF4ED9;
+    956              
+    957              
+    958          	if(Remote.Totle>0)
+    959          	{
+    960          		#ifdef CheckRemoteValueIsAllow_print
+    961          		InfoPrintf("---已学习遥控数量:%d---\r\n",Remote.Totle);
+    962          
+    963          		for(i=0;i<Remote.Totle;i++)
+    964          		{
+    965          			InfoPrintf("LOCAL[%d]=0x%08X\r\n",i,Remote.Rfid[i]);
+    966          		}
+    967          		
+    968          		InfoPrintf("RX rfid= 0x%08X \r\n",(*(u32 *) &Data[3]));
+    969          		#endif
+    970          		rx_rf_id = *(u32 *) &Data[3];
+    971          		for(u8 i = 0; i < Remote.Totle; i++)   //逐个与保存的遥控器属性比较
+    972          		{
+    973          			if(Remote.Rfid[i] == rx_rf_id)  //ID值一致
+    974          			{
+    975          				rx_loq = *(u32 *)(&Data[7]);//注意，Data[10]已被强制赋值为0x00
+    976          				calc_loq = (rx_loq - Remote.Rfloq[i]) & 0x00FFFFFF;
+    977          				#if 0
+    978          				InfoPrintf("----本地计步器值:%08X\r\n",Remote.Rfloq[i]);
+    979          				InfoPrintf("------RX计步器值:%08X\r\n",rx_loq);
+    980          				InfoPrintf("------------差值:%08X\r\n",calc_loq);
+    981          				#endif
+    982          
+    983          				
+    984          				if(/*calc_loq > 800 ||*/ calc_loq == 0)
+    985          				//if(calc_loq == 0)  
+    986          				{
+    987          					InfoPrintf("计数步进不在范围内--差值: %d \r\n",calc_loq);
+    988          					
+    989          					return FALSE;
+    990          				}
+    991          				else 
+    992          				{		
+    993          					#ifdef CheckRemoteValueIsAllow_print
+    994          					InfoPrintf("遥控命令有效\r\n");
+    995          					#endif		
+    996          
+    997          					if(ptr!=NULL)
+    998          					{
+    999          						*((u32*)(ptr))=rx_rf_id;
+   1000          					}
+   1001          					Remote.Rfloq[i] = *(u32 *) &Data[7];  	//记录新计数
+   1002          					
+   1003          					FLASH_WriteRemoteLOQ(&Remote);  		//保存到FLASH
+   1004          					
+   1005          					return TRUE;
+   1006          				}
+   1007          			}
+   1008          
+   1009          			#ifdef CheckRemoteValueIsAllow_print	
+   1010          			if(i==Remote.Totle-1)
+   1011          	       	{
+   1012          	       	 	InfoPrintf("ID不匹配!!!!!LOCAL=%08X,RX=%08X!!!!\r\n\r\n\r\n",Remote.Rfid[i],(*(u32 *) &Data[3]));
+   1013          	       	}
+   1014          			#endif
+   1015          		}
+   1016          	}
+   1017          	else
+   1018             	{
+   1019             		#ifdef CheckRemoteValueIsAllow_print
+   1020             	 	InfoPrintf("未学习RF60的ID\r\n");
+   1021          		#endif
+   1022             	}
+   1023          	
+   1024          	return FALSE;
+   1025          }
+   1026          
+   1027          void key_release(void)
+   1028          {
+   1029          	OS_ERR os_err;
+   1030          	
+   1031          	if(KEY_TRUNK_L_time_stamp!=0)
+   1032          	{
+   1033          		if(OSTimeGet(&os_err)-KEY_TRUNK_L_time_stamp>T_1S)
+   1034          		{
+   1035          			InfoPrintf("KEY_TRUNK_OFF\r\n");
+   1036          			KEY_TRUNK_L_time_stamp=0;
+   1037          			KEY_TRUNK_OFF;
+   1038          		}
+   1039          	}
+   1040          	if(KEY_UNLOCK_L_time_stamp!=0)
+   1041          	{
+   1042          		if(OSTimeGet(&os_err)-KEY_UNLOCK_L_time_stamp>T_1S)
+   1043          		{
+   1044          			InfoPrintf("KEY_UNLOCK_OFF\r\n");
+   1045          			KEY_UNLOCK_L_time_stamp=0;
+   1046          			KEY_UNLOCK_OFF;
+   1047          		}
+   1048          	}		
+   1049          	if(KEY_LOCK_L_time_stamp!=0)
+   1050          	{
+   1051          		if(OSTimeGet(&os_err)-KEY_LOCK_L_time_stamp>T_1S)
+   1052          		{
+   1053          			InfoPrintf("KEY_LOCK_OFF\r\n");
+   1054          			KEY_LOCK_L_time_stamp=0;
+   1055          			KEY_LOCK_OFF;
+   1056          		}
+   1057          	}
+   1058          }
+   1059          
+   1060          static void RemoteKeyActive(u16 key) 
+   1061          {	
+   1062          	OS_ERR os_err;
+   1063          	static uint32_t last_short_key_trunk_timestamp=0;
+   1064          	static uint32_t last_short_key_unlock_timestamp=0;
+   1065          	static uint32_t last_short_key_lock_timestamp=0;
+   1066          
+   1067          	switch(key) 
+   1068          	{
+   1069          		case KEY_BOX:
+   1070          			InfoPrintf("接收到尾箱--短按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1071          			if(smart_card_pwr_status==0)
+   1072          			{
+   1073          				power_on_smart_card();
+   1074          				DelayXms(600);
    1075          			}
-   1076          			last_short_key_unlock_timestamp=OSTimeGet(&os_err);
-   1077          			KEY_UNLOCK_ON;
-   1078          			KEY_UNLOCK_L_time_stamp=OSTimeGet(&os_err);
-   1079          			break;
-   1080          		case KEY_UNLOCK_L: 
-   1081          			if(last_short_key_unlock_timestamp+T_1S>OSTimeGet(&os_err))
-   1082          			{
-   1083          				last_short_key_unlock_timestamp=OSTimeGet(&os_err);
-   1084          				InfoPrintf("接收到解锁--长按键\r\n");
-   1085          				if(smart_card_pwr_status==0)
-   1086          				{
-   1087          					power_on_smart_card();
-   1088          					DelayXms(800);
-   1089          				}
-   1090          				else
+   1076          			else
+   1077          			{
+   1078          				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1079          			}
+   1080          			last_short_key_trunk_timestamp=OSTimeGet(&os_err);
+   1081          			KEY_TRUNK_ON;
+   1082          			DelayXms(350);
+   1083          			KEY_TRUNK_OFF;
+   1084          			break;
+   1085          		case KEY_BOX_L:
+   1086          			if(last_short_key_trunk_timestamp+T_1S>OSTimeGet(&os_err))
+   1087          			{
+   1088          				last_short_key_trunk_timestamp=OSTimeGet(&os_err);
+   1089          				InfoPrintf("接收到尾箱--长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1090          				if(smart_card_pwr_status==0)
    1091          				{
-   1092          					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
-   1093          				}
-   1094          				KEY_UNLOCK_ON;
-   1095          				KEY_UNLOCK_L_time_stamp=OSTimeGet(&os_err);
-   1096          			}
-   1097          			else
-   1098          			{
-   1099          				InfoPrintf("接收到(无效)解锁长按键\r\n");
-   1100          			}
-   1101          			break;	
-   1102          
-   1103          			
-   1104          		case KEY_LOCK:
-   1105          			InfoPrintf("接收到锁车--短按键\r\n");
-   1106          			if(smart_card_pwr_status==0)
-   1107          			{
-   1108          				power_on_smart_card();
-   1109          				DelayXms(800);
-   1110          			}
-   1111          			else
-   1112          			{
-   1113          				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1092          					power_on_smart_card();
+   1093          					DelayXms(700);
+   1094          				}
+   1095          				else
+   1096          				{
+   1097          					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1098          				}
+   1099          				
+   1100          				KEY_TRUNK_ON;
+   1101          				KEY_TRUNK_L_time_stamp=OSTimeGet(&os_err);
+   1102          			}
+   1103          			else
+   1104          			{
+   1105          				InfoPrintf("接收到(无效)尾箱长按键\r\n");
+   1106          			}
+   1107          			break;
+   1108          		case KEY_UNLOCK:
+   1109          			InfoPrintf("接收到解锁--短按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1110          			if(smart_card_pwr_status==0)
+   1111          			{
+   1112          				power_on_smart_card();
+   1113          				DelayXms(800);
    1114          			}
-   1115          			last_short_key_lock_timestamp=OSTimeGet(&os_err);
-   1116          			KEY_LOCK_ON;
-   1117          			KEY_LOCK_L_time_stamp=OSTimeGet(&os_err);
-   1118          			break;
-   1119          		case KEY_LOCK_L: 
-   1120          			if(last_short_key_lock_timestamp+T_1S>OSTimeGet(&os_err))
-   1121          			{
-   1122          				last_short_key_lock_timestamp=OSTimeGet(&os_err);
-   1123          				InfoPrintf("接收到锁车--长按键\r\n");
-   1124          				if(smart_card_pwr_status==0)
-   1125          				{
-   1126          					power_on_smart_card();
-   1127          					DelayXms(800);
-   1128          				}
-   1129          				else
+   1115          			else
+   1116          			{
+   1117          				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1118          			}
+   1119          			last_short_key_unlock_timestamp=OSTimeGet(&os_err);
+   1120          			KEY_UNLOCK_ON;
+   1121          			smart_card_need_dly_pwr_off_flag=0;
+   1122          			KEY_UNLOCK_L_time_stamp=OSTimeGet(&os_err);
+   1123          			break;
+   1124          		case KEY_UNLOCK_L: 
+   1125          			if(last_short_key_unlock_timestamp+T_1S>OSTimeGet(&os_err))
+   1126          			{
+   1127          				last_short_key_unlock_timestamp=OSTimeGet(&os_err);
+   1128          				InfoPrintf("接收到解锁--长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1129          				if(smart_card_pwr_status==0)
    1130          				{
-   1131          					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
-   1132          				}
-   1133          				KEY_LOCK_ON;
-   1134          				KEY_LOCK_L_time_stamp=OSTimeGet(&os_err);
-   1135          			}
-   1136          			else
-   1137          			{
-   1138          				InfoPrintf("接收到(无效)锁车长按键\r\n");
-   1139          			}
-   1140          			break;		
-   1141          			
-   1142          		case REMOTE_KEY_STOP:
-   1143          			DriveAlarm(1, 100);
-   1144          			if((READ_ON_LINE==1)&&(on_change_flag==0)&&(remote_started_flag==1))
-   1145          			{
-   1146          				InfoPrintf("接收到远程熄火命令\r\n");
-   1147          				ctl_car_remote_stop();
-   1148          				on_status=READ_ON_LINE;
-   1149          			}
-   1150          			else
-   1151          			{
-   1152          				InfoPrintf("接收到远程熄火命令，但不执行\r\n");
-   1153          			}
-   1154          			break;
-   1155          
-   1156          		case REMOTE_KEY_START:
-   1157          			DriveAlarm(1, 100);
-   1158          			if(READ_ON_LINE==0)
-   1159          			{
-   1160          				InfoPrintf("接收到远程启动命令\r\n");
-   1161          				ctl_car_remote_start();
-   1162          				on_change_flag=0;
-   1163          				on_status=READ_ON_LINE;
-   1164          				remote_started_flag=1;
-   1165          				
-   1166          				if(on_status==0)
-   1167          				{
-   1168          					remote_started_flag=0;	
-   1169          				}
-   1170          			}
-   1171          			else
-   1172          			{
-   1173          				InfoPrintf("接收到远程启动命令，但不执行\r\n");
-   1174          			}
-   1175          			break;
-   1176          			
-   1177          		case KEY_ALARM_L:
-   1178          			break;
-   1179          		default : 
-   1180          			break;
-   1181          	}
-   1182          }
-   1183          
-   1184          
-   1185          bool ActiveImmo(void) 
-   1186          {
-   1187          	u8 i,j;
-   1188          	u8 index;
-   1189          	u8 cnt;
-   1190          	u8 err=0;
-   1191          	u32 RFid=0;
-   1192          
-   1193            	InfoPrintf("Active Immo...,钥匙数量=%d\r\n",Remote.Totle);
-   1194          	while(1)
-   1195          	{  
-   1196          		if(err%3==0)
-   1197          		{
-   1198          			SendStartLF();  				//发送LF唤醒遥控器		
-   1199          		}
-   1200          		
-   1201          		index = UhfRevData_V7(Data, 180);	//接收V8遥控器信号 
-   1202          		if(index > 6)//接收到高频数据
-   1203          		{
-   1204          			InfoPrintf("\r\n\r\nActiveImmo的RX(%d+1):",index);
-   1205          			for(cnt=0;cnt<index+1;cnt++){InfoPrintf("%02X,",Data[cnt]);}InfoPrintf("\r\n");
-   1206          		
-   1207          			if(CheckRemoteValueIsAllow(&RFid)==TRUE)
+   1131          					power_on_smart_card();
+   1132          					DelayXms(800);
+   1133          				}
+   1134          				else
+   1135          				{
+   1136          					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1137          				}
+   1138          				KEY_UNLOCK_ON;
+   1139          				KEY_UNLOCK_L_time_stamp=OSTimeGet(&os_err);
+   1140          				smart_card_need_dly_pwr_off_flag=0;
+   1141          			}
+   1142          			else
+   1143          			{
+   1144          				InfoPrintf("接收到(无效)解锁长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1145          			}
+   1146          			break;	
+   1147          
+   1148          			
+   1149          		case KEY_LOCK:
+   1150          			InfoPrintf("接收到锁车--短按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1151          			if(smart_card_pwr_status==0)
+   1152          			{
+   1153          				power_on_smart_card();
+   1154          				DelayXms(800);
+   1155          			}
+   1156          			else
+   1157          			{
+   1158          				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1159          				smart_card_need_dly_pwr_off_flag=1;
+   1160          			}
+   1161          			last_short_key_lock_timestamp=OSTimeGet(&os_err);
+   1162          			KEY_LOCK_ON;
+   1163          			KEY_LOCK_L_time_stamp=OSTimeGet(&os_err);
+   1164          			break;
+   1165          			
+   1166          		case KEY_LOCK_L: 
+   1167          			if(last_short_key_lock_timestamp+T_1S>OSTimeGet(&os_err))
+   1168          			{
+   1169          				last_short_key_lock_timestamp=OSTimeGet(&os_err);
+   1170          				InfoPrintf("接收到锁车--长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1171          				if(smart_card_pwr_status==0)
+   1172          				{
+   1173          					power_on_smart_card();
+   1174          					DelayXms(800);
+   1175          				}
+   1176          				else
+   1177          				{
+   1178          					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+   1179          					smart_card_need_dly_pwr_off_flag=1;
+   1180          				}
+   1181          				KEY_LOCK_ON;
+   1182          				KEY_LOCK_L_time_stamp=OSTimeGet(&os_err);
+   1183          			}
+   1184          			else
+   1185          			{
+   1186          				InfoPrintf("接收到(无效)锁车长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
+   1187          			}
+   1188          			break;		
+   1189          			
+   1190          		case REMOTE_KEY_START:
+   1191          			DriveAlarm(1, 100);
+   1192          			if(READ_ON_LINE==0)
+   1193          			{
+   1194          				InfoPrintf("接收到远程启动命令\r\n");
+   1195          				ctl_car_remote_start();
+   1196          				on_change_flag=0;
+   1197          				on_status=READ_ON_LINE;
+   1198          				remote_started_flag=1;
+   1199          				
+   1200          				if(on_status==0)
+   1201          				{	
+   1202          					DriveAlarm(10, 30);
+   1203          					InfoPrintf("ON线无电,远程启动失败\r\n");
+   1204          					remote_started_flag=0;	
+   1205          				}
+   1206          			}
+   1207          			else
    1208          			{
-   1209          				if(Remote.Rfid[main_key_sn]!=RFid)
-   1210          				{
-   1211          					for(j=0;j<4;j++)
-   1212          					{
-   1213          						if(Remote.Rfid[j]==RFid)
-   1214          						{
-   1215          							InfoPrintf("\r\n\r\n\r\n\r\n!!!!!!!!!!!!!!!!! 主遥控器编号变更为:%d !!!!!!!!!!!!!!!!!\r\n\r\n\r\n\r\n",j);
-   1216          							main_key_sn=j;
-   1217          						}
-   1218          					}
-   1219          				}
-   1220          				//InfoPrintf("遥控器RFID=%08X,配对编号:%d\r\n",RFid,main_key_sn);
-   1221          				return TRUE;
-   1222          			}
-   1223          		}
-   1224          
-   1225          		if(err++ < 30)
-   1226          		{
-   1227          			//InfoPrintf("CCCCCC=%d,err=%d\r\n",i,err);
-   1228          			IWDG_ReloadCounter();
-   1229          			continue;
-   1230          		}
-   1231          		else
-   1232          		{
-   1233          			InfoPrintf("Active Immo 等待遥控器应答超时!!!!\r\n");
-   1234          			break;
-   1235          		}
-   1236          	}
-   1237          
-   1238          	return FALSE;
-   1239          }
-   1240          
-   1241          
+   1209          				InfoPrintf("接收到远程启动命令，但不执行\r\n");
+   1210          			}
+   1211          			break;
+   1212          			
+   1213          		case REMOTE_KEY_STOP:
+   1214          			DriveAlarm(1, 100);
+   1215          			if((READ_ON_LINE==1)&&(on_change_flag==0)&&(remote_started_flag==1))
+   1216          			{
+   1217          				InfoPrintf("接收到远程熄火命令\r\n");
+   1218          				ctl_car_remote_stop();
+   1219          				on_status=READ_ON_LINE;
+   1220          			}
+   1221          			else
+   1222          			{
+   1223          				InfoPrintf("接收到远程熄火命令，但不执行\r\n");
+   1224          			}
+   1225          			break;
+   1226          			
+   1227          		case KEY_ALARM_L:
+   1228          			break;
+   1229          		default : 
+   1230          			break;
+   1231          	}
+   1232          }
+   1233          
+   1234          
+   1235          bool ActiveImmo(void) 
+   1236          {
+   1237          	u8 i,j;
+   1238          	u8 index;
+   1239          	u8 cnt;
+   1240          	u8 err=0;
+   1241          	u32 RFid=0;
    1242          
-   1243          /*******************************************************************************
-   1244          * Function Name : OnRfRev
-   1245          * Description   : 高频接收遥控器数据
-   1246          * Input         : None
-   1247          * Output        : None
-   1248          * Return        : None
-   1249          *******************************************************************************/
-   1250          static void OnRfRev(void) 
-   1251          {
-   1252          	u8 index = 0;
-   1253          	u8 i;
-   1254          	
-   1255          	index = UhfRevData_V7(Data, 15);	//接收V7遥控器信号
-   1256          	
-   1257          	if(ClearKeyValueCount == 0) 
-   1258          	{
-   1259          		RemoteLastData = 0;
-   1260          		RemoteKeyValue = 0;
-   1261          	}
-   1262          	else 
-   1263          	{
-   1264          		ClearKeyValueCount--;
-   1265          	}
-   1266          	
-   1267          	if(index == 0)
-   1268          	{
-   1269          		return;  //未收到数据
-   1270          	}
-   1271          	
-   1272          
-   1273          	if(Data[1] != REMOTE_MARK_V7 && Data[1] != REMOTE_MARK_V8)//引导标志字不符 
-   1274          	//if(Data[1] != REMOTE_MARK_V8)//引导标志字不符 
-   1275          	{
-   1276          		return;
-   1277          	}
-   1278          	
-   1279          	if(Data[2] != 0x00)//引导标志字不符
-   1280          	{
-   1281          			return;
-   1282          	}
-   1283          
-   1284          
-   1285          	if(Data[0] == 0x50)  	//长帧
-   1286          	{
-   1287          		RemoteLastData = Data[3];//记录长短帧一致数据
-   1288          		//zgc mask
-   1289          		//InfoPrintf("校验发射数据的遥控器...\r\n");
-   1290          		if(CheckRemoteValueIsAllow(NULL) == FALSE) 
-   1291          		{
-   1292          			InfoPrintf("非法 遥控器 或 遥控命令，返回\r\n\r\n");
-   1293          			return;//非法遥控器
-   1294          		}
-   1295          		InfoPrintf("校验正确\r\n");
-   1296          		InfoPrintf("UHF数据包为:");
-   1297          		for(i=0;i<index+1;i++)InfoPrintf("%02X,",Data[i]);InfoPrintf("\r\n");
-   1298          		
-   1299          		RemoteKeyValue = Data[11];  //记录键值
-   1300          		ClearKeyValueCount = 40;
-   1301          	}
-   1302          	else if((Data[0] == 0x51)&&(Data[1] == 0xE3)&&(Data[2] == 0x00))//短帧
-   1303          	{
-   1304          		#if 1
-   1305          		InfoPrintf("长按解密前:");
-   1306          		for(i=0;i<index+1;i++)
-   1307          		{
-   1308          			InfoPrintf("%02X,",Data[i]);
-   1309          		}
-   1310          		InfoPrintf("\r\n");
-   1311          		#endif	
-   1312          		RemoteKeyValue=Data[4];
-   1313          
-   1314          		#if 0
-   1315          		if(Data[3] != RemoteLastData || Data[4] != (u8)RemoteKeyValue)   //长短帧一致数据不符、键值不符
-   1316          		{
-   1317          			InfoPrintf("AAAA %02X,%02X\r\n",RemoteLastData,RemoteKeyValue);
-   1318          			return;	
-   1319          		}
-   1320          		#endif
-   1321          
-   1322          		
-   1323          		//InfoPrintf("BBB %02X,%02X\r\n",RemoteLastData,RemoteKeyValue);
-   1324          		RemoteLastData++; //短帧数据只有效一次
-   1325          		RemoteKeyValue |= KEY_LONG; //记录键值
-   1326          	}
-   1327          	else 
-   1328          	{
-   1329          		return;
-   1330          	}
-   1331          	
-   1332          	InfoPrintf("RemoteKeyValue=%04X\r\n",RemoteKeyValue);
-   1333          	//执行键值响应
-   1334          	RemoteKeyActive(RemoteKeyValue);  
-   1335          }
-   1336          
-   1337          /*******************************************************************************
-   1338          * Function Name : OnStudyRemote
-   1339          * Description   : 学习遥控模式。
-   1340          (1)
-   1341          主控板在检测到学习键被按下3秒钟后: 主板持续发送10秒钟的低频信号(或者直到学完3个遥控器的RF ID 后)。
-   1342          该低频信号ID为0x0000,数据体里面携带有主板上保存的"低频唤醒ID(2Bytes)"。
-   1343          另外，在此期间，主板的高频接收会持续检测是否收到RF60下发的
-   1344          发送结束后，改为循环发送"低频唤醒ID"的唤醒帧。
-   1345          
-   1346          (2)
-   1347          7952在检测到CLOSE 和 OPEN键被按下后，会把唤醒ID寄存器的值设为0x0000,以便能够接收到主板发来的"学习键低频数据"，然后从
-   1348          中提取出携带的"低频唤醒ID"，并保存到FLASH中，然后设置到唤醒ID寄存器，之后，就能被主板的低频帧唤醒和通信了。
-   1349          
-   1350          (3)
-   1351          RF60在检测到CLOSE 和 OPEN 键被按下后，会发送包含RF60 ID的数据包给主板，目前还不知会发送几次。
-   1352          
-   1353          
-   1354          * Input         : None
-   1355          * Output        : None
-   1356          * Return        : None
-   1357          *******************************************************************************/
-   1358          static void OnStudyRemote(void) 
-   1359          {
-   1360          	OS_ERR os_err;
-   1361          	REMOTE_STATUS NewRemote={0};  //新遥控器属性数据
-   1362          	REMOTE_STATUS NewRemote_cmp={0};  //新遥控器属性数据
-   1363          	u8 IDCount = 0;
-   1364          	u8 index = 0;
-   1365          	u32 InitTime, LastTime;
-   1366          	u8 i=0;
-   1367          	u8  double_id_flag=0;
-   1368          	u32 double_id_val=0;
-   1369          	u8 key_max_4_flag=0;
-   1370          	u8 temp;
-   1371              //u8 *ptr;
-   1372          	key_sn=0;
-   1373          	
-   1374          	memset((u8 *)&NewRemote, 0x00, sizeof(REMOTE_STATUS));
-   1375          
-   1376          	IWDG_ReloadCounter();
-   1377          	DriveAlarm(1, 1250); //进入学习模式提示
-   1378          	IWDG_ReloadCounter();
-   1379          	DelayXms(1250);
-   1380          	IWDG_ReloadCounter();
-   1381          	DelayXms(1250);
-   1382          	IWDG_ReloadCounter();
-   1383          	DriveAlarm(1, 1250); //进入学习模式提示
-   1384          	IWDG_ReloadCounter();
-   1385          	
-   1386          	InitTime = OSTimeGet(&os_err);
-   1387          	i=0;
-   1388          	while(READ_STUDYKEY == Bit_RESET) //学习按键按下
-   1389          	{
-   1390          		i++;
-   1391          		if(i>3)
-   1392          		{
-   1393          			break;
-   1394          		}
-   1395          		DelayXms(10);
-   1396          	}
-   1397          	if(i>3)
-   1398          	{
-   1399          		key_max_4_flag=1;
-   1400          	}
-   1401          	InfoPrintf("开始学习...\r\n");
-   1402          	
+   1243            	InfoPrintf("Active Immo...,钥匙数量=%d\r\n",Remote.Totle);
+   1244          	while(1)
+   1245          	{  
+   1246          		if(err%3==0)
+   1247          		{
+   1248          			SendStartLF();  				//发送LF唤醒遥控器		
+   1249          		}
+   1250          		
+   1251          		index = UhfRevData_V7(Data, 180);	//接收V8遥控器信号 
+   1252          		if(index > 6)//接收到高频数据
+   1253          		{
+   1254          			InfoPrintf("\r\n\r\nActiveImmo的RX(%d+1):",index);
+   1255          			for(cnt=0;cnt<index+1;cnt++){InfoPrintf("%02X,",Data[cnt]);}InfoPrintf("\r\n");
+   1256          		
+   1257          			if(CheckRemoteValueIsAllow(&RFid)==TRUE)
+   1258          			{
+   1259          				if(Remote.Rfid[main_key_sn]!=RFid)
+   1260          				{
+   1261          					for(j=0;j<4;j++)
+   1262          					{
+   1263          						if(Remote.Rfid[j]==RFid)
+   1264          						{
+   1265          							InfoPrintf("\r\n\r\n\r\n\r\n!!!!!!!!!!!!!!!!! 主遥控器编号变更为:%d !!!!!!!!!!!!!!!!!\r\n\r\n\r\n\r\n",j);
+   1266          							main_key_sn=j;
+   1267          						}
+   1268          					}
+   1269          				}
+   1270          				//InfoPrintf("遥控器RFID=%08X,配对编号:%d\r\n",RFid,main_key_sn);
+   1271          				return TRUE;
+   1272          			}
+   1273          		}
+   1274          
+   1275          		if(err++ < 30)
+   1276          		{
+   1277          			//InfoPrintf("CCCCCC=%d,err=%d\r\n",i,err);
+   1278          			IWDG_ReloadCounter();
+   1279          			continue;
+   1280          		}
+   1281          		else
+   1282          		{
+   1283          			InfoPrintf("Active Immo 等待遥控器应答超时!!!!\r\n");
+   1284          			break;
+   1285          		}
+   1286          	}
+   1287          
+   1288          	return FALSE;
+   1289          }
+   1290          
+   1291          
+   1292          
+   1293          /*******************************************************************************
+   1294          * Function Name : OnRfRev
+   1295          * Description   : 高频接收遥控器数据
+   1296          * Input         : None
+   1297          * Output        : None
+   1298          * Return        : None
+   1299          *******************************************************************************/
+   1300          static void OnRfRev(void) 
+   1301          {
+   1302          	u8 index = 0;
+   1303          	u8 i;
+   1304          	
+   1305          	index = UhfRevData_V7(Data, 15);	//接收V7遥控器信号
+   1306          	
+   1307          	if(ClearKeyValueCount == 0) 
+   1308          	{
+   1309          		RemoteLastData = 0;
+   1310          		RemoteKeyValue = 0;
+   1311          	}
+   1312          	else 
+   1313          	{
+   1314          		ClearKeyValueCount--;
+   1315          	}
+   1316          	
+   1317          	if(index == 0)
+   1318          	{
+   1319          		return;  //未收到数据
+   1320          	}
+   1321          	
+   1322          
+   1323          	if(Data[1] != REMOTE_MARK_V7 && Data[1] != REMOTE_MARK_V8)//引导标志字不符 
+   1324          	//if(Data[1] != REMOTE_MARK_V8)//引导标志字不符 
+   1325          	{
+   1326          		return;
+   1327          	}
+   1328          	
+   1329          	if(Data[2] != 0x00)//引导标志字不符
+   1330          	{
+   1331          			return;
+   1332          	}
+   1333          
+   1334          
+   1335          	if(Data[0] == 0x50)  	//长帧
+   1336          	{
+   1337          		RemoteLastData = Data[3];//记录长短帧一致数据
+   1338          		//zgc mask
+   1339          		//InfoPrintf("校验发射数据的遥控器...\r\n");
+   1340          		if(CheckRemoteValueIsAllow(NULL) == FALSE) 
+   1341          		{
+   1342          			InfoPrintf("非法 遥控器 或 遥控命令，返回\r\n\r\n");
+   1343          			return;//非法遥控器
+   1344          		}
+   1345          		InfoPrintf("校验正确\r\n");
+   1346          		InfoPrintf("UHF数据包为:");
+   1347          		for(i=0;i<index+1;i++)InfoPrintf("%02X,",Data[i]);InfoPrintf("\r\n");
+   1348          		
+   1349          		RemoteKeyValue = Data[11];  //记录键值
+   1350          		ClearKeyValueCount = 40;
+   1351          	}
+   1352          	else if((Data[0] == 0x51)&&(Data[1] == 0xE3)&&(Data[2] == 0x00))//短帧
+   1353          	{
+   1354          		#if 1
+   1355          		InfoPrintf("长按解密前:");
+   1356          		for(i=0;i<index+1;i++)
+   1357          		{
+   1358          			InfoPrintf("%02X,",Data[i]);
+   1359          		}
+   1360          		InfoPrintf("\r\n");
+   1361          		#endif	
+   1362          		RemoteKeyValue=Data[4];
+   1363          
+   1364          		#if 0
+   1365          		if(Data[3] != RemoteLastData || Data[4] != (u8)RemoteKeyValue)   //长短帧一致数据不符、键值不符
+   1366          		{
+   1367          			InfoPrintf("AAAA %02X,%02X\r\n",RemoteLastData,RemoteKeyValue);
+   1368          			return;	
+   1369          		}
+   1370          		#endif
+   1371          
+   1372          		
+   1373          		//InfoPrintf("BBB %02X,%02X\r\n",RemoteLastData,RemoteKeyValue);
+   1374          		RemoteLastData++; //短帧数据只有效一次
+   1375          		RemoteKeyValue |= KEY_LONG; //记录键值
+   1376          	}
+   1377          	else 
+   1378          	{
+   1379          		return;
+   1380          	}
+   1381          	
+   1382          	InfoPrintf("RemoteKeyValue=%04X\r\n",RemoteKeyValue);
+   1383          	//执行键值响应
+   1384          	RemoteKeyActive(RemoteKeyValue);  
+   1385          }
+   1386          
+   1387          /*******************************************************************************
+   1388          * Function Name : OnStudyRemote
+   1389          * Description   : 学习遥控模式。
+   1390          (1)
+   1391          主控板在检测到学习键被按下3秒钟后: 主板持续发送10秒钟的低频信号(或者直到学完3个遥控器的RF ID 后)。
+   1392          该低频信号ID为0x0000,数据体里面携带有主板上保存的"低频唤醒ID(2Bytes)"。
+   1393          另外，在此期间，主板的高频接收会持续检测是否收到RF60下发的
+   1394          发送结束后，改为循环发送"低频唤醒ID"的唤醒帧。
+   1395          
+   1396          (2)
+   1397          7952在检测到CLOSE 和 OPEN键被按下后，会把唤醒ID寄存器的值设为0x0000,以便能够接收到主板发来的"学习键低频数据"，然后从
+   1398          中提取出携带的"低频唤醒ID"，并保存到FLASH中，然后设置到唤醒ID寄存器，之后，就能被主板的低频帧唤醒和通信了。
+   1399          
+   1400          (3)
+   1401          RF60在检测到CLOSE 和 OPEN 键被按下后，会发送包含RF60 ID的数据包给主板，目前还不知会发送几次。
+   1402          
    1403          
-   1404          	while(IDCount < 4) 	//匹配的遥控器数量少于3
-   1405          	{ 
-   1406          		IWDG_ReloadCounter();
-   1407          		index = UhfRevData_V7(Data, 50);
-   1408          		if(index > 9)  //接收V7遥控器信号
-   1409          		{
-   1410          			InfoPrintf("接收到遥控器数据(%d+1):",index);
-   1411          			for(i=0;i<index+1;i++)InfoPrintf("%02X,",Data[i]);InfoPrintf("\r\n");
-   1412          				
-   1413          			if((Data[0] != 0x50)||(Data[2] != 0x00)) continue;		
-   1414          
-   1415          			if(Data[11]!=REMOTE_KEY_STOP)continue;
-   1416          			
-   1417          			if(Data[1] == REMOTE_MARK_V8)  		//解密遥控数据
-   1418          			{
-   1419          				IV8_Decrypt(Data + 3);
-   1420          				
-   1421          				InfoPrintf("解密后%d+1:",index);
-   1422          				for(i=0;i<index+1;i++)InfoPrintf("%02X,",Data[i]);InfoPrintf("\r\n");
-   1423          				
-   1424          			}
-   1425          			else if(Data[1] == REMOTE_MARK_V7)  //解密遥控数据
-   1426          			{
-   1427          				V7_Decrypt(Data + 3);
-   1428          			}
-   1429          			else 
-   1430          			{
-   1431          				continue;
-   1432          			}
-   1433          			
-   1434          			if(Data[10] != (Data[11]&0xF0)) 
-   1435          			{
-   1436          				InfoPrintf("校验错误====0x%02X===0x%02X======\r\n",Data[10],Data[11]);
-   1437          				//continue;
-   1438          			}
-   1439          
-   1440          			if(Data[11]==0x2A)
-   1441          			{
-   1442          				//InfoPrintf("学习键值错误!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\r\n");
-   1443          				//continue;
-   1444          			}
-   1445          
-   1446          			#if 1
-   1447          			if(double_id_flag==1)
-   1448          			{
-   1449          				if(double_id_val==*(u32 *)&Data[3])
-   1450          				{
-   1451          					//InfoPrintf("A-\r\n");
-   1452          				}
-   1453          				else
-   1454          				{
-   1455          					//InfoPrintf("B-\r\n");
-   1456          					
-   1457          					continue;
-   1458          				}
-   1459          			}
-   1460          
-   1461          			if(double_id_flag==0)
-   1462          			{
-   1463          				double_id_val=*(u32 *)&Data[3];
-   1464          				double_id_flag=1;
-   1465          				//InfoPrintf("C-\r\n");
-   1466          				continue;
-   1467          			}
-   1468          
-   1469          			double_id_flag=0;
-   1470          			#endif
-   1471          			
-   1472          			
-   1473          			//如果RFID 重复，则忽略此包数据，返回
-   1474          			if((IDCount == 1) && (*(u32 *) &Data[3] == NewRemote.Rfid[0]))
-   1475          			{
-   1476          				InfoPrintf("RFID重复A =%08X\r\n",*(u32 *) &Data[3]);
-   1477          				continue;
+   1404          * Input         : None
+   1405          * Output        : None
+   1406          * Return        : None
+   1407          *******************************************************************************/
+   1408          static void OnStudyRemote(void) 
+   1409          {
+   1410          	OS_ERR os_err;
+   1411          	REMOTE_STATUS NewRemote={0};  //新遥控器属性数据
+   1412          	REMOTE_STATUS NewRemote_cmp={0};  //新遥控器属性数据
+   1413          	u8 IDCount = 0;
+   1414          	u8 index = 0;
+   1415          	u32 InitTime, LastTime;
+   1416          	u8 i=0;
+   1417          	u8  double_id_flag=0;
+   1418          	u32 double_id_val=0;
+   1419          	u8 key_max_4_flag=0;
+   1420          	u8 temp;
+   1421              //u8 *ptr;
+   1422          	key_sn=0;
+   1423          	
+   1424          	memset((u8 *)&NewRemote, 0x00, sizeof(REMOTE_STATUS));
+   1425          
+   1426          	IWDG_ReloadCounter();
+   1427          	DriveAlarm(1, 1250); //进入学习模式提示
+   1428          	IWDG_ReloadCounter();
+   1429          	DelayXms(1250);
+   1430          	IWDG_ReloadCounter();
+   1431          	DelayXms(1250);
+   1432          	IWDG_ReloadCounter();
+   1433          	DriveAlarm(1, 1250); //进入学习模式提示
+   1434          	IWDG_ReloadCounter();
+   1435          	
+   1436          	InitTime = OSTimeGet(&os_err);
+   1437          	i=0;
+   1438          	while(READ_STUDYKEY == Bit_RESET) //学习按键按下
+   1439          	{
+   1440          		i++;
+   1441          		if(i>3)
+   1442          		{
+   1443          			break;
+   1444          		}
+   1445          		DelayXms(10);
+   1446          	}
+   1447          	if(i>3)
+   1448          	{
+   1449          		key_max_4_flag=1;
+   1450          	}
+   1451          	InfoPrintf("开始学习...\r\n");
+   1452          	
+   1453          
+   1454          	while(IDCount < 4) 	//匹配的遥控器数量少于3
+   1455          	{ 
+   1456          		IWDG_ReloadCounter();
+   1457          		index = UhfRevData_V7(Data, 50);
+   1458          		if(index > 9)  //接收V7遥控器信号
+   1459          		{
+   1460          			InfoPrintf("接收到遥控器数据(%d+1):",index);
+   1461          			for(i=0;i<index+1;i++)InfoPrintf("%02X,",Data[i]);InfoPrintf("\r\n");
+   1462          				
+   1463          			if((Data[0] != 0x50)||(Data[2] != 0x00)) continue;		
+   1464          
+   1465          			if(Data[11]!=REMOTE_KEY_STOP)continue;
+   1466          			
+   1467          			if(Data[1] == REMOTE_MARK_V8)  		//解密遥控数据
+   1468          			{
+   1469          				IV8_Decrypt(Data + 3);
+   1470          				
+   1471          				InfoPrintf("解密后%d+1:",index);
+   1472          				for(i=0;i<index+1;i++)InfoPrintf("%02X,",Data[i]);InfoPrintf("\r\n");
+   1473          				
+   1474          			}
+   1475          			else if(Data[1] == REMOTE_MARK_V7)  //解密遥控数据
+   1476          			{
+   1477          				V7_Decrypt(Data + 3);
    1478          			}
-   1479          			
-   1480          			//如果RFID 重复，则忽略此包数据，返回
-   1481          			if((IDCount == 2) && ( (*(u32 *) &Data[3] == NewRemote.Rfid[0]) || (*(u32 *) &Data[3] == NewRemote.Rfid[1])) ) 
-   1482          			{
-   1483          				InfoPrintf("RFID重复B =%08X\r\n",*(u32 *) &Data[3]);
-   1484          				continue;
-   1485          			}
-   1486          
-   1487          			//如果RFID 重复，则忽略此包数据，返回
-   1488          			if(    (IDCount == 3) 
-   1489          				&& ( 
-   1490          				        (*(u32 *) &Data[3] == NewRemote.Rfid[0]) 
-   1491          				     || (*(u32 *) &Data[3] == NewRemote.Rfid[1])
-   1492          				     || (*(u32 *) &Data[3] == NewRemote.Rfid[2])
-   1493          				   ) 
-   1494          		       ) 
-   1495          			{
-   1496          				InfoPrintf("RFID重复C =%08X\r\n",*(u32 *) &Data[3]);
-   1497          				continue;
-   1498          			}
-   1499          			
-   1500          			NewRemote.Rfid[IDCount] = *(u32 *) &Data[3];
-   1501          			NewRemote.Rfloq[IDCount]= *(u32 *) &Data[7] & 0x00FFFFFF;
-   1502          			NewRemote.Lfid[IDCount] = ((u16)NewRemote.Rfid[IDCount] ^ 0xA569) & 0xFFFE;
-   1503          
-   1504          			//OSSchedUnlock(&os_err);
-   1505          			DriveAlarm(1, 150);
-   1506          			InfoPrintf("\r\n");
-   1507          			InfoPrintf("学习到RFID =%08X\r\n",NewRemote.Rfid[IDCount]);
-   1508          			InfoPrintf("学习到Rfloq=%08X\r\n",NewRemote.Rfloq[IDCount]);			
-   1509          			//InfoPrintf("学习到LFID =%08X\r\n",NewRemote.Lfid[IDCount]);
-   1510          			IDCount++;
-   1511          			InfoPrintf("学习到RFID数量=%d\r\n",IDCount);
-   1512          			key_sn++;
-   1513          			InitTime=OSTimeGet(&os_err);
-   1514          			DelayXms(200);
-   1515          			//OSSchedLock(&os_err);
-   1516          		}
-   1517          		else
-   1518          		{
-   1519          			//未接收到RF60下发的有效的高频数据
-   1520          		}
-   1521          
-   1522          		//超时判断
-   1523          		LastTime = OSTimeGet(&os_err);
-   1524          		if(key_max_4_flag==1)
-   1525          		{
-   1526          			temp=4;	
-   1527          		}
-   1528          		else
-   1529          		{
-   1530          			temp=2;
-   1531          		}
-   1532          		//if((LastTime - InitTime > STUDY_MODE_TIME+(key_sn*60))/*||(READ_STUDYKEY == Bit_RESET)*/) 	//持续接收时间10s
-   1533          		if((( (LastTime-InitTime) > 6000) /*||(READ_STUDYKEY == Bit_RESET)*/) 	//持续接收时间10s
-   1534          		    ||(key_sn>=temp)
-   1535          		  )
-   1536          		{
-   1537          			InfoPrintf("学习ID时间已耗完\r\n");
-   1538          			//OSSchedUnlock(&os_err);
-   1539          			DriveAlarm(4, 50);	//zgc add
-   1540                      DelayXms(300);
-   1541          			//OSSchedLock(&os_err);
-   1542          			break;
-   1543          		}
-   1544          
-   1545          		//不停地发送低频信号，确保PCF7952能接收到主控板决定的7952低频唤醒ID S
-   1546          		IWDG_ReloadCounter();	//喂狗
-   1547          		OSSchedLock(&os_err);
-   1548          		if(SendStudyLF()==1)
-   1549          		{
-   1550          			OSSchedUnlock(&os_err);
-   1551          			DriveAlarm(4, 50);
-   1552          			break;
-   1553          		}
-   1554          		OSSchedUnlock(&os_err);
-   1555          		DelayXms(5);
-   1556          		//OSSchedLock(&os_err);
-   1557          	}
-   1558          	
-   1559          	InfoPrintf("学习到RFID数量xxxxxxxxxxxx=%d\r\n",IDCount);
-   1560          	
-   1561          	if(IDCount != 0) 	//有效遥控器数量非0
-   1562          	{ 
-   1563          		NewRemote.Totle = IDCount;
-   1564          		NewRemote.Index = 0;
-   1565          		NewRemote.State = Remote.State; //复制当前汽车状态
-   1566          		InfoPrintf("学习到RFID数量dccccccccccccccc=%d\r\n",IDCount);
-   1567          		memcpy(&Remote, &NewRemote, sizeof(REMOTE_STATUS));
-   1568          
-   1569          		if(FLASH_WriteRemoteID(&Remote) == FALSE) 
-   1570          		{
-   1571          			FLASH_WriteRemoteID(&Remote);
-   1572          		}
-   1573          		
-   1574          		FLASH_WriteRemoteLOQ(&Remote);
-   1575          		FLASH_ReadRemoteID(&NewRemote_cmp);  			//获取遥控器ID值等
-   1576          		FLASH_ReadRemoteLOQ(&NewRemote_cmp); 			//获取遥控器LOQ值等
-   1577          
-   1578          		if(memcmp(&NewRemote_cmp,&Remote,sizeof(REMOTE_STATUS))==0)
+   1479          			else 
+   1480          			{
+   1481          				continue;
+   1482          			}
+   1483          			
+   1484          			if(Data[10] != (Data[11]&0xF0)) 
+   1485          			{
+   1486          				InfoPrintf("校验错误====0x%02X===0x%02X======\r\n",Data[10],Data[11]);
+   1487          				//continue;
+   1488          			}
+   1489          
+   1490          			if(Data[11]==0x2A)
+   1491          			{
+   1492          				//InfoPrintf("学习键值错误!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\r\n");
+   1493          				//continue;
+   1494          			}
+   1495          
+   1496          			#if 1
+   1497          			if(double_id_flag==1)
+   1498          			{
+   1499          				if(double_id_val==*(u32 *)&Data[3])
+   1500          				{
+   1501          					//InfoPrintf("A-\r\n");
+   1502          				}
+   1503          				else
+   1504          				{
+   1505          					//InfoPrintf("B-\r\n");
+   1506          					
+   1507          					continue;
+   1508          				}
+   1509          			}
+   1510          
+   1511          			if(double_id_flag==0)
+   1512          			{
+   1513          				double_id_val=*(u32 *)&Data[3];
+   1514          				double_id_flag=1;
+   1515          				//InfoPrintf("C-\r\n");
+   1516          				continue;
+   1517          			}
+   1518          
+   1519          			double_id_flag=0;
+   1520          			#endif
+   1521          			
+   1522          			
+   1523          			//如果RFID 重复，则忽略此包数据，返回
+   1524          			if((IDCount == 1) && (*(u32 *) &Data[3] == NewRemote.Rfid[0]))
+   1525          			{
+   1526          				InfoPrintf("RFID重复A =%08X\r\n",*(u32 *) &Data[3]);
+   1527          				continue;
+   1528          			}
+   1529          			
+   1530          			//如果RFID 重复，则忽略此包数据，返回
+   1531          			if((IDCount == 2) && ( (*(u32 *) &Data[3] == NewRemote.Rfid[0]) || (*(u32 *) &Data[3] == NewRemote.Rfid[1])) ) 
+   1532          			{
+   1533          				InfoPrintf("RFID重复B =%08X\r\n",*(u32 *) &Data[3]);
+   1534          				continue;
+   1535          			}
+   1536          
+   1537          			//如果RFID 重复，则忽略此包数据，返回
+   1538          			if(    (IDCount == 3) 
+   1539          				&& ( 
+   1540          				        (*(u32 *) &Data[3] == NewRemote.Rfid[0]) 
+   1541          				     || (*(u32 *) &Data[3] == NewRemote.Rfid[1])
+   1542          				     || (*(u32 *) &Data[3] == NewRemote.Rfid[2])
+   1543          				   ) 
+   1544          		       ) 
+   1545          			{
+   1546          				InfoPrintf("RFID重复C =%08X\r\n",*(u32 *) &Data[3]);
+   1547          				continue;
+   1548          			}
+   1549          			
+   1550          			NewRemote.Rfid[IDCount] = *(u32 *) &Data[3];
+   1551          			NewRemote.Rfloq[IDCount]= *(u32 *) &Data[7] & 0x00FFFFFF;
+   1552          			NewRemote.Lfid[IDCount] = ((u16)NewRemote.Rfid[IDCount] ^ 0xA569) & 0xFFFE;
+   1553          
+   1554          			//OSSchedUnlock(&os_err);
+   1555          			DriveAlarm(1, 150);
+   1556          			InfoPrintf("\r\n");
+   1557          			InfoPrintf("学习到RFID =%08X\r\n",NewRemote.Rfid[IDCount]);
+   1558          			InfoPrintf("学习到Rfloq=%08X\r\n",NewRemote.Rfloq[IDCount]);			
+   1559          			//InfoPrintf("学习到LFID =%08X\r\n",NewRemote.Lfid[IDCount]);
+   1560          			IDCount++;
+   1561          			InfoPrintf("学习到RFID数量=%d\r\n",IDCount);
+   1562          			key_sn++;
+   1563          			InitTime=OSTimeGet(&os_err);
+   1564          			DelayXms(200);
+   1565          			//OSSchedLock(&os_err);
+   1566          		}
+   1567          		else
+   1568          		{
+   1569          			//未接收到RF60下发的有效的高频数据
+   1570          		}
+   1571          
+   1572          		//超时判断
+   1573          		LastTime = OSTimeGet(&os_err);
+   1574          		if(key_max_4_flag==1)
+   1575          		{
+   1576          			temp=4;	
+   1577          		}
+   1578          		else
    1579          		{
-   1580          			InfoPrintf("保存成功!!!!!!!!! 遥控数量=%d !!!!!!!!!!!!!!\r\n",IDCount);
+   1580          			temp=2;
    1581          		}
-   1582          		//OSSchedUnlock(&os_err);
-   1583          		DriveAlarm(IDCount, 500);  //保存遥控器属性数据提示
-   1584          		//OSSchedLock(&os_err);
-   1585          	}
-   1586          
-   1587          	
-   1588              //OSSchedUnlock(&os_err);
-   1589          	
-   1590            	return;
-   1591          }
-   1592          
-   1593          
-   1594          static void rf_open_module(void)
-   1595          {
-   1596          	//user_uart2_open();
-   1597          	//gps_power_ctl(1);
-   1598          	//gps_reset_ctl(0);
-   1599          	//user_delay_ms(TIME_10ms);
-   1600          	//gps_config_module();
-   1601          	//gps_init_ant_ck_pin();
-   1602          }
-   1603          
-   1604          static void rf_close_module(void)
-   1605          {
-   1606          	
-   1607          }
-   1608          
-   1609          
-   1610          #define ___RF____MIDDLE__________________________________________________________
-   1611          
-   1612          
-   1613          #define ___RF_APP__________________________________________________________________________
-   1614          
-   1615          
-   1616          
-   1617          
-   1618          static void RfTaskMsg_handle(TASK_MSG_T *p_msg)
-   1619          {
-   1620          
-   1621          	switch (p_msg->msg_src_id)
-   1622          	{
-   1623          		case DEV_MANAGE_TASK_ID:
-   1624          			switch (p_msg->msg_father_type)
-   1625          			{
-   1626          				case FATHER_MSG_T_TASK_POWER_CTRL:
-   1627          					if(p_msg->msg_son_type==POWER_CTRL_PWR_ON)
-   1628          					{
-   1629          						rf_open_module();
-   1630          					}
-   1631          					else if(p_msg->msg_son_type==POWER_CTRL_WAKEUP)
-   1632          					{
-   1633          
-   1634          					}
-   1635          					else if(p_msg->msg_son_type==POWER_CTRL_SLEEP)
-   1636          					{
-   1637          
-   1638          					}
-   1639          					else if(p_msg->msg_son_type==POWER_CTRL_PWR_OFF)
-   1640          					{
-   1641          
-   1642          					}
-   1643          					break;
-   1644          				default:
-   1645          					break;
-   1646          			}
-   1647          			break;
-   1648          		case MODEM_MANAGE_TASK_ID:
-   1649          			break;
-   1650          		default:
-   1651          			break;
-   1652          	}		
-   1653          }
-   1654          
-   1655          void init_adc(uint8_t chan)
-   1656          {
-   1657          	
-   1658          	ADC_InitTypeDef ADC_InitStructure;
-   1659          	ADC_Cmd(ADC1, DISABLE);
-   1660          	
-   1661          	/* ADC1 configuration ------------------------------------------------------*/
-   1662          	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
-   1663          	ADC_InitStructure.ADC_ScanConvMode = DISABLE;
-   1664          	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;
-   1665          	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
-   1666          	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
-   1667          	ADC_InitStructure.ADC_NbrOfChannel = 1;
-   1668          	ADC_Init(ADC1, &ADC_InitStructure);
-   1669          	
-   1670          	/* ADC1 regular channels configuration */ 
-   1671          	ADC_RegularChannelConfig(ADC1, chan, 1, ADC_SampleTime_28Cycles5);
-   1672          
-   1673          	/* Enable ADC1 EOC interrupt */
-   1674          	ADC_ITConfig(ADC1, ADC_IT_EOC, ENABLE);
-   1675          
-   1676          	/*ADC_ResetCalibration(ADC1);
-   1677          	while(ADC_GetResetCalibrationStatus(ADC1));
-   1678          	ADC_StartCalibration(ADC1);
-   1679          	while(ADC_GetCalibrationStatus(ADC1));
-   1680          	ADC_SoftwareStartConvCmd(ADC1, ENABLE);*/
-   1681          
-   1682          	//ADC_Cmd(ADC1, ENABLE);
-   1683          }
-   1684          
-   1685          void start_adc(uint8_t chan)
-   1686          {
-   1687          	ADC_RegularChannelConfig(ADC1, chan, 1, ADC_SampleTime_28Cycles5);
-   1688          	ADC_Cmd(ADC1, ENABLE);
-   1689          }
-   1690          
+   1582          		//if((LastTime - InitTime > STUDY_MODE_TIME+(key_sn*60))/*||(READ_STUDYKEY == Bit_RESET)*/) 	//持续接收时间10s
+   1583          		if((( (LastTime-InitTime) > 6000) /*||(READ_STUDYKEY == Bit_RESET)*/) 	//持续接收时间10s
+   1584          		    ||(key_sn>=temp)
+   1585          		  )
+   1586          		{
+   1587          			InfoPrintf("学习ID时间已耗完\r\n");
+   1588          			//OSSchedUnlock(&os_err);
+   1589          			DriveAlarm(4, 50);	//zgc add
+   1590                      DelayXms(300);
+   1591          			//OSSchedLock(&os_err);
+   1592          			break;
+   1593          		}
+   1594          
+   1595          		//不停地发送低频信号，确保PCF7952能接收到主控板决定的7952低频唤醒ID S
+   1596          		IWDG_ReloadCounter();	//喂狗
+   1597          		OSSchedLock(&os_err);
+   1598          		if(SendStudyLF()==1)
+   1599          		{
+   1600          			OSSchedUnlock(&os_err);
+   1601          			DriveAlarm(4, 50);
+   1602          			break;
+   1603          		}
+   1604          		OSSchedUnlock(&os_err);
+   1605          		DelayXms(5);
+   1606          		//OSSchedLock(&os_err);
+   1607          	}
+   1608          	
+   1609          	InfoPrintf("学习到RFID数量xxxxxxxxxxxx=%d\r\n",IDCount);
+   1610          	
+   1611          	if(IDCount != 0) 	//有效遥控器数量非0
+   1612          	{ 
+   1613          		NewRemote.Totle = IDCount;
+   1614          		NewRemote.Index = 0;
+   1615          		NewRemote.State = Remote.State; //复制当前汽车状态
+   1616          		InfoPrintf("学习到RFID数量dccccccccccccccc=%d\r\n",IDCount);
+   1617          		memcpy(&Remote, &NewRemote, sizeof(REMOTE_STATUS));
+   1618          
+   1619          		if(FLASH_WriteRemoteID(&Remote) == FALSE) 
+   1620          		{
+   1621          			FLASH_WriteRemoteID(&Remote);
+   1622          		}
+   1623          		
+   1624          		FLASH_WriteRemoteLOQ(&Remote);
+   1625          		FLASH_ReadRemoteID(&NewRemote_cmp);  			//获取遥控器ID值等
+   1626          		FLASH_ReadRemoteLOQ(&NewRemote_cmp); 			//获取遥控器LOQ值等
+   1627          
+   1628          		if(memcmp(&NewRemote_cmp,&Remote,sizeof(REMOTE_STATUS))==0)
+   1629          		{
+   1630          			InfoPrintf("保存成功!!!!!!!!! 遥控数量=%d !!!!!!!!!!!!!!\r\n",IDCount);
+   1631          		}
+   1632          		//OSSchedUnlock(&os_err);
+   1633          		DriveAlarm(IDCount, 500);  //保存遥控器属性数据提示
+   1634          		//OSSchedLock(&os_err);
+   1635          	}
+   1636          
+   1637          	
+   1638              //OSSchedUnlock(&os_err);
+   1639          	
+   1640            	return;
+   1641          }
+   1642          
+   1643          
+   1644          static void rf_open_module(void)
+   1645          {
+   1646          	//user_uart2_open();
+   1647          	//gps_power_ctl(1);
+   1648          	//gps_reset_ctl(0);
+   1649          	//user_delay_ms(TIME_10ms);
+   1650          	//gps_config_module();
+   1651          	//gps_init_ant_ck_pin();
+   1652          }
+   1653          
+   1654          static void rf_close_module(void)
+   1655          {
+   1656          	
+   1657          }
+   1658          
+   1659          
+   1660          #define ___RF____MIDDLE__________________________________________________________
+   1661          
+   1662          
+   1663          #define ___RF_APP__________________________________________________________________________
+   1664          
+   1665          
+   1666          
+   1667          
+   1668          static void RfTaskMsg_handle(TASK_MSG_T *p_msg)
+   1669          {
+   1670          
+   1671          	switch (p_msg->msg_src_id)
+   1672          	{
+   1673          		case DEV_MANAGE_TASK_ID:
+   1674          			switch (p_msg->msg_father_type)
+   1675          			{
+   1676          				case FATHER_MSG_T_TASK_POWER_CTRL:
+   1677          					if(p_msg->msg_son_type==POWER_CTRL_PWR_ON)
+   1678          					{
+   1679          						rf_open_module();
+   1680          					}
+   1681          					else if(p_msg->msg_son_type==POWER_CTRL_WAKEUP)
+   1682          					{
+   1683          
+   1684          					}
+   1685          					else if(p_msg->msg_son_type==POWER_CTRL_SLEEP)
+   1686          					{
+   1687          
+   1688          					}
+   1689          					else if(p_msg->msg_son_type==POWER_CTRL_PWR_OFF)
+   1690          					{
    1691          
-   1692          
-   1693          void ADC1_2_IRQHandler(void)
-   1694          {
-   1695          	uint16_t temp;
-   1696          	uint32_t all=0;
-   1697          	uint8_t i;	
-   1698          
-   1699          	if(1 == ADC_GetFlagStatus(ADC1,ADC_FLAG_EOC))
-   1700          	{
-   1701          		bat_current = ADC_GetConversionValue(ADC1);
-   1702          		if(check_bat_vol_ok_flag==2)
-   1703          		{
-   1704          			if((bat_current>bat_off_average+bat_dif_val)&&(bat_cali_ok_flag==1))
-   1705          			{
-   1706          				#if 1
-   1707          				{
-   1708          					static uint8_t cnt=0;
-   1709          					if(cnt++%10==0)
-   1710          					InfoPrintf("疑似启动...\r\n");
-   1711          				}
-   1712          				#endif
-   1713          			}
-   1714          		}
-   1715          
-   1716          		if(check_bat_vol_ok_flag==0)
-   1717          		{
-   1718          			check_bat_vol_buf[check_bat_vol_buf_offset++]=bat_current;
-   1719          			if(check_bat_vol_buf_offset>=CHECK_BUF_LEN)
-   1720          			{
-   1721          				all=0;
-   1722          				for(i=0;i<CHECK_BUF_LEN;i++)
-   1723          				{
-   1724          					all+=check_bat_vol_buf[i];
-   1725          				}
-   1726          
-   1727          				check_bat_vol_buf_offset=0;
-   1728          				check_bat_vol_ok_flag=1;
-   1729          				bat_off_average=all/CHECK_BUF_LEN;
-   1730          				InfoPrintf("校准主电池 熄火后 电压OK\r\n");
-   1731          			}
-   1732          			
-   1733          			check_bat_vol_buf_offset%=CHECK_BUF_LEN;
-   1734          		}
-   1735          		else if(check_bat_vol_ok_flag==1)
-   1736          		{
-   1737          			all=0;
-   1738          			check_bat_vol_buf[check_bat_vol_buf_offset++]=bat_current;
-   1739          			for(i=0;i<CHECK_BUF_LEN;i++)
-   1740          			{
-   1741          				all+=check_bat_vol_buf[i];
-   1742          			}
-   1743          			bat_engined_average=all/CHECK_BUF_LEN;
-   1744          			check_bat_vol_buf_offset%=CHECK_BUF_LEN;
-   1745          			//InfoPrintf("校准主电池 点火后 电压OK\r\n");
-   1746          		}
-   1747          				
-   1748          		ADC_Cmd(ADC1, DISABLE);
-   1749          	}
-   1750          }
-   1751          
-   1752          static void recalibrate_bat_vol(void)
-   1753          {
-   1754          	check_bat_vol_ok_flag=0;
-   1755          	check_bat_vol_buf_offset=0;
-   1756          	bat_cali_ok_flag=0;
-   1757          }
-   1758          
-   1759          static void check_study_key(void)
-   1760          {
-   1761          	OS_ERR os_err;
-   1762          	uint32_t temp,j;
-   1763          	uint32_t i;
-   1764          	static uint32_t cali_alarm_timestamp=0;
-   1765          	
-   1766          	if(READ_STUDYKEY == Bit_RESET)
-   1767          	{
-   1768          		temp=0;
-   1769          		for(i=1;i<150;i++)
-   1770          		{
-   1771          			user_delay_ms(10);
-   1772          			if(READ_STUDYKEY == Bit_SET)
-   1773          			{
-   1774          				i=0;
-   1775          				break;
-   1776          			}
-   1777          			IWDG_ReloadCounter();
-   1778          		}
-   1779          		
-   1780          		if(i!=0)
-   1781          		{
-   1782          			InfoPrintf("进入学习遥控器模式...\r\n");
-   1783          			OnStudyRemote();
-   1784          			user_delay_ms(200);
-   1785          		}
-   1786          		#ifdef EN_ADC1_CHN1
-   1787          		else
-   1788          		{
-   1789          			//InfoPrintf("检测校准...\r\n");
-   1790          			temp=1;
-   1791          			for(i=0;i<300;i++)
-   1792          			{
-   1793          				user_delay_ms(10);
-   1794          				
-   1795          				if((READ_STUDYKEY == Bit_RESET) && (temp%2==1))
-   1796          				{
-   1797          					user_delay_ms(30);
-   1798          					temp++;
-   1799          				}
-   1800          				else if((READ_STUDYKEY == Bit_SET) && (temp%2==0))
-   1801          				{
-   1802          					user_delay_ms(30);
-   1803          					temp++; 
-   1804          				}
-   1805          
-   1806          				if((temp==1)&&(i>120))
-   1807          				{
-   1808          					break;
-   1809          				}
-   1810          
-   1811          				if(temp>=5)
-   1812          				{
-   1813          					InfoPrintf("进入校准模式...\r\n");
-   1814          					recalibrate_bat_vol();
-   1815          					start_calibrate_bat_timestamp=OSTimeGet(&os_err);
-   1816          					break;
-   1817          				}	
-   1818          			}
-   1819          		}
-   1820          		#endif
-   1821          	}
-   1822          
-   1823          	#ifdef EN_ADC1_CHN1
-   1824          	if(OSTimeGet(&os_err)-start_calibrate_bat_timestamp>10000)
-   1825          	{
-   1826          		if(check_bat_vol_ok_flag==1)
-   1827          		{
-   1828          			if(bat_engined_average>bat_off_average+100)
-   1829          			{
-   1830          				bat_dif_val=bat_engined_average-bat_off_average;
-   1831          				bat_cali_ok_flag=1;
-   1832          			}
-   1833          			else
-   1834          			{
-   1835          				bat_cali_ok_flag=0;
-   1836          				InfoPrintf("校准错误\r\n");
-   1837          				DriveAlarm(12, 70);
-   1838          			}
-   1839          			check_bat_vol_ok_flag=2;
-   1840          			InfoPrintf("校准结束\r\n");
-   1841          			cali_alarm_timestamp=0;
-   1842          		}
-   1843          	}
-   1844          	else
-   1845          	{
-   1846          		if(check_bat_vol_ok_flag<=1)
-   1847          		{
-   1848          			if((OSTimeGet(&os_err)-cali_alarm_timestamp)>=1000)
-   1849          			{
-   1850          				cali_alarm_timestamp=OSTimeGet(&os_err);
-   1851          				DriveAlarm(1, 200);
-   1852          			}
-   1853          		}
-   1854          	}
-   1855          	#endif
-   1856          }
-   1857          
-   1858          void IWDG_Configuration(void)
-   1859          {
-   1860          	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);	// 打开使能，iwdg的寄存器有写保护,必须先写入0x5555，才能操作寄存器
-   1861          	IWDG_SetPrescaler(IWDG_Prescaler_256);			// 独立看门狗使用内部低速振荡器LSI，对LSI进行256分频
-   1862          	//IWDG_SetReload(2000);							// 设定独立看门狗计数器的计数值(0x000~0xFFF;0~4095)，复位时间为12.8s
-   1863          	//IWDG_SetReload(200);							// 设定独立看门狗计数器的计数值(0x000~0xFFF;0~4095)，复位时间为1.28s
-   1864          	IWDG_SetReload(800);							// 设定独立看门狗计数器的计数值(0x000~0xFFF;0~4095)，复位时间为2.56s
-   1865          	IWDG_ReloadCounter();							// 重载独立看门狗计数器，向寄存器写入0xAAAA，或者更新计数值
-   1866          	IWDG_Enable();									// 开启看门狗，向寄存器写入0xCCCC即可
-   1867          }
-   1868          
-   1869          
-   1870          void RfTask(void *p_arg)
-   1871          {
-   1872          	TASK_MSG_T *task_msg;
-   1873          	OS_MSG_SIZE msg_size;
-   1874          	uint32_t last_time=0;
-   1875          	uint32_t last_adc_time=0;
-   1876          	uint32_t i;
-   1877          	uint8_t temp;
-   1878          	OS_ERR os_err;
-   1879          	p_arg=p_arg;
-   1880          	
-   1881          	KEY_PWR_OFF;
-   1882          	MCURegID = *(vu32 *)(0x1FFFF7E8 + 8);			//获取MCU固件ID
-   1883          	factory_trace_id = *(vu32 *)(0x1FFFF7E8 + 0);	//获取MCU固件ID zgc
-   1884          	FLASH_ReadRemoteID(&Remote);  					//获取遥控器ID值等
-   1885          	FLASH_ReadRemoteLOQ(&Remote); 					//获取遥控器LOQ值等
-   1886          
-   1887          	#ifdef EN_ADC1_CHN1
-   1888          	init_adc(ADC_Channel_1);
-   1889          	#else
-   1890          	DelayXms(5);  
-   1891          	on_status=READ_ON_LINE;
-   1892          	#endif
-   1893          	
-   1894          	while(1)
+   1692          					}
+   1693          					break;
+   1694          				default:
+   1695          					break;
+   1696          			}
+   1697          			break;
+   1698          		case MODEM_MANAGE_TASK_ID:
+   1699          			break;
+   1700          		default:
+   1701          			break;
+   1702          	}		
+   1703          }
+   1704          
+   1705          void init_adc(uint8_t chan)
+   1706          {
+   1707          	
+   1708          	ADC_InitTypeDef ADC_InitStructure;
+   1709          	ADC_Cmd(ADC1, DISABLE);
+   1710          	
+   1711          	/* ADC1 configuration ------------------------------------------------------*/
+   1712          	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
+   1713          	ADC_InitStructure.ADC_ScanConvMode = DISABLE;
+   1714          	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;
+   1715          	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
+   1716          	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
+   1717          	ADC_InitStructure.ADC_NbrOfChannel = 1;
+   1718          	ADC_Init(ADC1, &ADC_InitStructure);
+   1719          	
+   1720          	/* ADC1 regular channels configuration */ 
+   1721          	ADC_RegularChannelConfig(ADC1, chan, 1, ADC_SampleTime_28Cycles5);
+   1722          
+   1723          	/* Enable ADC1 EOC interrupt */
+   1724          	ADC_ITConfig(ADC1, ADC_IT_EOC, ENABLE);
+   1725          
+   1726          	/*ADC_ResetCalibration(ADC1);
+   1727          	while(ADC_GetResetCalibrationStatus(ADC1));
+   1728          	ADC_StartCalibration(ADC1);
+   1729          	while(ADC_GetCalibrationStatus(ADC1));
+   1730          	ADC_SoftwareStartConvCmd(ADC1, ENABLE);*/
+   1731          
+   1732          	//ADC_Cmd(ADC1, ENABLE);
+   1733          }
+   1734          
+   1735          void start_adc(uint8_t chan)
+   1736          {
+   1737          	ADC_RegularChannelConfig(ADC1, chan, 1, ADC_SampleTime_28Cycles5);
+   1738          	ADC_Cmd(ADC1, ENABLE);
+   1739          }
+   1740          
+   1741          
+   1742          
+   1743          void ADC1_2_IRQHandler(void)
+   1744          {
+   1745          	uint16_t temp;
+   1746          	uint32_t all=0;
+   1747          	uint8_t i;	
+   1748          
+   1749          	if(1 == ADC_GetFlagStatus(ADC1,ADC_FLAG_EOC))
+   1750          	{
+   1751          		bat_current = ADC_GetConversionValue(ADC1);
+   1752          		if(check_bat_vol_ok_flag==2)
+   1753          		{
+   1754          			if((bat_current>bat_off_average+bat_dif_val)&&(bat_cali_ok_flag==1))
+   1755          			{
+   1756          				#if 1
+   1757          				{
+   1758          					static uint8_t cnt=0;
+   1759          					if(cnt++%10==0)
+   1760          					InfoPrintf("疑似启动...\r\n");
+   1761          				}
+   1762          				#endif
+   1763          			}
+   1764          		}
+   1765          
+   1766          		if(check_bat_vol_ok_flag==0)
+   1767          		{
+   1768          			check_bat_vol_buf[check_bat_vol_buf_offset++]=bat_current;
+   1769          			if(check_bat_vol_buf_offset>=CHECK_BUF_LEN)
+   1770          			{
+   1771          				all=0;
+   1772          				for(i=0;i<CHECK_BUF_LEN;i++)
+   1773          				{
+   1774          					all+=check_bat_vol_buf[i];
+   1775          				}
+   1776          
+   1777          				check_bat_vol_buf_offset=0;
+   1778          				check_bat_vol_ok_flag=1;
+   1779          				bat_off_average=all/CHECK_BUF_LEN;
+   1780          				InfoPrintf("校准主电池 熄火后 电压OK\r\n");
+   1781          			}
+   1782          			
+   1783          			check_bat_vol_buf_offset%=CHECK_BUF_LEN;
+   1784          		}
+   1785          		else if(check_bat_vol_ok_flag==1)
+   1786          		{
+   1787          			all=0;
+   1788          			check_bat_vol_buf[check_bat_vol_buf_offset++]=bat_current;
+   1789          			for(i=0;i<CHECK_BUF_LEN;i++)
+   1790          			{
+   1791          				all+=check_bat_vol_buf[i];
+   1792          			}
+   1793          			bat_engined_average=all/CHECK_BUF_LEN;
+   1794          			check_bat_vol_buf_offset%=CHECK_BUF_LEN;
+   1795          			//InfoPrintf("校准主电池 点火后 电压OK\r\n");
+   1796          		}
+   1797          				
+   1798          		ADC_Cmd(ADC1, DISABLE);
+   1799          	}
+   1800          }
+   1801          
+   1802          static void recalibrate_bat_vol(void)
+   1803          {
+   1804          	check_bat_vol_ok_flag=0;
+   1805          	check_bat_vol_buf_offset=0;
+   1806          	bat_cali_ok_flag=0;
+   1807          }
+   1808          
+   1809          static void check_study_key(void)
+   1810          {
+   1811          	OS_ERR os_err;
+   1812          	uint32_t temp,j;
+   1813          	uint32_t i;
+   1814          	static uint32_t cali_alarm_timestamp=0;
+   1815          	
+   1816          	if(READ_STUDYKEY == Bit_RESET)
+   1817          	{
+   1818          		temp=0;
+   1819          		for(i=1;i<150;i++)
+   1820          		{
+   1821          			user_delay_ms(10);
+   1822          			if(READ_STUDYKEY == Bit_SET)
+   1823          			{
+   1824          				i=0;
+   1825          				break;
+   1826          			}
+   1827          			IWDG_ReloadCounter();
+   1828          		}
+   1829          		
+   1830          		if(i!=0)
+   1831          		{
+   1832          			InfoPrintf("进入学习遥控器模式...\r\n");
+   1833          			OnStudyRemote();
+   1834          			user_delay_ms(200);
+   1835          		}
+   1836          		#ifdef EN_ADC1_CHN1
+   1837          		else
+   1838          		{
+   1839          			//InfoPrintf("检测校准...\r\n");
+   1840          			temp=1;
+   1841          			for(i=0;i<300;i++)
+   1842          			{
+   1843          				user_delay_ms(10);
+   1844          				
+   1845          				if((READ_STUDYKEY == Bit_RESET) && (temp%2==1))
+   1846          				{
+   1847          					user_delay_ms(30);
+   1848          					temp++;
+   1849          				}
+   1850          				else if((READ_STUDYKEY == Bit_SET) && (temp%2==0))
+   1851          				{
+   1852          					user_delay_ms(30);
+   1853          					temp++; 
+   1854          				}
+   1855          
+   1856          				if((temp==1)&&(i>120))
+   1857          				{
+   1858          					break;
+   1859          				}
+   1860          
+   1861          				if(temp>=5)
+   1862          				{
+   1863          					InfoPrintf("进入校准模式...\r\n");
+   1864          					recalibrate_bat_vol();
+   1865          					start_calibrate_bat_timestamp=OSTimeGet(&os_err);
+   1866          					break;
+   1867          				}	
+   1868          			}
+   1869          		}
+   1870          		#endif
+   1871          	}
+   1872          
+   1873          	#ifdef EN_ADC1_CHN1
+   1874          	if(OSTimeGet(&os_err)-start_calibrate_bat_timestamp>10000)
+   1875          	{
+   1876          		if(check_bat_vol_ok_flag==1)
+   1877          		{
+   1878          			if(bat_engined_average>bat_off_average+100)
+   1879          			{
+   1880          				bat_dif_val=bat_engined_average-bat_off_average;
+   1881          				bat_cali_ok_flag=1;
+   1882          			}
+   1883          			else
+   1884          			{
+   1885          				bat_cali_ok_flag=0;
+   1886          				InfoPrintf("校准错误\r\n");
+   1887          				DriveAlarm(12, 70);
+   1888          			}
+   1889          			check_bat_vol_ok_flag=2;
+   1890          			InfoPrintf("校准结束\r\n");
+   1891          			cali_alarm_timestamp=0;
+   1892          		}
+   1893          	}
+   1894          	else
    1895          	{
-   1896          		task_msg = OSTaskQPend(0,OS_OPT_PEND_NON_BLOCKING,&msg_size,NULL,&os_err);
-   1897          		if(NULL != task_msg)
-   1898          		{
-   1899          			RfTaskMsg_handle(task_msg);
-   1900          			user_free(task_msg,__FUNCTION__);
-   1901          		}
-   1902          		
-   1903          		OnRfRev();
-   1904          
-   1905          		check_study_key();
-   1906          		
-   1907          		#ifdef EN_ADC1_CHN1
-   1908          		if(user_get_os_time()-last_adc_time>T_10MS)
-   1909          		{
-   1910          			last_adc_time=user_get_os_time();
-   1911          			start_adc(ADC_Channel_1);
-   1912          			
-   1913          		}
-   1914          		#else
-   1915          		if(user_get_os_time()-last_adc_time>T_50MS)
-   1916          		{
-   1917          			last_adc_time=user_get_os_time();
-   1918          			if(READ_ON_LINE!=on_status)
-   1919          			{
-   1920          				DelayXms(5);  
-   1921          				for(i=0;i<10;i++)
-   1922          				{
-   1923          					temp=READ_ON_LINE;
-   1924          					if(temp==on_status)
-   1925          					{
-   1926          						break;
-   1927          					}
-   1928          					
-   1929          					if(i==9)
-   1930          					{
-   1931          						on_status=temp;
-   1932          						InfoPrintf("!!!!!!!!!!on_status=%d,\r\n",on_status);
-   1933          						on_change_flag=1;
-   1934          						remote_started_flag=0;
-   1935          					}
-   1936          					DelayXms(2);
-   1937          				}
-   1938          			}
-   1939          		}
-   1940          		#endif
-   1941          
-   1942          		if(READ_BREAK_PIN==1)
-   1943          		{
-   1944          			DelayXms(5);
-   1945          			if((remote_started_flag==1)&&(READ_BREAK_PIN==1))
-   1946          			{
-   1947          				if(ActiveImmo() == TRUE) 
-   1948          				{
-   1949          					InfoPrintf("遥控器在车上，转为 本地启动 模式 !!!!\r\n");
-   1950          					InfoPrintf("\r\n\r\n\r\n");
-   1951          					remote_started_flag=0;
-   1952          				}
-   1953          				else 
-   1954          				{
-   1955          					control_car_power(CAR_OFF);
-   1956          					DriveAlarm(1, 100);
-   1957          					DelayXms(1000); 
-   1958          					InfoPrintf("遥控器不在车上，熄火OK\r\n");
-   1959          				}
-   1960          			}
-   1961          		}
-   1962          
-   1963          		if(smart_card_need_dly_pwr_off_flag==1)
-   1964          		{
-   1965          			if(OSTimeGet(&os_err)-remote_pwr_on_card_timestamp>T_4S)
-   1966          			{
-   1967          				power_off_smart_card();	
-   1968          			}
-   1969          		}
-   1970          
-   1971          		if(KEY_TRUNK_L_time_stamp!=0)
-   1972          		{
-   1973          			if(OSTimeGet(&os_err)-KEY_TRUNK_L_time_stamp>T_1S)
-   1974          			{
-   1975          				InfoPrintf("KEY_TRUNK_OFF\r\n");
-   1976          				KEY_TRUNK_L_time_stamp=0;
-   1977          				KEY_TRUNK_OFF;
-   1978          			}
-   1979          		}
-   1980          
-   1981          		if(KEY_UNLOCK_L_time_stamp!=0)
-   1982          		{
-   1983          			if(OSTimeGet(&os_err)-KEY_UNLOCK_L_time_stamp>T_1S)
-   1984          			{
-   1985          				InfoPrintf("KEY_UNLOCK_OFF\r\n");
-   1986          				KEY_UNLOCK_L_time_stamp=0;
-   1987          				KEY_UNLOCK_OFF;
-   1988          			}
-   1989          		}		
-   1990          
-   1991          		if(KEY_LOCK_L_time_stamp!=0)
-   1992          		{
-   1993          			if(OSTimeGet(&os_err)-KEY_LOCK_L_time_stamp>T_1S)
-   1994          			{
-   1995          				InfoPrintf("KEY_LOCK_OFF\r\n");
-   1996          				KEY_LOCK_L_time_stamp=0;
-   1997          				KEY_LOCK_OFF;
-   1998          			}
-   1999          		}
-   2000          
-   2001          		if(user_get_os_time()-last_time>T_600MS)
-   2002          		{
-   2003          			if((remote_started_flag==1)||(on_status==0))
-   2004          			{
-   2005          				last_time=user_get_os_time();
-   2006          				//InfoPrintf("bat_OFF_average=%d,bat_engined_average=%d,bat_current=%d\r\n",bat_off_average,bat_engined_average,bat_current);
-   2007          				SendAwakeLF();
-   2008          			}
-   2009          		}
-   2010          
-   2011          
-   2012          		IWDG_ReloadCounter();
-   2013          		//DelayXms(15);
-   2014          		OSSchedRoundRobinYield(&os_err);
-   2015          	}
-   2016          
-   2017          }
-   2018          
-   2019          
+   1896          		if(check_bat_vol_ok_flag<=1)
+   1897          		{
+   1898          			if((OSTimeGet(&os_err)-cali_alarm_timestamp)>=1000)
+   1899          			{
+   1900          				cali_alarm_timestamp=OSTimeGet(&os_err);
+   1901          				DriveAlarm(1, 200);
+   1902          			}
+   1903          		}
+   1904          	}
+   1905          	#endif
+   1906          }
+   1907          
+   1908          void IWDG_Configuration(void)
+   1909          {
+   1910          	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);	// 打开使能，iwdg的寄存器有写保护,必须先写入0x5555，才能操作寄存器
+   1911          	IWDG_SetPrescaler(IWDG_Prescaler_256);			// 独立看门狗使用内部低速振荡器LSI，对LSI进行256分频
+   1912          	//IWDG_SetReload(2000);							// 设定独立看门狗计数器的计数值(0x000~0xFFF;0~4095)，复位时间为12.8s
+   1913          	//IWDG_SetReload(200);							// 设定独立看门狗计数器的计数值(0x000~0xFFF;0~4095)，复位时间为1.28s
+   1914          	IWDG_SetReload(800);							// 设定独立看门狗计数器的计数值(0x000~0xFFF;0~4095)，复位时间为2.56s
+   1915          	IWDG_ReloadCounter();							// 重载独立看门狗计数器，向寄存器写入0xAAAA，或者更新计数值
+   1916          	IWDG_Enable();									// 开启看门狗，向寄存器写入0xCCCC即可
+   1917          }
+   1918          
+   1919          
+   1920          void RfTask(void *p_arg)
+   1921          {
+   1922          	TASK_MSG_T *task_msg;
+   1923          	OS_MSG_SIZE msg_size;
+   1924          	uint32_t last_time=0;
+   1925          	uint32_t last_adc_time=0;
+   1926          	uint32_t i;
+   1927          	uint8_t temp;
+   1928          	OS_ERR os_err;
+   1929          	p_arg=p_arg;
+   1930          	
+   1931          	KEY_PWR_OFF;
+   1932          	MCURegID = *(vu32 *)(0x1FFFF7E8 + 8);			//获取MCU固件ID
+   1933          	factory_trace_id = *(vu32 *)(0x1FFFF7E8 + 0);	//获取MCU固件ID zgc
+   1934          	FLASH_ReadRemoteID(&Remote);  					//获取遥控器ID值等
+   1935          	FLASH_ReadRemoteLOQ(&Remote); 					//获取遥控器LOQ值等
+   1936          
+   1937          	#ifdef EN_ADC1_CHN1
+   1938          	init_adc(ADC_Channel_1);
+   1939          	#else
+   1940          	DelayXms(5);  
+   1941          	on_status=READ_ON_LINE;
+   1942          	#endif
+   1943          	
+   1944          	while(1)
+   1945          	{
+   1946          		task_msg = OSTaskQPend(0,OS_OPT_PEND_NON_BLOCKING,&msg_size,NULL,&os_err);
+   1947          		if(NULL != task_msg)
+   1948          		{
+   1949          			RfTaskMsg_handle(task_msg);
+   1950          			user_free(task_msg,__FUNCTION__);
+   1951          		}
+   1952          		
+   1953          		OnRfRev();
+   1954          
+   1955          		check_study_key();
+   1956          		
+   1957          		#ifdef EN_ADC1_CHN1
+   1958          		if(user_get_os_time()-last_adc_time>T_10MS)
+   1959          		{
+   1960          			last_adc_time=user_get_os_time();
+   1961          			start_adc(ADC_Channel_1);
+   1962          			
+   1963          		}
+   1964          		#else
+   1965          		if(user_get_os_time()-last_adc_time>T_50MS)
+   1966          		{
+   1967          			last_adc_time=user_get_os_time();
+   1968          			if(READ_ON_LINE!=on_status)
+   1969          			{
+   1970          				DelayXms(5);  
+   1971          				for(i=0;i<10;i++)
+   1972          				{
+   1973          					temp=READ_ON_LINE;
+   1974          					if(temp==on_status)
+   1975          					{
+   1976          						break;
+   1977          					}
+   1978          					
+   1979          					if(i==9)
+   1980          					{
+   1981          						on_status=temp;
+   1982          						InfoPrintf("!!!!!!!!!!on_status=%d,\r\n",on_status);
+   1983          						on_change_flag=1;
+   1984          						remote_started_flag=0;
+   1985          						if(on_status==1)
+   1986          						{
+   1987          							if(ActiveImmo() == TRUE) 
+   1988          							{		
+   1989          								if(smart_card_pwr_status!=1)
+   1990          								{
+   1991          									power_on_smart_card(); 
+   1992          								}
+   1993          								smart_card_need_dly_pwr_off_flag=0;
+   1994          								//DriveAlarm(3, 100);
+   1995          								InfoPrintf("AAA遥控器在车上，转为 本地启动 模式 !!!!\r\n");
+   1996          								InfoPrintf("\r\n\r\n\r\n");
+   1997          								remote_started_flag=0;
+   1998          							}
+   1999          							else 
+   2000          							{
+   2001          								//control_car_power(CAR_OFF);
+   2002          								DriveAlarm(1, 100);
+   2003          								DelayXms(1000); 
+   2004          								InfoPrintf("遥控器不在车上，熄火OK\r\n");
+   2005          							}
+   2006          						}
+   2007          					}
+   2008          					DelayXms(2);
+   2009          				}
+   2010          			}
+   2011          		}
+   2012          		#endif
+   2013          
+   2014          		if(READ_BREAK_PIN==1)
+   2015          		{
+   2016          			DelayXms(5);
+   2017          			if((remote_started_flag==1)&&(READ_BREAK_PIN==1))
+   2018          			{
+   2019          				if(ActiveImmo() == TRUE) 
+   2020          				{		
+   2021          					if(smart_card_pwr_status!=1)
+   2022          					{
+   2023          						power_on_smart_card(); 
+   2024          						smart_card_need_dly_pwr_off_flag=0;
+   2025          					}
+   2026          					//DriveAlarm(5, 100);
+   2027          					InfoPrintf("遥控器在车上，转为 本地启动 模式 !!!!\r\n");
+   2028          					InfoPrintf("\r\n\r\n\r\n");
+   2029          					remote_started_flag=0;
+   2030          				}
+   2031          				else 
+   2032          				{
+   2033          					control_car_power(CAR_OFF);
+   2034          					DriveAlarm(1, 100);
+   2035          					DelayXms(1000); 
+   2036          					InfoPrintf("遥控器不在车上，熄火OK\r\n");
+   2037          				}
+   2038          			}
+   2039          		}
+   2040          		
+   2041          		if(smart_card_need_dly_pwr_off_flag==1)
+   2042          		{
+   2043          			if(OSTimeGet(&os_err)-remote_pwr_on_card_timestamp>T_3S)
+   2044          			{
+   2045          				//DriveAlarm(2, 200);
+   2046          				power_off_smart_card(); 
+   2047          			}
+   2048          		}
+   2049          
+   2050          		key_release();
+   2051          
+   2052          		if(user_get_os_time()-last_time>T_600MS)
+   2053          		{
+   2054          			if((remote_started_flag==1)||(on_status==0))
+   2055          			{
+   2056          				last_time=user_get_os_time();
+   2057          				//InfoPrintf("bat_OFF_average=%d,bat_engined_average=%d,bat_current=%d\r\n",bat_off_average,bat_engined_average,bat_current);
+   2058          				SendAwakeLF();
+   2059          			}
+   2060          		}
+   2061          
+   2062          
+   2063          		IWDG_ReloadCounter();
+   2064          		//DelayXms(15);
+   2065          		OSSchedRoundRobinYield(&os_err);
+   2066          	}
+   2067          
+   2068          }
+   2069          
+   2070          
+   2071          
+   2072          
+   2073          
 
    Maximum stack usage in bytes:
 
@@ -2126,6 +2180,7 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
         24   -> DelayXms
         24   -> GPIO_ResetBits
         24   -> GPIO_SetBits
+        24   -> IWDG_ReloadCounter
       16   GPIO_Configuration
         16   -> GPIO_Init
         16   -> GPIO_PinRemapConfig
@@ -2188,28 +2243,29 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
         16   -> ctl_car_remote_start
         16   -> ctl_car_remote_stop
         16   -> power_on_smart_card
-      40   RfTask
-        40   -> ActiveImmo
-        40   -> DelayXms
-        40   -> DriveAlarm
-        40   -> FLASH_ReadRemoteID
-        40   -> FLASH_ReadRemoteLOQ
-        40   -> GPIO_ReadInputDataBit
-        40   -> GPIO_ResetBits
-        40   -> GPIO_SetBits
-        40   -> IWDG_ReloadCounter
-        40   -> InfoPrintf
-        40   -> OSSchedRoundRobinYield
-        40   -> OSTaskQPend
-        40   -> OSTimeGet
-        40   -> OnRfRev
-        40   -> RfTaskMsg_handle
-        40   -> SendAwakeLF
-        40   -> check_study_key
-        40   -> control_car_power
-        40   -> power_off_smart_card
-        40   -> user_free
-        40   -> user_get_os_time
+      32   RfTask
+        32   -> ActiveImmo
+        32   -> DelayXms
+        32   -> DriveAlarm
+        32   -> FLASH_ReadRemoteID
+        32   -> FLASH_ReadRemoteLOQ
+        32   -> GPIO_ReadInputDataBit
+        32   -> GPIO_SetBits
+        32   -> IWDG_ReloadCounter
+        32   -> InfoPrintf
+        32   -> OSSchedRoundRobinYield
+        32   -> OSTaskQPend
+        32   -> OSTimeGet
+        32   -> OnRfRev
+        32   -> RfTaskMsg_handle
+        32   -> SendAwakeLF
+        32   -> check_study_key
+        32   -> control_car_power
+        32   -> key_release
+        32   -> power_off_smart_card
+        32   -> power_on_smart_card
+        32   -> user_free
+        32   -> user_get_os_time
        0   RfTaskMsg_handle
          0   -> rf_open_module
       24   SendAwakeLF
@@ -2251,14 +2307,14 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
          8   -> GPIO_ResetBits
          8   -> GPIO_SetBits
          8   -> InfoPrintf
-       8   ctl_car_remote_start
-         8   -> DelayXms
-         8   -> GPIO_ResetBits
-         8   -> GPIO_SetBits
-         0   -> InfoPrintf
-         8   -> InfoPrintf
-         8   -> control_car_power
-         8   -> power_on_smart_card
+      16   ctl_car_remote_start
+        16   -> DelayXms
+        16   -> GPIO_ResetBits
+        16   -> GPIO_SetBits
+        16   -> InfoPrintf
+        16   -> OSTimeGet
+        16   -> control_car_power
+        16   -> power_on_smart_card
        8   ctl_car_remote_stop
          8   -> DelayXms
          0   -> InfoPrintf
@@ -2269,6 +2325,10 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
         32   -> ADC_ITConfig
         32   -> ADC_Init
         32   -> ADC_RegularChannelConfig
+      16   key_release
+        16   -> GPIO_ResetBits
+        16   -> InfoPrintf
+        16   -> OSTimeGet
        8   power_off_smart_card
          8   -> GPIO_SetBits
          8   -> InfoPrintf
@@ -2287,24 +2347,23 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
    Bytes  Function/Label
    -----  --------------
        4  ??DataTable102
-       4  ??DataTable102_1
-       4  ??DataTable102_2
-       4  ??DataTable102_3
-       4  ??DataTable102_4
-       4  ??DataTable102_5
-       4  ??DataTable102_6
-       4  ??DataTable102_7
-       4  ??DataTable93
-       4  ??DataTable93_1
-       4  ??DataTable93_2
-       4  ??DataTable93_3
-       4  ??DataTable93_4
-       4  ??DataTable94
-       4  ??DataTable94_1
+       4  ??DataTable105
+       4  ??DataTable105_1
+       4  ??DataTable105_2
+       4  ??DataTable105_3
+       4  ??DataTable105_4
+       4  ??DataTable105_5
+       4  ??DataTable105_6
+       4  ??DataTable95
+       4  ??DataTable95_1
+       4  ??DataTable95_2
        4  ??DataTable96
        4  ??DataTable96_1
        4  ??DataTable96_2
+       4  ??DataTable96_3
+       4  ??DataTable98
        4  ??DataTable99
+       4  ??DataTable99_1
       24  ?_0
       28  ?_1
       28  ?_10
@@ -2327,59 +2386,61 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
       16  ?_26
       44  ?_27
       20  ?_28
-      24  ?_29
+      16  ?_29
       24  ?_3
-      24  ?_30
-      28  ?_31
-      24  ?_32
-      24  ?_33
+      20  ?_30
+      16  ?_31
+      40  ?_32
+      40  ?_33
       28  ?_34
-      24  ?_35
-      24  ?_36
-      28  ?_37
-      24  ?_38
-      32  ?_39
+      40  ?_35
+      40  ?_36
+      44  ?_37
+      40  ?_38
+      40  ?_39
       16  ?_4
-      24  ?_40
-      32  ?_41
-      32  ?_42
-      28  ?_43
-      76  ?_44
-      40  ?_45
-      36  ?_46
-      12  ?_47
-      16  ?_48
-      12  ?_49
+      44  ?_40
+      24  ?_41
+      24  ?_42
+      32  ?_43
+      24  ?_44
+      32  ?_45
+      32  ?_46
+      28  ?_47
+      76  ?_48
+      40  ?_49
       16  ?_5
-      24  ?_50
-      52  ?_51
-      52  ?_52
-      16  ?_53
+      36  ?_50
+      12  ?_51
+      16  ?_52
+      12  ?_53
       24  ?_54
-      12  ?_55
-      36  ?_56
-      20  ?_57
-      20  ?_58
-      20  ?_59
+      52  ?_55
+      52  ?_56
+      16  ?_57
+      24  ?_58
+      12  ?_59
       20  ?_6
-      20  ?_60
+      36  ?_60
       20  ?_61
       20  ?_62
       20  ?_63
-      32  ?_64
-      36  ?_65
-      48  ?_66
-      16  ?_67
-      28  ?_68
-      24  ?_69
+      20  ?_64
+      20  ?_65
+      20  ?_66
+      20  ?_67
+      32  ?_68
+      36  ?_69
       20  ?_7
-      28  ?_70
-      40  ?_71
-       8  ?_72
-      28  ?_73
-      16  ?_74
-      20  ?_75
-      16  ?_76
+      48  ?_70
+      16  ?_71
+      28  ?_72
+      24  ?_73
+      28  ?_74
+      44  ?_75
+       8  ?_76
+      28  ?_77
+      40  ?_78
       16  ?_8
       32  ?_9
      254  ADC1_2_IRQHandler
@@ -2387,18 +2448,32 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
       56  AddTimeDriveAlarm
       44  BasePlus
      326  CheckRemoteValueIsAllow
-      30  Data
+      72  Data
           RangData
           ClearKeyValueCount
           RemoteLastData
           car_power
+          smart_card_need_dly_pwr_off_flag
+          smart_card_pwr_status
           key_sn
+          on_change_flag
+          on_status
+          remote_started_flag
           main_key_sn
           cnt
           RemoteKeyValue
           lf_dst_WUPA
+          remote_pwr_on_card_timestamp
+          MCURegID
+          factory_trace_id
+          KEY_TRUNK_L_time_stamp
+          KEY_UNLOCK_L_time_stamp
+          KEY_LOCK_L_time_stamp
+          last_short_key_trunk_timestamp
+          last_short_key_unlock_timestamp
+          last_short_key_lock_timestamp
       16  DelayXms
-      56  DriveAlarm
+      60  DriveAlarm
      280  GPIO_Configuration
       36  IWDG_Configuration
       36  LED_flash
@@ -2407,10 +2482,10 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
      840  OnStudyRemote
       64  RangVlue
       52  Remote
-     710  RemoteKeyActive
-     530  RfTask
+     762  RemoteKeyActive
+     484  RfTask
       22  RfTaskMsg_handle
-      88  SendAwakeLF
+      94  SendAwakeLF
      106  SendStartLF
      140  SendStudyLF
       46  TIM2_IRQHandler
@@ -2428,40 +2503,27 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\rf\user_rf_app.c
           bat_dif_val
       82  check_study_key
      146  control_car_power
-     130  ctl_car_remote_start
+     160  ctl_car_remote_start
       34  ctl_car_remote_stop
        1  enable_lf_tx_flag
       84  init_adc
+     146  key_release
        2  lf_dst_WUPB
       34  power_off_smart_card
-      44  power_on_smart_card
+      46  power_on_smart_card
        2  rf_open_module
-      44  smart_card_need_dly_pwr_off_flag
-          smart_card_pwr_status
-          on_change_flag
-          on_status
-          remote_started_flag
-          remote_pwr_on_card_timestamp
-          MCURegID
-          factory_trace_id
-          KEY_TRUNK_L_time_stamp
-          KEY_UNLOCK_L_time_stamp
-          KEY_LOCK_L_time_stamp
-          last_short_key_trunk_timestamp
-          last_short_key_unlock_timestamp
-          last_short_key_lock_timestamp
-      30  start_adc
+      28  start_adc
        8  -- Other
 
  
     55 bytes in section .bss
-   135 bytes in section .data
+   133 bytes in section .data
    204 bytes in section .rodata
- 7 870 bytes in section .text
+ 8 254 bytes in section .text
  
- 7 870 bytes of CODE  memory
+ 8 254 bytes of CODE  memory
    204 bytes of CONST memory
-   190 bytes of DATA  memory
+   188 bytes of DATA  memory
 
 Errors: none
 Warnings: 15

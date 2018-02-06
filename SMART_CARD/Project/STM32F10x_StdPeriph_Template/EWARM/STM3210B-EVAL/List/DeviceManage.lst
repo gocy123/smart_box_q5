@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        01/Feb/2018  10:27:22
+# IAR ANSI C/C++ Compiler V7.40.7.9843/W32 for ARM        05/Feb/2018  13:40:52
 # Copyright 1999-2015 IAR Systems AB.
 #
 #    Cpu mode     =  thumb
@@ -666,7 +666,7 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\dev_manage\DeviceManage.c
     588          	creat_app_task();
     589          	DM_post_pwr_on_to_tasks();
     590          	BEEP_ON;
-    591          	OSTimeDly(500, OS_OPT_TIME_DLY, &os_err);
+    591          	OSTimeDly(200, OS_OPT_TIME_DLY, &os_err);
     592          	BEEP_OFF;
     593          	while(1)
     594          	{
@@ -811,7 +811,7 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\dev_manage\DeviceManage.c
       20  Can0ManageTask
      114  DM_post_one_task_msg
       56  DM_post_pwr_on_to_tasks
-      88  DeviceManageTask
+      86  DeviceManageTask
       38  DeviceManageTaskMsg_handle
      108  EXTI0_Config
      110  EXTI1_Config
@@ -829,9 +829,9 @@ D:\GitHub2\smart_box_q5\SMART_CARD\Project\App\dev_manage\DeviceManage.c
 
  
     16 bytes in section .rodata
- 1 448 bytes in section .text
+ 1 446 bytes in section .text
  
- 1 448 bytes of CODE  memory
+ 1 446 bytes of CODE  memory
     16 bytes of CONST memory
 
 Errors: none

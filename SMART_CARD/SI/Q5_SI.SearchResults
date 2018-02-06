@@ -1,0 +1,19 @@
+---- DriveAlarm Matches (18 in 1 files) ----
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):* Function Name  : DriveAlarm
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):void DriveAlarm(u8 index, u16 time) 
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):			DriveAlarm(1, 100);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):					DriveAlarm(10, 30);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):			DriveAlarm(1, 100);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):	DriveAlarm(1, 1250); //进入学习模式提示
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):	DriveAlarm(1, 1250); //进入学习模式提示
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):			DriveAlarm(1, 150);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):			DriveAlarm(4, 50);	//zgc add
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):			DriveAlarm(4, 50);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):		DriveAlarm(IDCount, 500);  //保存遥控器属性数据提示
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):				DriveAlarm(12, 70);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):				DriveAlarm(1, 200);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):								//DriveAlarm(3, 100);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):								DriveAlarm(1, 100);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):					//DriveAlarm(5, 100);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):					DriveAlarm(1, 100);
+User_rf_app.c (d:\github2\smart_box_q5\smart_card\project\app\rf):				//DriveAlarm(2, 200);

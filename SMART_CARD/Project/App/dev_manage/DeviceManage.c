@@ -588,7 +588,7 @@ void DeviceManageTask(void *p_arg)
 	creat_app_task();
 	DM_post_pwr_on_to_tasks();
 	BEEP_ON;
-	OSTimeDly(500, OS_OPT_TIME_DLY, &os_err);
+	OSTimeDly(200, OS_OPT_TIME_DLY, &os_err);
 	BEEP_OFF;
 	while(1)
 	{

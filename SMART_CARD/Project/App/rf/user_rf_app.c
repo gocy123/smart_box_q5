@@ -95,9 +95,9 @@ void power_on_smart_card(void)
 	
 	InfoPrintf("power_on_smart card()\r\n");
 	KEY_PWR_ON;
-	smart_card_need_dly_pwr_off_flag=1;
 	smart_card_pwr_status=1;
 	remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+	smart_card_need_dly_pwr_off_flag=1;
 }
 
 void power_off_smart_card(void)
@@ -133,6 +133,7 @@ void DriveAlarm(u8 index, u16 time)
 		{
 			DelayXms(time);  //延时，下次鸣叫
 		}
+		IWDG_ReloadCounter();
 	}
 }
 
@@ -225,22 +226,30 @@ void control_car_power(CAR_POWER_STATUS ctl)
 *******************************************************************************/
 void ctl_car_remote_start(void) 
 {	
+	OS_ERR os_err;
 	InfoPrintf("ctl_car_remote_start\r\n");
 
 	if(car_power != CAR_RUN)  	//未发动
 	{
-		power_on_smart_card();//智能卡2秒钟后要断电，防止砸玻璃偷车开走
+		if(smart_card_pwr_status!=1)
+		{
+			power_on_smart_card();//智能卡2秒钟后要断电，防止砸玻璃偷车开走
+		}
+		
 		DelayXms(300);
 		InfoPrintf("车辆未发动\r\n");		
 		InfoPrintf("模拟踩刹车\r\n");
 		BREAK_ON;
-		DelayXms(400);
+		KEY_LOCK_ON;
+		DelayXms(600);
+		KEY_LOCK_OFF;
 		InfoPrintf("远程发动!!!!!!\r\n");
 		control_car_power(CAR_RUN);
 		InfoPrintf("模拟踩刹车释放!!\r\n");
+		DelayXms(400);//这个延时必须有
 		BREAK_OFF;
-		DelayXms(400);
 		InfoPrintf("远程启动OK\r\n\r\n");
+		remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
 	}
 	else
 	{
@@ -538,7 +547,7 @@ void SendAwakeLF(void)
 	{
 	static u8 cnt=0;
 	cnt++;
-	//if(cnt%5==0)
+	if(cnt%8==0)
 	InfoPrintf("AWAKE:(KEY total:%d)(ID:%02X,%02X)(DATA:%02X,%02X)\r\n",Remote.Totle,LFData[0],LFData[1],LFData[2],LFData[3]);	
 	}
 
@@ -1015,6 +1024,39 @@ static bool CheckRemoteValueIsAllow(u32 *ptr)
 	return FALSE;
 }
 
+void key_release(void)
+{
+	OS_ERR os_err;
+	
+	if(KEY_TRUNK_L_time_stamp!=0)
+	{
+		if(OSTimeGet(&os_err)-KEY_TRUNK_L_time_stamp>T_1S)
+		{
+			InfoPrintf("KEY_TRUNK_OFF\r\n");
+			KEY_TRUNK_L_time_stamp=0;
+			KEY_TRUNK_OFF;
+		}
+	}
+	if(KEY_UNLOCK_L_time_stamp!=0)
+	{
+		if(OSTimeGet(&os_err)-KEY_UNLOCK_L_time_stamp>T_1S)
+		{
+			InfoPrintf("KEY_UNLOCK_OFF\r\n");
+			KEY_UNLOCK_L_time_stamp=0;
+			KEY_UNLOCK_OFF;
+		}
+	}		
+	if(KEY_LOCK_L_time_stamp!=0)
+	{
+		if(OSTimeGet(&os_err)-KEY_LOCK_L_time_stamp>T_1S)
+		{
+			InfoPrintf("KEY_LOCK_OFF\r\n");
+			KEY_LOCK_L_time_stamp=0;
+			KEY_LOCK_OFF;
+		}
+	}
+}
+
 static void RemoteKeyActive(u16 key) 
 {	
 	OS_ERR os_err;
@@ -1025,7 +1067,7 @@ static void RemoteKeyActive(u16 key)
 	switch(key) 
 	{
 		case KEY_BOX:
-			InfoPrintf("接收到尾箱--短按键\r\n");
+			InfoPrintf("接收到尾箱--短按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 			if(smart_card_pwr_status==0)
 			{
 				power_on_smart_card();
@@ -1044,7 +1086,7 @@ static void RemoteKeyActive(u16 key)
 			if(last_short_key_trunk_timestamp+T_1S>OSTimeGet(&os_err))
 			{
 				last_short_key_trunk_timestamp=OSTimeGet(&os_err);
-				InfoPrintf("接收到尾箱--长按键\r\n");
+				InfoPrintf("接收到尾箱--长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 				if(smart_card_pwr_status==0)
 				{
 					power_on_smart_card();
@@ -1054,6 +1096,7 @@ static void RemoteKeyActive(u16 key)
 				{
 					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
 				}
+				
 				KEY_TRUNK_ON;
 				KEY_TRUNK_L_time_stamp=OSTimeGet(&os_err);
 			}
@@ -1063,7 +1106,7 @@ static void RemoteKeyActive(u16 key)
 			}
 			break;
 		case KEY_UNLOCK:
-			InfoPrintf("接收到解锁--短按键\r\n");
+			InfoPrintf("接收到解锁--短按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 			if(smart_card_pwr_status==0)
 			{
 				power_on_smart_card();
@@ -1075,13 +1118,14 @@ static void RemoteKeyActive(u16 key)
 			}
 			last_short_key_unlock_timestamp=OSTimeGet(&os_err);
 			KEY_UNLOCK_ON;
+			smart_card_need_dly_pwr_off_flag=0;
 			KEY_UNLOCK_L_time_stamp=OSTimeGet(&os_err);
 			break;
 		case KEY_UNLOCK_L: 
 			if(last_short_key_unlock_timestamp+T_1S>OSTimeGet(&os_err))
 			{
 				last_short_key_unlock_timestamp=OSTimeGet(&os_err);
-				InfoPrintf("接收到解锁--长按键\r\n");
+				InfoPrintf("接收到解锁--长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 				if(smart_card_pwr_status==0)
 				{
 					power_on_smart_card();
@@ -1093,16 +1137,17 @@ static void RemoteKeyActive(u16 key)
 				}
 				KEY_UNLOCK_ON;
 				KEY_UNLOCK_L_time_stamp=OSTimeGet(&os_err);
+				smart_card_need_dly_pwr_off_flag=0;
 			}
 			else
 			{
-				InfoPrintf("接收到(无效)解锁长按键\r\n");
+				InfoPrintf("接收到(无效)解锁长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 			}
 			break;	
 
 			
 		case KEY_LOCK:
-			InfoPrintf("接收到锁车--短按键\r\n");
+			InfoPrintf("接收到锁车--短按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 			if(smart_card_pwr_status==0)
 			{
 				power_on_smart_card();
@@ -1111,16 +1156,18 @@ static void RemoteKeyActive(u16 key)
 			else
 			{
 				remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+				smart_card_need_dly_pwr_off_flag=1;
 			}
 			last_short_key_lock_timestamp=OSTimeGet(&os_err);
 			KEY_LOCK_ON;
 			KEY_LOCK_L_time_stamp=OSTimeGet(&os_err);
 			break;
+			
 		case KEY_LOCK_L: 
 			if(last_short_key_lock_timestamp+T_1S>OSTimeGet(&os_err))
 			{
 				last_short_key_lock_timestamp=OSTimeGet(&os_err);
-				InfoPrintf("接收到锁车--长按键\r\n");
+				InfoPrintf("接收到锁车--长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 				if(smart_card_pwr_status==0)
 				{
 					power_on_smart_card();
@@ -1129,15 +1176,39 @@ static void RemoteKeyActive(u16 key)
 				else
 				{
 					remote_pwr_on_card_timestamp=OSTimeGet(&os_err);
+					smart_card_need_dly_pwr_off_flag=1;
 				}
 				KEY_LOCK_ON;
 				KEY_LOCK_L_time_stamp=OSTimeGet(&os_err);
 			}
 			else
 			{
-				InfoPrintf("接收到(无效)锁车长按键\r\n");
+				InfoPrintf("接收到(无效)锁车长按键,当前card_pwr=%d\r\n",smart_card_pwr_status);
 			}
 			break;		
+			
+		case REMOTE_KEY_START:
+			DriveAlarm(1, 100);
+			if(READ_ON_LINE==0)
+			{
+				InfoPrintf("接收到远程启动命令\r\n");
+				ctl_car_remote_start();
+				on_change_flag=0;
+				on_status=READ_ON_LINE;
+				remote_started_flag=1;
+				
+				if(on_status==0)
+				{	
+					DriveAlarm(10, 30);
+					InfoPrintf("ON线无电,远程启动失败\r\n");
+					remote_started_flag=0;	
+				}
+			}
+			else
+			{
+				InfoPrintf("接收到远程启动命令，但不执行\r\n");
+			}
+			break;
 			
 		case REMOTE_KEY_STOP:
 			DriveAlarm(1, 100);
@@ -1150,27 +1221,6 @@ static void RemoteKeyActive(u16 key)
 			else
 			{
 				InfoPrintf("接收到远程熄火命令，但不执行\r\n");
-			}
-			break;
-
-		case REMOTE_KEY_START:
-			DriveAlarm(1, 100);
-			if(READ_ON_LINE==0)
-			{
-				InfoPrintf("接收到远程启动命令\r\n");
-				ctl_car_remote_start();
-				on_change_flag=0;
-				on_status=READ_ON_LINE;
-				remote_started_flag=1;
-				
-				if(on_status==0)
-				{
-					remote_started_flag=0;	
-				}
-			}
-			else
-			{
-				InfoPrintf("接收到远程启动命令，但不执行\r\n");
 			}
 			break;
 			
@@ -1932,6 +1982,28 @@ void RfTask(void *p_arg)
 						InfoPrintf("!!!!!!!!!!on_status=%d,\r\n",on_status);
 						on_change_flag=1;
 						remote_started_flag=0;
+						if(on_status==1)
+						{
+							if(ActiveImmo() == TRUE) 
+							{		
+								if(smart_card_pwr_status!=1)
+								{
+									power_on_smart_card(); 
+								}
+								smart_card_need_dly_pwr_off_flag=0;
+								//DriveAlarm(3, 100);
+								InfoPrintf("AAA遥控器在车上，转为 本地启动 模式 !!!!\r\n");
+								InfoPrintf("\r\n\r\n\r\n");
+								remote_started_flag=0;
+							}
+							else 
+							{
+								//control_car_power(CAR_OFF);
+								DriveAlarm(1, 100);
+								DelayXms(1000); 
+								InfoPrintf("遥控器不在车上，熄火OK\r\n");
+							}
+						}
 					}
 					DelayXms(2);
 				}
@@ -1945,7 +2017,13 @@ void RfTask(void *p_arg)
 			if((remote_started_flag==1)&&(READ_BREAK_PIN==1))
 			{
 				if(ActiveImmo() == TRUE) 
-				{
+				{		
+					if(smart_card_pwr_status!=1)
+					{
+						power_on_smart_card(); 
+						smart_card_need_dly_pwr_off_flag=0;
+					}
+					//DriveAlarm(5, 100);
 					InfoPrintf("遥控器在车上，转为 本地启动 模式 !!!!\r\n");
 					InfoPrintf("\r\n\r\n\r\n");
 					remote_started_flag=0;
@@ -1959,44 +2037,17 @@ void RfTask(void *p_arg)
 				}
 			}
 		}
-
+		
 		if(smart_card_need_dly_pwr_off_flag==1)
 		{
-			if(OSTimeGet(&os_err)-remote_pwr_on_card_timestamp>T_4S)
+			if(OSTimeGet(&os_err)-remote_pwr_on_card_timestamp>T_3S)
 			{
-				power_off_smart_card();	
+				//DriveAlarm(2, 200);
+				power_off_smart_card(); 
 			}
 		}
 
-		if(KEY_TRUNK_L_time_stamp!=0)
-		{
-			if(OSTimeGet(&os_err)-KEY_TRUNK_L_time_stamp>T_1S)
-			{
-				InfoPrintf("KEY_TRUNK_OFF\r\n");
-				KEY_TRUNK_L_time_stamp=0;
-				KEY_TRUNK_OFF;
-			}
-		}
-
-		if(KEY_UNLOCK_L_time_stamp!=0)
-		{
-			if(OSTimeGet(&os_err)-KEY_UNLOCK_L_time_stamp>T_1S)
-			{
-				InfoPrintf("KEY_UNLOCK_OFF\r\n");
-				KEY_UNLOCK_L_time_stamp=0;
-				KEY_UNLOCK_OFF;
-			}
-		}		
-
-		if(KEY_LOCK_L_time_stamp!=0)
-		{
-			if(OSTimeGet(&os_err)-KEY_LOCK_L_time_stamp>T_1S)
-			{
-				InfoPrintf("KEY_LOCK_OFF\r\n");
-				KEY_LOCK_L_time_stamp=0;
-				KEY_LOCK_OFF;
-			}
-		}
+		key_release();
 
 		if(user_get_os_time()-last_time>T_600MS)
 		{
@@ -2015,5 +2066,8 @@ void RfTask(void *p_arg)
 	}
 
 }
+
+
+
 
 
